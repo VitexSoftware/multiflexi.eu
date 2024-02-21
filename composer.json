@@ -7,8 +7,7 @@
         "vitexsoftware/ease-twbootstrap5": "dev-main",
         "vitexsoftware/ease-html-widgets": "dev-main",
         "vitexsoftware/ease-fluentpdo": "dev-main",
-        "robmorgan/phinx": "*",
-        "datatables.net-bs5": "*"
+        "robmorgan/phinx": "*"
     },
     "license": "MIT",
     "authors": [
