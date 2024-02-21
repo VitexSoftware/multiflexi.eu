@@ -1,0 +1,45 @@
+{
+    "name": "vitexsoftware/multiflexi",
+    "description": "MultiFlexi web site",
+    "type": "project",
+    "require": {
+        "php": "^8.0|^8.1|^8.2",
+        "vitexsoftware/ease-twbootstrap5": "dev-main",
+        "vitexsoftware/ease-html-widgets": "dev-main",
+        "vitexsoftware/ease-fluentpdo": "dev-main",
+        "robmorgan/phinx": "*",
+        "datatables.net-bs5": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vítězslav Dvořák",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "MultiFlexi\\": "src/MultiFlexi/",
+            "MultiFlexi\\Ui\\": "src/MultiFlexi/Ui",
+            "MultiFlexi\\Api\\": "src/MultiFlexi/Api"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\AbraFlexi\\": "vendor/spoje.net/abraflexi/testing/src/AbraFlexi/",
+            "Test\\AbraFlexi\\MultiFlexi\\": "tests/AbraFlexi/MultiFlexi/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"copy('vendor/datatables/datatables/media/js/dataTables.bootstrap5.js', 'src/js/dataTables.bootstrap5.js');copy('vendor/datatables/datatables/media/js/jquery.dataTables.js', 'src/js/jquery.dataTables.js');copy('vendor/datatables/datatables/media/css/dataTables.bootstrap5.css','src/css/dataTables.bootstrap5.css');\""
+        ],
+        "post-update-cmd": [
+            "php -r \"copy('vendor/datatables/datatables/media/js/dataTables.bootstrap5.js', 'src/js/dataTables.bootstrap5.js');copy('vendor/datatables/datatables/media/js/jquery.dataTables.js', 'src/js/jquery.dataTables.js');copy('vendor/datatables/datatables/media/css/dataTables.bootstrap5.css','src/css/dataTables.bootstrap5.css');\""
+        ]
+    }
+}
