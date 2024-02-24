@@ -37,6 +37,8 @@ class WebPage extends \Ease\TWB5\WebPage
         parent::__construct($pageTitle);
         $this->container = $this->addItem(new \Ease\TWB5\Container());
         $this->container->setTagClass('container-fluid');
+        $this->includeCss('css/lightbox.min.css');
+        $this->includeJavaScript('js/lightbox.js');
         $this->addCSS('
 ');
     }

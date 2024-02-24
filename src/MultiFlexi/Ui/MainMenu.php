@@ -2,13 +2,8 @@
 
 declare(strict_types=1);
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/PHPClass.php to edit this template
- */
-
 /**
- *
+ * MutliFlexi.eu Main Menu
  *
  * @author     Vítězslav Dvořák <info@vitexsoftware.cz>
  * @copyright  2024 Vitex Software
@@ -21,6 +16,36 @@ namespace MultiFlexi\Ui;
  *
  * @author vitex
  */
-class MainMenu extends \Ease\TWB5\Navbar
+class MainMenu extends \Ease\Html\NavTag
 {
+    public function __construct()
+    {
+        $logoLink = new \Ease\Html\ATag('index.php', new \Ease\Html\ImgTag('images/multiflexi-logo.svg', 'MultiFlexi', ['width' => "30", 'height' => "24", 'class' => "d-inline-block align-text-top"]), ['class' => 'navbar-brand']);
+        $logoLink->addItem('MultiFlexi');
+        $container = new \Ease\TWB5\Container($logoLink);
+        $container->addItem($this->navBarToggler());
+        $container->addItem($this->navBarCollapse());
+        parent::__construct($container, ['class' => 'navbar navbar-expand-lg navbar-light bg-light']);
+    }
+
+    public function navBarToggler()
+    {
+        return new \Ease\Html\ButtonTag(new \Ease\Html\SpanTag(null, ['class' => 'navbar-toggler-icon']), [
+            'class' => "navbar-toggler",
+            'type' => "button",
+            'data-bs-toggle' => "collapse",
+            'data-bs-target' => "#navbarNav",
+            'aria-controls' => "navbarNav",
+            'aria-expanded' => "false",
+            'aria-label' => _("Toggle navigation")
+                ]);
+    }
+
+    public function navBarCollapse()
+    {
+        $navbarNav = new \Ease\Html\UlTag(null, ['class' => 'navbar-nav me-auto mb-2 mb-lg-0', 'style' => "--bs-scroll-height: 100px;"]);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('https://demo.multiflexi.eu/', _('Demo Site'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('apps.php', _('Applications'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        return new \Ease\Html\DivTag($navbarNav, ['class' => "collapse navbar-collapse", 'id' => "navbarNav"]);
+    }
 }
