@@ -21,7 +21,8 @@ $imageRow = new \Ease\TWB5\Row();
 $imageRow->addTagClass('justify-content-md-center');
 $imageRow->addColumn('4');
 //$imageRow->addColumn('4', new \Ease\Html\DivTag(new \Ease\Html\ImgTag('images/openclipart/345630.svg', _('AI and Human Relationship'), ['class' => 'mx-auto d-block img-fluid'])), 'sm');
-$imageRow->addColumn('4', new \Ease\Html\DivTag(_('MultiFlexi is ...'), ['class' => 'text-center']));
+$imageRow->addColumn('4', new \Ease\Html\DivTag(_('MultiFlexi is a runtime environment for tasks not only on top of the economic systems AbraFlexi and Stormware Pohoda'), ['class' => 'text-center']));
+
 $imageRow->addColumn('4');
 
 $oPage->container->addItem($imageRow);
