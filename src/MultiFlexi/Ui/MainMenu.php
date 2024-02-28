@@ -38,7 +38,7 @@ class MainMenu extends \Ease\Html\NavTag
             'aria-controls' => "navbarNav",
             'aria-expanded' => "false",
             'aria-label' => _("Toggle navigation")
-                ]);
+        ]);
     }
 
     public function navBarCollapse()
@@ -46,6 +46,12 @@ class MainMenu extends \Ease\Html\NavTag
         $navbarNav = new \Ease\Html\UlTag(null, ['class' => 'navbar-nav me-auto mb-2 mb-lg-0', 'style' => "--bs-scroll-height: 100px;"]);
         $navbarNav->addItemSmart(new \Ease\Html\ATag('https://demo.multiflexi.eu/', _('Demo Site'), ['class' => 'nav-link']), ['class' => 'nav-item']);
         $navbarNav->addItemSmart(new \Ease\Html\ATag('apps.php', _('Applications'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('myapps.php', _('My Apps'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('app.php', _('Submit'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('logout.php', _('Logout'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('app.php', _('Submit'), ['class' => 'nav-link disabled']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('createaccount.php', _('Sign In'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('login.php', _('Sign On'), ['class' => 'nav-link']), ['class' => 'nav-item']);
         return new \Ease\Html\DivTag($navbarNav, ['class' => "collapse navbar-collapse", 'id' => "navbarNav"]);
     }
 }

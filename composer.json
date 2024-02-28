@@ -7,7 +7,7 @@
         "vitexsoftware/ease-twbootstrap5": "dev-main",
         "vitexsoftware/ease-html-widgets": "dev-main",
         "vitexsoftware/ease-fluentpdo": "dev-main",
-        "robmorgan/phinx": "*"
+        "datatables/datatables": "dev-master"
     },
     "license": "MIT",
     "authors": [
@@ -31,14 +31,7 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^9"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "php -r \"copy('vendor/datatables/datatables/media/js/dataTables.bootstrap5.js', 'src/js/dataTables.bootstrap5.js');copy('vendor/datatables/datatables/media/js/jquery.dataTables.js', 'src/js/jquery.dataTables.js');copy('vendor/datatables/datatables/media/css/dataTables.bootstrap5.css','src/css/dataTables.bootstrap5.css');\""
-        ],
-        "post-update-cmd": [
-            "php -r \"copy('vendor/datatables/datatables/media/js/dataTables.bootstrap5.js', 'src/js/dataTables.bootstrap5.js');copy('vendor/datatables/datatables/media/js/jquery.dataTables.js', 'src/js/jquery.dataTables.js');copy('vendor/datatables/datatables/media/css/dataTables.bootstrap5.css','src/css/dataTables.bootstrap5.css');\""
-        ]
+        "phpunit/phpunit": "^9",
+        "robmorgan/phinx": "0.x-dev"
     }
 }

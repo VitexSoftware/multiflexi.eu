@@ -263,7 +263,7 @@ class User extends \Ease\User
      *
      * @param string $newPassword nové heslo
      *
-     * @return string password hash
+     * @return bool password hash
      */
     public function passwordChange($newPassword)
     {

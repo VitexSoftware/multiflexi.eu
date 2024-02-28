@@ -23,12 +23,6 @@ class WebPage extends \Ease\TWB5\WebPage
     public $container = null;
 
     /**
-     * Current Customer
-     * @var \MultiFlexi\Customer
-     */
-    public $customer = null;
-
-    /**
      *
      * @param string $pageTitle
      */
