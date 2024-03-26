@@ -23,11 +23,12 @@ $servers = new Application();
 $allAppData = $servers->getAll();
 
 $fbtable = new Table();
-$fbtable->addRowHeaderColumns(['', _('Name'), _('Description'), _('Executable'), _('Created'), _('Modified'), _('HomePage'), _('Requirements'), _('Container Image'), _('Version'), _('Code'), _('uuid')]);
+$fbtable->addRowHeaderColumns(['', _('Name'), _('Description'), _('Executable'), _('Created'), _('Modified'), _('HomePage'), _('Requirements'), _('Container Image'), _('Version'), _('uuid')]);
 
 foreach ($allAppData as $appData) {
     unset($appData['id']);
     unset($appData['enabled']);
+    unset($appData['code']);
     $appData['image'] = new \Ease\Html\ImgTag($appData['image'], _('Icon'), ['height' => 40]);
     $executablePath = Application::findBinaryInPath($appData['executable']);
     $appData['executable'] = empty($executablePath) ? '<span title="' . _('Command not found') . '">⁉</span> ' . $appData['executable'] : $executablePath;
