@@ -9,7 +9,6 @@
 
 namespace MultiFlexi\Ui;
 
-use Ease\TWB4\LinkButton;
 use MultiFlexi\Ui\PageBottom;
 use MultiFlexi\Ui\PageTop;
 

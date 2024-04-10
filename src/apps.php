@@ -18,32 +18,20 @@ require_once './init.php';
 #$oPage->onlyForLogged();
 $oPage->addItem(new PageTop(_('Applications')));
 
-$servers = new Application();
+$apps = new Application();
 
-$allAppData = $servers->getAll();
+$allAppData = $apps->listingQuery()->select(['uuid', 'image', 'name', 'description', 'homepage', 'version' /*,'labels'*/], true);
 
 $fbtable = new Table();
-$fbtable->addRowHeaderColumns(['', _('Name'), _('Description'), _('Executable'), _('Created'), _('Modified'), _('HomePage'), _('Requirements'), _('Container Image'), _('Version'), _('uuid')]);
+$fbtable->addRowHeaderColumns(['', _('Name'), _('Description'), _('HomePage'), _('Version')]);
 
 foreach ($allAppData as $appData) {
-    unset($appData['id']);
-    unset($appData['enabled']);
-    unset($appData['code']);
+    $uuid = $appData['uuid'];
+    unset($appData['uuid']);
     $appData['image'] = new \Ease\Html\ImgTag($appData['image'], _('Icon'), ['height' => 40]);
-    $executablePath = Application::findBinaryInPath($appData['executable']);
-    $appData['executable'] = empty($executablePath) ? '<span title="' . _('Command not found') . '">⁉</span> ' . $appData['executable'] : $executablePath;
-
-    if (empty($appData['setup']) === false) {
-        $initPath = Application::findBinaryInPath($appData['setup']);
-        $appData['setup'] = (empty($initPath) ? '<span title="' . _('Command not found') . '">⁉</span> ' . $appData['setup'] : $initPath);
-    }
-
-    $appData['homepage'] = new \Ease\Html\ATag($appData['homepage'], $appData['homepage']);
     $appData['name'] = _($appData['name']);
     $appData['description'] = _($appData['description']);
-    unset($appData['setup']);
-    unset($appData['cmdparams']);
-    unset($appData['deploy']);
+    $appData['homepage'] = new \Ease\Html\ATag($appData['homepage'], $appData['homepage']);
     $fbtable->addRowColumns($appData);
 }
 

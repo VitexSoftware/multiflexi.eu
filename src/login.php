@@ -16,7 +16,6 @@ use Ease\Html\InputTextTag;
 use Ease\Shared;
 use Ease\TWB5\Col;
 use Ease\TWB5\Form;
-use Ease\TWB5\FormGroup;
 use Ease\TWB5\LinkButton;
 use Ease\TWB5\Panel;
 use Ease\TWB5\Row;
@@ -61,7 +60,7 @@ $submitRow->addColumn(6, $submit);
 $submitRow->addColumn(6, new LinkButton('passwordrecovery.php', '🔑&nbsp;' . _('Password recovery'), 'warning btn-block'));
 
 $loginPanel = new Panel(
-    new ImgTag('images/project-logo.svg', 'logo', ['width' => 20]),
+    new ImgTag('images/multiflexi-logo.svg', 'logo', ['width' => 20]),
     'inverse',
     null,
     $submitRow
