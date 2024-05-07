@@ -4,7 +4,7 @@
  * Multi Flexi - Login page.
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright  2020-2024 Vitex Software
+ * @copyright  2024 Vitex Software
  */
 
 namespace MultiFlexi\Ui;
