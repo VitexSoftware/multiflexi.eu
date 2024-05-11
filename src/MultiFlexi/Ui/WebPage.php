@@ -14,8 +14,8 @@ namespace MultiFlexi\Ui;
  *
  * @author vitex
  */
-class WebPage extends \Ease\TWB5\WebPage
-{
+class WebPage extends \Ease\TWB5\WebPage {
+
     /**
      * Put page contents here
      * @var \Ease\TWB5\Container
@@ -26,8 +26,7 @@ class WebPage extends \Ease\TWB5\WebPage
      *
      * @param string $pageTitle
      */
-    public function __construct($pageTitle = null)
-    {
+    public function __construct($pageTitle = null) {
         parent::__construct($pageTitle);
         $this->container = $this->addItem(new \Ease\TWB5\Container());
         $this->container->setTagClass('container-fluid');

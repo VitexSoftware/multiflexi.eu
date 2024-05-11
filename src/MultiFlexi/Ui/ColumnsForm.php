@@ -15,7 +15,6 @@ use Ease\Html\InputHiddenTag;
 use Ease\Html\InputSubmitTag;
 use Ease\TWB5\Col;
 use Ease\TWB5\Form;
-use Ease\TWB5\FormGroup;
 use Ease\TWB5\Row;
 use Ease\TWB5\SubmitButton;
 
@@ -40,7 +39,7 @@ class ColumnsForm extends Form
      *
      * @var int
      */
-    public $itemsPerRow = 3;
+    public $itemsPerRow = 1;
 
     /**
      * @var \Ease\Engine

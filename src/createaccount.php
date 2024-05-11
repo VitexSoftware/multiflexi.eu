@@ -37,9 +37,9 @@ if ($oPage->isPosted()) {
         if ($testuser->getUserName()) {
             $error = true;
             \Ease\Shared::user()->addStatusMessage(sprintf(
-                _('Mail address %s is already registered'),
-                $emailAddress
-            ), 'warning');
+                            _('Mail address %s is already registered'),
+                            $emailAddress
+                    ), 'warning');
         }
         unset($testuser);
     }
@@ -59,64 +59,66 @@ if ($oPage->isPosted()) {
     if ($testuser->getMyKey()) {
         $error = true;
         \Ease\Shared::user()->addStatusMessage(sprintf(
-            _('Username %s is used. Please choose another one'),
-            $login
-        ), 'warning');
+                        _('Username %s is used. Please choose another one'),
+                        $login
+                ), 'warning');
     }
 
     if ($error == false) {
-        $newAdmin = new \MultiFlexi\User();
+        $newUser = new \MultiFlexi\User();
 
         if (
-                $newAdmin->dbsync([
+                $newUser->dbsync([
                     'email' => $emailAddress,
                     'login' => $login,
-                    $newAdmin->passwordColumn => $newAdmin->encryptPassword($password),
+                    $newUser->passwordColumn => $newUser->encryptPassword($password),
                     'firstname' => $firstname,
                     'lastname' => $lastname,
                 ])
         ) {
-            if ($newAdmin->getUserID() == 1) {
-                $newAdmin->setSettingValue('admin', true);
+            if ($newUser->getUserID() == 1) {
+                $newUser->setSettingValue('admin', true);
                 \Ease\Shared::user()->addStatusMessage(_('Admin account created'), 'success');
-                $newAdmin->setDataValue('enabled', true);
-                $newAdmin->saveToSQL();
+                $newUser->setDataValue('enabled', true);
+                $newUser->saveToSQL();
             } else {
                 \Ease\Shared::user()->addStatusMessage(_('User account created'), 'success');
             }
 
-            $newAdmin->loginSuccess();
+            $newUser->loginSuccess();
 
             $email = $oPage->addItem(new \Ease\HtmlMailer(
-                $newAdmin->getDataValue('email'),
-                _('Sign On info')
+                            $newUser->getDataValue('email'),
+                            _('Sign On info')
             ));
             $email->setMailHeaders(['From' => \Ease\Shared::cfg('EMAIL_FROM')]);
             $email->addItem(new \Ease\Html\DivTag(sprintf(_("Your new %s account:") . "\n", \Ease\Shared::appName())));
-            $email->addItem(new \Ease\Html\DivTag(' Login: ' . $newAdmin->getUserLogin() . "\n"));
+            $email->addItem(new \Ease\Html\DivTag(' Login: ' . $newUser->getUserLogin() . "\n"));
             $email->addItem(new \Ease\Html\DivTag(' Password: ' . $_POST['password'] . "\n"));
             try {
                 $email->send();
             } catch (\Ease\Exception $exc) {
+                
             }
 
             $email = $oPage->addItem(new \Ease\HtmlMailer(
-                \Ease\Shared::cfg('SEND_INFO_TO'),
-                sprintf(
-                    _('New Sign On to %s: %s'),
-                    \Ease\Shared::appName(),
-                    $newAdmin->getUserLogin()
-                )
+                            \Ease\Shared::cfg('SEND_INFO_TO'),
+                            sprintf(
+                                    _('New Sign On to %s: %s'),
+                                    \Ease\Shared::appName(),
+                                    $newUser->getUserLogin()
+                            )
             ));
             $email->setMailHeaders(['From' => \Ease\Shared::cfg('EMAIL_FROM')]);
             $email->addItem(new \Ease\Html\DivTag(_("New User") . ":\n"));
-            $email->addItem(new \Ease\Html\DivTag(' Login: ' . $newAdmin->getUserLogin() . "\n"));
+            $email->addItem(new \Ease\Html\DivTag(' Login: ' . $newUser->getUserLogin() . "\n"));
             try {
                 $email->send();
             } catch (\Ease\Exception $exc) {
+                
             }
 
-            \Ease\Shared::user($newAdmin)->loginSuccess();
+            \Ease\Shared::user($newUser)->loginSuccess();
 
             $oPage->redirect('main.php');
             exit;
@@ -132,40 +134,23 @@ $regFace = $oPage->container->addItem(new \Ease\TWB5\Panel(_('Singn On')));
 
 $regForm = $regFace->addItem(new ColumnsForm(new \MultiFlexi\User()));
 if (\Ease\Shared::user()->getUserID()) {
-    $regForm->addItem(new \Ease\Html\InputHiddenTag(
-        'parent',
-        \Ease\Shared::user()->GetUserID()
-    ));
+    $regForm->addItem(new \Ease\Html\InputHiddenTag('parent', \Ease\Shared::user()->GetUserID()));
 }
 
-$regForm->addInput(
-    new \Ease\Html\InputTextTag('firstname', $firstname),
-    _('Firstname')
-);
-$regForm->addInput(
-    new \Ease\Html\InputTextTag('lastname', $lastname),
-    _('Lastname')
-);
-
 $regForm->addInput(new \Ease\Html\InputTextTag('login'), _('User name') . ' *');
-$regForm->addInput(
-    new \Ease\Html\InputPasswordTag('password'),
-    _('Password') . ' *'
-);
-$regForm->addInput(
-    new \Ease\Html\InputPasswordTag('confirmation'),
-    _('Password confirmation') . ' *'
-);
-$regForm->addInput(
-    new \Ease\Html\InputTextTag('email_address'),
-    _('eMail address') . ' *'
-);
+
+$regForm->addInput(new \Ease\Html\InputTextTag('firstname', $firstname), _('Firstname'));
+$regForm->addInput(new \Ease\Html\InputTextTag('lastname', $lastname), _('Lastname'));
+
+$regForm->addInput(new \Ease\Html\InputPasswordTag('password'), _('Password') . ' *');
+$regForm->addInput(new \Ease\Html\InputPasswordTag('confirmation'), _('Password confirmation') . ' *');
+$regForm->addInput(new \Ease\Html\InputTextTag('email_address'), _('eMail address') . ' *');
 
 $regForm->addItem(new \Ease\Html\DivTag(new \Ease\Html\InputSubmitTag(
-    'Register',
-    _('Register'),
-    ['title' => _('finish registration'), 'class' => 'btn btn-success']
-)));
+                        'Register',
+                        _('Register'),
+                        ['title' => _('finish registration'), 'class' => 'btn btn-success ', 'style' => 'margin: 20px; padding-left: 50px; padding-right: 50px;']
+        )));
 
 if (isset($_POST)) {
     $regForm->fillUp($_POST);

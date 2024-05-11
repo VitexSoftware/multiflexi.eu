@@ -12,10 +12,10 @@ namespace MultiFlexi\Ui;
 use DateTime;
 use Ease\Html\ATag;
 use Ease\Html\SmallTag;
-use Ease\TWB4\LinkButton;
-use Ease\TWB4\Row;
-use Ease\TWB4\Table;
-use Ease\TWB4\Tabs;
+use Ease\TWB5\LinkButton;
+use Ease\TWB5\Row;
+use Ease\TWB5\Table;
+use Ease\TWB5\Tabs;
 use Ease\ui\LiveAge;
 use MultiFlexi\Application;
 use MultiFlexi\Conffield;
@@ -69,27 +69,6 @@ $instanceRow->addColumn(4, new AppEditorForm($apps));
 //    $panel[] = new LinkButton('id=' . $apps->getMyKey() . '&company=' . $_SESSION['company'], sprintf(_('Assign to %s'), $company->getRecordName()), 'success');
 //}
 
-$jobber = new Job();
-$jobs = $jobber->listingQuery()->select(['job.id', 'job.company_id', 'job.begin', 'job.exitcode', 'user.login', 'job.launched_by', 'company.name'], true)->leftJoin('company ON company.id = job.company_id')
-                ->leftJoin('user ON user.id = job.launched_by')
-                ->where('app_id', $apps->getMyKey())->limit(10)->orderBy('job.id DESC')->fetchAll();
-$jobList = new Table();
-$jobList->addRowHeaderColumns([_('Job ID'), _('Company'), _('Launch time'), _('Exit Code'), _('Launched by')]);
-foreach ($jobs as $job) {
-    $job['id'] = new ATag('job.php?id=' . $job['id'], $job['id']);
-    $job['company_id'] = new ATag('company.php?id=' . $job['company_id'], $job['name']);
-    unset($job['name']);
-    $job['launched_by'] = new ATag('user.php?id' . $job['launched_by'], $job['login']);
-    unset($job['login']);
-    if (empty($job['begin'])) {
-        $job['begin'] = '⏳' . _('Not yet');
-    } else {
-        $job['begin'] = [$job['begin'], '<br>', new SmallTag(new LiveAge((new DateTime($job['begin']))->getTimestamp()))];
-    }
-    $job['exitcode'] = new ExitCode($job['exitcode']);
-    $jobList->addRowColumns($job);
-}
-
 $instanceRow->addColumn(4, is_null($apps->getMyKey()) ?
                 new LinkButton('', _('Config fields'), 'inverse disabled  btn-block') :
                 [
@@ -101,17 +80,12 @@ $instanceRow->addColumn(4, new AppLogo($apps));
 
 $appTabs = new Tabs();
 $appTabs->addTab(_('Configuration'), $instanceRow);
-$appTabs->addTab(_('Jobs'), [
-    $jobList,
-    new LinkButton('logs.php?apps_id=' . $apps->getMyKey(), _('Application Log'), 'info'),
-    new LinkButton('joblist.php?app_id=' . $apps->getMyKey(), _('All Application Jobs history'), 'info')
-]);
 $appTabs->addTab(_('Export'), new AppJson($apps));
 
 $oPage->container->addItem(new ApplicationPanel(
-    $apps,
-    $appTabs,
-    ''
+                $apps,
+                $appTabs,
+                ''
 ));
 
 $oPage->addItem(new PageBottom());
