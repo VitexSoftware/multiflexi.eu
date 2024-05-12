@@ -50,9 +50,9 @@ class MainMenu extends \Ease\Html\NavTag {
         $navbarNav = new \Ease\Html\UlTag(null, ['class' => 'navbar-nav ms-auto flex-nowrap navbar-expand mb-2 mb-lg-0', 'style' => "--bs-scroll-height: 100px;"]);
 
         if ($oUser->isLogged()) {
-            $navbarNav->addItemSmart(new \Ease\Html\ATag('myapps.php', _('My Apps'), ['class' => 'nav-link']), ['class' => 'nav-item']);
-            $navbarNav->addItemSmart(new \Ease\Html\ATag('app.php', _('Submit'), ['class' => 'nav-link']), ['class' => 'nav-item']);
-            $navbarNav->addItemSmart(new \Ease\Html\ATag('logout.php', _('Logout'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('myapps.php', new \Ease\Html\ImgTag('images/apps.svg','apps',['height'=>20]) .' ' . _('My Apps'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('app.php', '➕ '. _('Submit'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('logout.php', '🚪 '. _('Logout'), ['class' => 'nav-link']), ['class' => 'nav-item']);
         } else {
             $navbarNav->addItemSmart(new \Ease\Html\ATag('createaccount.php', _('Sign On'), ['class' => 'nav-link']), ['class' => 'nav-item']);
             $navbarNav->addItemSmart(new \Ease\Html\ATag('login.php', _('Sign In'), ['class' => 'nav-link']), ['class' => 'nav-item']);
