@@ -1,38 +1,45 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * MultiFlexi.eu  - WebPage class
+ * This file is part of the MultiFlexi package
  *
- * @author     Vítězslav Dvořák <vitex@arachne.cz>
- * @copyright  2024 Vitex Software
+ * https://multiflexi.eu/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace MultiFlexi\Ui;
 
 /**
- * Description of WebPage
+ * Description of WebPage.
  *
  * @author vitex
  */
-class WebPage extends \Ease\TWB5\WebPage {
-
+class WebPage extends \Ease\TWB5\WebPage
+{
     /**
-     * Put page contents here
-     * @var \Ease\TWB5\Container
+     * Put page contents here.
      */
-    public $container = null;
+    public \Ease\TWB5\Container $container;
 
     /**
-     *
      * @param string $pageTitle
      */
-    public function __construct($pageTitle = null) {
+    public function __construct($pageTitle = null)
+    {
         parent::__construct($pageTitle);
         $this->container = $this->addItem(new \Ease\TWB5\Container());
         $this->container->setTagClass('container-fluid');
         $this->includeCss('css/lightbox.min.css');
         $this->includeJavaScript('js/lightbox.js');
-        $this->addCSS('
-');
+        $this->addCSS(<<<'EOD'
+
+
+EOD);
     }
 }

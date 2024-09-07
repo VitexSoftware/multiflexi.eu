@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * Multi Flexi - Login page.
+ * This file is part of the MultiFlexi package
  *
- * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright  2024 Vitex Software
+ * https://multiflexi.eu/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace MultiFlexi\Ui;
@@ -26,6 +32,7 @@ require_once './init.php';
 $shared = Shared::singleton();
 
 $login = $oPage->getRequestValue('login');
+
 if ($login) {
     //    try {
     //        \Ease\Shared::user() = Shared::user(new User());
@@ -35,6 +42,7 @@ if ($login) {
     if (\Ease\Shared::user()->tryToLogin($_POST)) {
         $oPage->redirect('main.php');
         session_write_close();
+
         exit;
     }
 }
@@ -53,23 +61,23 @@ $infoBlock->addItem(new DivTag(_('Welcome to Multi Flexi'), ['style' => 'text-al
 
 $loginColumn = $loginRow->addItem(new Col(4));
 
-$submit = new SubmitButton('🚪&nbsp;' . _('Sign in'), 'success btn-lg btn-block', ['id' => 'signin']);
+$submit = new SubmitButton('🚪&nbsp;'._('Sign in'), 'success btn-lg btn-block', ['id' => 'signin']);
 
 $submitRow = new Row();
 $submitRow->addColumn(6, $submit);
-$submitRow->addColumn(6, new LinkButton('passwordrecovery.php', '🔑&nbsp;' . _('Password recovery'), 'warning btn-block'));
+$submitRow->addColumn(6, new LinkButton('passwordrecovery.php', '🔑&nbsp;'._('Password recovery'), 'warning btn-block'));
 
 $loginPanel = new Panel(
     new ImgTag('images/multiflexi-logo.svg', 'logo', ['width' => 20]),
     'inverse',
     null,
-    $submitRow
+    $submitRow,
 );
 $loginPanel->addItem(new \Ease\TWB5\InputGroup(
     _('Username'),
     new InputTextTag('login', $login),
     '',
-    _('the username you chose')
+    _('the username you chose'),
 ));
 
 $loginPanel->addItem(new \Ease\TWB5\InputGroup(_('Password'), new InputPasswordTag('password', $login)));
@@ -79,11 +87,11 @@ $loginPanel->body->setTagCss(['margin' => '20px']);
 $loginColumn->addItem('<p><br></p>');
 $loginColumn->addItem($loginPanel);
 
-//$passRecoveryColumn = $loginRow->addItem(new Col(
+// $passRecoveryColumn = $loginRow->addItem(new Col(
 //    4,
 //    new LinkButton('passwordrecovery.php', '<i class="fa fa-key"></i>
-//' . _('Lost password recovery'), 'warning')
-//));
+// ' . _('Lost password recovery'), 'warning')
+// ));
 
 $oPage->container->addItem(new Form([], [], $loginRow));
 

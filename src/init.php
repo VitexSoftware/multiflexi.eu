@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * MultiFlexi.eu - Company instance editor.
+ * This file is part of the MultiFlexi package
  *
- * @author Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright  2024 Vitex Software
+ * https://multiflexi.eu/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace MultiFlexi;
@@ -16,12 +22,12 @@ require_once '../vendor/autoload.php';
 session_start();
 \Ease\Shared::init(
     ['DB_CONNECTION', 'DB_HOST', 'DB_PORT', 'DB_DATABASE', 'DB_USERNAME', 'DB_PASSWORD'],
-    dirname(__DIR__) . '/.env'
+    \dirname(__DIR__).'/.env',
 );
 \Ease\Locale::singleton(null, '../i18n', 'multiflexi');
 $loggers = ['syslog', '\MultiFlexi\LogToSQL'];
 
-define('EASE_LOGGER', implode('|', $loggers));
+\define('EASE_LOGGER', implode('|', $loggers));
 
 Shared::user(null, '\MultiFlexi\User');
 
