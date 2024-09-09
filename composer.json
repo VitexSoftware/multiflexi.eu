@@ -8,7 +8,8 @@
         "vitexsoftware/ease-html-widgets": "dev-main",
         "vitexsoftware/ease-fluentpdo": "dev-main",
         "datatables/datatables": "dev-master",
-        "rcubitto/json-pretty": "dev-master"
+        "rcubitto/json-pretty": "dev-master",
+        "vitexsoftware/ease-core-bricks": "dev-master"
     },
     "license": "MIT",
     "authors": [

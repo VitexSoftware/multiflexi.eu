@@ -4,10 +4,10 @@
  *
  * To rebuild or modify this file with the latest versions of the included
  * software please visit:
- *   https://datatables.net/download/#bs5/jszip-3.10.1/dt-2.0.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0
+ *   https://datatables.net/download/#bs5/jszip-3.10.1/pdfmake-0.2.7/dt-2.1.6/af-2.7.0/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/b-print-3.1.2/cr-2.0.4/date-1.5.3/fc-5.0.1/fh-4.0.1/kt-2.12.1/r-3.0.3/rg-1.5.0/rr-1.5.0/sc-2.4.3/sb-1.8.0/sp-2.3.2/sl-2.0.5/sr-1.4.1
  *
  * Included libraries:
- *   JSZip 3.10.1, DataTables 2.0.0, Buttons 3.0.0, Column visibility 3.0.0, HTML5 export 3.0.0, Print view 3.0.0, ColReorder 2.0.0, DateTime 1.5.2, FixedColumns 5.0.0, FixedHeader 4.0.0, KeyTable 2.12.0, Responsive 3.0.0, RowGroup 1.5.0, RowReorder 1.5.0, Scroller 2.4.0, SearchBuilder 1.7.0, SearchPanes 2.3.0, Select 2.0.0, StateRestore 1.4.0
+ *   JSZip 3.10.1, pdfmake 0.2.7, DataTables 2.1.6, AutoFill 2.7.0, Buttons 3.1.2, Column visibility 3.1.2, HTML5 export 3.1.2, Print view 3.1.2, ColReorder 2.0.4, DateTime 1.5.3, FixedColumns 5.0.1, FixedHeader 4.0.1, KeyTable 2.12.1, Responsive 3.0.3, RowGroup 1.5.0, RowReorder 1.5.0, Scroller 2.4.3, SearchBuilder 1.8.0, SearchPanes 2.3.2, Select 2.0.5, StateRestore 1.4.1
  */
 
 @charset "UTF-8";
@@ -45,13 +45,19 @@ table.dataTable tr.dt-hasChild td.dt-control:before {
 }
 
 html.dark table.dataTable td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable td.dt-control:before {
+:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
+:root[data-theme=dark] table.dataTable td.dt-control:before {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
 html.dark table.dataTable tr.dt-hasChild td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
   border-top-color: rgba(255, 255, 255, 0.5);
   border-left-color: transparent;
+}
+
+div.dt-scroll {
+  width: 100%;
 }
 
 div.dt-scroll-body thead tr,
@@ -347,7 +353,7 @@ table.table.dataTable.table-striped > tbody > tr:nth-of-type(2n+1) > * {
   box-shadow: none;
 }
 table.table.dataTable > :not(caption) > * > * {
-  background-color: transparent;
+  background-color: var(--bs-table-bg);
 }
 table.table.dataTable > tbody > tr {
   background-color: transparent;
@@ -377,6 +383,31 @@ table.table.dataTable.table-hover > tbody > tr.selected:hover > * {
   box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 0.975);
 }
 
+div.dt-container div.dt-layout-start > *:not(:last-child) {
+  margin-right: 1em;
+}
+div.dt-container div.dt-layout-end > *:not(:first-child) {
+  margin-left: 1em;
+}
+div.dt-container div.dt-layout-full {
+  width: 100%;
+}
+div.dt-container div.dt-layout-full > *:only-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+div.dt-container div.dt-layout-table > div {
+  display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+  div.dt-container div.dt-layout-start > *:not(:last-child) {
+    margin-right: 0;
+  }
+  div.dt-container div.dt-layout-end > *:not(:first-child) {
+    margin-left: 0;
+  }
+}
 div.dt-container div.dt-length label {
   font-weight: normal;
   text-align: left;
@@ -399,9 +430,6 @@ div.dt-container div.dt-search input {
   margin-left: 0.5em;
   display: inline-block;
   width: auto;
-}
-div.dt-container div.dt-info {
-  padding-top: 0.85em;
 }
 div.dt-container div.dt-paging {
   margin: 0;
@@ -463,10 +491,18 @@ div.dt-scroll-foot > .dt-scroll-footInner > table > tfoot > tr:first-child {
     justify-content: center !important;
   }
 }
-table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled) {
+table.dataTable.table-sm > thead > tr th.dt-orderable-asc, table.dataTable.table-sm > thead > tr th.dt-orderable-desc, table.dataTable.table-sm > thead > tr th.dt-ordering-asc, table.dataTable.table-sm > thead > tr th.dt-ordering-desc,
+table.dataTable.table-sm > thead > tr td.dt-orderable-asc,
+table.dataTable.table-sm > thead > tr td.dt-orderable-desc,
+table.dataTable.table-sm > thead > tr td.dt-ordering-asc,
+table.dataTable.table-sm > thead > tr td.dt-ordering-desc {
   padding-right: 20px;
 }
-table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled):before, table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled):after {
+table.dataTable.table-sm > thead > tr th.dt-orderable-asc span.dt-column-order, table.dataTable.table-sm > thead > tr th.dt-orderable-desc span.dt-column-order, table.dataTable.table-sm > thead > tr th.dt-ordering-asc span.dt-column-order, table.dataTable.table-sm > thead > tr th.dt-ordering-desc span.dt-column-order,
+table.dataTable.table-sm > thead > tr td.dt-orderable-asc span.dt-column-order,
+table.dataTable.table-sm > thead > tr td.dt-orderable-desc span.dt-column-order,
+table.dataTable.table-sm > thead > tr td.dt-ordering-asc span.dt-column-order,
+table.dataTable.table-sm > thead > tr td.dt-ordering-desc span.dt-column-order {
   right: 5px;
 }
 
@@ -489,6 +525,9 @@ div.table-responsive > div.dt-container > div.row > div[class^=col-]:last-child 
   --dt-row-stripe: 255, 255, 255;
   --dt-column-ordering: 255, 255, 255;
 }
+
+
+div.dt-autofill-handle{position:absolute;height:10px;width:10px;z-index:10;box-sizing:border-box;background:#0d6efd;cursor:pointer}div.dtk-focus-alt div.dt-autofill-handle{background:#ff8b33}div.dt-autofill-select{position:absolute;z-index:1001;background-color:#0d6efd;background-image:repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.5) 5px, rgba(255, 255, 255, 0.5) 10px)}div.dt-autofill-select.top,div.dt-autofill-select.bottom{height:3px;margin-top:-1px}div.dt-autofill-select.left,div.dt-autofill-select.right{width:3px;margin-left:-1px}div.dt-autofill-list{position:fixed;top:50%;left:50%;width:500px;margin-left:-250px;background-color:white;border-radius:.75em;box-shadow:0 12px 30px rgba(0, 0, 0, 0.6);z-index:104;box-sizing:border-box;padding:2em}div.dt-autofill-list div.dtaf-popover-close{position:absolute;top:6px;right:6px;width:22px;height:22px;text-align:center;border-radius:3px;cursor:pointer;z-index:12}div.dt-autofill-list>div.dt-autofill-list-items>button{display:block;width:100%;margin:1em 0;padding:1em;border-radius:.5em;border:1px solid rgba(0, 0, 0, 0.175);background-color:#f6f6f6;text-align:left;cursor:pointer}div.dt-autofill-list>div.dt-autofill-list-items>button:hover{background-color:#ebebeb}div.dt-autofill-list>div.dt-autofill-list-items>button:first-child{margin-top:0}div.dt-autofill-list>div.dt-autofill-list-items>button:last-child{margin-bottom:0}div.dt-autofill-list>div.dt-autofill-list-items>button input[type=number]{display:inline-block;box-sizing:border-box;padding:6px;width:70px;margin:-2px 0}div.dt-autofill-list>div.dt-autofill-list-items>button span{float:right}div.dtaf-popover-closeable{padding-top:2.5em}div.dt-autofill-background{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.7);background:radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);z-index:103}html.dark div.dt-autofill-handle{background:rgb(110, 168, 254)}html.dark div.dt-autofill-select{position:absolute;z-index:1001;background-color:rgb(110, 168, 254);background-image:repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.5) 5px, rgba(0, 0, 0, 0.5) 10px)}html.dark div.dt-autofill-list{background-color:var(--dt-html-background);border:1px solid rgba(255, 255, 255, 0.15)}html.dark div.dt-autofill-list button{color:inherit;border:1px solid rgba(255, 255, 255, 0.175);background-color:rgb(47, 52, 56)}html.dark div.dt-autofill-list button:hover{background-color:rgb(64, 69, 73)}@media screen and (max-width: 767px){div.dt-autofill-handle{height:16px;width:16px}div.dt-autofill-list{width:90%;left:74.5%}}div.dt-autofill-list div.dt-autofill-question input[type=number]{padding:6px;width:60px;margin:-2px 0}div.row.dt-row>div.col-sm-12{position:relative}
 
 
 @keyframes dtb-spinner {
@@ -1314,25 +1353,28 @@ table.dataTable.table-bordered tr:last-child td {
   border-bottom-width: 0;
 }
 
-html[data-bs-theme=dark] table.dataTable thead tr > .dtfc-fixed-start,
-html[data-bs-theme=dark] table.dataTable thead tr > .dtfc-fixed-end,
-html[data-bs-theme=dark] table.dataTable tfoot tr > .dtfc-fixed-start,
-html[data-bs-theme=dark] table.dataTable tfoot tr > .dtfc-fixed-end {
+table.dataTable thead tr > .dtfc-fixed-start,
+table.dataTable thead tr > .dtfc-fixed-end,
+table.dataTable tfoot tr > .dtfc-fixed-start,
+table.dataTable tfoot tr > .dtfc-fixed-end {
+  background-color: var(--bs-table-bg);
+}
+table.dataTable tbody tr > .dtfc-fixed-start,
+table.dataTable tbody tr > .dtfc-fixed-end {
+  background-color: var(--bs-table-bg);
+}
+
+div.dtfc-top-blocker,
+div.dtfc-bottom-blocker {
   background-color: var(--bs-body-bg);
 }
-html[data-bs-theme=dark] table.dataTable tbody tr > .dtfc-fixed-start,
-html[data-bs-theme=dark] table.dataTable tbody tr > .dtfc-fixed-end {
-  background-color: var(--bs-body-bg);
+
+div.dt-scroll-body {
+  border-left-color: var(--bs-table-color) !important;
 }
-html[data-bs-theme=dark] div.dtfc-top-blocker,
-html[data-bs-theme=dark] div.dtfc-bottom-blocker {
-  background-color: var(--bs-body-bg);
-}
-html[data-bs-theme=dark] div.dt-scroll-body {
-  border-left-color: var(--bs-border-color) !important;
-}
-html[data-bs-theme=dark] div.dt-scroll-headInner table.table-bordered tr th:first-child,
-html[data-bs-theme=dark] div.dt-scroll-footInner table.table-bordered tr th:first-child {
+
+div.dt-scroll-headInner table.table-bordered tr th:first-child,
+div.dt-scroll-footInner table.table-bordered tr th:first-child {
   border-left-color: var(--bs-border-color) !important;
 }
 
@@ -1801,6 +1843,7 @@ div.dtsb-searchBuilder {
   cursor: default;
   margin-bottom: 1em;
   text-align: left;
+  width: 100%;
 }
 div.dtsb-searchBuilder button.dtsb-button,
 div.dtsb-searchBuilder select {
@@ -1873,7 +1916,7 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont {
   flex: 1;
   white-space: nowrap;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont span.dtsp-joiner {
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont span.dtsb-joiner {
   margin-right: 0.8em;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont input.dtsb-value {

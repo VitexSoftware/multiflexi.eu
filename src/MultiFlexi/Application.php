@@ -20,33 +20,30 @@ namespace MultiFlexi;
  *
  * @author vitex
  */
-class Application extends Engine
-{
-    public $lastModifiedColumn;
-    public $keyword;
+class Application extends DBEngine {
 
+    public ?string $lastModifiedColumn;
     public Company $company;
 
     /**
      * @param mixed $identifier
      * @param array $options
      */
-    public function __construct($identifier = null, $options = [])
-    {
+    public function __construct($identifier = null, $options = []) {
+        $this->keyword = 'app';
         $this->myTable = 'apps';
         $this->createColumn = 'DatCreate';
         $this->lastModifiedColumn = 'DatUpdate';
         $this->keyword = 'app';
         $this->nameColumn = 'name';
         parent::__construct($identifier, $options);
-        // $this->company = new Company();
+        //$this->company = new Company();
     }
 
     /**
-     * @return Company
+     * @return \MultiFlexi\Company
      */
-    public function getCompany()
-    {
+    public function getCompany() {
         return $this->company;
     }
 
@@ -57,8 +54,7 @@ class Application extends Engine
      *
      * @return int
      */
-    public function takeData($data)
-    {
+    public function takeData($data) {
         $data['enabled'] = \array_key_exists('enabled', $data) ? (($data['enabled'] === 'on') || ($data['enabled'] === 1)) : 0;
 
         if (\array_key_exists('name', $data) && empty($data['name'])) {
@@ -66,10 +62,10 @@ class Application extends Engine
         }
 
         if (\array_key_exists('imageraw', $_FILES) && !empty($_FILES['imageraw']['name'])) {
-            $uploadfile = sys_get_temp_dir().'/'.basename($_FILES['imageraw']['name']);
+            $uploadfile = sys_get_temp_dir() . '/' . basename($_FILES['imageraw']['name']);
 
             if (move_uploaded_file($_FILES['imageraw']['tmp_name'], $uploadfile)) {
-                $data['image'] = 'data:'.mime_content_type($uploadfile).';base64,'.base64_encode(file_get_contents($uploadfile));
+                $data['image'] = 'data:' . mime_content_type($uploadfile) . ';base64,' . base64_encode(file_get_contents($uploadfile));
                 unlink($uploadfile);
                 unset($data['imageraw']);
             }
@@ -86,15 +82,13 @@ class Application extends Engine
         return parent::takeData($data);
     }
 
-    public function getCode()
-    {
+    public function getCode() {
         $data = $this->getData();
 
         return substr(strtoupper($data['executable'] ? basename($data['executable']) : $data['name']), 0, -6);
     }
 
-    public function getUuid()
-    {
+    public function getUuid() {
         return \Ease\Functions::guidv4();
     }
 
@@ -105,8 +99,7 @@ class Application extends Engine
      *
      * @return bool check result
      */
-    public function checkExcutable($command)
-    {
+    public function checkExcutable($command) {
         //        new \Symfony\Component\Process\ExecutableFinder(); TODO
 
         $status = true;
@@ -140,15 +133,14 @@ class Application extends Engine
      *
      * @return string
      */
-    public static function findBinaryInPath($binary)
-    {
+    public static function findBinaryInPath($binary) {
         $found = null;
 
         if ($binary[0] === '/') {
             $found = file_exists($binary) && is_executable($binary) ? $binary : null;
         } else {
             foreach (strstr(getenv('PATH'), ':') ? explode(':', getenv('PATH')) : [getenv('PATH')] as $pathDir) {
-                $candidat = ((substr($pathDir, -1) === '/') ? $pathDir : $pathDir.'/').$binary;
+                $candidat = ((substr($pathDir, -1) === '/') ? $pathDir : $pathDir . '/') . $binary;
 
                 if (file_exists($candidat) && is_executable($candidat)) {
                     $found = $candidat;
@@ -166,8 +158,7 @@ class Application extends Engine
      *
      * @return bool
      */
-    public static function doesBinaryExist($binary)
-    {
+    public static function doesBinaryExist($binary) {
         return ($binary[0] === '/') ? file_exists($binary) : self::isBinaryInPath($binary);
     }
 
@@ -176,8 +167,7 @@ class Application extends Engine
      *
      * @return bool
      */
-    public static function isBinaryInPath($binary)
-    {
+    public static function isBinaryInPath($binary) {
         return !empty(self::findBinaryInPath($binary));
     }
 
@@ -188,8 +178,7 @@ class Application extends Engine
      *
      * @return array
      */
-    public function getPlatformApps($platform)
-    {
+    public function getPlatformApps($platform) {
         $platformApps = [];
         $confField = new Conffield();
 
@@ -197,7 +186,7 @@ class Application extends Engine
             $appConfFields = $confField->appConfigs($appInfo['id']);
             $appConfs = array_keys($appConfFields);
 
-            if (preg_grep('/^'.strtoupper($platform).'_.*/', $appConfs)) {
+            if (preg_grep('/^' . strtoupper($platform) . '_.*/', $appConfs)) {
                 $platformApps[$appId] = $appInfo;
             }
         }
@@ -212,8 +201,7 @@ class Application extends Engine
      *
      * @return \Envms\FluentPDO\Query
      */
-    public function getAvailbleApps($platform)
-    {
+    public function getAvailbleApps($platform) {
         return $this->listingQuery()->where('enabled', true);
     }
 
@@ -222,8 +210,7 @@ class Application extends Engine
      *
      * @return string Json
      */
-    public function getAppJson()
-    {
+    public function getAppJson() {
         $appData = $this->getData();
 
         if ($this->getMyKey()) {
@@ -249,9 +236,8 @@ class Application extends Engine
      *
      * @return string
      */
-    public function jsonFileName()
-    {
-        return strtolower(trim(preg_replace('#\W+#', '_', (string) $this->getRecordName()), '_')).'.multiflexi.app.json';
+    public function jsonFileName() {
+        return strtolower(trim(preg_replace('#\W+#', '_', (string) $this->getRecordName()), '_')) . '.multiflexi.app.json';
     }
 
     /**
@@ -261,8 +247,7 @@ class Application extends Engine
      *
      * @return array
      */
-    public function importAppJson($jsonFile)
-    {
+    public function importAppJson($jsonFile) {
         $fields = [];
 
         $codes = $this->listingQuery()->select('code', true)->fetchAll('code');
@@ -277,70 +262,88 @@ class Application extends Engine
 
                 $environment = \array_key_exists('environment', $importData) ? $importData['environment'] : [];
                 unset($importData['environment']);
-                $this->addStatusMessage('Importing '.$importData['name'].' from '.$jsonFile.' created by '.$importData['multiflexi'], 'debug');
+                $this->addStatusMessage('Importing ' . $importData['name'] . ' from ' . $jsonFile . ' created by ' . $importData['multiflexi'], 'debug');
                 unset($importData['multiflexi']);
                 $importData['requirements'] = \array_key_exists('requirements', $importData) ? (string) ($importData['requirements']) : '';
 
                 if (\array_key_exists('uuid', $importData) && !empty($importData['uuid'])) {
                     $candidat = $this->listingQuery()->where('uuid', $importData['uuid']);
                 } else {
-                    $candidat = $this->listingQuery()->where('executable', $importData['executable'])->whereOr('name', $importData['name']);
+                    $this->addStatusMessage(_('UUID field not present. '), 'error');
+
+                    exit(1);
                 }
+
+                $newVersion = \array_key_exists('version', $importData) ? $importData['version'] : 'n/a';
 
                 if ($candidat->count()) { // Update
                     $this->setMyKey($candidat->fetchColumn());
+                    $currentData = $candidat->fetchAll();
+                    $currentVersion = \array_key_exists('version', $currentData[0]) ? $currentData[0]['version'] : 'n/a';
                 } else { // Insert
-                    if ((\array_key_exists('uuid', $importData) === false) || empty($importData['uuid'])) {
-                        $importData['uuid'] = \Ease\Functions::guidv4();
-                    }
+                    $currentVersion = 'n/a';
 
                     if ((\array_key_exists('code', $importData) === false) || empty($importData['code'])) {
                         $importData['code'] = substr(substr(strtoupper($importData['executable'] ? basename($importData['executable']) : $importData['name']), -7), 0, 6);
                         $pos = 0;
 
                         while (\array_key_exists($importData['code'], $codes)) {
-                            $importData['code'] = substr(substr(strtoupper($importData['executable'] ? basename($importData['executable']) : $importData['name']), -7), 0, 5).$pos++;
+                            $importData['code'] = substr(substr(strtoupper($importData['executable'] ? basename($importData['executable']) : $importData['name']), -7), 0, 5) . $pos++;
                         }
                     }
                 }
 
-                $this->takeData($importData);
+                if (\array_key_exists('topics', $importData) === false) {
+                    $this->addStatusMessage(_('Topics field not present. '), 'warning');
+                }
 
-                try {
-                    if ($this->dbsync()) {
-                        $fields = [$importData['name']];
+                if ($currentVersion === $newVersion) {
+                    $this->addStatusMessage('🧩📦 ' . $importData['name'] . '(' . $currentVersion . ') already present', 'info');
+                    $fields = [true];
+                } else {
+                    $this->takeData($importData);
 
-                        if (empty($environment) === false) {
-                            $confField = new Conffield();
+                    try {
+                        if ($this->dbsync()) {
+                            $fields = [];
 
-                            foreach ($environment as $envName => $envProperties) {
-                                if ($confField->addAppConfig($this->getMyKey(), $envName, $envProperties)) {
-                                    $fields[] = $envName;
+                            if (empty($environment) === false) {
+                                $confField = new Conffield();
+
+                                foreach ($environment as $envName => $envProperties) {
+                                    if ($confField->addAppConfig($this->getMyKey(), $envName, $envProperties)) {
+                                        $fields[] = $envName;
+                                    }
                                 }
                             }
-                        }
 
-                        $this->addStatusMessage('Import:'.implode(',', $fields), 'success');
+                            $this->addStatusMessage('🧩📦 ' . $importData['name'] . '(' . $currentVersion . ' ➟ ' . $newVersion . '): ' . implode(',', $fields), 'success');
+                            $executable = self::findBinaryInPath($this->getDataValue('executable'));
 
-                        $executable = self::findBinaryInPath($this->getDataValue('executable'));
+                            if (empty($executable)) {
+                                $this->addStatusMessage(sprintf(_('executable %s not found'), $this->getDataValue('executable')), 'warning');
 
-                        if (empty($executable)) {
-                            $this->addStatusMessage(sprintf(_('executable %s not found'), $this->getDataValue('executable')), 'warning');
+                                if (\array_key_exists('deploy', $importData) && !empty($envProperties['deploy'])) {
+                                    $this->addStatusMessage(sprintf(_('consider: %s'), $importData['deploy']), 'info');
+                                }
+                            }
 
-                            if (\array_key_exists('deploy', $importData) && !empty($envProperties['deploy'])) {
-                                $this->addStatusMessage(sprintf(_('consider: %s'), $importData['deploy']), 'info');
+                            if (empty($fields)) {
+                                $fields = [true];
                             }
                         }
+                    } catch (\PDOException $exc) {
+                        echo $exc->getTraceAsString();
+                        fwrite(\STDERR, print_r($appSpecRaw, true) . \PHP_EOL);
+                        $problemData = $this->getData();
+                        $problemData['image'] = substr($problemData['image'], 0, 20) . ' ...';
+                        fwrite(\STDERR, print_r($problemData, true) . \PHP_EOL);
+                        echo $exc->getMessage();
                     }
-                } catch (\PDOException $exc) {
-                    echo $exc->getTraceAsString();
-                    fwrite(\STDERR, print_r($appSpecRaw, 1).\PHP_EOL);
-                    fwrite(\STDERR, print_r($this->getData(), 1).\PHP_EOL);
-                    echo $exc->getMessage();
                 }
             }
         } else {
-            $this->addStatusMessage(sprintf(_('The %s does not contain valid json').' '.json_last_error_msg(), $jsonFile), 'error');
+            $this->addStatusMessage(sprintf(_('The %s does not contain valid json') . ' ' . json_last_error_msg(), $jsonFile), 'error');
         }
 
         return $fields;
@@ -353,13 +356,12 @@ class Application extends Engine
      *
      * @return bool app removal status
      */
-    public function JsonAppRemove($jsonFile)
-    {
+    public function jsonAppRemove($jsonFile) {
         $success = true;
         $importData = json_decode(file_get_contents($jsonFile), true);
 
         if (\is_array($importData)) {
-            $candidat = $this->listingQuery()->whereOr('uuid', $importData['uuid'])->where('executable', $importData['executable'])->whereOr('name', $importData['name']);
+            $candidat = $this->listingQuery()->whereOr('uuid', $importData['uuid'])->whereOr('name', $importData['name']);
 
             if ($candidat->count()) {
                 foreach ($candidat as $candidatData) {
@@ -385,22 +387,54 @@ class Application extends Engine
      *
      * @return bool
      */
-    public function deleteFromSQL($data = null)
-    {
+    public function deleteFromSQL($data = null) {
         if (null === $data) {
             $data = $this->getData();
         }
 
-        $a2c = $this->getFluentPDO()->deleteFrom('companyapp')->where('app_id', $this->getMyKey($data))->execute();
-        $this->addStatusMessage(sprintf(_('Unassigned from %d companys'), $a2c), null === $a2c ? 'error' : 'success');
-        $a2rt = $this->getFluentPDO()->deleteFrom('runtemplate')->where('app_id', $this->getMyKey($data))->execute();
-        $this->addStatusMessage(sprintf(_('%s RunTemplate removal'), $a2rt), null === $a2rt ? 'error' : 'success');
-        $a2cf = $this->getFluentPDO()->deleteFrom('conffield')->where('app_id', $this->getMyKey($data))->execute();
-        $this->addStatusMessage(sprintf(_('%d Config fields removed'), $a2rt), null === $a2rt ? 'error' : 'success');
-        $a2job = $this->getFluentPDO()->deleteFrom('job')->where('app_id', $this->getMyKey($data))->execute();
-        $this->addStatusMessage(sprintf(_('%d Jobs removed'), $a2job), null === $a2job ? 'error' : 'success');
+        $appId = $this->getMyKey($data);
 
-        return parent::deleteFromSQL($data);
+        $a2c = $this->getFluentPDO()->deleteFrom('companyapp')->where('app_id', $appId)->execute();
+
+        if ($a2c !== 0) {
+            $this->addStatusMessage(sprintf(_('Unassigned from %d companys'), $a2c), null === $a2c ? 'error' : 'success');
+        }
+
+        $runtemplates = $this->getFluentPDO()->from('runtemplate')->where('app_id', $appId)->fetchAll();
+
+        foreach ($runtemplates as $runtemplate) {
+            $rt2ac = $this->getFluentPDO()->deleteFrom('actionconfig')->where('runtemplate_id', $runtemplate['id'])->execute();
+
+            if ($rt2ac !== 0) {
+                $this->addStatusMessage(sprintf(_('%s Action Config removal'), $runtemplate['name']), null === $rt2ac ? 'error' : 'success');
+            }
+        }
+
+        $a2rt = $this->getFluentPDO()->deleteFrom('runtemplate')->where('app_id', $appId)->execute();
+
+        if ($a2rt !== 0) {
+            $this->addStatusMessage(sprintf(_('%s RunTemplate removal'), $a2rt), null === $a2rt ? 'error' : 'success');
+        }
+
+        $a2cf = $this->getFluentPDO()->deleteFrom('conffield')->where('app_id', $appId)->execute();
+
+        if ($a2cf !== 0) {
+            $this->addStatusMessage(sprintf(_('%d Config fields removed'), $a2rt), null === $a2rt ? 'error' : 'success');
+        }
+
+        $a2cfg = $this->getFluentPDO()->deleteFrom('configuration')->where('app_id', $appId)->execute();
+
+        if ($a2cfg !== 0) {
+            $this->addStatusMessage(sprintf(_('%d Configurations removed'), $a2cfg), null === $a2cfg ? 'error' : 'success');
+        }
+
+        $a2job = $this->getFluentPDO()->deleteFrom('job')->where('app_id', $appId)->execute();
+
+        if ($a2job !== 0) {
+            $this->addStatusMessage(sprintf(_('%d Jobs removed'), $a2job), null === $a2job ? 'error' : 'success');
+        }
+
+        return parent::deleteFromSQL($this->getMyKey($data));
     }
 
     /**
@@ -408,8 +442,50 @@ class Application extends Engine
      *
      * @return array
      */
-    public function getAppEnvironmentFields()
-    {
+    public function getAppEnvironmentFields() {
         return Conffield::getAppConfigs($this->getMyKey());
+    }
+
+    public function getRequirements() {
+        return $this->getDataValue('requirements');
+    }
+
+    /**
+     * @param array $columns
+     *
+     * @return array
+     */
+    public function columns($columns = []) {
+        return parent::columns([
+                    ['name' => 'id', 'type' => 'text', 'label' => _('ID'),
+                        'detailPage' => 'app.php', 'valueColumn' => 'apps.id', 'idColumn' => 'apps.id',],
+                    ['name' => 'icon', 'type' => 'text', 'label' => _('Icon')],
+                    ['name' => 'name', 'type' => 'text', 'label' => _('Name')],
+                    ['name' => 'description', 'type' => 'text', 'label' => _('Description')],
+                    ['name' => 'version', 'type' => 'text', 'label' => _('Version')],
+                    ['name' => 'topics', 'type' => 'text', 'label' => _('Topics')],
+                    ['name' => 'executable', 'type' => 'text', 'label' => _('Executable')],
+                    ['name' => 'uuid', 'type' => 'text', 'label' => _('UUID')],
+        ]);
+    }
+
+    public function completeDataRow(array $dataRowRaw) {
+        $dataRow = current(Ui\AppsSelector::translateColumns([$dataRowRaw], ['name', 'description']));
+        $dataRow['name'] = '<a title="' . $dataRowRaw['name'] . '" href="app.php?id=' . $dataRowRaw['id'] . '">' . $dataRowRaw['name'] . '</a>';
+        $dataRow['icon'] = '<a title="' . $dataRowRaw['name'] . '" href="app.php?id=' . $dataRowRaw['id'] . '"><img src="appimage.php?uuid=' . $dataRowRaw['uuid'] . '" height="50">';
+
+        $topics = new \Ease\Html\DivTag();
+
+        if (empty($dataRow['topics']) === false) {
+            foreach (explode(',', $dataRow['topics']) as $topic) {
+                $topics->addItem(new \Ease\TWB5\Badge('secondary', $topic));
+            }
+
+            $dataRow['topics'] = (string) $topics;
+        }
+
+        //        $dataRowRaw['created'] = (new LiveAge((new DateTime($dataRowRaw['created']))->getTimestamp()))->__toString();
+
+        return parent::completeDataRow($dataRow);
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25155da5590809b3835f59dfd689f4c1",
+    "content-hash": "9a9f10c5b8e5302bdd3c911f0512fb68",
     "packages": [
         {
             "name": "datatables/datatables",
@@ -484,6 +484,59 @@
                 }
             ],
             "time": "2024-09-07T08:47:31+00:00"
+        },
+        {
+            "name": "vitexsoftware/ease-core-bricks",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VitexSoftware/php-ease-bricks.git",
+                "reference": "efc366a3d956ed56a53a5912202bcb14126f4145"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VitexSoftware/php-ease-bricks/zipball/efc366a3d956ed56a53a5912202bcb14126f4145",
+                "reference": "efc366a3d956ed56a53a5912202bcb14126f4145",
+                "shasum": ""
+            },
+            "require": {
+                "vitexsoftware/ease-html": ">=1.31"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ease\\": "src/Ease",
+                    "Ease\\ui\\": "src/Ease/ui"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Vítězslav Dvořák",
+                    "email": "info@vitexsoftware.cz",
+                    "homepage": "http://vitexsoftware.com/"
+                }
+            ],
+            "description": "EasePHP framework addons and code snipplets",
+            "homepage": "http://v.s.cz/ease.php",
+            "support": {
+                "issues": "https://github.com/VitexSoftware/php-ease-bricks/issues",
+                "source": "https://github.com/VitexSoftware/php-ease-bricks/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/VitexSoftware",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2023-11-14T18:15:29+00:00"
         },
         {
             "name": "vitexsoftware/ease-fluentpdo",
