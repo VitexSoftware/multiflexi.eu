@@ -40,7 +40,6 @@ class ColumnsForm extends Form
      * Počet položek na řádek.
      */
     public int $itemsPerRow = 1;
-
     public \Ease\Engine $engine = null;
 
     /**

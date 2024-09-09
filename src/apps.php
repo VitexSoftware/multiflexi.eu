@@ -21,7 +21,7 @@ $oPage->addItem(new PageTop(_('Applications')));
 
 $oPage->container->addItem(new DBDataTable(new \MultiFlexi\Application()));
 
-//$oPage->container->addItem(new \Ease\TWB5\Panel(_('Availble Applications'), 'default', $fbtable, new LinkButton('app.php', _('Register new'))));
+// $oPage->container->addItem(new \Ease\TWB5\Panel(_('Availble Applications'), 'default', $fbtable, new LinkButton('app.php', _('Register new'))));
 
 $oPage->addItem(new PageBottom());
 

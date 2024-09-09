@@ -24,7 +24,6 @@ class PageTop extends \Ease\Html\DivTag
      * Titulek stránky.
      */
     public string $pageTitle;
-
     public \Ease\Html\DivTag $status;
 
     /**
