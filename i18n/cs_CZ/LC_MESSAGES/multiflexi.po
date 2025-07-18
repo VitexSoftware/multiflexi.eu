@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Multi Flexi\n"
-"POT-Creation-Date: 2024-05-12 13:11+0200\n"
-"PO-Revision-Date: 2024-05-12 13:18+0200\n"
+"POT-Creation-Date: 2025-07-19 00:02+0200\n"
+"PO-Revision-Date: 2025-07-19 00:03+0200\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -10,410 +10,613 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SearchPath-0: ../src\n"
 "X-Poedit-SearchPathExcluded-0: ../vendor\n"
 
-#: ../src/MultiFlexi/Application.php:66
+#: ../src/MultiFlexi/Application.php:64
 msgid "Name is empty"
 msgstr "Jméno je prázdné"
 
-#: ../src/MultiFlexi/Application.php:114
+#: ../src/MultiFlexi/Application.php:115
 #, php-format
 msgid "Executable %s does not exist"
 msgstr "Příkaz %s neexistuje"
 
-#: ../src/MultiFlexi/Application.php:120
+#: ../src/MultiFlexi/Application.php:122
 #, php-format
 msgid "Executable %s does not exist in search PATH %s"
 msgstr "Příkaz %s není v prohledávané cestě %s"
 
-#: ../src/MultiFlexi/Application.php:124
+#: ../src/MultiFlexi/Application.php:126
 #, php-format
 msgid "file %s is not executable"
 msgstr "soubor %s není spustitelný"
 
-#: ../src/MultiFlexi/Application.php:313
+# Untranslated strings translated to Czech
+#: ../src/MultiFlexi/Application.php:286
+msgid "UUID field not present. "
+msgstr "Pole UUID není přítomno. "
+
+#: ../src/MultiFlexi/Application.php:311
+msgid "Topics field not present. "
+msgstr "Pole témata není přítomno."
+
+#: ../src/MultiFlexi/Application.php:338
 #, php-format
 msgid "executable %s not found"
 msgstr "spustitelný soubor %s nenalezen"
 
-#: ../src/MultiFlexi/Application.php:315
+#: ../src/MultiFlexi/Application.php:341
 #, php-format
 msgid "consider: %s"
 msgstr "zvažte: %s"
 
-#: ../src/MultiFlexi/Application.php:327
+#: ../src/MultiFlexi/Application.php:360
 #, php-format
 msgid "The %s does not contain valid json"
 msgstr "%s neobsahuje platný json"
 
-#: ../src/MultiFlexi/Application.php:352
+#: ../src/MultiFlexi/Application.php:390
 #, php-format
 msgid "Application removal %d %s"
 msgstr "Odstranění aplikace %d %s"
 
-#: ../src/MultiFlexi/Application.php:372
+#: ../src/MultiFlexi/Application.php:416
 #, php-format
 msgid "Unassigned from %d companys"
 msgstr "Odebráno z %d společnosti"
 
-#: ../src/MultiFlexi/Application.php:374
+#: ../src/MultiFlexi/Application.php:425
+#, fuzzy, php-format
+#| msgid "Application removal %d %s"
+msgid "%s Action Config removal"
+msgstr "Odstranění aplikace %d %s"
+
+#: ../src/MultiFlexi/Application.php:432
 #, php-format
 msgid "%s RunTemplate removal"
 msgstr "%s Předloh běhu odstraněno"
 
-#: ../src/MultiFlexi/Application.php:376
+#: ../src/MultiFlexi/Application.php:438
 #, php-format
 msgid "%d Config fields removed"
 msgstr "%d konfiguračních polí odstraněno"
 
-#: ../src/MultiFlexi/Application.php:378
+#: ../src/MultiFlexi/Application.php:444
+#, fuzzy, php-format
+#| msgid "Configuration removed"
+msgid "%d Configurations removed"
+msgstr "Konfigurace odstraněna"
+
+#: ../src/MultiFlexi/Application.php:450
 #, php-format
 msgid "%d Jobs removed"
 msgstr "%d úloh odstraněno"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:28
+#: ../src/MultiFlexi/Application.php:479
+msgid "ID"
+msgstr "ID"
+
+#: ../src/MultiFlexi/Application.php:481
+msgid "Icon"
+msgstr "Ikona"
+
+#: ../src/MultiFlexi/Application.php:482
+msgid "Name"
+msgstr "Jméno"
+
+#: ../src/MultiFlexi/Application.php:483
+msgid "Description"
+msgstr "Popis"
+
+#: ../src/MultiFlexi/Application.php:484
+msgid "Version"
+msgstr "Verze"
+
+#: ../src/MultiFlexi/Application.php:485
+msgid "Topics"
+msgstr "Témata"
+
+#: ../src/MultiFlexi/Application.php:486
+msgid "Executable"
+msgstr "Spustitelný soubor"
+
+#: ../src/MultiFlexi/Application.php:487
+msgid "UUID"
+msgstr "UUID"
+
+#: ../src/MultiFlexi/DBEngine.php:142
+#, php-format
+msgid "New %s"
+msgstr "Nový %s"
+
+#: ../src/MultiFlexi/DBEngine.php:143
+#, php-format
+msgid "Edit %s"
+msgstr "Uprav %s"
+
+#: ../src/MultiFlexi/DBEngine.php:144
+#, php-format
+msgid "Remove %s"
+msgstr "Odstranit %s"
+
+#: ../src/MultiFlexi/DBEngine.php:145
+#, php-format
+msgid "Create new %s"
+msgstr "Vytvořit nový %s"
+
+#: ../src/MultiFlexi/DBEngine.php:146
+#, php-format
+msgid "Editing %s"
+msgstr "Upravuji %s"
+
+#: ../src/MultiFlexi/DBEngine.php:147
+#, php-format
+msgid "Removing %s"
+msgstr "Odstraňuji %s"
+
+#: ../src/MultiFlexi/DBEngine.php:149
+#, php-format
+msgid "Are you sure you wish to delete %%d row of %s ?"
+msgstr "Opravdu chceš smazat %%d řádků z %s ?"
+
+#: ../src/MultiFlexi/DBEngine.php:193
+#, php-format
+msgid "Missing ColumnInfo name for %s/%s"
+msgstr "Chybí informace o jménu pro %s/%s"
+
+#: ../src/MultiFlexi/DBEngine.php:201
+#, php-format
+msgid "Missing ColumnInfo type for %s/%s"
+msgstr "Chybí informace o typu pro %s/%s"
+
+#: ../src/MultiFlexi/DBEngine.php:215
+msgid "Id"
+msgstr "Id"
+
+#: ../src/MultiFlexi/DBEngine.php:226
+msgid "Updated"
+msgstr "Aktualizováno"
+
+#: ../src/MultiFlexi/DBEngine.php:236
+msgid "Created"
+msgstr "Vytvořeno"
+
+#: ../src/MultiFlexi/DBEngine.php:535
+#, php-format
+msgid "%s is not valid email"
+msgstr "%s není platným emailem"
+
+#: ../src/MultiFlexi/DBEngine.php:566
+#, php-format
+msgid "A %s is required"
+msgstr "%s je vyžadován"
+
+#: ../src/MultiFlexi/DBEngine.php:573
+#, php-format
+msgid "A %s is not unique"
+msgstr "%s není jedinečný"
+
+#: ../src/MultiFlexi/DBEngine.php:715
+#, php-format
+msgid "Field Type is not set for %s "
+msgstr "Typ políčka není nastaven pr  %s "
+
+#: ../src/MultiFlexi/DBEngine.php:829
+msgid "Error saving record"
+msgstr "Chyba ukládání záznamu"
+
+#: ../src/MultiFlexi/DBEngine.php:962
+#, php-format
+msgid "Column \"%s\" of %s without type definition"
+msgstr "Políčko \"%s\" z %s bez definice typu"
+
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:34
 msgid "Application name"
 msgstr "Jméno aplikace"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:29
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:35
 #, fuzzy
 #| msgid "Application Icon"
 msgid "Application code"
 msgstr "Ikona Aplikace"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:30
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:36
 msgid "Application Description"
 msgstr "Popisek aplikace"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:31
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:37
 msgid "Path to binary"
 msgstr "Cesta k binárce"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:32
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:38
 msgid "Setup Command"
 msgstr "Příkaz pro nastavení"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:32
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:38
 msgid "Command used to setup new company for use with command"
 msgstr "Příkaz použitý pro nastavení nové společnosti pro použití s příkazem"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:33
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:39
 msgid "Command arguments"
 msgstr "Parametry příkazu"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:33
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:39
 msgid ""
 "you can use macros like {ABRAFLEXI_URL} or custom defined config fields."
 msgstr ""
 "je možné použít makra jako {ABRAFLEXI_URL} nebo uživatelsky definovaná pole."
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:34
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:40
 msgid "Application Icon"
 msgstr "Ikona Aplikace"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:35
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:41
 msgid "Enabled"
 msgstr "Povoleno"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:36
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:42
 msgid "Application Homepage"
 msgstr "Domovská stránka aplikace"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:37
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:43
 msgid "Container image"
 msgstr "Obraz pro Kontainer"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:38
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:44
 #, fuzzy
 #| msgid "Error saving Application"
 msgid "Current Version of Application"
 msgstr "Chyba ukládání Aplikace"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:39
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:45
 msgid "Application deploy command"
 msgstr "Příkaz pro instalaci aplikace"
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:40
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:46
 msgid "Application Universal Unique Identifier"
 msgstr ""
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:41
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:47
 msgid "Topics divided by column"
 msgstr ""
 
-#: ../src/MultiFlexi/Ui/AppEditorForm.php:42
-#: ../src/MultiFlexi/Ui/ColumnsForm.php:125
+#: ../src/MultiFlexi/Ui/AppEditorForm.php:48
+#: ../src/MultiFlexi/Ui/ColumnsForm.php:120
 msgid "Save"
 msgstr "Ulož"
 
-#: ../src/MultiFlexi/Ui/AppJson.php:23
+#: ../src/MultiFlexi/Ui/AppJson.php:29
 msgid "Download"
 msgstr "Stahnout"
 
-#: ../src/MultiFlexi/Ui/ApplicationPanel.php:43 ../src/app.php:64
+#: ../src/MultiFlexi/Ui/ApplicationPanel.php:42 ../src/app.php:63
 msgid "Application"
 msgstr "Aplikace"
 
-#: ../src/MultiFlexi/Ui/ColumnsForm.php:137
+#: ../src/MultiFlexi/Ui/ColumnsForm.php:132
 msgid "Save and back"
 msgstr "Ulož a vrať se"
 
-#: ../src/MultiFlexi/Ui/ColumnsForm.php:149
+#: ../src/MultiFlexi/Ui/ColumnsForm.php:144
 msgid "Save and next"
 msgstr "Ulož a pokračuj"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:26
+#: ../src/MultiFlexi/Ui/MainMenu.php:31
 msgid "Demo Site"
 msgstr ""
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:27
+#: ../src/MultiFlexi/Ui/MainMenu.php:32
 msgid "Apps"
 msgstr "Appky"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:28
+#: ../src/MultiFlexi/Ui/MainMenu.php:33
 msgid "Install"
 msgstr "Instalace"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:43
+#: ../src/MultiFlexi/Ui/MainMenu.php:49
 #, fuzzy
 #| msgid "Configuration"
 msgid "Toggle navigation"
 msgstr "Konfigurace"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:53
+#: ../src/MultiFlexi/Ui/MainMenu.php:60
 msgid "My Apps"
 msgstr "Mé Aplikace"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:54
+#: ../src/MultiFlexi/Ui/MainMenu.php:61
 #, fuzzy
 msgid "Submit"
 msgstr "Uložit"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:55
+#: ../src/MultiFlexi/Ui/MainMenu.php:62
 msgid "Logout"
 msgstr "Odhlášení"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:57
+#: ../src/MultiFlexi/Ui/MainMenu.php:64
 msgid "Sign On"
 msgstr "Registrace"
 
-#: ../src/MultiFlexi/Ui/MainMenu.php:58 ../src/login.php:42
+#: ../src/MultiFlexi/Ui/MainMenu.php:65 ../src/login.php:50
 msgid "Sign In"
 msgstr "Přihlásit"
 
-#: ../src/MultiFlexi/Ui/PageBottom.php:44
+#: ../src/MultiFlexi/Ui/PageBottom.php:49
 msgid "Github Project"
 msgstr "Projekt na Githubu"
 
-#: ../src/MultiFlexi/Ui/PageBottom.php:45
+#: ../src/MultiFlexi/Ui/PageBottom.php:50
 msgid "LinkedIN Product page"
 msgstr ""
 
-#: ../src/MultiFlexi/Ui/PageTop.php:65
-msgid "Click to hide messages"
-msgstr "Klikněte pro skrytí zpráv"
-
-#: ../src/MultiFlexi/User.php:158
+#: ../src/MultiFlexi/User.php:150
 msgid "missing login"
 msgstr "chybějící přihlašovací jméno"
 
-#: ../src/MultiFlexi/User.php:162
+#: ../src/MultiFlexi/User.php:155
 msgid "missing password"
 msgstr "chybí heslo"
 
-#: ../src/MultiFlexi/User.php:182
+#: ../src/MultiFlexi/User.php:180
 msgid "invalid password"
 msgstr "chybné heslo"
 
-#: ../src/MultiFlexi/User.php:189
+#: ../src/MultiFlexi/User.php:187
 #, php-format
 msgid "user %s does not exist"
 msgstr "uživatel %s neexistuje"
 
-#: ../src/app.php:31
+#: ../src/app.php:28
 msgid "n/a"
 msgstr "neudáno"
 
-#: ../src/app.php:39
+#: ../src/app.php:36
 #, fuzzy, php-format
 #| msgid "Application removal %d %s"
 msgid "Application %s removal"
 msgstr "Odstranění aplikace %d %s"
 
-#: ../src/app.php:45
+#: ../src/app.php:44
 msgid "Application Saved"
 msgstr "Aplikace uložena"
 
-#: ../src/app.php:49
+#: ../src/app.php:48
 msgid "Error saving Application"
 msgstr "Chyba ukládání Aplikace"
 
-#: ../src/app.php:59
+#: ../src/app.php:58
 msgid "New Application"
 msgstr "Nová Aplikace"
 
-#: ../src/app.php:73
+#: ../src/app.php:72
 msgid "Config fields"
 msgstr "Pole nastavení"
 
-#: ../src/app.php:76
+#: ../src/app.php:75
 msgid "Config fields editor"
 msgstr "Editor Konfiguračních položek"
 
-#: ../src/app.php:82
+#: ../src/app.php:81
 msgid "Configuration"
 msgstr "Konfigurace"
 
-#: ../src/app.php:83
+#: ../src/app.php:82
 msgid "Export"
 msgstr "Export"
 
-#: ../src/apps.php:19
+#: ../src/apps.php:20
 msgid "Applications"
 msgstr "Aplikace"
 
-#: ../src/apps.php:26
-msgid "Name"
-msgstr "Jméno"
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid ""
+"assert.fail() with more than one argument is deprecated. Please use assert."
+"strictEqual() instead or only pass a message."
+msgstr ""
 
-#: ../src/apps.php:26
-msgid "Description"
-msgstr "Popis"
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "expected"
+msgstr ""
 
-#: ../src/apps.php:26
-msgid "HomePage"
-msgstr "Domovská stránka"
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "fn"
+msgstr ""
 
-#: ../src/apps.php:26
-msgid "Version"
-msgstr "Verze"
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "promiseFn"
+msgstr ""
 
-#: ../src/apps.php:31
-msgid "Icon"
-msgstr "Ikona"
-
-#: ../src/apps.php:38
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
 #, fuzzy
-#| msgid "Applications"
-msgid "Availble Applications"
-msgstr "Aplikace"
+#| msgid "Errors"
+msgid "error"
+msgstr "Chyby"
 
-#: ../src/apps.php:38
-msgid "Register new"
-msgstr "Registrovant nový"
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "Reduce of empty array with no initial value"
+msgstr ""
 
-#: ../src/createaccount.php:32
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "Accessors not supported"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "includes"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "flags"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "iterator"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:28 ../src/js/datatables.min.js:28
+msgid "toStringTag"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:288 ../src/js/datatables.min.js:288
+msgid "<div/>"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:288 ../src/js/datatables.min.js:288
+msgid "<button type=\"button\">&#215;</button>"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:288 ../src/js/datatables.min.js:288
+msgid "<button type=\"button\"><span class=\""
+msgstr ""
+
+#: ../src/assets/datatables.min.js:288 ../src/js/datatables.min.js:288
+msgid "<button type=\"button\"><span></span></button>"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:288 ../src/js/datatables.min.js:288
+msgid ""
+"<table width=\"100%\"><thead><tr><th></th><th></th></tr></thead></table>"
+msgstr ""
+
+#: ../src/assets/datatables.min.js:288 ../src/js/datatables.min.js:288
+#, fuzzy
+msgid "<input/>"
+msgstr "Vstupní formát"
+
+#: ../src/createaccount.php:44
+msgid "You must agree to the terms and conditions."
+msgstr "Musíte souhlasit s obchodními podmínkami."
+
+#: ../src/createaccount.php:48
+msgid "You must consent to the processing of personal data according to GDPR."
+msgstr "Musíte udělit souhlas se zpracováním osobních údajů dle GDPR."
+
+#: ../src/createaccount.php:52
 msgid "invalid mail address"
 msgstr "neplatná mailová adresa"
 
-#: ../src/createaccount.php:40
+#: ../src/createaccount.php:60
 #, php-format
 msgid "Mail address %s is already registered"
 msgstr "Mailová adresa %s je již registrována"
 
-#: ../src/createaccount.php:49
+#: ../src/createaccount.php:69
 msgid "password is too short"
 msgstr "heslo je příliš krátké"
 
-#: ../src/createaccount.php:52
+#: ../src/createaccount.php:72
 msgid "Password control does not match"
 msgstr "Kontrola hesla nesouhlasí"
 
-#: ../src/createaccount.php:62
+#: ../src/createaccount.php:82
 #, php-format
 msgid "Username %s is used. Please choose another one"
 msgstr "Uživatelské jméno %s je již použito. Prosím zvolte jiné"
 
-#: ../src/createaccount.php:81
+#: ../src/createaccount.php:101
 msgid "Admin account created"
 msgstr "Účet administrátora vytvořen"
 
-#: ../src/createaccount.php:85
+#: ../src/createaccount.php:105
 msgid "User account created"
 msgstr "Úživatelský účet byl vytvořen"
 
-#: ../src/createaccount.php:92
+#: ../src/createaccount.php:112
 msgid "Sign On info"
 msgstr "Přihlašovací údaje"
 
-#: ../src/createaccount.php:95
+#: ../src/createaccount.php:115
 #, php-format
 msgid "Your new %s account:"
 msgstr "Tvůj nový účet %s:"
 
-#: ../src/createaccount.php:107
+#: ../src/createaccount.php:127
 #, php-format
 msgid "New Sign On to %s: %s"
 msgstr "Nové přihlášení k %s: %s"
 
-#: ../src/createaccount.php:113
+#: ../src/createaccount.php:133
 msgid "New User"
 msgstr "Nový uživatel"
 
-#: ../src/createaccount.php:126
+#: ../src/createaccount.php:148
 msgid "Administrator create failed"
 msgstr "Nepodařilo se vytvořit adminstrátora"
 
-#: ../src/createaccount.php:131
+#: ../src/createaccount.php:152
 msgid "New Administrator"
 msgstr "Nový Administrátor"
 
-#: ../src/createaccount.php:133
+#: ../src/createaccount.php:154
 msgid "Singn On"
 msgstr "Registrace"
 
-#: ../src/createaccount.php:140
+#: ../src/createaccount.php:162
 msgid "User name"
 msgstr "Uživatelské Jméno"
 
-#: ../src/createaccount.php:142
+#: ../src/createaccount.php:164
 msgid "Firstname"
 msgstr "Jméno"
 
-#: ../src/createaccount.php:143
+#: ../src/createaccount.php:165
 msgid "Lastname"
 msgstr "Příjmení"
 
-#: ../src/createaccount.php:145 ../src/login.php:75
-#: ../src/passwordrecovery.php:53
+#: ../src/createaccount.php:167 ../src/login.php:83
+#: ../src/passwordrecovery.php:59
 msgid "Password"
 msgstr "Heslo"
 
-#: ../src/createaccount.php:146
+#: ../src/createaccount.php:168
 msgid "Password confirmation"
 msgstr "Potvrzení hesla"
 
-#: ../src/createaccount.php:147
+#: ../src/createaccount.php:170
 msgid "eMail address"
 msgstr "emailová adresa"
 
-#: ../src/createaccount.php:151
+#: ../src/createaccount.php:173
+msgid "Terms and conditions not available."
+msgstr "Obchodní podmínky nejsou dostupné."
+
+#: ../src/createaccount.php:174
+msgid "GDPR consent not available."
+msgstr "Souhlas s GDPR není dostupný."
+
+#: ../src/createaccount.php:179
+msgid "I agree to the terms and conditions"
+msgstr ""
+
+#: ../src/createaccount.php:187
+msgid "I consent to the processing of personal data according to GDPR"
+msgstr ""
+
+#: ../src/createaccount.php:194
 msgid "Register"
 msgstr "Registrovat"
 
-#: ../src/createaccount.php:152
+#: ../src/createaccount.php:195
 msgid "finish registration"
 msgstr "ukončit registraci"
 
-#: ../src/index.php:17 ../src/install.php:17 ../src/main.php:17
+#: ../src/index.php:20 ../src/install.php:20 ../src/main.php:20
 msgid "Multi Flexi"
 msgstr "Multi Flexi"
 
-#: ../src/index.php:23
+#: ../src/index.php:26
 msgid ""
 "MultiFlexi is a runtime environment for tasks not only on top of the "
 "economic systems AbraFlexi and Stormware Pohoda"
 msgstr ""
 
-#: ../src/index.php:29
+#: ../src/index.php:32
 msgid "Screenshot"
 msgstr ""
 
-#: ../src/index.php:29
+#: ../src/index.php:32
 #, fuzzy
 #| msgid "Click to hide messages"
 msgid "Click to enlarge"
@@ -423,106 +626,106 @@ msgstr "Klikněte pro skrytí zpráv"
 msgid "Prepare your system"
 msgstr ""
 
-#: ../src/install.php:28
+#: ../src/install.php:29
 msgid "Stable"
 msgstr "Stabilní"
 
-#: ../src/install.php:35
+#: ../src/install.php:37
 msgid "Development"
 msgstr ""
 
-#: ../src/install.php:43
+#: ../src/install.php:44
 msgid "Choose stability"
 msgstr "Zvolte stabilitu"
 
-#: ../src/install.php:46
+#: ../src/install.php:47
 msgid "Update Sources"
 msgstr "Aktualizační zdroje"
 
-#: ../src/install.php:49
+#: ../src/install.php:50
 msgid "Install for chosen database"
 msgstr ""
 
-#: ../src/install.php:52
+#: ../src/install.php:53
 msgid "MySQL"
 msgstr "MySQL"
 
-#: ../src/install.php:53
+#: ../src/install.php:54
 msgid "SQLite"
-msgstr ""
+msgstr "SQLite"
 
 #: ../src/install.php:58
 msgid "Check for applications Availble"
 msgstr ""
 
-#: ../src/login.php:51
+#: ../src/login.php:59
 msgid "Logo"
 msgstr "Logo"
 
-#: ../src/login.php:52
+#: ../src/login.php:60
 msgid "Welcome to Multi Flexi"
 msgstr "Vítejte do MultiFlexi"
 
-#: ../src/login.php:56
+#: ../src/login.php:64
 msgid "Sign in"
 msgstr "Přihlásit"
 
-#: ../src/login.php:60
+#: ../src/login.php:68
 msgid "Password recovery"
 msgstr "Obnova hesla"
 
-#: ../src/login.php:69 ../src/passwordrecovery.php:52
+#: ../src/login.php:77 ../src/passwordrecovery.php:58
 msgid "Username"
 msgstr "Uživatelské jméno"
 
-#: ../src/login.php:72
+#: ../src/login.php:80
 msgid "the username you chose"
 msgstr "vaše uživatelské jméno"
 
-#: ../src/logout.php:21
+#: ../src/logout.php:24
 msgid "Sign Off"
 msgstr "Odhlášení"
 
-#: ../src/logout.php:25
+#: ../src/logout.php:28
 msgid "Good bye"
 msgstr "Nashledanou"
 
-#: ../src/logout.php:30
+#: ../src/logout.php:33
 msgid "Thank you for your patronage and look forward to another visit"
 msgstr "Díky za váš zájem a těším se na další návštěvu"
 
-#: ../src/passwordrecovery.php:19
+#: ../src/passwordrecovery.php:25
 msgid "Please enter your email."
 msgstr "Prosím zadejte svůj email."
 
-#: ../src/passwordrecovery.php:31
+#: ../src/passwordrecovery.php:37
 #, php-format
 msgid "unknow email address %s"
 msgstr "neznámá mailová adresa %s"
 
-#: ../src/passwordrecovery.php:44
+#: ../src/passwordrecovery.php:50
 #, php-format
 msgid "New password for %s"
 msgstr "Nové heslo pro %s"
 
-#: ../src/passwordrecovery.php:50
+#: ../src/passwordrecovery.php:56
 msgid "Sign On informations was changed"
 msgstr "Přihlašovací údaje byly změněny"
 
-#: ../src/passwordrecovery.php:58
+#: ../src/passwordrecovery.php:64
 #, php-format
 msgid "Your new password was sent to %s"
 msgstr "Vaše nové heslo bylo odesláno na %s"
 
-#: ../src/passwordrecovery.php:65
+#: ../src/passwordrecovery.php:71
 msgid "Lost password recovery"
 msgstr "Obnova ztraceného hesla"
 
-#: ../src/passwordrecovery.php:76
+#: ../src/passwordrecovery.php:82
 msgid "Tip"
 msgstr "Tip"
 
-#: ../src/passwordrecovery.php:79
+#: ../src/passwordrecovery.php:85
 msgid ""
 "Forgot your password? Enter your e-mail address you entered during the "
 "registration and we will send you a new one."
@@ -530,48 +733,37 @@ msgstr ""
 "Zapoměli jste heslo ? Vložte svojí e-mailovou adresu kterou jste zadali "
 "během registrace a my vám pošleme nové."
 
-#: ../src/passwordrecovery.php:84
+#: ../src/passwordrecovery.php:90
 msgid "Password Recovery"
 msgstr "Obnova hesla"
 
-#: ../src/passwordrecovery.php:90
+#: ../src/passwordrecovery.php:96
 #, fuzzy
 #| msgid "Sent New Password"
 msgid "Send New Password"
 msgstr "Pošli nové heslo"
 
-#: ../src/passwordrecovery.php:93
+#: ../src/passwordrecovery.php:99
 msgid "Email"
 msgstr "Email"
 
-#: ../src/passwordrecovery.php:111
+#: ../src/passwordrecovery.php:117
 msgid "Continue"
 msgstr "Pokračuj"
 
-#: ../src/js/datatables.min.js:263
-msgid "<div/>"
-msgstr ""
+#~ msgid "Click to hide messages"
+#~ msgstr "Klikněte pro skrytí zpráv"
 
-#: ../src/js/datatables.min.js:263
-msgid "<button type=\"button\">&#215;</button>"
-msgstr ""
+#~ msgid "HomePage"
+#~ msgstr "Domovská stránka"
 
-#: ../src/js/datatables.min.js:263
-msgid "<button type=\"button\"><span class=\""
-msgstr ""
-
-#: ../src/js/datatables.min.js:263
-msgid "<button type=\"button\"><span></span></button>"
-msgstr ""
-
-#: ../src/js/datatables.min.js:263
-msgid "<table width=\"100%\"><thead><tr><th>"
-msgstr ""
-
-#: ../src/js/datatables.min.js:263
 #, fuzzy
-msgid "<input/>"
-msgstr "Vstupní formát"
+#~| msgid "Applications"
+#~ msgid "Availble Applications"
+#~ msgstr "Aplikace"
+
+#~ msgid "Register new"
+#~ msgstr "Registrovant nový"
 
 #, php-format
 #~ msgid "label %s created"
@@ -645,82 +837,11 @@ msgstr "Vstupní formát"
 #~ msgid "Setting Environment %s to %s"
 #~ msgstr "Nastavuji prostředí %s na %s"
 
-#~ msgid "ID"
-#~ msgstr "ID"
-
 #~ msgid "Subject"
 #~ msgstr "Předmět"
 
 #~ msgid "Status"
 #~ msgstr "Stav"
-
-#, php-format
-#~ msgid "New %s"
-#~ msgstr "Nový %s"
-
-#, php-format
-#~ msgid "Edit %s"
-#~ msgstr "Uprav %s"
-
-#, php-format
-#~ msgid "Remove %s"
-#~ msgstr "Odstranit %s"
-
-#, php-format
-#~ msgid "Create new %s"
-#~ msgstr "Vytvořit nový %s"
-
-#, php-format
-#~ msgid "Editing %s"
-#~ msgstr "Upravuji %s"
-
-#, php-format
-#~ msgid "Removing %s"
-#~ msgstr "Odstraňuji %s"
-
-#, php-format
-#~ msgid "Are you sure you wish to delete %%d row of %s ?"
-#~ msgstr "Opravdu chceš smazat %%d řádků z %s ?"
-
-#, php-format
-#~ msgid "Missing ColumnInfo name for %s/%s"
-#~ msgstr "Chybí informace o jménu pro %s/%s"
-
-#, php-format
-#~ msgid "Missing ColumnInfo type for %s/%s"
-#~ msgstr "Chybí informace o typu pro %s/%s"
-
-#~ msgid "Id"
-#~ msgstr "Id"
-
-#~ msgid "Updated"
-#~ msgstr "Aktualizováno"
-
-#~ msgid "Created"
-#~ msgstr "Vytvořeno"
-
-#, php-format
-#~ msgid "%s is not valid email"
-#~ msgstr "%s není platným emailem"
-
-#, php-format
-#~ msgid "A %s is required"
-#~ msgstr "%s je vyžadován"
-
-#, php-format
-#~ msgid "A %s is not unique"
-#~ msgstr "%s není jedinečný"
-
-#, php-format
-#~ msgid "Field Type is not set for %s "
-#~ msgstr "Typ políčka není nastaven pr  %s "
-
-#~ msgid "Error saving record"
-#~ msgstr "Chyba ukládání záznamu"
-
-#, php-format
-#~ msgid "Column \"%s\" of %s without type definition"
-#~ msgstr "Políčko \"%s\" z %s bez definice typu"
 
 #~ msgid "Yes"
 #~ msgstr "Ano"
@@ -1221,9 +1342,6 @@ msgstr "Vstupní formát"
 #~ msgid "%d used configurations removed"
 #~ msgstr "%d použitých konfigurací bylo odstraněno"
 
-#~ msgid "Configuration removed"
-#~ msgstr "Konfigurace odstraněna"
-
 #~ msgid "Config field Saved"
 #~ msgstr "Konfigurační položka uložena"
 
@@ -1268,9 +1386,6 @@ msgstr "Vstupní formát"
 
 #~ msgid "Output"
 #~ msgstr "Výstup"
-
-#~ msgid "Errors"
-#~ msgstr "Chyby"
 
 #~ msgid "Job history"
 #~ msgstr "Historie úloh"

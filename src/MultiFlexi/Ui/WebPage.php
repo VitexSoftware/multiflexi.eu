@@ -30,9 +30,9 @@ class WebPage extends \Ease\TWB5\WebPage
     /**
      * @param string $pageTitle
      */
-    public function __construct($pageTitle = null)
+    public function __construct($pageTitle = '')
     {
-        parent::__construct($pageTitle);
+        parent::__construct((string) $pageTitle);
         \Ease\TWB5\Part::jQueryze();
         $this->container = $this->addItem(new \Ease\TWB5\Container());
         $this->container->setTagClass('container-fluid');

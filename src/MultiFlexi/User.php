@@ -79,10 +79,8 @@ class User extends \Ease\User
 
     /**
      * Vrací odkaz na ikonu.
-     *
-     * @return string
      */
-    public function getIcon()
+    public function getIcon(): string
     {
         $Icon = $this->GetSettingValue('icon');
 
@@ -105,10 +103,8 @@ class User extends \Ease\User
 
     /**
      * Give you user name.
-     *
-     * @return string
      */
-    public function getUserName()
+    public function getUserName(): string
     {
         $longname = trim($this->getDataValue('firstname').' '.$this->getDataValue('lastname'));
 
@@ -137,7 +133,7 @@ class User extends \Ease\User
      *
      * @return null|bool
      */
-    public function tryToLogin($formData)
+    public function tryToLogin(array $formData): bool
     {
         if (empty($formData) === true) {
             return false;
@@ -149,13 +145,13 @@ class User extends \Ease\User
         if (empty($login)) {
             $this->addStatusMessage(_('missing login'), 'event');
 
-            return null;
+            return false;
         }
 
         if (empty($password)) {
             $this->addStatusMessage(_('missing password'), 'event');
 
-            return null;
+            return false;
         }
 
         if ($this->loadFromSQL([$this->loginColumn => $login])) {
@@ -235,10 +231,8 @@ class User extends \Ease\User
 
     /**
      * Perform User signoff.
-     *
-     * @return bool
      */
-    public function logout()
+    public function logout(): bool
     {
         $this->dataReset();
 

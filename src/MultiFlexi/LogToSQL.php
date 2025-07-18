@@ -22,7 +22,7 @@ namespace MultiFlexi;
  */
 class LogToSQL extends \Ease\SQL\Engine implements \Ease\Logger\Loggingable
 {
-    public $myTable = 'log';
+    public string $myTable = 'log';
     public $applicationId;
     public $userId;
 

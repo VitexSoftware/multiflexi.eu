@@ -34,18 +34,18 @@ class ColumnsForm extends Form
     /**
      * Řádek.
      */
-    public Row $row = null;
+    public ?Row $row = null;
 
     /**
      * Počet položek na řádek.
      */
     public int $itemsPerRow = 1;
-    public \Ease\Engine $engine = null;
+    public $engine;
 
     /**
      * Submit button.
      */
-    public \Ease\Html\DivTag $savers = null;
+    public ?\Ease\Html\DivTag $savers = null;
 
     /**
      * Formulář Bootstrapu.
@@ -151,7 +151,7 @@ class ColumnsForm extends Form
      *
      * @return bool
      */
-    public function finalize()
+    public function finalize(): void
     {
         $recordID = $this->engine->getMyKey();
         $this->addItem(new InputHiddenTag(
@@ -169,6 +169,6 @@ class ColumnsForm extends Form
         $this->newRow();
         $this->addItem($this->savers);
 
-        return parent::finalize();
+        parent::finalize();
     }
 }

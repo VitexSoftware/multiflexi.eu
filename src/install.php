@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace MultiFlexi\Ui;
 
-require_once './init.php';
+require_once __DIR__.'/init.php';
 
 $oPage->addItem(new PageTop(_('Multi Flexi')));
 $oPage->addCss('pre: {margin: 10px, padding: 10px, color: green; background-color: black;}');

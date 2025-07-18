@@ -15,9 +15,13 @@ declare(strict_types=1);
 
 namespace MultiFlexi\Ui;
 
-require_once './init.php';
+require_once __DIR__.'/init.php';
 
 $process = false;
+
+// Legal documents paths
+$termsPath = 'src/assets/legal/terms-and-conditions.txt';
+$gdprPath = 'src/assets/legal/gdpr-consent.txt';
 
 $firstname = $oPage->getRequestValue('firstname');
 $lastname = $oPage->getRequestValue('lastname');
@@ -26,13 +30,23 @@ if ($oPage->isPosted()) {
     $process = true;
 
     $emailAddress = addslashes(strtolower($oPage->getRequestValue('email_address')));
-
     $login = addslashes($oPage->getRequestValue('login'));
     $password = addslashes($oPage->getRequestValue('password'));
-
     $confirmation = addslashes($oPage->getRequestValue('confirmation'));
+    $agreeTerms = $oPage->getRequestValue('agree_terms');
+    $agreeGdpr = $oPage->getRequestValue('agree_gdpr');
 
     $error = false;
+
+    if (!$agreeTerms) {
+        $error = true;
+        \Ease\Shared::user()->addStatusMessage(_('You must agree to the terms and conditions.'), 'warning');
+    }
+
+    if (!$agreeGdpr) {
+        $error = true;
+        \Ease\Shared::user()->addStatusMessage(_('You must consent to the processing of personal data according to GDPR.'), 'warning');
+    }
 
     if (!filter_var($emailAddress, \FILTER_VALIDATE_EMAIL)) {
         \Ease\Shared::user()->addStatusMessage(_('invalid mail address'), 'warning');
@@ -95,8 +109,10 @@ if ($oPage->isPosted()) {
 
             $newUser->loginSuccess();
 
+            $userEmail = $newUser->getDataValue('email');
+            $emailAddress = \is_string($userEmail) && $userEmail !== '' ? $userEmail : '';
             $email = $oPage->addItem(new \Ease\HtmlMailer(
-                $newUser->getDataValue('email'),
+                $emailAddress,
                 _('Sign On info'),
             ));
             $email->setMailHeaders(['From' => \Ease\Shared::cfg('EMAIL_FROM')]);
@@ -109,8 +125,10 @@ if ($oPage->isPosted()) {
             } catch (\Ease\Exception $exc) {
             }
 
+            $infoEmail = \Ease\Shared::cfg('SEND_INFO_TO');
+            $infoEmailAddress = \is_string($infoEmail) && $infoEmail !== '' ? $infoEmail : '';
             $email = $oPage->addItem(new \Ease\HtmlMailer(
-                \Ease\Shared::cfg('SEND_INFO_TO'),
+                $infoEmailAddress,
                 sprintf(
                     _('New Sign On to %s: %s'),
                     \Ease\Shared::appName(),
@@ -154,7 +172,27 @@ $regForm->addInput(new \Ease\Html\InputTextTag('lastname', $lastname), _('Lastna
 
 $regForm->addInput(new \Ease\Html\InputPasswordTag('password'), _('Password').' *');
 $regForm->addInput(new \Ease\Html\InputPasswordTag('confirmation'), _('Password confirmation').' *');
+
 $regForm->addInput(new \Ease\Html\InputTextTag('email_address'), _('eMail address').' *');
+
+// Terms and GDPR checkboxes
+$termsText = file_exists($termsPath) ? nl2br(htmlspecialchars(file_get_contents($termsPath))) : _('Terms and conditions not available.');
+$gdprText = file_exists($gdprPath) ? nl2br(htmlspecialchars(file_get_contents($gdprPath))) : _('GDPR consent not available.');
+
+$agreeTermsChecked = isset($_POST['agree_terms']) && $_POST['agree_terms'] === '1';
+$agreeGdprChecked = isset($_POST['agree_gdpr']) && $_POST['agree_gdpr'] === '1';
+
+$regForm->addItem(new \Ease\Html\DivTag([
+    new \Ease\Html\CheckboxTag('agree_terms', $agreeTermsChecked, '1', ['id' => 'agree_terms']),
+    ' <label for="agree_terms"><b>'._('I agree to the terms and conditions').'</b></label>',
+    '<br><small>'.$termsText.'</small>',
+], ['style' => 'margin-top:15px;']));
+
+$regForm->addItem(new \Ease\Html\DivTag([
+    new \Ease\Html\CheckboxTag('agree_gdpr', $agreeGdprChecked, '1', ['id' => 'agree_gdpr']),
+    ' <label for="agree_gdpr"><b>'._('I consent to the processing of personal data according to GDPR').'</b></label>',
+    '<br><small>'.$gdprText.'</small>',
+], ['style' => 'margin-top:15px;']));
 
 $regForm->addItem(new \Ease\Html\DivTag(new \Ease\Html\InputSubmitTag(
     'Register',

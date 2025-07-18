@@ -27,7 +27,7 @@ use Ease\TWB5\Panel;
 use Ease\TWB5\Row;
 use Ease\TWB5\SubmitButton;
 
-require_once './init.php';
+require_once __DIR__.'/init.php';
 
 $shared = Shared::singleton();
 

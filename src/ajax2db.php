@@ -30,7 +30,7 @@ declare(strict_types=1);
 
 namespace MultiFlexi\Ui;
 
-require_once './init.php';
+require_once __DIR__.'/init.php';
 
 header('Content-Type: application/json');
 $class = \Ease\WebPage::getRequestValue('class');
