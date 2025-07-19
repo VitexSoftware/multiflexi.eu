@@ -22,7 +22,7 @@ namespace MultiFlexi\Ui;
  */
 class PageBottom extends \Ease\Html\FooterTag
 {
-    public const BUILD = '';
+    public const string BUILD = '';
 
     /**
      * Zobrazí přehled právě přihlášených a spodek stránky.
@@ -52,5 +52,6 @@ class PageBottom extends \Ease\Html\FooterTag
         $footrow->addColumn(6, [$github, '&nbsp;', $linkedIn]);
 
         $this->addItem(new \Ease\TWB5\Container($footrow));
+        parent::finalize();
     }
 }

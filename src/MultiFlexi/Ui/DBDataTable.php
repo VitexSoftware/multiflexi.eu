@@ -258,7 +258,7 @@ EOD);
     }
 
     /**
-     * @return type
+     * @return string
      */
     public static function getUri()
     {
@@ -270,13 +270,13 @@ EOD);
     /**
      * Prepare DataSource URI.
      *
-     * @param \DBFinance\Engine $engine
+     * @param \MultiFlexi\Engine $engine
      *
      * @return string Data Source URI
      */
     public function dataSourceURI($engine)
     {
-        $conds = ['class' => \get_class($engine)];
+        $conds = ['class' => $engine::class];
 
         if (null !== $engine->filter) {
             $conds = array_merge($engine->filter, $conds);
@@ -301,7 +301,7 @@ EOD);
      */
     public function addCustomButton(
         $caption,
-        $callFunction = "alert( 'Button activated' );"
+        $callFunction = "alert( 'Button activated' );",
     ): void {
         $this->buttons[] = <<<'EOD'
 {

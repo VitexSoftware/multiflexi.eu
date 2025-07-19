@@ -58,11 +58,11 @@ class ColumnsForm extends Form
     public function __construct(
         $engine,
         $formContents = null,
-        $tagProperties = []
+        $tagProperties = [],
     ) {
         $this->engine = $engine;
         $tagProperties['method'] = 'post';
-        $tagProperties['name'] = \get_class($engine);
+        $tagProperties['name'] = $engine::class;
         parent::__construct($tagProperties, [], $formContents);
         $this->newRow();
         $this->savers = new DivTag(
@@ -97,7 +97,7 @@ class ColumnsForm extends Form
         $caption = null,
         $placeholder = null,
         $helptext = null,
-        $addTagClass = 'form-control'
+        $addTagClass = 'form-control',
     ) {
         if ($this->row->getItemsCount() > $this->itemsPerRow) {
             $this->row = $this->addItem(new Row());

@@ -17,11 +17,11 @@ namespace MultiFlexi\Ui;
 
 use Ease\Html\InputHiddenTag;
 use Ease\TWB5\Form;
-use MultiFlexi\Engine;
+use MultiFlexi\DBEngine;
 
 class EngineForm extends Form
 {
-    public SysEngine $engine = null;
+    public ?DBEngine $engine = null;
 
     /**
      * Formulář Bootstrapu.
@@ -35,7 +35,7 @@ class EngineForm extends Form
     {
         $this->engine = $engine;
         $tagProperties['method'] = 'post';
-        $tagProperties['name'] = \get_class($engine);
+        $tagProperties['name'] = $engine::class;
         parent::__construct($tagProperties, [], $formContents);
     }
 
@@ -44,17 +44,17 @@ class EngineForm extends Form
      *
      * @return bool
      */
-    public function finalize()
+    public function finalize(): void
     {
         $recordID = $this->engine->getMyKey();
         $this->addItem(new InputHiddenTag('class', \get_class($this->engine)));
 
         if (null !== $recordID) {
-            $this->addItem(new InputHiddenTag($this->engine->getKeyColumn(), $recordID));
+            $this->addItem(new InputHiddenTag($this->engine->getKeyColumn(), (string)$recordID));
         }
 
         $this->fillUp($this->engine->getData());
 
-        return parent::finalize();
+        parent::finalize();
     }
 }

@@ -24,23 +24,30 @@ $app = new \MultiFlexi\Application();
 
 $uuid = WebPage::getRequestValue('uuid');
 
-$image = $app->listingQuery()->select('image', true)->where('uuid', $uuid)->limit(1)->fetch('image');
+$svgPath = '/usr/share/multiflexi/images/'.$uuid.'.svg';
 
-if ($image) {
-    // Extract content/type from data URI
-    [$contentType, $base64Data] = explode(',', $image);
-    [, $contentType] = explode(':', $contentType);
-
-    // Convert base64 data to original format
-    $imageData = base64_decode($base64Data, true);
-
-    // Set proper content-type header
-    header('Content-Type: '.str_replace(';base64', '', $contentType));
-
-    // Send image data to the browser
-
-    echo $imageData;
-} else {
+if (file_exists($svgPath)) {
     header('Content-Type: image/svg+xml');
-    readfile('images/apps.svg');
+    readfile($svgPath);
+} else {
+    $image = $app->listingQuery()->select('image', true)->where('uuid', $uuid)->limit(1)->fetch('image');
+
+    if ($image) {
+        // Extract content/type from data URI
+        [$contentType, $base64Data] = explode(',', $image);
+        [, $contentType] = explode(':', $contentType);
+
+        // Convert base64 data to original format
+        $imageData = base64_decode($base64Data, true);
+
+        // Set proper content-type header
+        header('Content-Type: '.str_replace(';base64', '', $contentType));
+
+        // Send image data to the browser
+
+        echo $imageData;
+    } else {
+        header('Content-Type: image/svg+xml');
+        readfile('images/apps.svg');
+    }
 }
