@@ -43,10 +43,21 @@ final class Apps extends AbstractMigration
                 ->addForeignKey('user', 'user', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION', 'constraint' => 'a2u-user_must_exist'])
                 ->create();
 
-        if ($this->adapter->getAdapterType() == 'mysql') {
-            $table
-                    ->changeColumn('image', 'text', ['limit' => \Phinx\Db\Adapter\MysqlAdapter::TEXT_LONG])
-                    ->save();
+        // Handle database-specific column adjustments
+        switch ($this->adapter->getAdapterType()) {
+            case 'mysql':
+                $table->changeColumn('image', 'text', ['limit' => \Phinx\Db\Adapter\MysqlAdapter::TEXT_LONG])
+                      ->save();
+                break;
+            case 'pgsql':
+                // PostgreSQL TEXT type can handle large content by default
+                break;
+            case 'sqlite':
+                // SQLite TEXT type can handle large content by default  
+                break;
+            default:
+                // Other databases use default TEXT handling
+                break;
         }
     }
 }

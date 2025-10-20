@@ -51,6 +51,7 @@ $oPage->container->addItem(new \Ease\Html\H3Tag('4.) '._('Install for chosen dat
 
 $installRow = new \Ease\TWB5\Tabs();
 $installRow->addTab(_('MySQL'), new \Ease\Html\PreTag('sudo apt install multiflexi-mysql'));
+$installRow->addTab(_('PostgreSQL'), new \Ease\Html\PreTag('sudo apt install multiflexi-pgsql'));
 $installRow->addTab(_('SQLite'), new \Ease\Html\PreTag('sudo apt install multiflexi-sqlite'));
 
 $oPage->container->addItem($installRow);
