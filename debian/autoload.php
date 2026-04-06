@@ -4,7 +4,7 @@
  * MultiFlexi.eu Debian autoloader.
  */
 
-require_once '/usr/share/php/EaseCore/autoload.php';
+require_once '/usr/share/php/Ease/autoload.php';
 require_once '/usr/share/php/EaseFluentPDO/autoload.php';
 require_once '/usr/share/php/EaseHtml/autoload.php';
 require_once '/usr/share/php/EaseTWB5/autoload.php';
