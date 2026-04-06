@@ -64,18 +64,10 @@ distributions.each { distro ->
                         sh 'cd $WORKSPACE/dist/debian/ ; dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz; cd $WORKSPACE'
                         sh 'echo "deb [trusted=yes] file://///$WORKSPACE/dist/debian/ ./" | sudo tee /etc/apt/sources.list.d/local.list'
                         sh 'sudo apt-get update --allow-releaseinfo-change'
-                        sh 'echo "INSTALATION (sqlite backend - no MySQL server in build container)"'
-                        // Collect non-mysql .deb paths and install them all at once so dependencies resolve together
-                        def installDebs = []
-                        artifacts.each { deb_file ->
-                            if (deb_file.endsWith('.deb') && !deb_file.contains('mysql')) {
-                                installDebs.add('$WORKSPACE/dist/debian/' + deb_file)
-                            }
-                        }
-                        if (installDebs.size() > 0) {
-                            sh 'echo -e "${GREEN} installing ' + installDebs.join(' ') + ' on `lsb_release -sc` ${ENDCOLOR} "'
-                            sh 'sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=' + debconf_debug + ' apt-get -y install ' + installDebs.join(' ')
-                        }
+                        sh 'echo "INSTALATION (sqlite backend only - no MySQL/PostgreSQL server in build container)"'
+                        // Install explicitly multiflexi-eu + sqlite backend; use --no-install-recommends
+                        // to prevent apt from pulling in the mysql backend via Recommends
+                        sh 'sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=' + debconf_debug + ' apt-get -y --no-install-recommends install $WORKSPACE/dist/debian/multiflexi-eu_*.deb $WORKSPACE/dist/debian/multiflexi-eu-sqlite_*.deb'
                     }
                 }
                 stage('Archive artifacts ' + distroName ) {
