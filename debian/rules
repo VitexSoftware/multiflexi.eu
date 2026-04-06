@@ -1,15 +1,19 @@
 #!/usr/bin/make -f
-# You must remove unused comment lines for the released package.
-#export DH_VERBOSE = 1
-#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-#export DEB_LDFLAGS_MAINT_APPEND = -Wl,-O1
 
 %:
 	dh $@
 
-#override_dh_auto_install:
-#	dh_auto_install -- prefix=/usr
-
-#override_dh_install:
-#	dh_install --list-missing -X.pyc -X.pyo
+override_dh_install:
+	mkdir -p debian/tmp/
+	jq '.version = "'`dpkg-parsechangelog | sed -n 's/^Version: //p'| sed 's/~.*//'`'"'  composer.json |sponge debian/tmp/composer.json
+	dh_install
+	# Fix vendor autoload path for Debian
+	sed -i -e "s|\.\./vendor/autoload\.php|/usr/share/php/multiflexi-eu/autoload.php|g" debian/multiflexi-eu/usr/share/multiflexi-eu/init.php
+	# Fix .env path for Debian
+	sed -i -e '/dirname(__DIR__)/c\    "/etc/multiflexi-eu/.env"' debian/multiflexi-eu/usr/share/multiflexi-eu/init.php
+	# Fix i18n path
+	sed -i -e 's|\.\./i18n|/usr/share/locale|g' debian/multiflexi-eu/usr/share/multiflexi-eu/init.php
+	# Fix composer.json path in PageBottom
+	sed -i -e 's|composer\.json|/usr/lib/multiflexi-eu/composer.json|g' debian/multiflexi-eu/usr/lib/multiflexi-eu/MultiFlexi/Ui/PageBottom.php
+	# Copy .env.template for mysql (non-sqlite path)
+	sed -i '/DB_DATABASE/c\DB_DATABASE=_DBC_DBNAME_' debian/multiflexi-eu-mysql/usr/lib/multiflexi-eu/.env.template || true

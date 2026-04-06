@@ -30,6 +30,7 @@ class MainMenu extends \Ease\Html\NavTag
 
         $container->addItem(new \Ease\TWB5\LinkButton('https://demo.multiflexi.eu/', _('Demo Site'), 'success'));
         $container->addItem(new \Ease\TWB5\LinkButton('apps.php', _('Apps'), 'info'));
+        $container->addItem(new \Ease\TWB5\LinkButton('credentialtypes.php', _('Credential Types'), 'info'));
         $container->addItem(new \Ease\TWB5\LinkButton('install.php', _('Install'), 'warning'));
 
         $container->addItem($this->navBarToggler());
@@ -58,7 +59,9 @@ class MainMenu extends \Ease\Html\NavTag
 
         if ($oUser->isLogged()) {
             $navbarNav->addItemSmart(new \Ease\Html\ATag('myapps.php', new \Ease\Html\ImgTag('images/apps.svg', 'apps', ['height' => 20]).' '._('My Apps'), ['class' => 'nav-link']), ['class' => 'nav-item']);
-            $navbarNav->addItemSmart(new \Ease\Html\ATag('app.php', '➕ '._('Submit'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('mycredentialtypes.php', '🔑 '._('My Credential Types'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('app.php', '➕ '._('Submit App'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('credentialtype.php', '➕ '._('Submit Credential Type'), ['class' => 'nav-link']), ['class' => 'nav-item']);
             $navbarNav->addItemSmart(new \Ease\Html\ATag('logout.php', '🚪 '._('Logout'), ['class' => 'nav-link']), ['class' => 'nav-item']);
         } else {
             $navbarNav->addItemSmart(new \Ease\Html\ATag('createaccount.php', _('Sign On'), ['class' => 'nav-link']), ['class' => 'nav-item']);

@@ -50,7 +50,7 @@ class EngineForm extends Form
         $this->addItem(new InputHiddenTag('class', \get_class($this->engine)));
 
         if (null !== $recordID) {
-            $this->addItem(new InputHiddenTag($this->engine->getKeyColumn(), (string)$recordID));
+            $this->addItem(new InputHiddenTag($this->engine->getKeyColumn(), (string) $recordID));
         }
 
         $this->fillUp($this->engine->getData());

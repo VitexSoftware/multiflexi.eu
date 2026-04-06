@@ -1,8 +1,23 @@
 #!/bin/sh
 set -e
 
+[ ! -e /usr/share/apache2/apache2-maintscript-helper ] ||
+    . /usr/share/apache2/apache2-maintscript-helper
+
 case "$1" in
     configure)
+        # Create system user for the site
+        if ! getent passwd multiflexi-eu > /dev/null; then
+            adduser --system --group --home /var/lib/multiflexi-eu --no-create-home --quiet multiflexi-eu || true
+        fi
+
+        # Create config directory
+        mkdir -p /etc/multiflexi-eu
+
+        # Enable Apache configuration
+        if [ -e /usr/share/apache2/apache2-maintscript-helper ]; then
+            apache2_invoke enconf multiflexi-eu.conf || true
+        fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
@@ -13,7 +28,6 @@ case "$1" in
         exit 1
     ;;
 esac
-
 
 #DEBHELPER#
 
