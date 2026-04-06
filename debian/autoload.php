@@ -11,7 +11,7 @@ require_once '/usr/share/php/EaseTWB5/autoload.php';
 require_once '/usr/share/php/EaseHtmlWidgets/autoload.php';
 require_once '/usr/share/php/EaseTWB5Widgets/autoload.php';
 require_once '/usr/share/php/MultiFlexi/autoload.php';
-require_once '/usr/share/php/Rcubitto/JsonPretty/JsonPretty.php';
+require_once '/usr/share/php/Rcubitto/JsonPretty/autoload.php';
 
 // Local classes
 spl_autoload_register(function ($class) {
