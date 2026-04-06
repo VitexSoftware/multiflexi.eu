@@ -1,0 +1,15 @@
+Package: multiflexi-eu-sqlite
+Source: multiflexi.eu
+Version: 0.1.0
+Architecture: all
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Installed-Size: 343
+Depends: debconf (>= 0.5) | debconf-2.0, multiflexi-eu, dbconfig-sqlite3, php-sqlite3, sqlite3
+Breaks: multiflexi-eu-mysql (<< 0.1.0)
+Provides: multiflexi-eu-database
+Section: web
+Priority: optional
+Homepage: https://multiflexi.eu
+Description: SQLite database backend for multiflexi.eu
+ SQLite database support for the MultiFlexi hub website.
+ Recommended for development and small deployments.

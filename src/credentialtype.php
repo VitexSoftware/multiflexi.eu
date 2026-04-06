@@ -18,7 +18,7 @@ namespace MultiFlexi\Ui;
 use Ease\TWB5\LinkButton;
 use Ease\TWB5\Row;
 use Ease\TWB5\Tabs;
-use MultiFlexi\CredentialProtoType;
+use MultiFlexi\Hub\CredentialProtoType;
 
 require_once __DIR__ . '/init.php';
 $oPage->onlyForLogged();

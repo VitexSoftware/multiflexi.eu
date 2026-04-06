@@ -20,7 +20,7 @@ $oPage->onlyForLogged();
 
 $oPage->addItem(new PageTop(_('My Applications')));
 
-$apps = new \MultiFlexi\Application();
+$apps = new \MultiFlexi\Hub\Application();
 $apps->filter = ['user' => \Ease\Shared::user()->getUserID()];
 
 $oPage->container->addItem(new DBDataTable($apps));

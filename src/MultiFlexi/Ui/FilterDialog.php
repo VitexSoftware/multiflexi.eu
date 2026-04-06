@@ -28,7 +28,7 @@ class FilterDialog extends \Ease\Html\DivTag
      */
     public function __construct($tableId, $columns = [])
     {
-        $columnTabs = new \Ease\TWB5\Tabs(null, ['id' => 'filterTabs']);
+        $columnTabs = new \Ease\TWB5\Tabs([], ['id' => 'filterTabs']);
 
         foreach ($columns as $columnProperies) {
             $columnName = $columnProperies['name'];

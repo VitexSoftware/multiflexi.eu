@@ -1,0 +1,17 @@
+Package: multiflexi-eu
+Source: multiflexi.eu
+Version: 0.1.0
+Architecture: all
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Installed-Size: 19800
+Depends: php-vitexsoftware-multiflexi-core, php-vitexsoftware-ease-twbootstrap5, php-vitexsoftware-ease-html-widgets, php-vitexsoftware-ease-fluentpdo, php-vitexsoftware-ease-bootstrap5-widgets, php-rcubitto-json-pretty, php-robmorgan-phinx | php-cakephp-phinx, php-cli, adduser
+Recommends: multiflexi-eu-sqlite | multiflexi-eu-mysql
+Section: web
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://multiflexi.eu
+Description: MultiFlexi Application & Credential Hub website
+ Public hub for sharing MultiFlexi application definitions and
+ credential type prototypes. Signed-in users can store and present
+ their own applications and credential types for others to use
+ in their MultiFlexi instances.

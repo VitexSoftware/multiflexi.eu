@@ -1,0 +1,35 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+. /usr/share/dbconfig-common/dpkg/postinst.sqlite3
+
+            dbc_generate_include_args="-U -o template_infile=/usr/lib/multiflexi-eu/.env.template"
+            dbc_generate_include=template:/etc/multiflexi-eu/.env
+            dbc_generate_include_owner="root:www-data"
+            dbc_generate_include_perms="640"
+            dbc_dbfile_owner="www-data:www-data"
+            dbc_dbfile_perms="0664"
+
+            db_get multiflexi-eu/db/app-user || true
+            if [ -z "$RET" ] || echo "$RET" | grep -q "doesn't exist"; then
+                export dbc_dbuser=multiflexi-eu
+            else
+                export dbc_dbuser="$RET"
+            fi
+            db_get multiflexi-eu/db/dbname || true
+            if [ -z "$RET" ] || echo "$RET" | grep -q "doesn't exist"; then
+                export dbc_dbname=multiflexi-eu
+            else
+                export dbc_dbname="$RET"
+            fi
+
+            dbc_go multiflexi-eu "$@"
+
+            # Run database migrations
+            if [ -f /usr/lib/multiflexi-eu/phinx-adapter.php ]; then
+                phinx migrate -c /usr/lib/multiflexi-eu/phinx-adapter.php 2>/dev/null || true
+            fi
+
+

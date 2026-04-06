@@ -19,7 +19,7 @@ require_once __DIR__ . '/init.php';
 
 $oPage->addItem(new PageTop(_('Credential Types')));
 
-$oPage->container->addItem(new DBDataTable(new \MultiFlexi\CredentialProtoType()));
+$oPage->container->addItem(new DBDataTable(new \MultiFlexi\Hub\CredentialProtoType()));
 
 $oPage->addItem(new PageBottom());
 

@@ -23,6 +23,7 @@
     "autoload": {
         "psr-4": {
             "MultiFlexi\\": "src/MultiFlexi/",
+            "MultiFlexi\\Hub\\": "src/MultiFlexi/Hub",
             "MultiFlexi\\Ui\\": "src/MultiFlexi/Ui",
             "MultiFlexi\\Api\\": "src/MultiFlexi/Api"
         }

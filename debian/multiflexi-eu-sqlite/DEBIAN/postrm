@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+if [ -f /usr/share/debconf/confmodule ]; then
+    . /usr/share/debconf/confmodule
+fi
+if [ -f /usr/share/dbconfig-common/dpkg/postrm.sqlite3 ]; then
+    . /usr/share/dbconfig-common/dpkg/postrm.sqlite3
+    dbc_go multiflexi-eu "$@"
+fi
+
+# Automatically added by dh_installdebconf/13.24.2
+if [ "$1" = purge ] && [ -e /usr/share/debconf/confmodule ]; then
+	. /usr/share/debconf/confmodule
+	db_purge
+fi
+# End automatically added section
+

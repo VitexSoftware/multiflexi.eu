@@ -46,7 +46,7 @@ $oPage->container->addItem($actionRow);
 // Recent Applications
 $oPage->container->addItem(new \Ease\Html\H3Tag(_('Recent Applications'), ['class' => 'mt-4']));
 
-$recentApps = new \MultiFlexi\Application();
+$recentApps = new \MultiFlexi\Hub\Application();
 $recentAppsData = $recentApps->listingQuery()->orderBy('DatCreate DESC')->limit(6)->fetchAll();
 
 if (!empty($recentAppsData)) {
@@ -84,7 +84,7 @@ $oPage->container->addItem(new \Ease\TWB5\LinkButton('apps.php', _('View all app
 // Recent Credential Types
 $oPage->container->addItem(new \Ease\Html\H3Tag(_('Recent Credential Types'), ['class' => 'mt-4']));
 
-$recentCreds = new \MultiFlexi\CredentialProtoType();
+$recentCreds = new \MultiFlexi\Hub\CredentialProtoType();
 $recentCredsData = $recentCreds->listingQuery()->orderBy('created_at DESC')->limit(6)->fetchAll();
 
 if (!empty($recentCredsData)) {

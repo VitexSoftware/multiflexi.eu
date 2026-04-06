@@ -17,7 +17,7 @@ namespace MultiFlexi\Ui;
 
 require_once __DIR__ . '/init.php';
 $oPage->onlyForLogged();
-$prototype = new \MultiFlexi\CredentialProtoType($oPage->getRequestValue('id', 'int'));
+$prototype = new \MultiFlexi\Hub\CredentialProtoType($oPage->getRequestValue('id', 'int'));
 
 $jsonData = $prototype->exportJson();
 $jsonString = json_encode($jsonData, \JSON_PRETTY_PRINT | \JSON_UNESCAPED_UNICODE);

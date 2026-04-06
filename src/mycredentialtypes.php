@@ -20,7 +20,7 @@ $oPage->onlyForLogged();
 
 $oPage->addItem(new PageTop(_('My Credential Types')));
 
-$credTypes = new \MultiFlexi\CredentialProtoType();
+$credTypes = new \MultiFlexi\Hub\CredentialProtoType();
 $credTypes->filter = ['user' => \Ease\Shared::user()->getUserID()];
 
 $oPage->container->addItem(new DBDataTable($credTypes));

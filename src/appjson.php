@@ -17,7 +17,7 @@ namespace MultiFlexi\Ui;
 
 require_once __DIR__.'/init.php';
 $oPage->onlyForLogged();
-$apps = new \MultiFlexi\Application($oPage->getRequestValue('id', 'int'));
+$apps = new \MultiFlexi\Hub\Application($oPage->getRequestValue('id', 'int'));
 
 $appJson = $apps->getAppJson();
 

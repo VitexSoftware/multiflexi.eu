@@ -7,6 +7,6 @@ src/js/*                                   usr/share/multiflexi-eu/js
 src/css/*                                  usr/share/multiflexi-eu/css
 src/images/*                               usr/share/multiflexi-eu/images
 src/assets/*                               usr/share/multiflexi-eu/assets
-src/MultiFlexi/*.php                       usr/lib/multiflexi-eu/MultiFlexi/
+src/MultiFlexi/Hub/*.php                   usr/lib/multiflexi-eu/MultiFlexi/Hub/
 src/MultiFlexi/Ui/*.php                    usr/lib/multiflexi-eu/MultiFlexi/Ui/
 debian/conf/multiflexi-eu.conf             etc/apache2/conf-available

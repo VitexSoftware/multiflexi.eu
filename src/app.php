@@ -18,7 +18,7 @@ namespace MultiFlexi\Ui;
 use Ease\TWB5\LinkButton;
 use Ease\TWB5\Row;
 use Ease\TWB5\Tabs;
-use MultiFlexi\Application;
+use MultiFlexi\Hub\Application;
 use MultiFlexi\Conffield;
 
 require_once __DIR__.'/init.php';
