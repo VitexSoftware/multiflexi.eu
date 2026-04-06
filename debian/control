@@ -13,7 +13,6 @@ Package: multiflexi-eu
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
- multiflexi-eu-sqlite | multiflexi-eu-mysql,
  php-vitexsoftware-multiflexi-core,
  php-vitexsoftware-ease-twbootstrap5,
  php-vitexsoftware-ease-html-widgets,
@@ -23,6 +22,7 @@ Depends: ${misc:Depends},
  php-robmorgan-phinx | php-cakephp-phinx,
  php-cli,
  adduser
+Recommends: multiflexi-eu-sqlite | multiflexi-eu-mysql
 Description: MultiFlexi Application & Credential Hub website
  Public hub for sharing MultiFlexi application definitions and
  credential type prototypes. Signed-in users can store and present
@@ -31,8 +31,7 @@ Description: MultiFlexi Application & Credential Hub website
 
 Package: multiflexi-eu-sqlite
 Provides: multiflexi-eu-database
-Pre-Depends: multiflexi-eu
-Depends: ${misc:Depends}, dbconfig-sqlite3, php-sqlite3, sqlite3
+Depends: ${misc:Depends}, multiflexi-eu, dbconfig-sqlite3, php-sqlite3, sqlite3
 Breaks: multiflexi-eu-mysql (<< ${source:Version})
 Architecture: all
 Description: SQLite database backend for multiflexi.eu
@@ -41,8 +40,7 @@ Description: SQLite database backend for multiflexi.eu
 
 Package: multiflexi-eu-mysql
 Provides: multiflexi-eu-database
-Pre-Depends: multiflexi-eu
-Depends: ${misc:Depends}, dbconfig-mysql, php-mysql
+Depends: ${misc:Depends}, multiflexi-eu, dbconfig-mysql, php-mysql
 Breaks: multiflexi-eu-sqlite (<< ${source:Version})
 Suggests: mariadb-server
 Architecture: all
