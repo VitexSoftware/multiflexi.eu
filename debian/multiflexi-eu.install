@@ -8,6 +8,4 @@ src/css/*                                  usr/share/multiflexi-eu/css
 src/images/*                               usr/share/multiflexi-eu/images
 src/assets/*                               usr/share/multiflexi-eu/assets
 src/MultiFlexi/*                           usr/lib/multiflexi-eu/MultiFlexi/
-i18n/cs_CZ/LC_MESSAGES/*.mo                usr/share/locale/cs_CZ/LC_MESSAGES/
-i18n/en_US/LC_MESSAGES/*.mo                usr/share/locale/en_US/LC_MESSAGES/
 debian/conf/multiflexi-eu.conf             etc/apache2/conf-available
