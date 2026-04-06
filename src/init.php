@@ -18,6 +18,8 @@ namespace MultiFlexi;
 use Ease\Shared;
 use MultiFlexi\Ui\WebPage;
 
+define('APP_NAME','MultiFlexiEU');
+
 require_once '../vendor/autoload.php';
 session_start();
 \Ease\Shared::init(
