@@ -9,7 +9,7 @@ require_once '/usr/share/php/EaseFluentPDO/autoload.php';
 require_once '/usr/share/php/EaseHtml/autoload.php';
 require_once '/usr/share/php/EaseTWB5/autoload.php';
 require_once '/usr/share/php/EaseHtmlWidgets/autoload.php';
-require_once '/usr/share/php/EaseBootstrap5Widgets/autoload.php';
+require_once '/usr/share/php/EaseTWB5Widgets/autoload.php';
 require_once '/usr/share/php/MultiFlexi/autoload.php';
 require_once '/usr/share/php/Rcubitto/JsonPretty/JsonPretty.php';
 
