@@ -78,26 +78,15 @@ distributions.each { distro ->
                         sh 'sudo apt-get update --allow-releaseinfo-change'
                         sh 'echo "INSTALATION"'
                       
+                        // Install only multiflexi-eu + sqlite backend (no MySQL/PostgreSQL server in build container)
                         def installOrder = [
-//                        '',
+                            'multiflexi-eu_',
+                            'multiflexi-eu-sqlite_',
                         ]
 
-                    def sorted_artifacts = artifacts.toList()
-                    
-                    // If installOrder is empty, install all produced packages
-                    if (installOrder.isEmpty()) {
-                        sorted_artifacts.each { deb_file ->
-                            if (deb_file.endsWith('.deb')) {
-                                def pkgName = deb_file.tokenize('/')[-1].replaceFirst(/_.*/, '')
-                                sh 'echo -e "${GREEN} installing ' + pkgName + ' on `lsb_release -sc` ${ENDCOLOR} "'
-                                sh 'sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=' + debconf_debug + ' apt-get -y install ' + pkgName
-                            }
-                        }
-                    } else {
-                        // Install packages in specified order
                         installOrder.each { pkgPrefix ->
                             def debFile = null
-                            for (item in sorted_artifacts) {
+                            for (item in artifacts) {
                                 def itemStr = item.toString()
                                 if (itemStr.startsWith(pkgPrefix) && itemStr.endsWith('.deb')) {
                                     debFile = itemStr
@@ -107,10 +96,9 @@ distributions.each { distro ->
                             if (debFile) {
                                 def pkgName = debFile.tokenize('/')[-1].replaceFirst(/_.*/, '')
                                 sh 'echo -e "${GREEN} installing ' + pkgName + ' on `lsb_release -sc` ${ENDCOLOR} "'
-                                sh 'sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=' + debconf_debug + ' apt-get -y install ' + pkgName
+                                sh 'sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=' + debconf_debug + ' apt-get -y --no-install-recommends install ' + pkgName
                             }
                         }
-                    }
 
                 }
                 stage('Archive artifacts ' + distroName ) {
