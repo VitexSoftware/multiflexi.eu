@@ -23,3 +23,7 @@ debian/multiflexi.eu/usr/share/doc/multiflexi.eu/README.Debian
 debian/debhelper-build-stamp
 debian/files
 debian/multiflexi.eu.substvars
+debian/multiflexi-eu/
+debian/multiflexi-eu-sqlite/
+debian/multiflexi-eu-mysql/
+debian/multiflexi-eu-postgresql/

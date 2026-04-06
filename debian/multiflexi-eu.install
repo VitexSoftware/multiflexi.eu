@@ -9,4 +9,6 @@ src/images/*                               usr/share/multiflexi-eu/images
 src/assets/*                               usr/share/multiflexi-eu/assets
 src/MultiFlexi/Hub/*.php                   usr/lib/multiflexi-eu/MultiFlexi/Hub/
 src/MultiFlexi/Ui/*.php                    usr/lib/multiflexi-eu/MultiFlexi/Ui/
-debian/conf/multiflexi-eu.conf             etc/apache2/conf-available
+debian/conf/multiflexi-eu.conf             etc/apache2/conf-available/
+bin/*					   usr/bin/
+libexec/*.php				   usr/lib/multiflexi-eu/

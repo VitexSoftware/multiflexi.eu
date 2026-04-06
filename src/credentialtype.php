@@ -71,6 +71,7 @@ $instanceRow->addColumn(4, [
 ]);
 
 $credTabs = new Tabs();
+$credTabs->addTab(_('Import'), new CredentialProtoTypeImportForm());
 $credTabs->addTab(_('Configuration'), $instanceRow);
 
 if ($prototype->getMyKey()) {

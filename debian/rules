@@ -9,8 +9,10 @@ override_dh_install:
 	dh_install
 	# Fix vendor autoload path for Debian
 	sed -i -e "s|\.\./vendor/autoload\.php|/usr/share/php/multiflexi-eu/autoload.php|g" debian/multiflexi-eu/usr/share/multiflexi-eu/init.php
+	sed -i -e "s|\.\./vendor/autoload\.php|/usr/share/php/multiflexi-eu/autoload.php|g" debian/multiflexi-eu/usr/lib/multiflexi-eu/*.php
 	# Fix .env path for Debian
 	sed -i -e '/dirname(__DIR__)/c\    "/etc/multiflexi-eu/.env"' debian/multiflexi-eu/usr/share/multiflexi-eu/init.php
+	sed -i -e '/dirname(__DIR__)/c\    "/etc/multiflexi-eu/.env"' debian/multiflexi-eu/usr/lib/multiflexi-eu/*.php
 	# Fix i18n path
 	sed -i -e 's|\.\./i18n|/usr/share/locale|g' debian/multiflexi-eu/usr/share/multiflexi-eu/init.php
 	# Fix composer.json path in PageBottom

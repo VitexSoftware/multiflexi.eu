@@ -17,11 +17,11 @@ namespace MultiFlexi\Ui;
 
 use Ease\Html\InputHiddenTag;
 use Ease\TWB5\Form;
-use MultiFlexi\DBEngine;
+use MultiFlexi\Engine;
 
 class EngineForm extends Form
 {
-    public ?DBEngine $engine = null;
+    public ?Engine $engine = null;
 
     /**
      * Formulář Bootstrapu.
@@ -53,7 +53,11 @@ class EngineForm extends Form
             $this->addItem(new InputHiddenTag($this->engine->getKeyColumn(), (string) $recordID));
         }
 
-        $this->fillUp($this->engine->getData());
+        $data = $this->engine->getData();
+
+        if (\is_array($data)) {
+            $this->fillUp($data);
+        }
 
         parent::finalize();
     }
