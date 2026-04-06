@@ -20,8 +20,7 @@ spl_autoload_register(function ($class) {
     if (strncmp($prefix, $class, $len) !== 0) {
         return;
     }
-    $relative = substr($class, $len);
-    $file = '/usr/lib/multiflexi-eu/' . str_replace('\\', '/', $relative) . '.php';
+    $file = '/usr/lib/multiflexi-eu/' . str_replace('\\', '/', $class) . '.php';
     if (file_exists($file)) {
         require $file;
     }
