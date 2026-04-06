@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5986dc64975e7b1f97d61a8bb5c08f14",
+    "content-hash": "00dace6bc2ddc912c9eaf145476c1784",
     "packages": [
         {
             "name": "datatables/datatables",
@@ -6993,7 +6993,6 @@
         "datatables/datatables": 20,
         "rcubitto/json-pretty": 20,
         "robmorgan/phinx": 20,
-        "vitexsoftware/ease-core-bricks": 20,
         "vitexsoftware/ease-fluentpdo": 20,
         "vitexsoftware/ease-html-widgets": 20,
         "vitexsoftware/ease-twbootstrap5": 20,
