@@ -27,3 +27,5 @@ debian/multiflexi-eu/
 debian/multiflexi-eu-sqlite/
 debian/multiflexi-eu-mysql/
 debian/multiflexi-eu-postgresql/
+multiflexieu.db
+fix_tags.php

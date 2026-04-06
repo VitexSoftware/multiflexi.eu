@@ -43,11 +43,18 @@ $actionRow->addColumn(3, new \Ease\TWB5\LinkButton('credentialtypes.php', '🔑 
 $actionRow->addColumn(3, new \Ease\TWB5\LinkButton('install.php', '📦 '._('Install MultiFlexi'), 'warning btn-lg btn-block w-100'));
 $oPage->container->addItem($actionRow);
 
-// Recent Applications
-$oPage->container->addItem(new \Ease\Html\H3Tag(_('Recent Applications'), ['class' => 'mt-4']));
+// Topics Search Form
+$searchForm = new \Ease\TWB5\Form(['name' => 'search', 'class' => 'mb-4 mt-2 d-flex']);
+$inputDiv = new \Ease\Html\DivTag(null, ['class' => 'input-group']);
+$inputDiv->addItem(new \Ease\Html\InputTextTag('tags', '', ['class' => 'form-control', 'placeholder' => _('Live search applications by tags...'), 'id' => 'tagSearchInput']));
+$searchForm->addItem($inputDiv);
+$oPage->container->addItem($searchForm);
 
-$recentApps = new \MultiFlexi\Hub\Application();
-$recentAppsData = $recentApps->listingQuery()->orderBy('DatCreate DESC')->limit(6)->fetchAll();
+$appQuery = (new \MultiFlexi\Hub\Application())->listingQuery()->orderBy('DatCreate DESC');
+$oPage->container->addItem(new \Ease\Html\H3Tag(_('Applications'), ['class' => 'mt-4']));
+
+$recentAppsData = $appQuery->fetchAll();
+
 
 if (!empty($recentAppsData)) {
     $appsRow = new \Ease\TWB5\Row();
@@ -67,11 +74,20 @@ if (!empty($recentAppsData)) {
             ['class' => 'card-text text-muted small'],
         ));
 
+        if (!empty($appData['tags'])) {
+            $tags = explode(',', (string) $appData['tags']);
+            $tagsDiv = new \Ease\Html\DivTag(null, ['class' => 'mb-2 tags-container']);
+            foreach ($tags as $tag) {
+                $tagsDiv->addItem(new \Ease\Html\SpanTag(trim($tag), ['class' => 'badge bg-info me-1 tag-badge']));
+            }
+            $cardBody->addItem($tagsDiv);
+        }
+
         if (!empty($appData['version'])) {
             $cardBody->addItem(new \Ease\Html\SpanTag('v'.$appData['version'], ['class' => 'badge bg-secondary']));
         }
 
-        $appsRow->addColumn(2, new \Ease\Html\DivTag($card, ['class' => 'mb-3']));
+        $appsRow->addColumn(2, new \Ease\Html\DivTag($card, ['class' => 'mb-3 app-card-wrapper']));
     }
 
     $oPage->container->addItem($appsRow);
@@ -124,5 +140,40 @@ if (!empty($recentCredsData)) {
 $oPage->container->addItem(new \Ease\TWB5\LinkButton('credentialtypes.php', _('View all credential types').' →', 'outline-primary mb-4'));
 
 $oPage->addItem(new PageBottom());
+
+$oPage->addJavaScript(<<<'JS'
+document.addEventListener('DOMContentLoaded', function() {
+    var searchInput = document.getElementById('tagSearchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            var value = this.value.toLowerCase().trim();
+            var appCards = document.querySelectorAll('.app-card-wrapper');
+            appCards.forEach(function(cardWrapper) {
+                if (value === '') {
+                    cardWrapper.style.display = '';
+                    return;
+                }
+                var tagsDiv = cardWrapper.querySelector('.tags-container');
+                var match = false;
+                if (tagsDiv) {
+                    var badges = tagsDiv.querySelectorAll('.tag-badge');
+                    badges.forEach(function(badge) {
+                        if (badge.textContent.toLowerCase().includes(value)) {
+                            match = true;
+                        }
+                    });
+                }
+                
+                if (match) {
+                    cardWrapper.style.display = '';
+                } else {
+                    cardWrapper.style.display = 'none';
+                }
+            });
+        });
+    }
+});
+JS
+);
 
 $oPage->draw();

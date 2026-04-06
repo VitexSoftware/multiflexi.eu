@@ -32,6 +32,7 @@ class Application extends \MultiFlexi\Application
             'name' => ['name' => 'name', 'type' => 'text', 'label' => _('Name'),
                 'detailPage' => 'app.php', 'idColumn' => 'id'],
             'description' => ['name' => 'description', 'type' => 'text', 'label' => _('Description')],
+            'tags' => ['name' => 'tags', 'type' => 'text', 'label' => _('Tags')],
             'homepage' => ['name' => 'homepage', 'type' => 'text', 'label' => _('Homepage')],
             'version' => ['name' => 'version', 'type' => 'text', 'label' => _('Version')],
             'uuid' => ['name' => 'uuid', 'type' => 'text', 'hidden' => true, 'label' => _('UUID')],
