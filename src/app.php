@@ -18,8 +18,8 @@ namespace MultiFlexi\Ui;
 use Ease\TWB5\LinkButton;
 use Ease\TWB5\Row;
 use Ease\TWB5\Tabs;
-use MultiFlexi\Hub\Application;
 use MultiFlexi\Conffield;
+use MultiFlexi\Hub\Application;
 
 require_once __DIR__.'/init.php';
 $oPage->onlyForLogged();
@@ -75,6 +75,7 @@ $instanceRow->addColumn(4, null === $apps->getMyKey() ?
 $instanceRow->addColumn(4, new AppLogo($apps));
 
 $appTabs = new Tabs();
+$appTabs->addTab(_('Import'), new AppImportForm());
 $appTabs->addTab(_('Configuration'), $instanceRow);
 $appTabs->addTab(_('Export'), new AppJson($apps));
 

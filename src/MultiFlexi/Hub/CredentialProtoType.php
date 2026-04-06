@@ -24,9 +24,9 @@ class CredentialProtoType extends \MultiFlexi\CredentialProtoType
     /**
      * {@inheritDoc}
      */
-    public function columns($columns = []): array
+    public static function columns($columns = []): array
     {
-        return parent::columns([
+        return array_merge($columns, [
             'id' => ['name' => 'id', 'type' => 'int', 'hidden' => true, 'label' => _('Id')],
             'code' => ['name' => 'code', 'type' => 'text', 'label' => _('Code')],
             'name' => ['name' => 'name', 'type' => 'text', 'label' => _('Name'),
@@ -38,8 +38,35 @@ class CredentialProtoType extends \MultiFlexi\CredentialProtoType
         ]);
     }
 
+    public function getGetDataTableColumns()
+    {
+        return self::columns();
+    }
+
+    public function preTableCode($tableID)
+    {
+        return '';
+    }
+
+    public function foterCallback($tableID)
+    {
+        return '';
+    }
+
+    public function tableCode($tableID)
+    {
+        return '';
+    }
+
+    public function postTableCode($tableID): string
+    {
+        return '';
+    }
+
     /**
      * Override takeData to stamp user ownership.
+     *
+     * @param mixed $data
      */
     public function takeData($data): int
     {
@@ -62,6 +89,8 @@ class CredentialProtoType extends \MultiFlexi\CredentialProtoType
 
     /**
      * Save to SQL with timestamp handling.
+     *
+     * @param null|mixed $data
      */
     public function saveToSQL($data = null)
     {
@@ -76,5 +105,10 @@ class CredentialProtoType extends \MultiFlexi\CredentialProtoType
         $data['updated_at'] = date('Y-m-d H:i:s');
 
         return parent::saveToSQL($data);
+    }
+
+    public function columnDefs()
+    {
+        return json_encode($this->columns());
     }
 }

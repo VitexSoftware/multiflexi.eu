@@ -38,9 +38,9 @@ $oPage->container->addItem($heroRow);
 // Quick action buttons
 $actionRow = new \Ease\TWB5\Row();
 $actionRow->addTagClass('justify-content-center mb-4');
-$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('apps.php', '🧩 ' . _('Browse Applications'), 'primary btn-lg btn-block w-100'));
-$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('credentialtypes.php', '🔑 ' . _('Browse Credential Types'), 'primary btn-lg btn-block w-100'));
-$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('install.php', '📦 ' . _('Install MultiFlexi'), 'warning btn-lg btn-block w-100'));
+$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('apps.php', '🧩 '._('Browse Applications'), 'primary btn-lg btn-block w-100'));
+$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('credentialtypes.php', '🔑 '._('Browse Credential Types'), 'primary btn-lg btn-block w-100'));
+$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('install.php', '📦 '._('Install MultiFlexi'), 'warning btn-lg btn-block w-100'));
 $oPage->container->addItem($actionRow);
 
 // Recent Applications
@@ -56,10 +56,10 @@ if (!empty($recentAppsData)) {
         $card = new \Ease\Html\DivTag(null, ['class' => 'card h-100']);
         $cardBody = $card->addItem(new \Ease\Html\DivTag(null, ['class' => 'card-body']));
 
-        $imgSrc = !empty($appData['uuid']) ? 'appimage.php?uuid=' . $appData['uuid'] : 'images/apps.svg';
+        $imgSrc = !empty($appData['uuid']) ? 'appimage.php?uuid='.$appData['uuid'] : 'images/apps.svg';
         $cardBody->addItem(new \Ease\Html\ImgTag($imgSrc, $appData['name'], ['height' => '40', 'class' => 'mb-2']));
         $cardBody->addItem(new \Ease\Html\H5Tag(
-            new \Ease\Html\ATag('app.php?id=' . $appData['id'], $appData['name']),
+            new \Ease\Html\ATag('app.php?id='.$appData['id'], $appData['name']),
             ['class' => 'card-title'],
         ));
         $cardBody->addItem(new \Ease\Html\PTag(
@@ -68,7 +68,7 @@ if (!empty($recentAppsData)) {
         ));
 
         if (!empty($appData['version'])) {
-            $cardBody->addItem(new \Ease\Html\SpanTag('v' . $appData['version'], ['class' => 'badge bg-secondary']));
+            $cardBody->addItem(new \Ease\Html\SpanTag('v'.$appData['version'], ['class' => 'badge bg-secondary']));
         }
 
         $appsRow->addColumn(2, new \Ease\Html\DivTag($card, ['class' => 'mb-3']));
@@ -79,7 +79,7 @@ if (!empty($recentAppsData)) {
     $oPage->container->addItem(new \Ease\Html\PTag(_('No applications submitted yet. Be the first!'), ['class' => 'text-muted']));
 }
 
-$oPage->container->addItem(new \Ease\TWB5\LinkButton('apps.php', _('View all applications') . ' →', 'outline-primary mb-4'));
+$oPage->container->addItem(new \Ease\TWB5\LinkButton('apps.php', _('View all applications').' →', 'outline-primary mb-4'));
 
 // Recent Credential Types
 $oPage->container->addItem(new \Ease\Html\H3Tag(_('Recent Credential Types'), ['class' => 'mt-4']));
@@ -94,7 +94,7 @@ if (!empty($recentCredsData)) {
         $card = new \Ease\Html\DivTag(null, ['class' => 'card h-100']);
         $cardBody = $card->addItem(new \Ease\Html\DivTag(null, ['class' => 'card-body']));
         $cardBody->addItem(new \Ease\Html\H5Tag(
-            new \Ease\Html\ATag('credentialtype.php?id=' . $credData['id'], $credData['name']),
+            new \Ease\Html\ATag('credentialtype.php?id='.$credData['id'], $credData['name']),
             ['class' => 'card-title'],
         ));
         $cardBody->addItem(new \Ease\Html\PTag(
@@ -110,7 +110,7 @@ if (!empty($recentCredsData)) {
         }
 
         if (!empty($credData['version'])) {
-            $cardBody->addItem(new \Ease\Html\SpanTag('v' . $credData['version'], ['class' => 'badge bg-secondary']));
+            $cardBody->addItem(new \Ease\Html\SpanTag('v'.$credData['version'], ['class' => 'badge bg-secondary']));
         }
 
         $credsRow->addColumn(2, new \Ease\Html\DivTag($card, ['class' => 'mb-3']));
@@ -121,7 +121,7 @@ if (!empty($recentCredsData)) {
     $oPage->container->addItem(new \Ease\Html\PTag(_('No credential types submitted yet. Be the first!'), ['class' => 'text-muted']));
 }
 
-$oPage->container->addItem(new \Ease\TWB5\LinkButton('credentialtypes.php', _('View all credential types') . ' →', 'outline-primary mb-4'));
+$oPage->container->addItem(new \Ease\TWB5\LinkButton('credentialtypes.php', _('View all credential types').' →', 'outline-primary mb-4'));
 
 $oPage->addItem(new PageBottom());
 

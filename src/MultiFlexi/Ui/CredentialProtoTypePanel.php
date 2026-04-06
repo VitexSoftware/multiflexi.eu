@@ -37,7 +37,7 @@ class CredentialProtoTypePanel extends Panel
         $cid = $prototype->getMyKey();
         $this->headRow = new Row();
         $this->headRow->addColumn(2, ['🔑&nbsp;', $prototype->getRecordName()]);
-        $this->headRow->addColumn(4, [new LinkButton('credentialtype.php?id=' . $cid, '🔑&nbsp;' . _('Credential Type'), 'primary btn-lg')]);
+        $this->headRow->addColumn(4, [new LinkButton('credentialtype.php?id='.$cid, '🔑&nbsp;'._('Credential Type'), 'primary btn-lg')]);
 
         parent::__construct($this->headRow, 'default', $content, $footer);
     }

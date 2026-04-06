@@ -18,20 +18,22 @@ namespace MultiFlexi;
 use Ease\Shared;
 use MultiFlexi\Ui\WebPage;
 
-define('APP_NAME','MultiFlexiEU');
+\define('APP_NAME', 'MultiFlexiEU');
 
 // Load composer autoloader
 $autoloadPaths = [
-    __DIR__ . '/../vendor/autoload.php',      // Development
+    __DIR__.'/../vendor/autoload.php',      // Development
     '/usr/share/php/multiflexi-eu/autoload.php', // Debian deployment
 ];
 
 foreach ($autoloadPaths as $autoloadPath) {
     if (file_exists($autoloadPath)) {
         require_once $autoloadPath;
+
         break;
     }
 }
+
 session_start();
 \Ease\Shared::init(
     ['DB_CONNECTION', 'DB_HOST', 'DB_PORT', 'DB_DATABASE', 'DB_USERNAME', 'DB_PASSWORD'],

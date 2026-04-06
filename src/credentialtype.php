@@ -20,7 +20,7 @@ use Ease\TWB5\Row;
 use Ease\TWB5\Tabs;
 use MultiFlexi\Hub\CredentialProtoType;
 
-require_once __DIR__ . '/init.php';
+require_once __DIR__.'/init.php';
 $oPage->onlyForLogged();
 $action = \Ease\WebPage::getRequestValue('action');
 $prototype = new CredentialProtoType(WebPage::getRequestValue('id', 'int'));
@@ -38,7 +38,7 @@ switch ($action) {
         if ($oPage->isPosted()) {
             if ($prototype->takeData($_POST) && null !== $prototype->saveToSQL()) {
                 $prototype->addStatusMessage(_('Credential Type Saved'), 'success');
-                $oPage->redirect('?id=' . $prototype->getMyKey());
+                $oPage->redirect('?id='.$prototype->getMyKey());
             } else {
                 $prototype->addStatusMessage(_('Error saving Credential Type'), 'error');
             }
@@ -54,7 +54,7 @@ if (empty($instanceName) === false) {
     $instanceLink = null;
 }
 
-$oPage->addItem(new PageTop($prototype->getRecordName() ? trim(_('Credential Type') . ' ' . $prototype->getRecordName()) : $instanceName));
+$oPage->addItem(new PageTop($prototype->getRecordName() ? trim(_('Credential Type').' '.$prototype->getRecordName()) : $instanceName));
 $instanceRow = new Row();
 $instanceRow->addColumn(4, new CredentialProtoTypeEditorForm($prototype));
 

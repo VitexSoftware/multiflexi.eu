@@ -62,9 +62,9 @@ class Application extends \MultiFlexi\Application
     public function completeDataRow(array $dataRowRaw): array|string
     {
         if (!empty($dataRowRaw['uuid'])) {
-            $dataRowRaw['name'] = '<a href="app.php?id=' . $dataRowRaw['id'] . '">' .
-                '<img src="appimage.php?uuid=' . $dataRowRaw['uuid'] . '" height="24" class="me-2">' .
-                htmlspecialchars((string) $dataRowRaw['name']) . '</a>';
+            $dataRowRaw['name'] = '<a href="app.php?id='.$dataRowRaw['id'].'">'.
+                '<img src="appimage.php?uuid='.$dataRowRaw['uuid'].'" height="24" class="me-2">'.
+                htmlspecialchars((string) $dataRowRaw['name']).'</a>';
         }
 
         return parent::completeDataRow($dataRowRaw);

@@ -29,8 +29,8 @@ class CredentialProtoTypeJson extends \Ease\Html\DivTag
 
         if ($prototype->getMyKey()) {
             $this->addItem(new \Ease\TWB5\LinkButton(
-                'credentialtypejson.php?id=' . $prototype->getMyKey(),
-                _('Download') . ' ' . $prototype->getDataValue('code') . '.credentialtype.json',
+                'credentialtypejson.php?id='.$prototype->getMyKey(),
+                _('Download').' '.$prototype->getDataValue('code').'.credentialtype.json',
                 'info',
             ));
         }
