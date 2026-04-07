@@ -23,6 +23,28 @@ use MultiFlexi\Hub\Application;
 
 require_once __DIR__.'/init.php';
 
+// JSON export mode — public API, no auth required
+$exportUuid = \Ease\WebPage::getRequestValue('export');
+
+if ($exportUuid) {
+    $exportApp = new Application();
+    $exportApp->setKeyColumn('uuid');
+    $exportApp->loadFromSQL($exportUuid);
+
+    if ($exportApp->getMyKey()) {
+        $appJson = $exportApp->getAppJson();
+        header('Content-Type: application/json; charset=utf-8');
+        header('Access-Control-Allow-Origin: *');
+        echo $appJson;
+    } else {
+        http_response_code(404);
+        header('Content-Type: application/json');
+        echo json_encode(['error' => 'Application not found']);
+    }
+
+    exit;
+}
+
 $action = \Ease\WebPage::getRequestValue('action');
 $apps = new Application(WebPage::getRequestValue('id', 'int') + WebPage::getRequestValue('app', 'int'));
 $instanceName = _($apps->getDataValue('name') ?: _('n/a'));
