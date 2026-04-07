@@ -27,8 +27,30 @@ $action = \Ease\WebPage::getRequestValue('action');
 $apps = new Application(WebPage::getRequestValue('id', 'int') + WebPage::getRequestValue('app', 'int'));
 $instanceName = _($apps->getDataValue('name') ?: _('n/a'));
 
+$loggedUser = \Ease\Shared::user();
+$isOwner = $loggedUser->isLogged() && $apps->getMyKey() && (int) $apps->getDataValue('user') === (int) $loggedUser->getMyKey();
+$isNewApp = !$apps->getMyKey() && $loggedUser->isLogged();
+
+// Check coworker status
+$isCoworker = false;
+
+if ($loggedUser->isLogged() && $apps->getMyKey() && !$isOwner) {
+    $pdo = $apps->getPdo();
+    $stmt = $pdo->prepare('SELECT 1 FROM item_coworker WHERE item_type = ? AND item_id = ? AND user_id = ?');
+    $stmt->execute(['app', $apps->getMyKey(), $loggedUser->getMyKey()]);
+    $isCoworker = (bool) $stmt->fetch();
+}
+
+$canEdit = $isOwner || $isNewApp || $isCoworker;
+
 switch ($action) {
     case 'delete':
+        if (!$canEdit) {
+            $apps->addStatusMessage(_('Only the application author can delete it'), 'warning');
+
+            break;
+        }
+
         $configurator = new \MultiFlexi\Configuration();
         $configurator->deleteFromSQL(['app_id' => $apps->getMyKey()]);
 
@@ -40,9 +62,14 @@ switch ($action) {
 
     default:
         if ($oPage->isPosted()) {
+            if (!$canEdit) {
+                $apps->addStatusMessage(_('Only the application author can edit it'), 'warning');
+
+                break;
+            }
+
             if ($apps->takeData($_POST) && null !== $apps->saveToSQL()) {
                 $apps->addStatusMessage(_('Application Saved'), 'success');
-                //        $apps->prepareRemoteAbraFlexi();
                 $oPage->redirect('?id='.$apps->getMyKey());
             } else {
                 $apps->addStatusMessage(_('Error saving Application'), 'error');
@@ -61,23 +88,35 @@ if (empty($instanceName) === false) {
 
 $_SESSION['application'] = $apps->getMyKey();
 $oPage->addItem(new PageTop($apps->getRecordName() ? trim(_('Application').' '.$apps->getRecordName()) : $instanceName));
-$instanceRow = new Row();
-$instanceRow->addColumn(4, new AppEditorForm($apps));
-// if (array_key_exists('company', $_SESSION) && is_null($_SESSION['company']) === false) {
-//    $company = new Company($_SESSION['company']);
-//    $panel[] = new LinkButton('id=' . $apps->getMyKey() . '&company=' . $_SESSION['company'], sprintf(_('Assign to %s'), $company->getRecordName()), 'success');
-// }
-
-$instanceRow->addColumn(4, null === $apps->getMyKey() ?
-                new LinkButton('', _('Config fields'), 'inverse disabled  btn-block') :
-                new ConfigFieldsView(Conffield::getAppConfigs($apps)));
-
-$instanceRow->addColumn(4, new AppLogo($apps));
 
 $appTabs = new Tabs();
-$appTabs->addTab(_('Import'), new AppImportForm());
-$appTabs->addTab(_('Configuration'), $instanceRow);
+
+if ($canEdit) {
+    $appTabs->addTab(_('Import'), new AppImportForm());
+
+    $instanceRow = new Row();
+    $instanceRow->addColumn(4, new AppEditorForm($apps));
+    $instanceRow->addColumn(4, null === $apps->getMyKey() ?
+                    new LinkButton('', _('Config fields'), 'inverse disabled  btn-block') :
+                    new ConfigFieldsView(Conffield::getAppConfigs($apps)));
+    $instanceRow->addColumn(4, new AppLogo($apps));
+
+    $appTabs->addTab(_('Configuration'), $instanceRow);
+} else {
+    $instanceRow = new Row();
+    $instanceRow->addColumn(8, null === $apps->getMyKey() ?
+                    new \Ease\Html\PTag(_('No configuration available.')) :
+                    new ConfigFieldsView(Conffield::getAppConfigs($apps)));
+    $instanceRow->addColumn(4, new AppLogo($apps));
+
+    $appTabs->addTab(_('Configuration'), $instanceRow);
+}
+
 $appTabs->addTab(_('Export'), new AppJson($apps));
+
+if ($isOwner && $apps->getMyKey()) {
+    $appTabs->addTab(_('Coworkers'), new CoworkersManager('app', (int) $apps->getMyKey()));
+}
 
 $oPage->container->addItem(new ApplicationPanel(
     $apps,

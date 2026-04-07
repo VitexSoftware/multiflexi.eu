@@ -77,11 +77,10 @@ if (!empty($allTags)) {
     $oPage->includeCss('css/selectize.bootstrap5.css');
 
     $contentContainer->addItem(new H4Tag(_('Filter by Tags')));
-    $contentContainer->addItem(new PTag(_('Select tags to filter applications. All tags are selected by default to show all applications.')));
+    $contentContainer->addItem(new PTag(_('Select tags to filter applications. All applications are shown when no tags are selected.')));
 
     $filterRow = new Row();
-    $allTagIds = array_column($allTags, 'id');
-    $tagFilter = new PillBox('tag_filter', $allTags, $allTagIds, [
+    $tagFilter = new PillBox('tag_filter', $allTags, [], [
         'class' => 'form-control mb-2',
         'placeholder' => _('Select tags to filter applications...'),
     ]);
@@ -229,15 +228,15 @@ $(document).ready(function() {
         try {
             var saved = localStorage.getItem(STORAGE_KEY);
             if (!saved || saved === DEFAULT_ALL_SELECTED) {
-                return allAvailableTags.slice();
+                return [];
             }
             var parsed = JSON.parse(saved);
             if (Array.isArray(parsed)) {
                 return parsed.filter(function(t) { return allAvailableTags.includes(t); });
             }
-            return allAvailableTags.slice();
+            return [];
         } catch (e) {
-            return allAvailableTags.slice();
+            return [];
         }
     }
 
@@ -256,14 +255,12 @@ $(document).ready(function() {
                 appDesc.toString().toLowerCase().includes(searchText) ||
                 appTags.toLowerCase().includes(searchText);
 
-            // Tag filter
+            // Tag filter: show all when no tags selected, filter when tags chosen
             var matchesTags = true;
-            if (allAvailableTags.length > 0) {
+            if (selectedTags.length > 0) {
                 var cardTags = appTags.split(',').map(function(t) { return t.trim(); }).filter(function(t) { return t.length > 0; });
-                if (selectedTags.length === 0) {
-                    matchesTags = true;
-                } else if (cardTags.length === 0) {
-                    matchesTags = true;
+                if (cardTags.length === 0) {
+                    matchesTags = false;
                 } else {
                     matchesTags = false;
                     for (var i = 0; i < selectedTags.length; i++) {
@@ -312,8 +309,10 @@ $(document).ready(function() {
             allAvailableTags = Object.keys(tagFilterSelectize.options);
 
             var savedSelection = loadTagSelection();
-            tagFilterSelectize.setValue(savedSelection, true);
-            selectedTags = savedSelection;
+            if (savedSelection.length > 0) {
+                tagFilterSelectize.setValue(savedSelection, true);
+                selectedTags = savedSelection;
+            }
             applyFilters();
 
             tagFilterSelectize.on('change', function(value) {
@@ -332,8 +331,8 @@ $(document).ready(function() {
             });
 
             $('#reset-tag-filter').on('click', function() {
-                tagFilterSelectize.setValue(allAvailableTags, true);
-                selectedTags = allAvailableTags.slice();
+                tagFilterSelectize.clear(true);
+                selectedTags = [];
                 saveTagSelection(selectedTags);
                 applyFilters();
             });
