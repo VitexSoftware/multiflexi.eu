@@ -25,7 +25,7 @@ if (\Ease\Shared::cfg('ZABBIX_SERVER') && \Ease\Shared::cfg('ZABBIX_HOST') && cl
 }
 
 \define('EASE_LOGGER', implode('|', $loggers));
-\define('APP_NAME', 'MultiFlexi json2app');
+\define('APP_NAME', 'MultiFlexiEU json2app');
 
 \Ease\Shared::user(new \Ease\Anonym());
 
@@ -42,11 +42,15 @@ if (\array_key_exists(1, $argv) && file_exists($argv[1])) {
         exit(1);
     }
 
+    $apper->setDataValue('enabled', 1);
+
     $apper->setKeyColumn('uuid');
 
     if ($apper->loadImage($apper->getDataValue('uuid'), '../src/images/')) {
         $apper->updateToSQL();
     } elseif ($apper->loadImage($apper->getDataValue('uuid'), \dirname($argv[1]))) {
+        $apper->updateToSQL();
+    } else {
         $apper->updateToSQL();
     }
 } else {

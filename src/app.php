@@ -22,7 +22,7 @@ use MultiFlexi\Conffield;
 use MultiFlexi\Hub\Application;
 
 require_once __DIR__.'/init.php';
-$oPage->onlyForLogged();
+
 $action = \Ease\WebPage::getRequestValue('action');
 $apps = new Application(WebPage::getRequestValue('id', 'int') + WebPage::getRequestValue('app', 'int'));
 $instanceName = _($apps->getDataValue('name') ?: _('n/a'));

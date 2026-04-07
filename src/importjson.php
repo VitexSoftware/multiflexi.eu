@@ -26,6 +26,8 @@ if ($oPage->isPosted() && isset($_FILES['jsonfile']) && $_FILES['jsonfile']['err
     $result = $apps->importAppJson($tmpFile);
 
     if ($apps->getMyKey()) {
+        $apps->setDataValue('enabled', 1);
+        $apps->updateToSQL();
         $apps->addStatusMessage(_('Application imported successfully'), 'success');
         $oPage->redirect('app.php?id='.$apps->getMyKey());
     } else {

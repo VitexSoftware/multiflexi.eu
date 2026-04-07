@@ -8,6 +8,7 @@
 ./db/migrations/20260405230100_app_support_tables.php
 ./db/migrations/20260405230200_credential_prototypes.php
 ./db/migrations/20260406101100_user_password_length.php
+./db/migrations/20260407000000_rename_topics_to_tags.php
 ./src/ajax2db.php
 ./src/app.php
 ./src/appimage.php
@@ -108,6 +109,7 @@
 ./src/MultiFlexi/Ui/MainMenu.php
 ./src/MultiFlexi/Ui/PageBottom.php
 ./src/MultiFlexi/Ui/PageTop.php
+./src/MultiFlexi/Ui/PillBox.php
 ./src/MultiFlexi/Ui/WebPage.php
 ./debian/conf/multiflexi-eu.conf
 ./bin/multiflexi-eu-json2app
