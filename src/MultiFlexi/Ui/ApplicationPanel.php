@@ -64,7 +64,7 @@ $(document).ready(function() {
         var savedDomain = '';
         try { savedDomain = localStorage.getItem(STORAGE_KEY) || ''; } catch(e) {}
 
-        var domain = prompt('{$this->jsEscape(_('Enter your MultiFlexi instance domain (e.g. multiflexi.example.com):'))}', savedDomain);
+        var domain = prompt('{self::jsEscape(_('Enter your MultiFlexi instance domain (e.g. multiflexi.example.com):'))}', savedDomain);
         if (!domain) return;
 
         domain = domain.replace(/^https?:\\/\\//, '').replace(/\\/+$/, '');
@@ -79,7 +79,7 @@ JS);
         }
     }
 
-    private function jsEscape(string $str): string
+    private static function jsEscape(string $str): string
     {
         return addcslashes($str, "'\\");
     }

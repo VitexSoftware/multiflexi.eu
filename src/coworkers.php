@@ -67,7 +67,6 @@ switch ($action) {
         echo json_encode(['success' => true, 'message' => _('Coworker added')]);
 
         break;
-
     case 'remove':
         $stmt = $pdo->prepare('DELETE FROM item_coworker WHERE item_type = ? AND item_id = ? AND user_id = ?');
         $stmt->execute([$itemType, $itemId, $userId]);

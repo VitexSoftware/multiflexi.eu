@@ -44,10 +44,9 @@ $actionRow->addColumn(3, new \Ease\TWB5\LinkButton('install.php', '📦 '._('Ins
 $oPage->container->addItem($actionRow);
 
 $appQuery = (new \MultiFlexi\Hub\Application())->listingQuery()->orderBy('DatCreate DESC');
-$oPage->container->addItem(new \Ease\Html\H3Tag(_('Applications'), ['class' => 'mt-4']));
+$oPage->container->addItem(new \Ease\Html\H3Tag(_('Recent Applications'), ['class' => 'mt-4']));
 
-$recentAppsData = $appQuery->fetchAll();
-
+$recentAppsData = $appQuery->limit(6)->orderBy('DatUpdate DESC')->fetchAll();
 
 if (!empty($recentAppsData)) {
     $appsRow = new \Ease\TWB5\Row();
@@ -70,9 +69,11 @@ if (!empty($recentAppsData)) {
         if (!empty($appData['tags'])) {
             $tags = explode(',', (string) $appData['tags']);
             $tagsDiv = new \Ease\Html\DivTag(null, ['class' => 'mb-2 tags-container']);
+
             foreach ($tags as $tag) {
                 $tagsDiv->addItem(new \Ease\Html\SpanTag(trim($tag), ['class' => 'badge bg-info me-1 tag-badge']));
             }
+
             $cardBody->addItem($tagsDiv);
         }
 

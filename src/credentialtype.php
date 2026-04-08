@@ -21,7 +21,7 @@ use Ease\TWB5\Tabs;
 use MultiFlexi\Hub\CredentialProtoType;
 
 require_once __DIR__.'/init.php';
-$oPage->onlyForLogged();
+
 $action = \Ease\WebPage::getRequestValue('action');
 $prototype = new CredentialProtoType(WebPage::getRequestValue('id', 'int'));
 $instanceName = $prototype->getDataValue('name') ?: _('n/a');
