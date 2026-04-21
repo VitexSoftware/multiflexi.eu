@@ -14,6 +14,8 @@ override_dh_install:
 		debian/multiflexi-eu/usr/share/php/multiflexi-eu/autoload.php
 	sed -i "s|: 'unknown'|: '$(PKG_SOURCE)'|" \\
 		debian/multiflexi-eu/usr/share/php/multiflexi-eu/autoload.php
+	sed -i "s|: '0.0.0'|: '$(PKG_VERSION)'|" \\
+		debian/multiflexi-eu/usr/share/php/multiflexi-eu/autoload.php
 	sed -i "2a defined('APP_VERSION') || define('APP_VERSION', '$(PKG_VERSION)');" \
 		debian/multiflexi-eu/usr/share/php/multiflexi-eu/autoload.php
 	# Fix vendor autoload path for Debian
