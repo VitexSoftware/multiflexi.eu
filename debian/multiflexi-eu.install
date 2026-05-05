@@ -12,3 +12,5 @@ src/MultiFlexi/Ui/*.php                    usr/lib/multiflexi-eu/MultiFlexi/Ui/
 debian/conf/multiflexi-eu.conf             etc/apache2/conf-available/
 bin/*					   usr/bin/
 libexec/*.php				   usr/lib/multiflexi-eu/
+multiflexi-eu.svg	usr/share/icons/hicolor/scalable/apps/
+eu.multiflexi.multiflexi_eu.metainfo.xml	usr/share/metainfo/

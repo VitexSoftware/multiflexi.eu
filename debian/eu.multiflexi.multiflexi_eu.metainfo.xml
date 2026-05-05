@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="web-application">
+  <id>eu.multiflexi.multiflexi_eu</id>
+  <icon type="stock">multiflexi-eu</icon>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>MultiFlexi.eu</name>
+  <summary>MultiFlexi web portal</summary>
+  <description>
+    <p>
+      Web portal for the MultiFlexi platform. Provides a web interface for managing and showcasing MultiFlexi services and documentation.
+    </p>
+  </description>
+  <categories>
+    <category>Network</category>
+  </categories>
+  <url type="homepage">https://multiflexi.eu</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/multiflexi.eu/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
