@@ -19,7 +19,7 @@ Depends: ${misc:Depends},
  php-vitexsoftware-ease-fluentpdo,
  php-vitexsoftware-ease-bootstrap5-widgets,
  php-rcubitto-json-pretty,
- php-robmorgan-phinx | php-cakephp-phinx,
+ php-cakephp-phinx,
  php-cli,
  adduser
 Recommends: multiflexi-eu-sqlite | multiflexi-eu-mysql
