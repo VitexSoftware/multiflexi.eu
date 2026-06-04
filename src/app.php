@@ -119,7 +119,7 @@ if ($canEdit) {
     $instanceRow = new Row();
     $instanceRow->addColumn(4, new AppEditorForm($apps));
     $instanceRow->addColumn(4, null === $apps->getMyKey() ?
-                    new LinkButton('', _('Config fields'), 'inverse disabled  btn-block') :
+                    new LinkButton('', _('Config fields'), 'inverse disabled  w-100') :
                     new ConfigFieldsView(Conffield::getAppConfigs($apps)));
     $instanceRow->addColumn(4, new AppLogo($apps));
 

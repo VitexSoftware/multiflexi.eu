@@ -23,24 +23,22 @@ $oPage->addItem(new PageTop(_('MultiFlexi Hub')));
 $heroRow = new \Ease\TWB5\Row();
 $heroRow->addTagClass('justify-content-md-center mb-4');
 $heroRow->addColumn('2');
-$heroRow->addColumn('8', new \Ease\Html\DivTag(
-    [
-        new \Ease\Html\H2Tag(_('MultiFlexi Application & Credential Hub'), ['class' => 'text-center']),
-        new \Ease\Html\PTag(
-            _('Browse, share and discover applications and credential type definitions for MultiFlexi. Sign in to submit your own.'),
-            ['class' => 'text-center text-muted'],
-        ),
-    ],
-));
+$heroRow->addColumn('8', new \Ease\Html\DivTag([
+    new \Ease\Html\H2Tag(_('MultiFlexi Application & Credential Hub'), ['class' => 'text-center']),
+    new \Ease\Html\PTag(
+        _('Browse, share and discover applications and credential type definitions for MultiFlexi. Sign in to submit your own.'),
+        ['class' => 'text-center text-muted'],
+    ),
+],));
 $heroRow->addColumn('2');
 $oPage->container->addItem($heroRow);
 
 // Quick action buttons
 $actionRow = new \Ease\TWB5\Row();
 $actionRow->addTagClass('justify-content-center mb-4');
-$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('apps.php', '🧩 '._('Browse Applications'), 'primary btn-lg btn-block w-100'));
-$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('credentialtypes.php', '🔑 '._('Browse Credential Types'), 'primary btn-lg btn-block w-100'));
-$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('install.php', '📦 '._('Install MultiFlexi'), 'warning btn-lg btn-block w-100'));
+$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('apps.php', '🧩 '._('Browse Applications'), 'primary btn-lg w-100'));
+$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('credentialtypes.php', '🔑 '._('Browse Credential Types'), 'primary btn-lg w-100'));
+$actionRow->addColumn(3, new \Ease\TWB5\LinkButton('install.php', '📦 '._('Install MultiFlexi'), 'warning btn-lg w-100'));
 $oPage->container->addItem($actionRow);
 
 $appQuery = (new \MultiFlexi\Hub\Application())->listingQuery()->orderBy('DatCreate DESC');

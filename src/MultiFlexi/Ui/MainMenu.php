@@ -35,7 +35,7 @@ class MainMenu extends \Ease\Html\NavTag
 
         $container->addItem($this->navBarToggler());
         $container->addItem($this->navBarCollapse());
-        parent::__construct($container, ['class' => 'navbar navbar-expand-lg navbar-light bg-light']);
+        parent::__construct($container, ['class' => 'navbar navbar-expand-lg navbar-dark mf-navbar sticky-top']);
     }
 
     public function navBarToggler()

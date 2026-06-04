@@ -93,15 +93,11 @@ if ($canEdit) {
     $instanceRow->addColumn(4, new CredentialProtoTypeEditorForm($prototype));
 
     $instanceRow->addColumn(4, null === $prototype->getMyKey() ?
-        new LinkButton('', _('Fields'), 'inverse disabled btn-block') :
+        new LinkButton('', _('Fields'), 'inverse disabled w-100') :
         new CredentialProtoTypeFieldsView($prototype));
 
     $instanceRow->addColumn(4, [
-        new \Ease\Html\DivTag(
-            $prototype->getDataValue('url')
-                ? new \Ease\Html\ATag($prototype->getDataValue('url'), $prototype->getDataValue('url'), ['target' => '_blank'])
-                : '',
-        ),
+        new \Ease\Html\DivTag($prototype->getDataValue('url') ? new \Ease\Html\ATag($prototype->getDataValue('url'), $prototype->getDataValue('url'), ['target' => '_blank']) : ''),
     ]);
 
     $credTabs->addTab(_('Configuration'), $instanceRow);
@@ -112,11 +108,7 @@ if ($canEdit) {
         new CredentialProtoTypeFieldsView($prototype));
 
     $instanceRow->addColumn(4, [
-        new \Ease\Html\DivTag(
-            $prototype->getDataValue('url')
-                ? new \Ease\Html\ATag($prototype->getDataValue('url'), $prototype->getDataValue('url'), ['target' => '_blank'])
-                : '',
-        ),
+        new \Ease\Html\DivTag($prototype->getDataValue('url') ? new \Ease\Html\ATag($prototype->getDataValue('url'), $prototype->getDataValue('url'), ['target' => '_blank']) : ''),
     ]);
 
     $credTabs->addTab(_('Configuration'), $instanceRow);
