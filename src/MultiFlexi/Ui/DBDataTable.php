@@ -409,6 +409,13 @@ EOD;
             $name = $properties['name'];
             $properties['valueColumn'] = \array_key_exists('valueColumn', $properties) ? addslashes($properties['valueColumn']) : $properties['name'];
             $properties['data'] = $name;
+
+            // Convert 'hidden' to DataTables 'visible' property
+            if (\array_key_exists('hidden', $properties) && $properties['hidden'] === true) {
+                $properties['visible'] = false;
+                unset($properties['hidden']);
+            }
+
             $parts[] = '{'.\Ease\Part::partPropertiesToString($properties).'}';
         }
 
@@ -417,6 +424,10 @@ EOD;
 
     /**
      * Engine columns to Table Header columns format.
+     *
+     * All columns must be included (even hidden ones) so that the <th> count
+     * matches the DataTables JS column definitions. DataTables hides columns
+     * via the `visible` property in JS, not by omitting <th> elements.
      *
      * @param array $columns
      *
@@ -427,10 +438,6 @@ EOD;
         $header = [];
 
         foreach ($columns as $properties) {
-            if (\array_key_exists('hidden', $properties) && ($properties['hidden'] === true)) {
-                continue;
-            }
-
             if (isset($properties['label'])) {
                 $header[$properties['name']] = $properties['label'];
             } else {
