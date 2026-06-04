@@ -29,6 +29,22 @@ require_once __DIR__.'/init.php';
 
 $oPage->addItem(new PageTop(_('Applications')));
 
+// View toggle buttons
+$viewToggle = new DivTag(null, ['class' => 'd-flex justify-content-between align-items-center mb-3']);
+$viewToggle->addItem(new H2Tag(_('Applications'), ['class' => 'mb-0']));
+$toggleBtns = new DivTag(null, ['class' => 'btn-group', 'role' => 'group']);
+$toggleBtns->addItem(new \Ease\Html\ButtonTag(
+    '<i class="bi bi-grid-3x3-gap-fill"></i> '._('Cards'),
+    ['class' => 'btn btn-primary', 'id' => 'btn-cards-view', 'type' => 'button'],
+));
+$toggleBtns->addItem(new \Ease\Html\ButtonTag(
+    '<i class="bi bi-table"></i> '._('Table'),
+    ['class' => 'btn btn-outline-primary', 'id' => 'btn-table-view', 'type' => 'button'],
+));
+$viewToggle->addItem($toggleBtns);
+$oPage->container->addItem($viewToggle);
+$oPage->includeCSS('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
+
 // Fetch all applications with localized names
 $apper = new \MultiFlexi\Application();
 $currentLang = substr(\Ease\Locale::$localeUsed ?? 'en_US', 0, 2);
@@ -60,24 +76,23 @@ foreach ($allApps as $app) {
 ksort($allTags);
 $allTags = array_values($allTags);
 
-// Search box
-$contentContainer = new DivTag();
-$contentContainer->addItem(new H2Tag(_('Applications')));
+// ═══ CARD VIEW ═══
+$cardViewContainer = new DivTag(null, ['id' => 'card-view']);
 
 $searchBox = new InputSearchTag('app_search', '', [
     'placeholder' => _('Search applications...'),
     'class' => 'form-control form-control-lg mb-3',
     'id' => 'app_search',
 ]);
-$contentContainer->addItem($searchBox);
+$cardViewContainer->addItem($searchBox);
 
 // Tag filter using PillBox
 if (!empty($allTags)) {
     $oPage->includeJavaScript('js/selectize.min.js');
     $oPage->includeCss('css/selectize.bootstrap5.css');
 
-    $contentContainer->addItem(new H4Tag(_('Filter by Tags')));
-    $contentContainer->addItem(new PTag(_('Select tags to filter applications. All applications are shown when no tags are selected.')));
+    $cardViewContainer->addItem(new H4Tag(_('Filter by Tags')));
+    $cardViewContainer->addItem(new PTag(_('Select tags to filter applications. All applications are shown when no tags are selected.')));
 
     $filterRow = new Row();
     $tagFilter = new PillBox('tag_filter', $allTags, [], [
@@ -93,8 +108,8 @@ if (!empty($allTags)) {
         'title' => _('Select all tags to show all applications'),
     ]);
     $filterRow->addColumn(2, $resetButton);
-    $contentContainer->addItem($filterRow);
-    $contentContainer->addItem(new DivTag('', ['class' => 'mb-4']));
+    $cardViewContainer->addItem($filterRow);
+    $cardViewContainer->addItem(new DivTag('', ['class' => 'mb-4']));
 }
 
 // Count display
@@ -102,7 +117,7 @@ $countDiv = new DivTag(
     new SmallTag(['<strong id="visible-count">'.\count($allApps).'</strong> ', _('applications')], ['class' => 'text-muted']),
     ['class' => 'mb-3'],
 );
-$contentContainer->addItem($countDiv);
+$cardViewContainer->addItem($countDiv);
 
 // Build card grid
 $cardsRow = new Row();
@@ -158,8 +173,13 @@ foreach ($allApps as $app) {
     $cardsRow->addItem($cardWrapper);
 }
 
-$contentContainer->addItem($cardsRow);
-$oPage->container->addItem($contentContainer);
+$cardViewContainer->addItem($cardsRow);
+$oPage->container->addItem($cardViewContainer);
+
+// ═══ TABLE VIEW ═══
+$tableViewContainer = new DivTag(null, ['id' => 'table-view', 'style' => 'display:none']);
+$tableViewContainer->addItem(new DBDataTable(new \MultiFlexi\Hub\Application()));
+$oPage->container->addItem($tableViewContainer);
 
 // CSS
 $oPage->addCSS(<<<'CSS'
@@ -197,9 +217,30 @@ $oPage->addCSS(<<<'CSS'
 }
 CSS);
 
-// JavaScript - live search and tag filtering
+// JavaScript - view toggle + live search and tag filtering
 $oPage->addJavaScript(<<<'JS'
 $(document).ready(function() {
+    // View toggle
+    var VIEW_KEY = 'multiflexi_eu_apps_view';
+    function setView(mode) {
+        if (mode === 'table') {
+            $('#card-view').hide();
+            $('#table-view').show();
+            $('#btn-table-view').removeClass('btn-outline-primary').addClass('btn-primary');
+            $('#btn-cards-view').removeClass('btn-primary').addClass('btn-outline-primary');
+        } else {
+            $('#table-view').hide();
+            $('#card-view').show();
+            $('#btn-cards-view').removeClass('btn-outline-primary').addClass('btn-primary');
+            $('#btn-table-view').removeClass('btn-primary').addClass('btn-outline-primary');
+        }
+        try { localStorage.setItem(VIEW_KEY, mode); } catch(e) {}
+    }
+    $('#btn-cards-view').on('click', function() { setView('cards'); });
+    $('#btn-table-view').on('click', function() { setView('table'); });
+    var savedView = 'cards';
+    try { savedView = localStorage.getItem(VIEW_KEY) || 'cards'; } catch(e) {}
+    setView(savedView);
     // Click card to navigate to detail
     $('.app-card').click(function() {
         var link = $(this).find('a').attr('href');
