@@ -68,56 +68,51 @@ if (empty($emailTo)) {
     }
 }
 
-$oPage->addItem(new PageTop(_('Lost password recovery')));
+$oPage->addItem(new PageTop(_('Password Recovery')));
 
-$pageRow = new \Ease\TWB5\Row();
+$face = new \Ease\Html\DivTag(null, ['id' => 'LoginFace']);
+$card = new \Ease\Html\DivTag(null, ['class' => 'mf-login-card']);
 
-$columnI = $pageRow->addColumn('4');
-$columnII = $pageRow->addColumn('4');
-$columnIII = $pageRow->addColumn('4');
-
-$oPage->addItem($pageRow);
+$card->addItem(new \Ease\Html\DivTag(
+    new \Ease\Html\ImgTag('images/multiflexi-logo.svg', 'MultiFlexi', ['style' => 'height: 80px']),
+    ['class' => 'mf-login-logo'],
+));
+$card->addItem(new \Ease\Html\H2Tag('🔑 '._('Password Recovery')));
 
 if (!$success) {
-    $columnIII->addItem(new \Ease\TWB5\Badge('info', _('Tip')));
-
-    $columnIII->addItem(new \Ease\TWB5\Card(
-        _('Forgot your password? Enter your e-mail address you entered during the registration and we will send you a new one.'),
+    $card->addItem(new \Ease\Html\DivTag(
+        _('Forgot your password? Enter the e-mail address you used during registration and we will send you a new one.'),
+        ['class' => 'alert alert-info mb-3', 'role' => 'alert'],
+    ));
+    $card->addItem(new \Ease\TWB5\FormGroup(
+        _('Email address'),
+        new \Ease\Html\InputTextTag('Email', $emailTo, ['type' => 'email', 'class' => 'form-control form-control-lg', 'placeholder' => _('your@email.com'), 'autofocus' => 'autofocus']),
+    ));
+    $card->addItem(new \Ease\Html\DivTag(
+        new \Ease\TWB5\SubmitButton(_('Send New Password'), 'success btn-lg w-100'),
+        ['class' => 'd-grid mt-3'],
     ));
 
-    $titlerow = new \Ease\TWB5\Row();
-    $titlerow->addColumn(4, new \Ease\Html\ImgTag('images/password.png'));
-    $titlerow->addColumn(8, new \Ease\Html\H3Tag(_('Password Recovery')));
-
-    $loginPanel = new \Ease\TWB5\Panel(
-        new \Ease\TWB5\Container($titlerow),
-        'inverse',
-        null,
-        new \Ease\TWB5\SubmitButton(_('Send New Password'), 'success'),
-    );
-    $loginPanel->addItem(new \Ease\TWB5\InputGroup(
-        _('Email'),
-        new \Ease\Html\InputTextTag(
-            'Email',
-            $emailTo,
-            ['type' => 'email'],
-        ),
-    ));
-    $loginPanel->body->setTagProperties(['style' => 'margin: 20px']);
-
-    $mailForm = $columnII->addItem(new \Ease\TWB5\Form(['name' => 'PasswordRecovery']));
-    $mailForm->addItem($loginPanel);
+    $mailForm = new \Ease\TWB5\Form(['name' => 'PasswordRecovery', 'method' => 'POST'], [], $card);
 
     if ($oPage->isPosted()) {
         $mailForm->fillUp($_POST);
     }
+
+    $face->addItem($mailForm);
 } else {
-    $columnII->addItem(new \Ease\TWB5\LinkButton(
-        'login.php',
-        _('Continue'),
+    $card->addItem(new \Ease\Html\DivTag(
+        '✅ '._('Check your inbox — your new password has been sent.'),
+        ['class' => 'alert alert-success mb-3'],
     ));
-    $oPage->redirect('login.php');
+    $card->addItem(new \Ease\Html\DivTag(
+        new \Ease\TWB5\LinkButton('login.php', '🚪 '._('Back to Sign In'), 'primary btn-lg w-100'),
+        ['class' => 'd-grid'],
+    ));
+    $face->addItem($card);
 }
+
+$oPage->container->addItem($face);
 
 $oPage->addItem(new PageBottom());
 
