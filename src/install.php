@@ -393,15 +393,13 @@ $oPage->addJavaScript(<<<'JS'
     }).catch(function(){ alert('Failed to copy. Please select and copy manually.'); });
   }
 
-  document.addEventListener('DOMContentLoaded', function(){
-    /* Wire up selectors and checkboxes */
-    document.querySelectorAll('.mf-select-teal[data-repo], .mf-comp-cb').forEach(function(el){
-      el.addEventListener('change', function(){ updatePreview(el.dataset.repo); });
-    });
-    /* Wire up all copy buttons */
-    document.querySelectorAll('[data-copy-target]').forEach(function(el){
-      el.addEventListener('click', function(){ copyToClipboard(el.dataset.copyTarget); });
-    });
+  /* Wire up selectors and checkboxes (DOM is already ready via Ease/jQuery) */
+  document.querySelectorAll('.mf-select-teal[data-repo], .mf-comp-cb').forEach(function(el){
+    el.addEventListener('change', function(){ updatePreview(el.dataset.repo); });
+  });
+  /* Wire up all copy buttons */
+  document.querySelectorAll('[data-copy-target]').forEach(function(el){
+    el.addEventListener('click', function(){ copyToClipboard(el.dataset.copyTarget); });
   });
 }());
 JS);
