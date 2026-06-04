@@ -35,8 +35,13 @@ class CredentialProtoTypePanel extends Panel
     public function __construct($prototype, $content = null, $footer = null)
     {
         $cid = $prototype->getMyKey();
+        $logoUrl = method_exists($prototype, 'getLogoUrl') ? $prototype->getLogoUrl() : 'credentialtypeimage.php?uuid='.rawurlencode((string) $prototype->getDataValue('uuid'));
+        $logo = new \Ease\Html\ImgTag($logoUrl, $prototype->getRecordName(), [
+            'class' => 'img-thumbnail me-2',
+            'style' => 'max-width: 48px; max-height: 48px;',
+        ]);
         $this->headRow = new Row();
-        $this->headRow->addColumn(2, ['🔑&nbsp;', $prototype->getRecordName()]);
+        $this->headRow->addColumn(2, [$logo, $prototype->getRecordName()]);
         $this->headRow->addColumn(4, [new LinkButton('credentialtype.php?id='.$cid, '🔑&nbsp;'._('Credential Type'), 'primary btn-lg')]);
 
         parent::__construct($this->headRow, 'default', $content, $footer);

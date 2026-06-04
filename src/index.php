@@ -100,7 +100,12 @@ if (!empty($recentCredsData)) {
 
     foreach ($recentCredsData as $credData) {
         $card = new \Ease\Html\DivTag(null, ['class' => 'card h-100']);
-        $cardBody = $card->addItem(new \Ease\Html\DivTag(null, ['class' => 'card-body']));
+        $cardBody = $card->addItem(new \Ease\Html\DivTag(null, ['class' => 'card-body text-center']));
+        $cardBody->addItem(new \Ease\Html\ImgTag(
+            \MultiFlexi\Hub\CredentialProtoType::logoUrl($credData),
+            $credData['name'],
+            ['style' => 'max-width: 64px; max-height: 64px;', 'class' => 'mb-2'],
+        ));
         $cardBody->addItem(new \Ease\Html\H5Tag(
             new \Ease\Html\ATag('credentialtype.php?id='.$credData['id'], $credData['name']),
             ['class' => 'card-title'],

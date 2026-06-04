@@ -29,3 +29,4 @@ debian/multiflexi-eu-mysql/
 debian/multiflexi-eu-postgresql/
 multiflexieu.db
 fix_tags.php
+src/php_errors.log
