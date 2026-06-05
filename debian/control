@@ -21,7 +21,8 @@ Depends: ${misc:Depends},
  php-rcubitto-json-pretty,
  php-cakephp-phinx,
  php-cli,
- adduser
+ adduser,
+ multiflexi-doc
 Recommends: multiflexi-eu-sqlite | multiflexi-eu-mysql
 Description: MultiFlexi Application & Credential Hub website
  Public hub for sharing MultiFlexi application definitions and

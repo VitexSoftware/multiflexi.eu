@@ -50,6 +50,20 @@ $oPage->addCss(<<<'CSS'
 }
 .mf-setup-header h2 { color: #fff; font-size: 1.15rem; margin: 0; font-weight: 700; letter-spacing: 0.03em; }
 .mf-setup-header p  { color: rgba(255,255,255,0.65); font-size: 0.82rem; margin: 0.3rem 0 0; }
+.mf-repo-header-content { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.mf-repo-header-text { min-width: 0; }
+.mf-repo-logo {
+    max-width: 220px;
+    max-height: 92px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+}
+.mf-repo-logo-prod { filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.25)); }
+@media (max-width: 575.98px) {
+    .mf-repo-header-content { align-items: flex-start; flex-direction: column; }
+    .mf-repo-logo { max-width: 220px; max-height: 92px; }
+}
 .mf-setup-body { padding: 1.5rem; }
 
 /* Teal-flavoured form controls */
@@ -178,6 +192,8 @@ $repos = [
         'title' => _('Production Repository'),
         'subtitle' => _('Stable releases — recommended for production systems'),
         'badge' => '<span class="mf-repo-badge mf-badge-prod"><i class="bi bi-shield-check"></i> '._('Stable').'</span>',
+        'logo' => 'https://repo.multiflexi.eu/repo-logo.svg',
+        'logoClass' => 'mf-repo-logo-prod',
         'baseUrl' => 'https://repo.multiflexi.eu',
         'keyword' => 'multiflexi',
         'distros' => ['bookworm', 'trixie', 'forky', 'jammy', 'noble', 'resolute'],
@@ -188,6 +204,8 @@ $repos = [
         'title' => _('Testing Repository'),
         'subtitle' => _('Development builds — latest features, may be unstable'),
         'badge' => '<span class="mf-repo-badge mf-badge-test"><i class="bi bi-lightning"></i> '._('Testing').'</span>',
+        'logo' => 'https://repo.vitexsoftware.cz/repo-logo.png',
+        'logoClass' => '',
         'baseUrl' => 'https://repo.vitexsoftware.com',
         'keyword' => 'vitexsoftware',
         'distros' => ['bookworm', 'trixie', 'forky', 'jammy', 'noble', 'resolute'],
@@ -223,8 +241,13 @@ foreach ($repos as $repo) {
     $html = '
 <div class="card mf-setup-card h-100">
   <div class="card-header mf-setup-header">
-    <h2><i class="bi bi-box-seam"></i> '.htmlspecialchars($repo['title']).' '.$repo['badge'].'</h2>
-    <p>'.htmlspecialchars($repo['subtitle']).'</p>
+    <div class="mf-repo-header-content">
+      <div class="mf-repo-header-text">
+        <h2><i class="bi bi-box-seam"></i> '.htmlspecialchars($repo['title']).' '.$repo['badge'].'</h2>
+        <p>'.htmlspecialchars($repo['subtitle']).'</p>
+      </div>
+      <img src="'.htmlspecialchars($repo['logo'], \ENT_QUOTES | \ENT_SUBSTITUTE, 'UTF-8').'" alt="'.htmlspecialchars($repo['title'], \ENT_QUOTES | \ENT_SUBSTITUTE, 'UTF-8').'" class="mf-repo-logo '.$repo['logoClass'].'">
+    </div>
   </div>
   <div class="card-body mf-setup-body">
 

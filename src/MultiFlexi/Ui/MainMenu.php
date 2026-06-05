@@ -28,10 +28,11 @@ class MainMenu extends \Ease\Html\NavTag
         $logoLink->addItem('MultiFlexi');
         $container = new \Ease\TWB5\Container($logoLink);
 
-        $container->addItem(new \Ease\TWB5\LinkButton('https://demo.multiflexi.eu/', _('Demo Site'), 'success'));
+        $container->addItem(new \Ease\TWB5\LinkButton('https://demo.multiflexi.eu/login.php?login=demo&password=demo', _('Demo Site'), 'success'));
         $container->addItem(new \Ease\TWB5\LinkButton('apps.php', _('Apps'), 'info'));
         $container->addItem(new \Ease\TWB5\LinkButton('credentialtypes.php', _('Credential Types'), 'info'));
         $container->addItem(new \Ease\TWB5\LinkButton('install.php', _('Install'), 'warning'));
+        $container->addItem(new \Ease\TWB5\LinkButton('/doc/', _('Documentation'), 'secondary'));
 
         $container->addItem($this->navBarToggler());
         $container->addItem($this->navBarCollapse());
