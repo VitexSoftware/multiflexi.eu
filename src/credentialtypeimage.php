@@ -38,9 +38,8 @@ if ($uuid) {
 
 $imagePath = null;
 $imageDirectories = [
-    '/usr/share/multiflexi-web/images',
-    '/usr/share/multiflexi/images',
-    __DIR__.'/images',
+    __DIR__.'/images',                    // Development: src/images/
+    '/usr/share/multiflexi/images',       // Deb packages: app-specific SVGs
 ];
 
 if ($logo) {

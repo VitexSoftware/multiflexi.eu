@@ -41,7 +41,7 @@ class CredentialProtoTypeFieldsView extends \Ease\Html\TableTag
 
             foreach ($fields as $field) {
                 $this->addRowColumns([
-                    new \Ease\Html\CodeTag($field['keyword']),
+                    new \Ease\Html\PairTag('code', [], $field['keyword']),
                     $field['type'],
                     $field['name'],
                     $field['required'] ? '✔' : '',

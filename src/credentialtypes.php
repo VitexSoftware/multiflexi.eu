@@ -87,7 +87,7 @@ foreach ($allCreds as $credData) {
 
     // Code badge
     $cardBody->addItem(new \Ease\Html\PTag(
-        new \Ease\Html\CodeTag((string) ($credData['code'] ?? '')),
+            new \Ease\Html\PairTag('code', [], (string) ($credData['code'] ?? '')),
         ['class' => 'card-text'],
     ));
 

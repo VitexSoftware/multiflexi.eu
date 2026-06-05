@@ -41,26 +41,36 @@ $actionRow->addColumn(3, new \Ease\TWB5\LinkButton('credentialtypes.php', '🔑 
 $actionRow->addColumn(3, new \Ease\TWB5\LinkButton('install.php', '📦 '._('Install MultiFlexi'), 'warning btn-lg w-100'));
 $oPage->container->addItem($actionRow);
 
-$appQuery = (new \MultiFlexi\Hub\Application())->listingQuery()->orderBy('DatCreate DESC');
+$currentLang = substr(\Ease\Locale::$localeUsed ?? 'en_US', 0, 2);
+$apper = new \MultiFlexi\Hub\Application();
+$recentAppsData = $apper->getFluentPDO()
+    ->from('apps')
+    ->select('apps.id, apps.name, apps.description, apps.uuid, apps.tags, apps.version')
+    ->select('COALESCE(app_translations.name, apps.name) AS localized_name')
+    ->select('COALESCE(app_translations.description, apps.description) AS localized_description')
+    ->leftJoin('app_translations ON app_translations.app_id = apps.id AND app_translations.lang = ?', $currentLang)
+    ->orderBy('apps.DatUpdate DESC')
+    ->limit(6)
+    ->fetchAll();
 $oPage->container->addItem(new \Ease\Html\H3Tag(_('Recent Applications'), ['class' => 'mt-4']));
-
-$recentAppsData = $appQuery->limit(6)->orderBy('DatUpdate DESC')->fetchAll();
 
 if (!empty($recentAppsData)) {
     $appsRow = new \Ease\TWB5\Row();
 
     foreach ($recentAppsData as $appData) {
+        $displayName = $appData['localized_name'] ?? $appData['name'];
+        $displayDescription = $appData['localized_description'] ?? $appData['description'] ?? '';
         $card = new \Ease\Html\DivTag(null, ['class' => 'card h-100']);
         $cardBody = $card->addItem(new \Ease\Html\DivTag(null, ['class' => 'card-body']));
 
         $imgSrc = !empty($appData['uuid']) ? 'appimage.php?uuid='.$appData['uuid'] : 'images/apps.svg';
-        $cardBody->addItem(new \Ease\Html\ImgTag($imgSrc, $appData['name'], ['height' => '40', 'class' => 'mb-2']));
+        $cardBody->addItem(new \Ease\Html\ImgTag($imgSrc, $displayName, ['height' => '40', 'class' => 'mb-2']));
         $cardBody->addItem(new \Ease\Html\H5Tag(
-            new \Ease\Html\ATag('app.php?id='.$appData['id'], $appData['name']),
+            new \Ease\Html\ATag('app.php?id='.$appData['id'], $displayName),
             ['class' => 'card-title'],
         ));
         $cardBody->addItem(new \Ease\Html\PTag(
-            mb_strimwidth((string) $appData['description'], 0, 100, '...'),
+            mb_strimwidth((string) $displayDescription, 0, 100, '...'),
             ['class' => 'card-text text-muted small'],
         ));
 
@@ -111,7 +121,7 @@ if (!empty($recentCredsData)) {
             ['class' => 'card-title'],
         ));
         $cardBody->addItem(new \Ease\Html\PTag(
-            new \Ease\Html\CodeTag($credData['code']),
+            new \Ease\Html\PairTag('code', [], $credData['code']),
             ['class' => 'card-text'],
         ));
 

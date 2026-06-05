@@ -69,14 +69,8 @@ class MainMenu extends \Ease\Html\NavTag
             $navbarNav->addItemSmart(new \Ease\Html\ATag('login.php', _('Sign In'), ['class' => 'nav-link']), ['class' => 'nav-item']);
         }
 
-        //        switch (get_class($oUser)) {
-        //            case 'MultiFlexi\User':
-        //                break;
-        //            default:
-        //                $this->addStatusMessage('Unknow user class type: ' . get_class($oUser), 'warning');
-        //                break;
-        //        }
-        //
+        // Add language selector — last item in navbar; CSS pushes it to the far right
+        $navbarNav->addItemSmart(new \Ease\TWB5\Widgets\LangSelect('locale'), ['class' => 'nav-item']);
 
         return new \Ease\Html\DivTag($navbarNav, ['class' => 'collapse navbar-collapse', 'id' => 'navbarNav']);
     }

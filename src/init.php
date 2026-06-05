@@ -39,7 +39,10 @@ session_start();
     ['DB_CONNECTION', 'DB_HOST', 'DB_PORT', 'DB_DATABASE', 'DB_USERNAME', 'DB_PASSWORD'],
     \dirname(__DIR__).'/.env',
 );
-\Ease\Locale::singleton(null, '../i18n', 'multiflexi');
+\Ease\Locale::singleton(null, '../i18n', 'multiflexieu');
+// Workaround: Ease\Locale sets LANGUAGUE (typo) instead of LANGUAGE;
+// gettext on some systems needs the correct LANGUAGE env var to find .mo files.
+\putenv('LANGUAGE='.(\Ease\Locale::$localeUsed ?? 'en_US'));
 $loggers = ['syslog', '\MultiFlexi\LogToSQL'];
 
 \define('EASE_LOGGER', implode('|', $loggers));

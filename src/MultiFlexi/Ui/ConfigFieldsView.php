@@ -36,7 +36,7 @@ class ConfigFieldsView extends \Ease\Html\TableTag
 
         foreach ($configFields as $field) {
             $this->addRowColumns([
-                new \Ease\Html\CodeTag($field->getCode()),
+                new \Ease\Html\PairTag('code', [], $field->getCode()),
                 $field->getType(),
                 $field->isRequired() ? '✔' : '',
                 $field->getDescription(),
