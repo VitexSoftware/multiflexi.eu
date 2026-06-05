@@ -2,6 +2,8 @@
 
 MultiFlexi Hub WebSite - a catalog of MultiFlexi applications and credential types.
 
+![Screenshot](index.png?raw=true)
+
 ## Features
 
 - **Applications catalog** — browse, search, and filter applications by tags
