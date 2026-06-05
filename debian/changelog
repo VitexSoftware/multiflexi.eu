@@ -1,3 +1,8 @@
+multiflexi.eu (0.2.0) UNRELEASED; urgency=medium
+
+  * Bump application version and refresh copyright year.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Fri, 05 Jun 2026 00:31:22 +0000
 multiflexi.eu (0.1.0) UNRELEASED; urgency=low
 
   * Initial release. Closes: #nnnn
