@@ -1,4 +1,15 @@
-multiflexi.eu (0.2.0) UNRELEASED; urgency=medium
+multiflexi.eu (0.3.0) UNRELEASED; urgency=medium
+
+  * Add topics (tags) and homepage support to credential types
+  * Display topic badges and homepage link on credential type detail page
+  * Add topic filter with Selectize PillBox to credential types card view
+  * Make homepage URL clickable in credential types DataTable
+  * Add homepage and tags columns to CredentialProtoType model
+  * Update importJson/exportJson to handle homepage and tags fields
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Thu, 05 Jun 2026 20:58:00 +0000
+
+multiflexi.eu (0.2.0) unstable; urgency=medium
 
   * Bump application version and refresh copyright year.
 

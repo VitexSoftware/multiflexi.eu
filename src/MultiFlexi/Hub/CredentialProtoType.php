@@ -33,6 +33,8 @@ class CredentialProtoType extends \MultiFlexi\CredentialProtoType
             'name' => ['name' => 'name', 'type' => 'text', 'label' => _('Name'),
                 'detailPage' => 'credentialtype.php', 'idColumn' => 'id'],
             'description' => ['name' => 'description', 'type' => 'text', 'label' => _('Description')],
+            'homepage' => ['name' => 'homepage', 'type' => 'text', 'label' => _('Homepage')],
+            'tags' => ['name' => 'tags', 'type' => 'text', 'label' => _('Tags')],
             'version' => ['name' => 'version', 'type' => 'text', 'label' => _('Version')],
             'uuid' => ['name' => 'uuid', 'type' => 'text', 'hidden' => true, 'label' => _('UUID')],
             'user' => ['name' => 'user', 'type' => 'int', 'hidden' => true, 'label' => _('Owner')],
@@ -112,6 +114,11 @@ class CredentialProtoType extends \MultiFlexi\CredentialProtoType
             if (isset($dataRow['name'])) {
                 $dataRow['name'] = '<a href="credentialtype.php?id='.(int) $dataRow['id'].'" class="link-primary">'.
                     htmlspecialchars((string) $dataRow['name'], \ENT_QUOTES | \ENT_SUBSTITUTE, 'UTF-8').'</a>';
+            }
+
+            if (!empty($dataRow['homepage'])) {
+                $hp = htmlspecialchars((string) $dataRow['homepage'], \ENT_QUOTES | \ENT_SUBSTITUTE, 'UTF-8');
+                $dataRow['homepage'] = '<a href="'.$hp.'" target="_blank" class="link-primary">'.$hp.'</a>';
             }
 
             $data[] = $dataRow;

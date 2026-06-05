@@ -15,6 +15,9 @@ declare(strict_types=1);
 
 namespace MultiFlexi\Ui;
 
+use Ease\Html\ATag;
+use Ease\Html\DivTag;
+use Ease\TWB5\Badge;
 use Ease\TWB5\LinkButton;
 use Ease\TWB5\Panel;
 use Ease\TWB5\Row;
@@ -43,6 +46,37 @@ class CredentialProtoTypePanel extends Panel
         $this->headRow = new Row();
         $this->headRow->addColumn(2, [$logo, $prototype->getRecordName()]);
         $this->headRow->addColumn(4, [new LinkButton('credentialtype.php?id='.$cid, '🔑&nbsp;'._('Credential Type'), 'primary btn-lg')]);
+
+        // Homepage link
+        $metaCol = [];
+        $homepage = $prototype->getDataValue('homepage');
+
+        if (!empty($homepage)) {
+            $metaCol[] = new DivTag(
+                new ATag($homepage, $homepage, ['target' => '_blank', 'class' => 'text-decoration-none']),
+                ['class' => 'mb-2'],
+            );
+        }
+
+        // Tags badges
+        $tags = $prototype->getDataValue('tags');
+
+        if (!empty($tags)) {
+            $tagsList = array_map('trim', explode(',', $tags));
+            $badgesDiv = new DivTag(null, ['class' => 'd-flex flex-wrap gap-1']);
+
+            foreach ($tagsList as $tag) {
+                if (!empty($tag)) {
+                    $badgesDiv->addItem(new Badge($tag, 'secondary'));
+                }
+            }
+
+            $metaCol[] = $badgesDiv;
+        }
+
+        if (!empty($metaCol)) {
+            $this->headRow->addColumn(6, $metaCol);
+        }
 
         parent::__construct($this->headRow, 'default', $content, $footer);
     }
