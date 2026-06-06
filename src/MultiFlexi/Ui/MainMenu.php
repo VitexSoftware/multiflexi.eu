@@ -28,12 +28,6 @@ class MainMenu extends \Ease\Html\NavTag
         $logoLink->addItem('MultiFlexi');
         $container = new \Ease\TWB5\Container($logoLink);
 
-        $container->addItem(new \Ease\TWB5\LinkButton('https://demo.multiflexi.eu/login.php?login=demo&password=demo', _('Demo Site'), 'success'));
-        $container->addItem(new \Ease\TWB5\LinkButton('apps.php', _('Apps'), 'info'));
-        $container->addItem(new \Ease\TWB5\LinkButton('credentialtypes.php', _('Credential Types'), 'info'));
-        $container->addItem(new \Ease\TWB5\LinkButton('install.php', _('Install'), 'warning'));
-        $container->addItem(new \Ease\TWB5\LinkButton('/doc/', _('Documentation'), 'secondary'));
-
         $container->addItem($this->navBarToggler());
         $container->addItem($this->navBarCollapse());
         parent::__construct($container, ['class' => 'navbar navbar-expand-lg navbar-dark mf-navbar sticky-top']);
@@ -58,12 +52,17 @@ class MainMenu extends \Ease\Html\NavTag
 
         $navbarNav = new \Ease\Html\UlTag(null, ['class' => 'navbar-nav ms-auto flex-nowrap navbar-expand mb-2 mb-lg-0', 'style' => '--bs-scroll-height: 100px;']);
 
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('https://demo.multiflexi.eu/login.php?login=demo&password=demo', '<img height=20 src=images/rocket.svg> '._('Demo'), ['class' => 'nav-link', 'target' => '_blank']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('apps.php', '<img height=20 src=images/apps.svg> '._('Apps'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('credentialtypes.php', '<img height=20 src=images/vault.svg> '._('Credential Types'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+        $navbarNav->addItemSmart(new \Ease\Html\ATag('install.php', '<img height=20 src=images/set.svg> '._('Install'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+
         if ($oUser->isLogged()) {
-            $navbarNav->addItemSmart(new \Ease\Html\ATag('myapps.php', new \Ease\Html\ImgTag('images/apps.svg', 'apps', ['height' => 20]).' '._('My Apps'), ['class' => 'nav-link']), ['class' => 'nav-item']);
-            $navbarNav->addItemSmart(new \Ease\Html\ATag('mycredentialtypes.php', '🔑 '._('My Credential Types'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('myapps.php', '<img height=20 src=images/apps.svg> '._('My Apps'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('mycredentialtypes.php', '<img height=20 src=images/vault.svg> '._('My Credential Types'), ['class' => 'nav-link']), ['class' => 'nav-item']);
             $navbarNav->addItemSmart(new \Ease\Html\ATag('app.php', '➕ '._('Submit App'), ['class' => 'nav-link']), ['class' => 'nav-item']);
             $navbarNav->addItemSmart(new \Ease\Html\ATag('credentialtype.php', '➕ '._('Submit Credential Type'), ['class' => 'nav-link']), ['class' => 'nav-item']);
-            $navbarNav->addItemSmart(new \Ease\Html\ATag('logout.php', '🚪 '._('Logout'), ['class' => 'nav-link']), ['class' => 'nav-item']);
+            $navbarNav->addItemSmart(new \Ease\Html\ATag('logout.php', '<img height=20 src=images/application-exit.svg> '._('Sign Off'), ['class' => 'nav-link']), ['class' => 'nav-item']);
         } else {
             $navbarNav->addItemSmart(new \Ease\Html\ATag('createaccount.php', _('Sign On'), ['class' => 'nav-link']), ['class' => 'nav-item']);
             $navbarNav->addItemSmart(new \Ease\Html\ATag('login.php', _('Sign In'), ['class' => 'nav-link']), ['class' => 'nav-item']);
