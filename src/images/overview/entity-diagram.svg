@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#495057"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Company box -->
+  <rect x="30" y="40" width="160" height="60" rx="10" fill="#0d6efd" filter="url(#shadow)"/>
+  <text x="110" y="77" text-anchor="middle" fill="#fff" font-size="18" font-weight="600">Company</text>
+
+  <!-- Arrow: Company → RunTemplate -->
+  <line x1="190" y1="70" x2="258" y2="70" stroke="#495057" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- RunTemplate box -->
+  <rect x="260" y="40" width="190" height="60" rx="10" fill="#0d6efd" filter="url(#shadow)"/>
+  <text x="355" y="77" text-anchor="middle" fill="#fff" font-size="18" font-weight="600">RunTemplate</text>
+
+  <!-- Arrow: RunTemplate → Job -->
+  <line x1="450" y1="70" x2="518" y2="70" stroke="#495057" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Job box -->
+  <rect x="520" y="40" width="160" height="60" rx="10" fill="#198754" filter="url(#shadow)"/>
+  <text x="600" y="77" text-anchor="middle" fill="#fff" font-size="18" font-weight="600">Job</text>
+
+  <!-- Application box -->
+  <rect x="100" y="180" width="180" height="60" rx="10" fill="#6f42c1" filter="url(#shadow)"/>
+  <text x="190" y="217" text-anchor="middle" fill="#fff" font-size="18" font-weight="600">Application</text>
+
+  <!-- Arrow: Application → RunTemplate -->
+  <line x1="280" y1="200" x2="340" y2="200" stroke="#495057" stroke-width="2.5" stroke-dasharray="0"/>
+  <line x1="340" y1="200" x2="340" y2="108" stroke="#495057" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Credential box -->
+  <rect x="430" y="180" width="180" height="60" rx="10" fill="#dc3545" filter="url(#shadow)"/>
+  <text x="520" y="217" text-anchor="middle" fill="#fff" font-size="18" font-weight="600">Credential</text>
+
+  <!-- Arrow: Credential → Job -->
+  <line x1="610" y1="200" x2="610" y2="108" stroke="#495057" stroke-width="2.5" marker-end="url(#arrow)"/>
+</svg>
