@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Multi Flexi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-05 20:16+0200\n"
+"POT-Creation-Date: 2026-06-08 11:10+0200\n"
 "PO-Revision-Date: 2025-07-19 00:03+0200\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
@@ -17,92 +17,74 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../src\n"
 "X-Poedit-SearchPathExcluded-0: ../vendor\n"
 
-#: src/MultiFlexi/Ui/CoworkersManager.php:33
-msgid "Add users who can edit this item."
-msgstr "Přidejte uživatele, kteří mohou upravovat tuto položku."
+#: src/credentialtype.php:27 src/app.php:50
+msgid "n/a"
+msgstr "neudáno"
 
-#: src/createaccount.php:103
-msgid "Admin account created"
-msgstr "Účet administrátora vytvořen"
+#: src/credentialtype.php:48
+msgid "Only the owner can delete this credential type"
+msgstr "Pouze vlastník může smazat tento typ přihlašovacích údajů"
 
-#: src/createaccount.php:154
-msgid "Administrator create failed"
-msgstr "Nepodařilo se vytvořit adminstrátora"
-
-#: src/MultiFlexi/Ui/DBDataTable.php:347
-msgid "All pages"
-msgstr "Všechny stránky"
-
-#: src/app.php:112 src/MultiFlexi/Ui/ApplicationPanel.php:43
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Application.php:52
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:119
-msgid "Application"
-msgstr "Aplikace"
-
-#: src/app.php:80
+#: src/credentialtype.php:54
 #, php-format
-msgid "Application %s removal"
-msgstr "Odstranění aplikace %s"
+msgid "Credential Type %s removed"
+msgstr "Typ přihlašovacích údajů %s odstraněn"
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:36
-msgid "Application Description"
-msgstr "Popisek aplikace"
+#: src/credentialtype.php:62
+msgid "You do not have permission to edit this credential type"
+msgstr "Nemáte oprávnění upravit tento typ přihlašovacích údajů"
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:42
-msgid "Application Homepage"
-msgstr "Domovská stránka aplikace"
+#: src/credentialtype.php:68
+msgid "Credential Type Saved"
+msgstr "Typ přihlašovacích údajů uložen"
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:40
-msgid "Application Icon"
-msgstr "Ikona Aplikace"
+#: src/credentialtype.php:71
+msgid "Error saving Credential Type"
+msgstr "Chyba ukládání typu přihlašovacích údajů"
 
-#: src/MultiFlexi/Ui/AppImportForm.php:29
-msgid "Application JSON file"
-msgstr "JSON soubor aplikace"
+#: src/credentialtype.php:81
+msgid "New Credential Type"
+msgstr "Nový typ přihlašovacích údajů"
 
-#: src/app.php:94
-msgid "Application Saved"
-msgstr "Aplikace uložena"
+#: src/credentialtype.php:85 src/MultiFlexi/Ui/CredentialProtoTypePanel.php:48
+msgid "Credential Type"
+msgstr "Typ přihlašovacích údajů"
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:46
-msgid "Application Universal Unique Identifier"
-msgstr "Univerzální unikátní identifikátor aplikace"
+#: src/credentialtype.php:90 src/app.php:117
+#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:30
+#: src/MultiFlexi/Ui/AppImportForm.php:30
+msgid "Import"
+msgstr "Import"
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:35
-msgid "Application code"
-msgstr "Kód aplikace"
+#: src/credentialtype.php:96
+msgid "Fields"
+msgstr "Pole"
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:45
-msgid "Application deploy command"
-msgstr "Příkaz pro instalaci aplikace"
+#: src/credentialtype.php:103 src/credentialtype.php:114 src/app.php:126
+#: src/app.php:134
+msgid "Configuration"
+msgstr "Konfigurace"
 
-#: src/importjson.php:31
-msgid "Application imported successfully"
-msgstr "Aplikace úspěšně importována"
+#: src/credentialtype.php:107 src/app.php:130
+msgid "No configuration available."
+msgstr "Konfigurace není k dispozici."
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:34
-msgid "Application name"
-msgstr "Jméno aplikace"
+#: src/credentialtype.php:118 src/app.php:137
+msgid "Export"
+msgstr "Export"
 
-#: src/apps.php:30 src/apps.php:34
-msgid "Applications"
-msgstr "Aplikace"
+#: src/credentialtype.php:122 src/app.php:140
+#: src/MultiFlexi/Ui/CoworkersManager.php:32
+msgid "Coworkers"
+msgstr "Spolupracovníci"
 
-#: src/MultiFlexi/Ui/MainMenu.php:32
-msgid "Apps"
-msgstr "Appky"
+#: src/index.php:20
+msgid "MultiFlexi Hub"
+msgstr "MultiFlexi centrum"
 
-#: src/passwordrecovery.php:109
-msgid "Back to Sign In"
-msgstr "Zpět na přihlášení"
-
-#: src/index.php:39
-msgid "Browse Applications"
-msgstr "Procházet aplikace"
-
-#: src/index.php:40
-msgid "Browse Credential Types"
-msgstr "Procházet typy přihlašovacích údajů"
+#: src/index.php:27
+msgid "MultiFlexi Application & Credential Hub"
+msgstr "MultiFlexi centrum aplikací a přihlašovacích údajů"
 
 #: src/index.php:29
 msgid ""
@@ -112,525 +94,57 @@ msgstr ""
 "Procházejte, sdílejte a objevujte aplikace a definice typů přihlašovacích "
 "údajů pro MultiFlexi. Přihlaste se a přidejte své vlastní."
 
-#: src/apps.php:37 src/credentialtypes.php:28
-msgid "Cards"
-msgstr "Karty"
+#: src/index.php:39
+msgid "Browse Applications"
+msgstr "Procházet aplikace"
 
-#: src/passwordrecovery.php:105
-msgid "Check your inbox — your new password has been sent."
-msgstr "Zkontrolujte svou schránku — vaše nové heslo bylo odesláno."
-
-#: src/install.php:223
-msgid "Choose distribution"
-msgstr "Zvolte distribuci"
-
-#: src/install.php:217
-msgid ""
-"Choose your preferred repository channel and configure it interactively."
-msgstr "Zvolte si preferovaný repozitář a nakonfigurujte jej interaktivně."
-
-#: src/MultiFlexi/Ui/PageTop.php:68
-msgid "Click to hide messages"
-msgstr "Klikněte pro skrytí zpráv"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:30
-#: src/MultiFlexi/Hub/CredentialProtoType.php:32
-msgid "Code"
-msgstr "Kód"
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:39
-msgid "Command arguments"
-msgstr "Parametry příkazu"
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:38
-msgid "Command used to setup new company for use with command"
-msgstr "Příkaz použitý pro nastavení nové společnosti pro použití s příkazem"
-
-#: src/app.php:122
-msgid "Config fields"
-msgstr "Pole nastavení"
-
-#: src/app.php:126 src/app.php:134 src/credentialtype.php:103
-#: src/credentialtype.php:114
-msgid "Configuration"
-msgstr "Konfigurace"
-
-#: src/install.php:259
-msgid "Configuration format:"
-msgstr "Formát konfigurace:"
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:43
-msgid "Container image"
-msgstr "Obraz pro Kontainer"
-
-#: src/install.php:288
-msgid "Copy and paste this into your terminal:"
-msgstr "Zkopírujte a vložte do terminálu:"
-
-#: src/coworkers.php:67
-msgid "Coworker added"
-msgstr "Spolupracovník přidán"
-
-#: src/coworkers.php:73
-msgid "Coworker removed"
-msgstr "Spolupracovník odebrán"
-
-#: src/app.php:140 src/credentialtype.php:122
-#: src/MultiFlexi/Ui/CoworkersManager.php:32
-msgid "Coworkers"
-msgstr "Spolupracovníci"
-
-#: src/install.php:280
-msgid "Create Configuration File"
-msgstr "Vytvořit konfigurační soubor"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:29
-msgid "Credential Prototype JSON file"
-msgstr "JSON soubor prototypu přihlašovacích údajů"
-
-#: src/credentialtype.php:85 src/MultiFlexi/Ui/CredentialProtoTypePanel.php:45
-msgid "Credential Type"
-msgstr "Typ přihlašovacích údajů"
-
-#: src/credentialtype.php:54
-#, php-format
-msgid "Credential Type %s removed"
-msgstr "Typ přihlašovacích údajů %s odstraněn"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:31
-msgid "Credential Type Name"
-msgstr "Název typu přihlašovacích údajů"
-
-#: src/credentialtype.php:68
-msgid "Credential Type Saved"
-msgstr "Typ přihlašovacích údajů uložen"
-
-#: src/importcredentialtype.php:32
-msgid "Credential Type imported successfully"
-msgstr "Typ přihlašovacích údajů úspěšně importován"
-
-#: src/credentialtypes.php:20 src/credentialtypes.php:25
-#: src/MultiFlexi/Ui/MainMenu.php:33
-msgid "Credential Types"
-msgstr "Typy přihlašovacích údajů"
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:44
-msgid "Current Version of Application"
-msgstr "Aktuální verze aplikace"
-
-#: src/install.php:261
-msgid "DEB822 format (.sources) — Recommended"
-msgstr "Formát DEB822 (.sources) — Doporučeno"
-
-#: src/MultiFlexi/Ui/MainMenu.php:31
-msgid "Demo Site"
-msgstr "Demo stránka"
-
-#: src/MultiFlexi/Ui/ConfigFieldsView.php:34
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:35
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:35
-#: src/MultiFlexi/Hub/Application.php:34
-#: src/MultiFlexi/Hub/CredentialProtoType.php:35
-msgid "Description"
-msgstr "Popis"
-
-#: src/install.php:205
-msgid "Development builds — latest features, may be unstable"
-msgstr "Vývojové sestavení — nejnovější funkce, může být nestabilní"
-
-#: src/MultiFlexi/Ui/MainMenu.php:35
-msgid "Documentation"
-msgstr "Dokumentace"
-
-#: src/MultiFlexi/Ui/AppJson.php:29
-#: src/MultiFlexi/Ui/CredentialProtoTypeJson.php:33
-msgid "Download"
-msgstr "Stahnout"
-
-#: src/passwordrecovery.php:88
-msgid "Email address"
-msgstr "E-mailová adresa"
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:41
-msgid "Enabled"
-msgstr "Povoleno"
-
-#: src/importcredentialtype.php:35
-msgid "Error importing Credential Type"
-msgstr "Chyba importu typu přihlašovacích údajů"
-
-#: src/importjson.php:34
-msgid "Error importing application"
-msgstr "Chyba importu aplikace"
-
-#: src/app.php:97
-msgid "Error saving Application"
-msgstr "Chyba ukládání Aplikace"
-
-#: src/credentialtype.php:71
-msgid "Error saving Credential Type"
-msgstr "Chyba ukládání typu přihlašovacích údajů"
-
-#: src/app.php:137 src/credentialtype.php:118
-msgid "Export"
-msgstr "Export"
-
-#: src/credentialtype.php:96
-msgid "Fields"
-msgstr "Pole"
-
-#: src/install.php:281
-msgid "File path:"
-msgstr "Cesta k souboru:"
-
-#: src/MultiFlexi/Ui/DBDataTable.php:130
-msgid "Filter"
-msgstr "Filtrovat"
-
-#: src/apps.php:94
-msgid "Filter by Tags"
-msgstr "Filtrovat podle štítků"
-
-#: src/createaccount.php:170
-msgid "Firstname"
-msgstr "Jméno"
-
-#: src/passwordrecovery.php:84
-#, fuzzy
-msgid ""
-"Forgot your password? Enter the e-mail address you used during registration "
-"and we will send you a new one."
-msgstr ""
-"Zapoměli jste heslo ? Vložte svojí e-mailovou adresu kterou jste zadali "
-"během registrace a my vám pošleme nové."
-
-#: src/MultiFlexi/Ui/FilterDialog.php:65 src/MultiFlexi/Ui/FilterDialog.php:94
-msgid "From"
-msgstr "Od"
-
-#: src/createaccount.php:180
-msgid "GDPR consent not available."
-msgstr "Souhlas s GDPR není dostupný."
-
-#: src/MultiFlexi/Ui/PageBottom.php:49
-msgid "Github Project"
-msgstr "Projekt na Githubu"
-
-#: src/logout.php:28
-msgid "Good bye"
-msgstr "Nashledanou"
-
-#: src/MultiFlexi/Hub/Application.php:36
-msgid "Homepage"
-msgstr "Domovská stránka"
-
-#: src/createaccount.php:187
-msgid "I agree to the terms and conditions"
-msgstr "Souhlasím s obchodními podmínkami"
-
-#: src/createaccount.php:193
-msgid "I consent to the processing of personal data according to GDPR"
-msgstr "Souhlasím se zpracováním osobních údajů dle GDPR"
-
-#: src/MultiFlexi/Hub/Application.php:30
-#: src/MultiFlexi/Hub/CredentialProtoType.php:30
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:209
-msgid "Id"
-msgstr "Id"
-
-#: src/MultiFlexi/Hub/Application.php:31
-msgid "Image"
-msgstr "Obrázek"
-
-#: src/app.php:117 src/credentialtype.php:90
-#: src/MultiFlexi/Ui/AppImportForm.php:30
-#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:30
-msgid "Import"
-msgstr "Import"
-
-#: src/install.php:274
-msgid "Import the GPG Key"
-msgstr "Importovat GPG klíč"
-
-#: src/MultiFlexi/Ui/ApplicationPanel.php:46 src/MultiFlexi/Ui/MainMenu.php:34
-msgid "Install"
-msgstr "Instalace"
+#: src/index.php:40
+msgid "Browse Credential Types"
+msgstr "Procházet typy přihlašovacích údajů"
 
 #: src/index.php:41 src/install.php:176
 msgid "Install MultiFlexi"
 msgstr "Nainstalovat MultiFlexi"
 
-#: src/install.php:184
-msgid "Install prerequisites needed for secure APT repository access."
-msgstr "Nainstalujte požadavky pro bezpečný přístup k APT repozitáři."
+#: src/index.php:55
+msgid "Recent Applications"
+msgstr "Nejnovější aplikace"
 
-#: src/importcredentialtype.php:29
-msgid "Invalid JSON file"
-msgstr "Neplatný JSON soubor"
+#: src/index.php:97
+msgid "No applications submitted yet. Be the first!"
+msgstr "Zatím nebyly přidány žádné aplikace. Buďte první!"
 
-#: src/coworkers.php:36
-msgid "Invalid parameters"
-msgstr "Neplatné parametry"
+#: src/index.php:100
+msgid "View all applications"
+msgstr "Zobrazit všechny aplikace"
 
-#: src/MultiFlexi/Ui/ConfigFieldsView.php:31
-msgid "Key"
-msgstr "Klíč"
+#: src/index.php:103
+msgid "Recent Credential Types"
+msgstr "Nejnovější typy přihlašovacích údajů"
 
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:31
-msgid "Keyword"
-msgstr "Klíč"
+#: src/index.php:144
+msgid "No credential types submitted yet. Be the first!"
+msgstr "Zatím nebyly přidány žádné typy přihlašovacích údajů. Buďte první!"
 
-#: src/createaccount.php:171
-msgid "Lastname"
-msgstr "Příjmení"
+#: src/index.php:147
+msgid "View all credential types"
+msgstr "Zobrazit všechny typy přihlašovacích údajů"
 
-#: src/install.php:262
-msgid "Legacy format (sources.list)"
-msgstr "Starší formát (sources.list)"
+#: src/importjson.php:31
+msgid "Application imported successfully"
+msgstr "Aplikace úspěšně importována"
 
-#: src/MultiFlexi/Ui/PageBottom.php:50
-msgid "LinkedIN Product page"
-msgstr "Produktová stránka na LinkedIn"
+#: src/importjson.php:34
+msgid "Error importing application"
+msgstr "Chyba importu aplikace"
 
-#: src/login.php:53 src/MultiFlexi/Hub/CredentialProtoType.php:31
-msgid "Logo"
-msgstr "Logo"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:34
-msgid "Logo URL"
-msgstr "URL loga"
-
-#: src/MultiFlexi/Ui/MainMenu.php:66
-msgid "Logout"
-msgstr "Odhlášení"
-
-#: src/createaccount.php:61
-#, php-format
-msgid "Mail address %s is already registered"
-msgstr "Mailová adresa %s je již registrována"
-
-#: src/main.php:20
-msgid "Multi Flexi"
-msgstr "Multi Flexi"
-
-#: src/index.php:27
-msgid "MultiFlexi Application & Credential Hub"
-msgstr "MultiFlexi centrum aplikací a přihlašovacích údajů"
-
-#: src/index.php:20
-msgid "MultiFlexi Hub"
-msgstr "MultiFlexi centrum"
+#: src/importjson.php:38 src/importcredentialtype.php:39
+msgid "No file uploaded or upload error"
+msgstr "Nebyl nahrán žádný soubor nebo chyba nahrávání"
 
 #: src/install.php:20
 msgid "MultiFlexi Installation"
 msgstr "Instalace MultiFlexi"
-
-#: src/myapps.php:21
-msgid "My Applications"
-msgstr "Mé aplikace"
-
-#: src/MultiFlexi/Ui/MainMenu.php:62
-msgid "My Apps"
-msgstr "Mé Aplikace"
-
-#: src/mycredentialtypes.php:21 src/MultiFlexi/Ui/MainMenu.php:63
-msgid "My Credential Types"
-msgstr "Mé typy přihlašovacích údajů"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:33
-#: src/MultiFlexi/Hub/Application.php:32
-#: src/MultiFlexi/Hub/CredentialProtoType.php:33
-msgid "Name"
-msgstr "Jméno"
-
-#: src/createaccount.php:158
-msgid "New Administrator"
-msgstr "Nový Administrátor"
-
-#: src/app.php:107
-msgid "New Application"
-msgstr "Nová Aplikace"
-
-#: src/credentialtype.php:81
-msgid "New Credential Type"
-msgstr "Nový typ přihlašovacích údajů"
-
-#: src/createaccount.php:133
-#, php-format
-msgid "New Sign On to %s: %s"
-msgstr "Nové přihlášení k %s: %s"
-
-#: src/createaccount.php:139
-msgid "New User"
-msgstr "Nový uživatel"
-
-#: src/passwordrecovery.php:50
-#, php-format
-msgid "New password for %s"
-msgstr "Nové heslo pro %s"
-
-#: src/index.php:87
-msgid "No applications submitted yet. Be the first!"
-msgstr "Zatím nebyly přidány žádné aplikace. Buďte první!"
-
-#: src/app.php:130 src/credentialtype.php:107
-msgid "No configuration available."
-msgstr "Konfigurace není k dispozici."
-
-#: src/index.php:134
-msgid "No credential types submitted yet. Be the first!"
-msgstr "Zatím nebyly přidány žádné typy přihlašovacích údajů. Buďte první!"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:53
-msgid "No fields defined"
-msgstr "Žádná pole nejsou definována"
-
-#: src/importcredentialtype.php:39 src/importjson.php:38
-msgid "No file uploaded or upload error"
-msgstr "Nebyl nahrán žádný soubor nebo chyba nahrávání"
-
-#: src/coworkers.php:25
-msgid "Not authenticated"
-msgstr "Nepřihlášen"
-
-#: src/app.php:71
-msgid "Only the application author can delete it"
-msgstr "Pouze autor aplikace ji může smazat"
-
-#: src/app.php:88
-msgid "Only the application author can edit it"
-msgstr "Pouze autor aplikace ji může upravit"
-
-#: src/credentialtype.php:48
-msgid "Only the owner can delete this credential type"
-msgstr "Pouze vlastník může smazat tento typ přihlašovacích údajů"
-
-#: src/coworkers.php:51
-msgid "Only the owner can manage coworkers"
-msgstr "Pouze vlastník může spravovat spolupracovníky"
-
-#: src/MultiFlexi/Hub/Application.php:39
-#: src/MultiFlexi/Hub/CredentialProtoType.php:38
-msgid "Owner"
-msgstr "Vlastník"
-
-#: src/createaccount.php:173 src/login.php:63 src/passwordrecovery.php:59
-msgid "Password"
-msgstr "Heslo"
-
-#: src/passwordrecovery.php:71 src/passwordrecovery.php:80
-msgid "Password Recovery"
-msgstr "Obnova hesla"
-
-#: src/createaccount.php:174
-msgid "Password confirmation"
-msgstr "Potvrzení hesla"
-
-#: src/createaccount.php:74
-msgid "Password control does not match"
-msgstr "Kontrola hesla nesouhlasí"
-
-#: src/login.php:71
-msgid "Password recovery"
-msgstr "Obnova hesla"
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:37
-msgid "Path to binary"
-msgstr "Cesta k binárce"
-
-#: src/passwordrecovery.php:25
-msgid "Please enter your email."
-msgstr "Prosím zadejte svůj email."
-
-#: src/install.php:192
-msgid "Production Repository"
-msgstr "Produkční repozitář"
-
-#: src/install.php:288
-msgid "Quick install command:"
-msgstr "Rychlý instalační příkaz:"
-
-#: src/index.php:45
-msgid "Recent Applications"
-msgstr "Nejnovější aplikace"
-
-#: src/index.php:93
-msgid "Recent Credential Types"
-msgstr "Nejnovější typy přihlašovacích údajů"
-
-#: src/createaccount.php:199
-msgid "Register"
-msgstr "Registrovat"
-
-#: src/MultiFlexi/Ui/DBDataTable.php:114
-msgid "Reload"
-msgstr "Obnovit"
-
-#: src/install.php:234 src/MultiFlexi/Ui/ConfigFieldsView.php:33
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:34
-msgid "Required"
-msgstr "Vyžadováno"
-
-#: src/apps.php:104
-msgid "Reset Filter"
-msgstr "Resetovat filtr"
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:48 src/MultiFlexi/Ui/ColumnsForm.php:120
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:36
-msgid "Save"
-msgstr "Ulož"
-
-#: src/MultiFlexi/Ui/ColumnsForm.php:132
-msgid "Save and back"
-msgstr "Ulož a vrať se"
-
-#: src/MultiFlexi/Ui/ColumnsForm.php:144
-msgid "Save and next"
-msgstr "Ulož a pokračuj"
-
-#: src/apps.php:83
-msgid "Search applications..."
-msgstr "Hledat aplikace..."
-
-#: src/credentialtypes.php:45
-msgid "Search credential types..."
-msgstr "Hledat typy přihlašovacích údajů..."
-
-#: src/install.php:332
-msgid "Search the repository for MultiFlexi application packages:"
-msgstr "Prohledejte repozitář pro balíčky aplikací MultiFlexi:"
-
-#: src/apps.php:108
-msgid "Select all tags to show all applications"
-msgstr "Vybrat všechny štítky pro zobrazení všech aplikací"
-
-#: src/install.php:267
-msgid "Select components:"
-msgstr "Vyberte komponenty:"
-
-#: src/apps.php:95
-msgid ""
-"Select tags to filter applications. All applications are shown when no tags "
-"are selected."
-msgstr ""
-"Vyberte štítky pro filtrování aplikací. Při prázdném výběru se zobrazí "
-"všechny aplikace."
-
-#: src/apps.php:100
-msgid "Select tags to filter applications..."
-msgstr "Vyberte štítky pro filtrování aplikací..."
-
-#: src/install.php:295
-msgid "Select your distribution above to generate customized configuration"
-msgstr "Vyberte svou distribuci výše pro vygenerování přizpůsobené konfigurace"
-
-#: src/install.php:255
-msgid "Select your distribution:"
-msgstr "Vyberte svou distribuci:"
-
-#: src/passwordrecovery.php:92
-msgid "Send New Password"
-msgstr "Odeslat nové heslo"
 
 #: src/install.php:177
 msgid ""
@@ -639,57 +153,103 @@ msgstr ""
 "Nastavte automatizační platformu MultiFlexi na vašem systému Debian nebo "
 "Ubuntu"
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:38
-msgid "Setup Command"
-msgstr "Příkaz pro nastavení"
+#: src/install.php:182
+msgid "Step 1: Prepare your system"
+msgstr "Krok 1: Připravte svůj systém"
 
-#: src/login.php:47 src/MultiFlexi/Ui/MainMenu.php:69
-msgid "Sign In"
-msgstr "Přihlásit"
+#: src/install.php:184
+msgid "Install prerequisites needed for secure APT repository access."
+msgstr "Nainstalujte požadavky pro bezpečný přístup k APT repozitáři."
 
-#: src/logout.php:24
-msgid "Sign Off"
-msgstr "Odhlášení"
-
-#: src/MultiFlexi/Ui/MainMenu.php:68
-msgid "Sign On"
-msgstr "Registrace"
-
-#: src/createaccount.php:116
-msgid "Sign On info"
-msgstr "Přihlašovací údaje"
-
-#: src/passwordrecovery.php:56
-msgid "Sign On informations was changed"
-msgstr "Přihlašovací údaje byly změněny"
-
-#: src/login.php:67
-msgid "Sign in"
-msgstr "Přihlásit"
-
-#: src/login.php:56
-msgid "Sign in to MultiFlexi"
-msgstr "Přihlásit se do MultiFlexi"
-
-#: src/createaccount.php:160
-msgid "Singn On"
-msgstr "Registrace"
-
-#: src/install.php:194
-msgid "Stable"
-msgstr "Stabilní"
+#: src/install.php:192
+msgid "Production Repository"
+msgstr "Produkční repozitář"
 
 #: src/install.php:193
 msgid "Stable releases — recommended for production systems"
 msgstr "Stabilní vydání — doporučeno pro produkční systémy"
 
-#: src/install.php:182
-msgid "Step 1: Prepare your system"
-msgstr "Krok 1: Připravte svůj systém"
+#: src/install.php:194
+msgid "Stable"
+msgstr "Stabilní"
+
+#: src/install.php:204
+msgid "Testing Repository"
+msgstr "Testovací repozitář"
+
+#: src/install.php:205
+msgid "Development builds — latest features, may be unstable"
+msgstr "Vývojové sestavení — nejnovější funkce, může být nestabilní"
+
+#: src/install.php:206
+msgid "Testing"
+msgstr "Testování"
 
 #: src/install.php:216
 msgid "Step 2: Configure APT Repository"
 msgstr "Krok 2: Konfigurace APT repozitáře"
+
+#: src/install.php:217
+msgid ""
+"Choose your preferred repository channel and configure it interactively."
+msgstr "Zvolte si preferovaný repozitář a nakonfigurujte jej interaktivně."
+
+#: src/install.php:223
+msgid "Choose distribution"
+msgstr "Zvolte distribuci"
+
+#: src/install.php:234 src/MultiFlexi/Ui/ConfigFieldsView.php:33
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:34
+msgid "Required"
+msgstr "Vyžadováno"
+
+#: src/install.php:255
+msgid "Select your distribution:"
+msgstr "Vyberte svou distribuci:"
+
+#: src/install.php:259
+msgid "Configuration format:"
+msgstr "Formát konfigurace:"
+
+#: src/install.php:261
+msgid "DEB822 format (.sources) — Recommended"
+msgstr "Formát DEB822 (.sources) — Doporučeno"
+
+#: src/install.php:262
+msgid "Legacy format (sources.list)"
+msgstr "Starší formát (sources.list)"
+
+#: src/install.php:267
+msgid "Select components:"
+msgstr "Vyberte komponenty:"
+
+#: src/install.php:269
+msgid "The <strong>main</strong> component is always required."
+msgstr "Komponenta <strong>main</strong> je vždy vyžadována."
+
+#: src/install.php:274
+msgid "Import the GPG Key"
+msgstr "Importovat GPG klíč"
+
+#: src/install.php:280
+msgid "Create Configuration File"
+msgstr "Vytvořit konfigurační soubor"
+
+#: src/install.php:281
+msgid "File path:"
+msgstr "Cesta k souboru:"
+
+#: src/install.php:288
+msgid "Quick install command:"
+msgstr "Rychlý instalační příkaz:"
+
+#: src/install.php:288
+msgid "Copy and paste this into your terminal:"
+msgstr "Zkopírujte a vložte do terminálu:"
+
+#: src/install.php:295
+msgid "Select your distribution above to generate customized configuration"
+msgstr "Vyberte svou distribuci výše pro vygenerování přizpůsobené konfigurace"
 
 #: src/install.php:306
 msgid "Step 3: Update Sources"
@@ -703,118 +263,54 @@ msgstr "Krok 4: Instalace pro zvolenou databázi"
 msgid "Step 5: Discover available applications"
 msgstr "Krok 5: Objevte dostupné aplikace"
 
-#: src/MultiFlexi/Ui/MainMenu.php:64
-msgid "Submit App"
-msgstr "Přidat aplikaci"
+#: src/install.php:332
+msgid "Search the repository for MultiFlexi application packages:"
+msgstr "Prohledejte repozitář pro balíčky aplikací MultiFlexi:"
 
-#: src/MultiFlexi/Ui/MainMenu.php:65
-msgid "Submit Credential Type"
-msgstr "Přidat typ přihlašovacích údajů"
+#: src/apps.php:30 src/apps.php:34
+msgid "Applications"
+msgstr "Aplikace"
 
-#: src/myapps.php:27
-msgid "Submit new application"
-msgstr "Přidat novou aplikaci"
+#: src/apps.php:37 src/credentialtypes.php:35
+msgid "Cards"
+msgstr "Karty"
 
-#: src/mycredentialtypes.php:27
-msgid "Submit new credential type"
-msgstr "Přidat nový typ přihlašovacích údajů"
-
-#: src/apps.php:41 src/credentialtypes.php:32
+#: src/apps.php:41 src/credentialtypes.php:39
 msgid "Table"
 msgstr "Tabulka"
 
-#: src/MultiFlexi/Hub/Application.php:35
-msgid "Tags"
-msgstr "Štítky"
+#: src/apps.php:83
+msgid "Search applications..."
+msgstr "Hledat aplikace..."
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:47
-msgid "Tags separated by comma"
-msgstr "Štítky oddělené čárkou"
+#: src/apps.php:94
+msgid "Filter by Tags"
+msgstr "Filtrovat podle štítků"
 
-#: src/createaccount.php:179
-msgid "Terms and conditions not available."
-msgstr "Obchodní podmínky nejsou dostupné."
+#: src/apps.php:95
+msgid ""
+"Select tags to filter applications. All applications are shown when no tags "
+"are selected."
+msgstr ""
+"Vyberte štítky pro filtrování aplikací. Při prázdném výběru se zobrazí "
+"všechny aplikace."
 
-#: src/install.php:206
-msgid "Testing"
-msgstr "Testování"
+#: src/apps.php:100
+msgid "Select tags to filter applications..."
+msgstr "Vyberte štítky pro filtrování aplikací..."
 
-#: src/install.php:204
-msgid "Testing Repository"
-msgstr "Testovací repozitář"
+#: src/apps.php:104 src/credentialtypes.php:91
+msgid "Reset Filter"
+msgstr "Resetovat filtr"
 
-#: src/logout.php:33
-msgid "Thank you for your patronage and look forward to another visit"
-msgstr "Díky za váš zájem a těším se na další návštěvu"
+#: src/apps.php:108
+msgid "Select all tags to show all applications"
+msgstr "Vybrat všechny štítky pro zobrazení všech aplikací"
 
-#: src/install.php:269
-msgid "The <strong>main</strong> component is always required."
-msgstr "Komponenta <strong>main</strong> je vždy vyžadována."
-
-#: src/MultiFlexi/Ui/FilterDialog.php:78 src/MultiFlexi/Ui/FilterDialog.php:104
-msgid "To"
-msgstr "Do"
-
-#: src/MultiFlexi/Ui/MainMenu.php:51
-msgid "Toggle navigation"
-msgstr "Přepnout navigaci"
-
-#: src/MultiFlexi/Ui/ConfigFieldsView.php:32
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:32
-msgid "Type"
-msgstr "Typ"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:33
-msgid "URL"
-msgstr "URL"
-
-#: src/MultiFlexi/Hub/Application.php:38
-#: src/MultiFlexi/Hub/CredentialProtoType.php:37
-msgid "UUID"
-msgstr "UUID"
-
-#: src/coworkers.php:78
-msgid "Unknown action"
-msgstr "Neznámá akce"
-
-#: src/createaccount.php:107
-msgid "User account created"
-msgstr "Úživatelský účet byl vytvořen"
-
-#: src/createaccount.php:168
-msgid "User name"
-msgstr "Uživatelské Jméno"
-
-#: src/login.php:59 src/passwordrecovery.php:58
-msgid "Username"
-msgstr "Uživatelské jméno"
-
-#: src/createaccount.php:84
-#, php-format
-msgid "Username %s is used. Please choose another one"
-msgstr "Uživatelské jméno %s je již použito. Prosím zvolte jiné"
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:32
-#: src/MultiFlexi/Hub/Application.php:37
-#: src/MultiFlexi/Hub/CredentialProtoType.php:36
-msgid "Version"
-msgstr "Verze"
-
-#: src/index.php:90
-msgid "View all applications"
-msgstr "Zobrazit všechny aplikace"
-
-#: src/index.php:137
-msgid "View all credential types"
-msgstr "Zobrazit všechny typy přihlašovacích údajů"
-
-#: src/coworkers.php:58
-msgid "You are already the owner"
-msgstr "Již jste vlastníkem"
-
-#: src/credentialtype.php:62
-msgid "You do not have permission to edit this credential type"
-msgstr "Nemáte oprávnění upravit tento typ přihlašovacích údajů"
+#: src/apps.php:117
+#, fuzzy
+msgid "applications"
+msgstr "Aplikace"
 
 #: src/createaccount.php:43
 msgid "You must agree to the terms and conditions."
@@ -824,50 +320,822 @@ msgstr "Musíte souhlasit s obchodními podmínkami."
 msgid "You must consent to the processing of personal data according to GDPR."
 msgstr "Musíte udělit souhlas se zpracováním osobních údajů dle GDPR."
 
+#: src/createaccount.php:52
+msgid "invalid mail address"
+msgstr "neplatná mailová adresa"
+
+#: src/createaccount.php:61
+#, php-format
+msgid "Mail address %s is already registered"
+msgstr "Mailová adresa %s je již registrována"
+
+#: src/createaccount.php:71
+msgid "password is too short"
+msgstr "heslo je příliš krátké"
+
+#: src/createaccount.php:74
+msgid "Password control does not match"
+msgstr "Kontrola hesla nesouhlasí"
+
+#: src/createaccount.php:84
+#, php-format
+msgid "Username %s is used. Please choose another one"
+msgstr "Uživatelské jméno %s je již použito. Prosím zvolte jiné"
+
+#: src/createaccount.php:103
+msgid "Admin account created"
+msgstr "Účet administrátora vytvořen"
+
+#: src/createaccount.php:107
+msgid "User account created"
+msgstr "Úživatelský účet byl vytvořen"
+
+#: src/createaccount.php:116
+msgid "Sign On info"
+msgstr "Přihlašovací údaje"
+
 #: src/createaccount.php:119
 #, php-format
 msgid "Your new %s account:"
 msgstr "Tvůj nový účet %s:"
+
+#: src/createaccount.php:133
+#, php-format
+msgid "New Sign On to %s: %s"
+msgstr "Nové přihlášení k %s: %s"
+
+#: src/createaccount.php:139
+msgid "New User"
+msgstr "Nový uživatel"
+
+#: src/createaccount.php:154
+msgid "Administrator create failed"
+msgstr "Nepodařilo se vytvořit adminstrátora"
+
+#: src/createaccount.php:158
+msgid "New Administrator"
+msgstr "Nový Administrátor"
+
+#: src/createaccount.php:160
+msgid "Singn On"
+msgstr "Registrace"
+
+#: src/createaccount.php:168
+msgid "User name"
+msgstr "Uživatelské Jméno"
+
+#: src/createaccount.php:170
+msgid "Firstname"
+msgstr "Jméno"
+
+#: src/createaccount.php:171
+msgid "Lastname"
+msgstr "Příjmení"
+
+#: src/createaccount.php:173 src/passwordrecovery.php:59 src/login.php:63
+msgid "Password"
+msgstr "Heslo"
+
+#: src/createaccount.php:174
+msgid "Password confirmation"
+msgstr "Potvrzení hesla"
+
+#: src/createaccount.php:176
+msgid "eMail address"
+msgstr "emailová adresa"
+
+#: src/createaccount.php:179
+msgid "Terms and conditions not available."
+msgstr "Obchodní podmínky nejsou dostupné."
+
+#: src/createaccount.php:180
+msgid "GDPR consent not available."
+msgstr "Souhlas s GDPR není dostupný."
+
+#: src/createaccount.php:187
+msgid "I agree to the terms and conditions"
+msgstr "Souhlasím s obchodními podmínkami"
+
+#: src/createaccount.php:193
+msgid "I consent to the processing of personal data according to GDPR"
+msgstr "Souhlasím se zpracováním osobních údajů dle GDPR"
+
+#: src/createaccount.php:199
+msgid "Register"
+msgstr "Registrovat"
+
+#: src/createaccount.php:200
+msgid "finish registration"
+msgstr "ukončit registraci"
+
+#: src/app.php:71
+msgid "Only the application author can delete it"
+msgstr "Pouze autor aplikace ji může smazat"
+
+#: src/app.php:80
+#, php-format
+msgid "Application %s removal"
+msgstr "Odstranění aplikace %s"
+
+#: src/app.php:88
+msgid "Only the application author can edit it"
+msgstr "Pouze autor aplikace ji může upravit"
+
+#: src/app.php:94
+msgid "Application Saved"
+msgstr "Aplikace uložena"
+
+#: src/app.php:97
+msgid "Error saving Application"
+msgstr "Chyba ukládání Aplikace"
+
+#: src/app.php:107
+msgid "New Application"
+msgstr "Nová Aplikace"
+
+#: src/app.php:112 src/whatis.php:92 src/MultiFlexi/Ui/ApplicationPanel.php:43
+msgid "Application"
+msgstr "Aplikace"
+
+#: src/app.php:122
+msgid "Config fields"
+msgstr "Pole nastavení"
+
+#: src/passwordrecovery.php:25
+msgid "Please enter your email."
+msgstr "Prosím zadejte svůj email."
+
+#: src/passwordrecovery.php:37
+#, php-format
+msgid "unknow email address %s"
+msgstr "neznámá mailová adresa %s"
+
+#: src/passwordrecovery.php:50
+#, php-format
+msgid "New password for %s"
+msgstr "Nové heslo pro %s"
+
+#: src/passwordrecovery.php:56
+msgid "Sign On informations was changed"
+msgstr "Přihlašovací údaje byly změněny"
+
+#: src/passwordrecovery.php:58 src/login.php:59
+msgid "Username"
+msgstr "Uživatelské jméno"
 
 #: src/passwordrecovery.php:64
 #, php-format
 msgid "Your new password was sent to %s"
 msgstr "Vaše nové heslo bylo odesláno na %s"
 
-#: src/apps.php:117
-#, fuzzy
-msgid "applications"
-msgstr "Aplikace"
+#: src/passwordrecovery.php:71 src/passwordrecovery.php:80
+msgid "Password Recovery"
+msgstr "Obnova hesla"
 
-#: src/credentialtypes.php:53
+#: src/passwordrecovery.php:84
+#, fuzzy
+msgid ""
+"Forgot your password? Enter the e-mail address you used during registration "
+"and we will send you a new one."
+msgstr ""
+"Zapoměli jste heslo ? Vložte svojí e-mailovou adresu kterou jste zadali "
+"během registrace a my vám pošleme nové."
+
+#: src/passwordrecovery.php:88
+msgid "Email address"
+msgstr "E-mailová adresa"
+
+#: src/passwordrecovery.php:89
+msgid "your@email.com"
+msgstr "vas@email.cz"
+
+#: src/passwordrecovery.php:92
+msgid "Send New Password"
+msgstr "Odeslat nové heslo"
+
+#: src/passwordrecovery.php:105
+msgid "Check your inbox — your new password has been sent."
+msgstr "Zkontrolujte svou schránku — vaše nové heslo bylo odesláno."
+
+#: src/passwordrecovery.php:109
+msgid "Back to Sign In"
+msgstr "Zpět na přihlášení"
+
+#: src/importcredentialtype.php:29
+msgid "Invalid JSON file"
+msgstr "Neplatný JSON soubor"
+
+#: src/importcredentialtype.php:32
+msgid "Credential Type imported successfully"
+msgstr "Typ přihlašovacích údajů úspěšně importován"
+
+#: src/importcredentialtype.php:35
+msgid "Error importing Credential Type"
+msgstr "Chyba importu typu přihlašovacích údajů"
+
+#: src/myapps.php:21
+msgid "My Applications"
+msgstr "Mé aplikace"
+
+#: src/myapps.php:27
+msgid "Submit new application"
+msgstr "Přidat novou aplikaci"
+
+#: src/coworkers.php:25
+msgid "Not authenticated"
+msgstr "Nepřihlášen"
+
+#: src/coworkers.php:36
+msgid "Invalid parameters"
+msgstr "Neplatné parametry"
+
+#: src/coworkers.php:51
+msgid "Only the owner can manage coworkers"
+msgstr "Pouze vlastník může spravovat spolupracovníky"
+
+#: src/coworkers.php:58
+msgid "You are already the owner"
+msgstr "Již jste vlastníkem"
+
+#: src/coworkers.php:67
+msgid "Coworker added"
+msgstr "Spolupracovník přidán"
+
+#: src/coworkers.php:73
+msgid "Coworker removed"
+msgstr "Spolupracovník odebrán"
+
+#: src/coworkers.php:78
+msgid "Unknown action"
+msgstr "Neznámá akce"
+
+#: src/whatis.php:34 src/whatis.php:38 src/MultiFlexi/Ui/MainMenu.php:55
+msgid "What is MultiFlexi?"
+msgstr ""
+
+#: src/whatis.php:40
+msgid ""
+"MultiFlexi is an open-source task scheduling and automation platform for "
+"business system integrations. It lets organizations run applications — "
+"importers, exporters, reports, health checks — on a schedule across multiple "
+"companies, with isolated credentials and full execution history."
+msgstr ""
+
+#: src/whatis.php:46
+msgid "MultiFlexi dashboard"
+msgstr ""
+
+#: src/whatis.php:51
+msgid ""
+"Think of it as cron on steroids for business automation: instead of managing "
+"scattered shell scripts and cron entries, you register applications once, "
+"assign them to companies with the right credentials, and let MultiFlexi "
+"handle scheduling, execution, output capture, and monitoring."
+msgstr ""
+
+#: src/whatis.php:56
+msgid "Who is it for?"
+msgstr ""
+
+#: src/whatis.php:60
+msgid "Accounting Firms"
+msgstr ""
+
+#: src/whatis.php:60
+msgid ""
+"Automating daily tasks for dozens of clients — bank imports, invoice "
+"generation, report exports — each running with that client's own credentials."
+msgstr ""
+
+#: src/whatis.php:61
+msgid "Managed Service Providers"
+msgstr ""
+
+#: src/whatis.php:61
+msgid ""
+"Running system health checks, backup verifications, and compliance reports "
+"across customer environments on schedule."
+msgstr ""
+
+#: src/whatis.php:62
+msgid "Internal IT Teams"
+msgstr ""
+
+#: src/whatis.php:62
+msgid ""
+"Synchronizing data between systems, dispatching notifications, and "
+"maintaining databases without hand-written automation glue."
+msgstr ""
+
+#: src/whatis.php:77
+msgid "Key Concepts"
+msgstr ""
+
+#: src/whatis.php:79
+msgid "MultiFlexi is built around five core entities that work together:"
+msgstr ""
+
+#: src/whatis.php:85
+msgid "MultiFlexi entity relationships"
+msgstr ""
+
+#: src/whatis.php:91
+msgid "Company"
+msgstr "Společnost"
+
+#: src/whatis.php:91
+msgid ""
+"A tenant or organization you automate tasks for. Each company has its own "
+"set of credentials and job history, ensuring full data isolation."
+msgstr ""
+
+#: src/whatis.php:92
+msgid ""
+"A tool that MultiFlexi can execute — a CLI binary, a PHP script, a Docker "
+"image. Applications are registered once and can be assigned to any company."
+msgstr ""
+
+#: src/whatis.php:93
+msgid "Credential"
+msgstr ""
+
+#: src/whatis.php:93
+msgid ""
+"Securely stored authentication data (API keys, database passwords, SMTP "
+"accounts). Credentials are scoped to a company and encrypted at rest with "
+"AES-256."
+msgstr ""
+
+#: src/whatis.php:94
+#, fuzzy
+msgid "RunTemplate"
+msgstr "%s Předloh běhu odstraněno"
+
+#: src/whatis.php:94
+msgid ""
+"The link between an application and a company: \"run this app for this "
+"company on this schedule with these credentials.\""
+msgstr ""
+
+#: src/whatis.php:95
+msgid "Job"
+msgstr "Úloha"
+
+#: src/whatis.php:95
+msgid ""
+"A single execution of a RunTemplate. MultiFlexi records the start time, exit "
+"code, stdout, stderr, and any output files as searchable artifacts."
+msgstr ""
+
+#: src/whatis.php:114
+msgid "How It Works"
+msgstr ""
+
+#: src/whatis.php:117
+msgid ""
+"Register an application — import its JSON definition or create it in the web "
+"UI."
+msgstr ""
+
+#: src/whatis.php:118
+msgid ""
+"Add a company — create a tenant representing the organization whose tasks "
+"you're automating."
+msgstr ""
+
+#: src/whatis.php:119
+msgid ""
+"Assign credentials — store the company's API keys, database passwords, or "
+"SMTP accounts. MultiFlexi encrypts them and injects them as environment "
+"variables at runtime."
+msgstr ""
+
+#: src/whatis.php:120
+msgid ""
+"Create a RunTemplate — pick the application, the company, the schedule, and "
+"the credentials."
+msgstr ""
+
+#: src/whatis.php:121
+msgid ""
+"Jobs run automatically — the scheduler daemon creates job records when the "
+"schedule is due, and the executor daemon launches the application and "
+"captures all output."
+msgstr ""
+
+#: src/whatis.php:133
+msgid "Execution Environments"
+msgstr ""
+
+#: src/whatis.php:135
+msgid "MultiFlexi can launch applications in several ways:"
+msgstr ""
+
+#: src/whatis.php:141
+msgid "Native"
+msgstr ""
+
+#: src/whatis.php:141
+msgid "run the command directly on the server"
+msgstr ""
+
+#: src/whatis.php:142
+msgid "Docker"
+msgstr ""
+
+#: src/whatis.php:142
+msgid "run inside a Docker container with the application's OCI image"
+msgstr ""
+
+#: src/whatis.php:143
+msgid "Podman"
+msgstr ""
+
+#: src/whatis.php:143
+msgid "rootless container execution"
+msgstr ""
+
+#: src/whatis.php:144
+msgid "Kubernetes"
+msgstr ""
+
+#: src/whatis.php:144
+msgid "launch as a K8s pod"
+msgstr ""
+
+#: src/whatis.php:145
+msgid "Azure Container Instances"
+msgstr ""
+
+#: src/whatis.php:145
+msgid "run in the cloud"
+msgstr ""
+
+#: src/whatis.php:158
+msgid ""
+"The executor is pluggable: each RunTemplate can use a different execution "
+"backend depending on the application's requirements."
+msgstr ""
+
+#: src/whatis.php:163
+msgid "Multiple Interfaces"
+msgstr ""
+
+#: src/whatis.php:165
+msgid ""
+"You interact with MultiFlexi through whichever interface fits your workflow:"
+msgstr ""
+
+#: src/whatis.php:170
+msgid "Web UI"
+msgstr ""
+
+#: src/whatis.php:170
+msgid ""
+"Bootstrap 5 dashboard with real-time metrics, company/application/credential "
+"management, job history, and live output streaming via WebSocket."
+msgstr ""
+
+#: src/whatis.php:171
+msgid "CLI"
+msgstr ""
+
+#: src/whatis.php:171
+msgid ""
+"Full-featured command-line tool for scripting, CI/CD pipelines, and headless "
+"administration."
+msgstr ""
+
+#: src/whatis.php:172
+msgid "TUI"
+msgstr ""
+
+#: src/whatis.php:172
+msgid ""
+"Interactive terminal interface built with Bubbletea (Go) for keyboard-driven "
+"management."
+msgstr ""
+
+#: src/whatis.php:173
+msgid "REST API"
+msgstr ""
+
+#: src/whatis.php:173
+msgid ""
+"JSON/XML/YAML endpoints with HTTP Basic and token authentication for "
+"programmatic integration."
+msgstr ""
+
+#: src/whatis.php:174
+msgid "MCP Server"
+msgstr ""
+
+#: src/whatis.php:174
+msgid "Model Context Protocol server for AI agent integration."
+msgstr ""
+
+#: src/whatis.php:191
+msgid "Monitoring and Observability"
+msgstr ""
+
+#: src/whatis.php:195
+msgid ""
+"Zabbix integration with Low-Level Discovery — auto-discovers companies and "
+"applications, monitors job success rates and execution times"
+msgstr ""
+
+#: src/whatis.php:196
+msgid "OpenTelemetry support for distributed tracing"
+msgstr ""
+
+#: src/whatis.php:197
+msgid "Structured logging to syslog, database, and custom targets"
+msgstr ""
+
+#: src/whatis.php:198
+msgid ""
+"Universal artifact preservation — every job's stdout, stderr, and output "
+"files are stored and searchable"
+msgstr ""
+
+#: src/whatis.php:208
+msgid "Getting Started"
+msgstr ""
+
+#: src/whatis.php:209
+msgid "Ready to try it?"
+msgstr ""
+
+#: src/whatis.php:212
+msgid "Browse Apps"
+msgstr ""
+
+#: src/whatis.php:213 src/credentialtypes.php:27 src/credentialtypes.php:32
+#: src/MultiFlexi/Ui/MainMenu.php:58
+msgid "Credential Types"
+msgstr "Typy přihlašovacích údajů"
+
+#: src/whatis.php:214 src/MultiFlexi/Ui/ApplicationPanel.php:46
+#: src/MultiFlexi/Ui/MainMenu.php:59
+msgid "Install"
+msgstr "Instalace"
+
+#: src/whatis.php:215
+msgid "Try Demo"
+msgstr ""
+
+#: src/whatis.php:220
+msgid "MultiFlexi on GitHub"
+msgstr ""
+
+#: src/whatis.php:221 src/MultiFlexi/Ui/PageBottom.php:52
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#: src/whatis.php:222
+msgid "Demo Instance — try MultiFlexi without installing"
+msgstr ""
+
+#: src/login.php:47 src/MultiFlexi/Ui/MainMenu.php:69
+msgid "Sign In"
+msgstr "Přihlásit"
+
+#: src/login.php:53 src/MultiFlexi/Hub/CredentialProtoType.php:31
+msgid "Logo"
+msgstr "Logo"
+
+#: src/login.php:56
+msgid "Sign in to MultiFlexi"
+msgstr "Přihlásit se do MultiFlexi"
+
+#: src/login.php:67
+msgid "Sign in"
+msgstr "Přihlásit"
+
+#: src/login.php:71
+msgid "Password recovery"
+msgstr "Obnova hesla"
+
+#: src/mycredentialtypes.php:21 src/MultiFlexi/Ui/MainMenu.php:63
+msgid "My Credential Types"
+msgstr "Mé typy přihlašovacích údajů"
+
+#: src/mycredentialtypes.php:27
+msgid "Submit new credential type"
+msgstr "Přidat nový typ přihlašovacích údajů"
+
+#: src/logout.php:24 src/MultiFlexi/Ui/MainMenu.php:66
+msgid "Sign Off"
+msgstr "Odhlášení"
+
+#: src/logout.php:28
+msgid "Good bye"
+msgstr "Nashledanou"
+
+#: src/logout.php:33
+msgid "Thank you for your patronage and look forward to another visit"
+msgstr "Díky za váš zájem a těším se na další návštěvu"
+
+#: src/credentialtypes.php:70
+msgid "Search credential types..."
+msgstr "Hledat typy přihlašovacích údajů..."
+
+#: src/credentialtypes.php:81
+msgid "Filter by Topics"
+msgstr ""
+
+#: src/credentialtypes.php:82
+msgid ""
+"Select topics to filter credential types. All are shown when no topics are "
+"selected."
+msgstr ""
+
+#: src/credentialtypes.php:87
+msgid "Select topics to filter..."
+msgstr ""
+
+#: src/credentialtypes.php:95
+msgid "Clear topic filter to show all credential types"
+msgstr ""
+
+#: src/credentialtypes.php:104
 msgid "credential types"
 msgstr "typy přihlašovacích údajů"
 
-#: src/createaccount.php:176
-msgid "eMail address"
-msgstr "emailová adresa"
+#: src/credentialtypes.php:161 src/MultiFlexi/Hub/Application.php:36
+#: src/MultiFlexi/Hub/CredentialProtoType.php:36
+msgid "Homepage"
+msgstr "Domovská stránka"
 
-#: src/createaccount.php:200
-msgid "finish registration"
-msgstr "ukončit registraci"
+#: src/main.php:20
+msgid "Multi Flexi"
+msgstr "Multi Flexi"
 
-#: src/createaccount.php:52
-msgid "invalid mail address"
-msgstr "neplatná mailová adresa"
+#: libexec/json2app.php:40
+msgid "Error importing application json"
+msgstr ""
 
-#: src/app.php:50 src/credentialtype.php:27
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/JobReport.php:43
-msgid "n/a"
-msgstr "neudáno"
+#: libexec/json2credentialtype.php:42
+msgid "Credential prototype definition file is empty: "
+msgstr ""
 
-#: src/createaccount.php:71
-msgid "password is too short"
-msgstr "heslo je příliš krátké"
+#: libexec/json2credentialtype.php:50
+#, fuzzy
+msgid "Invalid JSON: "
+msgstr "Neplatný JSON soubor"
 
-#: src/passwordrecovery.php:37
+#: libexec/json2credentialtype.php:60
 #, php-format
-msgid "unknow email address %s"
-msgstr "neznámá mailová adresa %s"
+msgid "Credential prototype %s imported successfully"
+msgstr ""
+
+#: libexec/json2credentialtype.php:62
+msgid "Error importing credential prototype"
+msgstr ""
+
+#: src/MultiFlexi/Hub/Application.php:30
+#: src/MultiFlexi/Hub/CredentialProtoType.php:30
+msgid "Id"
+msgstr "Id"
+
+#: src/MultiFlexi/Hub/Application.php:31
+msgid "Image"
+msgstr "Obrázek"
+
+#: src/MultiFlexi/Hub/Application.php:32
+#: src/MultiFlexi/Hub/CredentialProtoType.php:33
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:33
+msgid "Name"
+msgstr "Jméno"
+
+#: src/MultiFlexi/Hub/Application.php:34
+#: src/MultiFlexi/Hub/CredentialProtoType.php:35
+#: src/MultiFlexi/Ui/ConfigFieldsView.php:34
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:35
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:35
+msgid "Description"
+msgstr "Popis"
+
+#: src/MultiFlexi/Hub/Application.php:35
+#: src/MultiFlexi/Hub/CredentialProtoType.php:37
+msgid "Tags"
+msgstr "Štítky"
+
+#: src/MultiFlexi/Hub/Application.php:37
+#: src/MultiFlexi/Hub/CredentialProtoType.php:38
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:32
+msgid "Version"
+msgstr "Verze"
+
+#: src/MultiFlexi/Hub/Application.php:38
+#: src/MultiFlexi/Hub/CredentialProtoType.php:39
+msgid "UUID"
+msgstr "UUID"
+
+#: src/MultiFlexi/Hub/Application.php:39
+#: src/MultiFlexi/Hub/CredentialProtoType.php:40
+msgid "Owner"
+msgstr "Vlastník"
+
+#: src/MultiFlexi/Hub/CredentialProtoType.php:32
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:30
+msgid "Code"
+msgstr "Kód"
+
+#: src/MultiFlexi/Ui/PageBottom.php:49
+msgid "Github Project"
+msgstr "Projekt na Githubu"
+
+#: src/MultiFlexi/Ui/PageBottom.php:50
+msgid "LinkedIN Product page"
+msgstr "Produktová stránka na LinkedIn"
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:29
+msgid "Credential Prototype JSON file"
+msgstr "JSON soubor prototypu přihlašovacích údajů"
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeJson.php:33
+#: src/MultiFlexi/Ui/AppJson.php:29
+msgid "Download"
+msgstr "Stahnout"
+
+#: src/MultiFlexi/Ui/AppImportForm.php:29
+msgid "Application JSON file"
+msgstr "JSON soubor aplikace"
+
+#: src/MultiFlexi/Ui/ConfigFieldsView.php:31
+msgid "Key"
+msgstr "Klíč"
+
+#: src/MultiFlexi/Ui/ConfigFieldsView.php:32
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:32
+msgid "Type"
+msgstr "Typ"
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:31
+msgid "Keyword"
+msgstr "Klíč"
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:53
+msgid "No fields defined"
+msgstr "Žádná pole nejsou definována"
+
+#: src/MultiFlexi/Ui/PageTop.php:68
+msgid "Click to hide messages"
+msgstr "Klikněte pro skrytí zpráv"
+
+#: src/MultiFlexi/Ui/DBDataTable.php:114
+msgid "Reload"
+msgstr "Obnovit"
+
+#: src/MultiFlexi/Ui/DBDataTable.php:130
+msgid "Filter"
+msgstr "Filtrovat"
+
+#: src/MultiFlexi/Ui/DBDataTable.php:347
+msgid "All pages"
+msgstr "Všechny stránky"
+
+#: src/MultiFlexi/Ui/ColumnsForm.php:120 src/MultiFlexi/Ui/AppEditorForm.php:48
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:36
+msgid "Save"
+msgstr "Ulož"
+
+#: src/MultiFlexi/Ui/ColumnsForm.php:132
+msgid "Save and back"
+msgstr "Ulož a vrať se"
+
+#: src/MultiFlexi/Ui/ColumnsForm.php:144
+msgid "Save and next"
+msgstr "Ulož a pokračuj"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:34
+msgid "Application name"
+msgstr "Jméno aplikace"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:35
+msgid "Application code"
+msgstr "Kód aplikace"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:36
+msgid "Application Description"
+msgstr "Popisek aplikace"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:37
+msgid "Path to binary"
+msgstr "Cesta k binárce"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:38
+msgid "Setup Command"
+msgstr "Příkaz pro nastavení"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:38
+msgid "Command used to setup new company for use with command"
+msgstr "Příkaz použitý pro nastavení nové společnosti pro použití s příkazem"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:39
+msgid "Command arguments"
+msgstr "Parametry příkazu"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:39
 msgid ""
@@ -875,1056 +1143,447 @@ msgid ""
 msgstr ""
 "je možné použít makra jako {ABRAFLEXI_URL} nebo uživatelsky definovaná pole."
 
-#: src/passwordrecovery.php:89
-msgid "your@email.com"
-msgstr "vas@email.cz"
+#: src/MultiFlexi/Ui/AppEditorForm.php:40
+msgid "Application Icon"
+msgstr "Ikona Aplikace"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:64
-msgid "Name is empty"
-msgstr "Jméno je prázdné"
+#: src/MultiFlexi/Ui/AppEditorForm.php:41
+msgid "Enabled"
+msgstr "Povoleno"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:119
-#, php-format
-msgid "Executable %s does not exist"
-msgstr "Příkaz %s neexistuje"
+#: src/MultiFlexi/Ui/AppEditorForm.php:42
+msgid "Application Homepage"
+msgstr "Domovská stránka aplikace"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:126
-#, php-format
-msgid "Executable %s does not exist in search PATH %s"
-msgstr "Příkaz %s není v prohledávané cestě %s"
+#: src/MultiFlexi/Ui/AppEditorForm.php:43
+msgid "Container image"
+msgstr "Obraz pro Kontainer"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:130
-#, php-format
-msgid "file %s is not executable"
-msgstr "soubor %s není spustitelný"
+#: src/MultiFlexi/Ui/AppEditorForm.php:44
+msgid "Current Version of Application"
+msgstr "Aktuální verze aplikace"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:450
-#, php-format
-msgid "JSON does not comply with. %s version %s"
+#: src/MultiFlexi/Ui/AppEditorForm.php:45
+msgid "Application deploy command"
+msgstr "Příkaz pro instalaci aplikace"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:46
+msgid "Application Universal Unique Identifier"
+msgstr "Univerzální unikátní identifikátor aplikace"
+
+#: src/MultiFlexi/Ui/AppEditorForm.php:47
+msgid "Tags separated by comma"
+msgstr "Štítky oddělené čárkou"
+
+#: src/MultiFlexi/Ui/CoworkersManager.php:33
+msgid "Add users who can edit this item."
+msgstr "Přidejte uživatele, kteří mohou upravovat tuto položku."
+
+#: src/MultiFlexi/Ui/MainMenu.php:45
+msgid "Toggle navigation"
+msgstr "Přepnout navigaci"
+
+#: src/MultiFlexi/Ui/MainMenu.php:56
+msgid "Demo"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:492
-#, php-format
-msgid "Application removal %d %s"
-msgstr "Odstranění aplikace %d %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:519
-#, fuzzy, php-format
-msgid "Unassigned from %d companies"
-msgstr "Odebráno z %d společnosti"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:530
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyApp.php:91
-#, fuzzy, php-format
-msgid "%s Action Config removal"
-msgstr "Odstranění aplikace %d %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:538
-#, fuzzy, php-format
-msgid "#%d %s RunTemplate removal"
-msgstr "%s Předloh běhu odstraněno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:545
-#, php-format
-msgid "%d Config fields removed"
-msgstr "%d konfiguračních polí odstraněno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:552
-#, fuzzy, php-format
-msgid "%d Configurations removed"
-msgstr "Konfigurace odstraněna"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:559
-#, php-format
-msgid "%d Jobs removed"
-msgstr "%d úloh odstraněno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:588
-#, fuzzy
-msgid "Schema file not found: "
-msgstr "spustitelný soubor %s nenalezen"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:594
-msgid "App definition file is empty: "
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:610
-#, fuzzy
-msgid "Invalid JSON: "
-msgstr "Neplatný JSON soubor"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:813
-#, php-format
-msgid "The required configuration key `%s` was not filled"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:871
-#, fuzzy
-msgid "Undocumented"
-msgstr "Zobraz neodeslané dokumenty"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:972
-#, php-format
-msgid "Failed to insert artifact definition: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Common.php:52
-#, fuzzy
-msgid "Non specialised credential type"
-msgstr "Zobrazit všechny typy přihlašovacích údajů"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Common.php:70
-msgid "Common type"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:34
-#, fuzzy
-msgid "Fio Bank Account Number"
-msgstr "Číslo bankovního účtu"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:34
-msgid "Number of the Fio Bank account"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:37
-msgid "Fio Bank Token"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:37
-msgid "Token for accessing the Fio Bank API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:38
-msgid "AXWxJN18IqwbY....xccP2eyxvWDFLe2"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:40
-msgid "Fio Token Name"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:40
-msgid "Name of the token used for identification"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:74
-msgid "Fio Bank"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:79
-msgid "Fio Bank credential type for integration with Fio Bank API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:30
-msgid ".env"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:30
-msgid "Path to .env file"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:56
-#, php-format
-msgid "Value from .env file %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:62
-#, fuzzy, php-format
-msgid "File %s is not readable"
-msgstr "soubor %s není spustitelný"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:65
-#, fuzzy, php-format
-msgid "File %s does not exists"
-msgstr "uživatel %s neexistuje"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:68
-msgid ".env file must be filled"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:102
-msgid ".env file"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:107
-#, fuzzy
-msgid "Load configuration values from .env file"
-msgstr "Konfigurace není k dispozici."
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:126
-#, php-format
-msgid "Populated by .env file %s "
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:34
-msgid "Database Connection"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:34
-msgid "Database connection type (e.g., sqlsrv)"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:37
-msgid "Database Host"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:37
-msgid "Host of the SQL Server"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:40
-msgid "Database Port"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:40
-msgid "Port of the SQL Server"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:43
-msgid "Database Name"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:43
-msgid "Name of the database"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:46
-#, fuzzy
-msgid "Database Username"
-msgstr "Uživatelské jméno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:46
-msgid "Username for the database"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:49
-#, fuzzy
-msgid "Database Password"
-msgstr "Heslo"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:49
-#, fuzzy
-msgid "Password for the database"
-msgstr "Změna hesla"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:52
-#, fuzzy
-msgid "Database Settings"
-msgstr "Nastavení"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:52
-msgid "Additional database settings (e.g., encrypt=false)"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:72
-#, fuzzy
-msgid "SQL Server"
-msgstr "Server"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:77
-msgid "Credential type for connecting to Microsoft SQL Server"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:32
-msgid "VaultWarden URL"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:32
-msgid "URL instance VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:33
-msgid "VaultWarden User login"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:33
-#, fuzzy
-msgid "User e-mail"
-msgstr "Uživatelské Jméno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:34
-msgid "VaultWarden User password"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:34
-#, fuzzy
-msgid "Password for user"
-msgstr "Nové heslo pro %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:35
-msgid "VaultWarden Folder"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:35
-msgid "Název složky s hesly ve VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:43
-msgid "VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:48
-msgid "Use VaultWarden secrets"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:94
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:139
-msgid "Missing required fields for VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:117
-msgid "VaultWarden check: connection and secrets available."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:34
-msgid "Office 365 Username"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:34
-msgid "Username for Office 365"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:37
-#, fuzzy
-msgid "Office 365 Password"
-msgstr "Heslo certifickátu"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:37
-#, fuzzy
-msgid "Password for Office 365"
-msgstr "Obnova hesla"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:40
-msgid "Office 365 Client ID"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:40
-msgid "Client ID for Office 365 API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:43
-msgid "Office 365 Secret Value"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:43
-msgid "Secret value for Office 365 API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:43
-msgid ""
-"Azure Portal → App registrations → Your app → Certificates & secrets, and "
-"copy the actual secret VALUE"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:46
-msgid "Office 365 Tenant"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:46
-msgid "Tenant ID for Office 365"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:64
-msgid "Office 365"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:69
-msgid "Credential type for integration with Office 365 API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:52
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:113
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Customer.php:72
-msgid "ID"
-msgstr "ID"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:53
-msgid "After"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:54
-msgid "Job"
-msgstr "Úloha"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:55
-#, fuzzy
-msgid "App"
+#: src/MultiFlexi/Ui/MainMenu.php:57
+msgid "Apps"
 msgstr "Appky"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:56
-#, fuzzy
-msgid "Runtemplate"
-msgstr "%s Předloh běhu odstraněno"
+#: src/MultiFlexi/Ui/MainMenu.php:62
+msgid "My Apps"
+msgstr "Mé Aplikace"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:57
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Company.php:54
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:127
-msgid "Company"
-msgstr "Společnost"
+#: src/MultiFlexi/Ui/MainMenu.php:64
+msgid "Submit App"
+msgstr "Přidat aplikaci"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:136
+#: src/MultiFlexi/Ui/MainMenu.php:65
+msgid "Submit Credential Type"
+msgstr "Přidat typ přihlašovacích údajů"
+
+#: src/MultiFlexi/Ui/MainMenu.php:68
+msgid "Sign On"
+msgstr "Registrace"
+
+#: src/MultiFlexi/Ui/FilterDialog.php:65 src/MultiFlexi/Ui/FilterDialog.php:94
+msgid "From"
+msgstr "Od"
+
+#: src/MultiFlexi/Ui/FilterDialog.php:78 src/MultiFlexi/Ui/FilterDialog.php:104
+msgid "To"
+msgstr "Do"
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:31
+msgid "Credential Type Name"
+msgstr "Název typu přihlašovacích údajů"
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:33
+msgid "URL"
+msgstr "URL"
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:34
+msgid "Logo URL"
+msgstr "URL loga"
+
+#~ msgid "Demo Site"
+#~ msgstr "Demo stránka"
+
+#~ msgid "Logout"
+#~ msgstr "Odhlášení"
+
+#~ msgid "Name is empty"
+#~ msgstr "Jméno je prázdné"
+
 #, php-format
-msgid "New %s"
-msgstr "Nový %s"
+#~ msgid "Executable %s does not exist"
+#~ msgstr "Příkaz %s neexistuje"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:137
 #, php-format
-msgid "Edit %s"
-msgstr "Uprav %s"
+#~ msgid "Executable %s does not exist in search PATH %s"
+#~ msgstr "Příkaz %s není v prohledávané cestě %s"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:138
 #, php-format
-msgid "Remove %s"
-msgstr "Odstranit %s"
+#~ msgid "file %s is not executable"
+#~ msgstr "soubor %s není spustitelný"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:139
 #, php-format
-msgid "Create new %s"
-msgstr "Vytvořit nový %s"
+#~ msgid "Application removal %d %s"
+#~ msgstr "Odstranění aplikace %d %s"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:140
-#, php-format
-msgid "Editing %s"
-msgstr "Upravuji %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:141
-#, php-format
-msgid "Removing %s"
-msgstr "Odstraňuji %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:143
-#, php-format
-msgid "Are you sure you wish to delete %%d row of %s ?"
-msgstr "Opravdu chceš smazat %%d řádků z %s ?"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:187
-#, php-format
-msgid "Missing ColumnInfo name for %s/%s"
-msgstr "Chybí informace o jménu pro %s/%s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:195
-#, php-format
-msgid "Missing ColumnInfo type for %s/%s"
-msgstr "Chybí informace o typu pro %s/%s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:220
-msgid "Updated"
-msgstr "Aktualizováno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:230
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:117
-msgid "Created"
-msgstr "Vytvořeno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:528
-#, php-format
-msgid "%s is not valid email"
-msgstr "%s není platným emailem"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:559
-#, php-format
-msgid "A %s is required"
-msgstr "%s je vyžadován"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:566
-#, php-format
-msgid "A %s is not unique"
-msgstr "%s není jedinečný"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:708
-#, php-format
-msgid "Field Type is not set for %s "
-msgstr "Typ políčka není nastaven pr  %s "
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:822
-#, fuzzy
-msgid "Error saving record"
-msgstr "Chyba ukládání uživatele"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:956
-#, php-format
-msgid "Column \"%s\" of %s without type definition"
-msgstr "Políčko \"%s\" z %s bez definice typu"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:1160
-msgid "Yes"
-msgstr "Ano"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:1160
-msgid "No"
-msgstr "Ne"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:1330
-msgid "Dismis"
-msgstr "Zrušit"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/EventSource.php:172
-#, php-format
-msgid "Event source \"%s\" unreachable: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialType.php:162
-#, php-format
-msgid "Try to access Undefined field %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialType.php:165
-#, php-format
-msgid "Unexistent field helper %s ?!?"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:87
-#, fuzzy
-msgid "Job Env"
-msgstr "Info úlohy"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:119
-msgid "Cannot create job without authenticated user. User ID is required."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:143
-#, php-format
-msgid "Creating Job for Runtemplate #%d with NULL company_id. RT data: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:148
-msgid "Job ID"
-msgstr "ID úlohy"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:148
-#, fuzzy
-msgid "Number of job"
-msgstr "Číslo"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:178
-msgid "Envirnoment unserialization Error"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:213
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:217
-#, fuzzy
-msgid "No RunTemplate prepared"
-msgstr "%s Předloh běhu odstraněno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:286
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:351
-#, php-format
-msgid "OTel export failed: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:485
-#, fuzzy
-msgid "Scheduling job"
-msgstr "Naplánovat úlohu"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:646
-#, fuzzy
-msgid "Job environment"
-msgstr "Prostředí"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:774
 #, fuzzy, php-format
-msgid "Requested Executor %s not availble"
-msgstr "Obchodní podmínky nejsou dostupné."
+#~ msgid "Unassigned from %d companies"
+#~ msgstr "Odebráno z %d společnosti"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:947
 #, fuzzy, php-format
-msgid "Job #%d"
-msgstr "ID úlohy"
+#~ msgid "%s Action Config removal"
+#~ msgstr "Odstranění aplikace %d %s"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1009
-msgid "Cannot delete job without ID"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1050
-msgid "Updated runtemplate counters after job deletion"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1054
-#, php-format
-msgid "Failed to update runtemplate counters: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1070
-#, php-format
-msgid "Deleted %d schedule entries"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1076
-#, php-format
-msgid "Failed to delete schedule entries: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1092
-#, fuzzy
-msgid "Empty Job Environment"
-msgstr "Prostředí"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1247
-#, php-format
-msgid "Result file from job execution: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1270
-#, php-format
-msgid "Failed to create artifact for result file %s: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:176
-#, php-format
-msgid ""
-"Too many failed login attempts from your IP address. Please try again in %d "
-"minutes."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:184
-#, php-format
-msgid ""
-"Too many failed login attempts for this username. Please try again in %d "
-"minutes."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:199
-msgid "missing login"
-msgstr "chybějící přihlašovací jméno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:205
-msgid "missing password"
-msgstr "chybí heslo"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:265
-msgid "invalid password"
-msgstr "chybné heslo"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:282
-#, php-format
-msgid "user %s does not exist"
-msgstr "uživatel %s neexistuje"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:409
-#, fuzzy
-msgid "Sign in denied by administrator"
-msgstr "Nejprve se prosím přihlaš jako admin"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/UnixUser.php:48
 #, fuzzy, php-format
-msgid "New unix user %s created"
-msgstr "štítek %s byl vytvořen"
+#~ msgid "#%d %s RunTemplate removal"
+#~ msgstr "%s Předloh běhu odstraněno"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/UnixUser.php:50
-msgid "Failed to create new user for current Unix username."
-msgstr ""
+#, php-format
+#~ msgid "%d Config fields removed"
+#~ msgstr "%d konfiguračních polí odstraněno"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CommonAction.php:84
-#, fuzzy
-msgid "No Action performed"
-msgstr "Prvotní nastavení provedeno"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Credential.php:185
-msgid "undescribed custom field"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Credential.php:186
 #, fuzzy, php-format
-msgid "Config field %s inconsistency"
-msgstr "Editor Konfiguračních položek"
+#~ msgid "%d Configurations removed"
+#~ msgstr "Konfigurace odstraněna"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Scheduler.php:200
 #, php-format
-msgid "Job #%d is already scheduled, skipping duplicate"
-msgstr ""
+#~ msgid "%d Jobs removed"
+#~ msgstr "%d úloh odstraněno"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Scheduler.php:224
-#, php-format
-msgid "Job #%d already scheduled (caught duplicate key error)"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:382
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:404
 #, fuzzy
-msgid "Config fields Saved"
-msgstr "Konfigurační položka uložena"
+#~ msgid "Schema file not found: "
+#~ msgstr "spustitelný soubor %s nenalezen"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:385
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:407
-msgid "Error saving Config fields"
-msgstr "Chyba ukládání konfiguračního políčka"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:463
-#, php-format
-msgid "RunTemplate #%s Environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:475
 #, fuzzy
-msgid "RunTemplate CredentialType Values"
-msgstr "Nejnovější typy přihlašovacích údajů"
+#~ msgid "Undocumented"
+#~ msgstr "Zobraz neodeslané dokumenty"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Environmentor.php:62
-#, php-format
-msgid "Query for Nonexistent module %s vars"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Environmentor.php:92
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Configuration.php:111
-#, php-format
-msgid "Setting Environment %s to %s"
-msgstr "Nastavuji prostředí %s na %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/FileStore.php:108
-msgid "uploaded file"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyApp.php:71
-#, php-format
-msgid "Application %s was assigned to %s company"
-msgstr "Aplikace %s byla přiřazeno ke společnosti %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyApp.php:96
-#, php-format
-msgid "Application %s was unassigned from %s company"
-msgstr "Aplkace %s byla odebrána ze společnosti %s"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/MultiFlexi.php:53
 #, fuzzy
-msgid "MultiFlexi"
-msgstr "Multi Flexi"
+#~ msgid "Non specialised credential type"
+#~ msgstr "Zobrazit všechny typy přihlašovacích údajů"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/MultiFlexi.php:58
-msgid "Provide Informations about Current running Environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Application.php:57
-msgid "Provide per Application Custom environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/EaseLogger.php:61
-msgid "Logger"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/EaseLogger.php:66
-msgid "Handle Logging for Ease Framework based Applications"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/RunTemplate.php:50
 #, fuzzy
-msgid "RunTemplate"
-msgstr "%s Předloh běhu odstraněno"
+#~ msgid "Fio Bank Account Number"
+#~ msgstr "Číslo bankovního účtu"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/RunTemplate.php:55
-msgid "Provide stored RunTemplate Environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Company.php:59
-msgid "Provide Information about Current company"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:83
-msgid "OpenTelemetry metrics export is disabled"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:89
-msgid ""
-"OpenTelemetry SDK not installed. Install: composer require open-telemetry/"
-"sdk open-telemetry/exporter-otlp"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:98
-msgid "OpenTelemetry metrics exporter initialized"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:100
-#, php-format
-msgid "Failed to initialize OpenTelemetry: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:139
-#, php-format
-msgid "OTel: Recorded job start #%d"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:171
-#, php-format
-msgid "OTel: Recorded job end, exitcode=%d, duration=%.2fs"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:188
-msgid "OTel: Metrics flushed"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:190
-#, php-format
-msgid "Error flushing metrics: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:205
-msgid "OTel: Metrics provider shutdown"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:207
-#, php-format
-msgid "Error shutting down metrics: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:341
-#, php-format
-msgid "Error counting running jobs: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:357
 #, fuzzy, php-format
-msgid "Error counting applications: %s"
-msgstr "Chyba importu aplikace"
+#~ msgid "File %s is not readable"
+#~ msgstr "soubor %s není spustitelný"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:373
 #, fuzzy, php-format
-msgid "Error counting enabled applications: %s"
-msgstr "Chyba importu aplikace"
+#~ msgid "File %s does not exists"
+#~ msgstr "uživatel %s neexistuje"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:389
+#, fuzzy
+#~ msgid "Load configuration values from .env file"
+#~ msgstr "Konfigurace není k dispozici."
+
+#, fuzzy
+#~ msgid "Database Username"
+#~ msgstr "Uživatelské jméno"
+
+#, fuzzy
+#~ msgid "Database Password"
+#~ msgstr "Heslo"
+
+#, fuzzy
+#~ msgid "Password for the database"
+#~ msgstr "Změna hesla"
+
+#, fuzzy
+#~ msgid "Database Settings"
+#~ msgstr "Nastavení"
+
+#, fuzzy
+#~ msgid "SQL Server"
+#~ msgstr "Server"
+
+#, fuzzy
+#~ msgid "User e-mail"
+#~ msgstr "Uživatelské Jméno"
+
+#, fuzzy
+#~ msgid "Password for user"
+#~ msgstr "Nové heslo pro %s"
+
+#, fuzzy
+#~ msgid "Office 365 Password"
+#~ msgstr "Heslo certifickátu"
+
+#, fuzzy
+#~ msgid "Password for Office 365"
+#~ msgstr "Obnova hesla"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#, fuzzy
+#~ msgid "App"
+#~ msgstr "Appky"
+
+#, fuzzy
+#~ msgid "Runtemplate"
+#~ msgstr "%s Předloh běhu odstraněno"
+
+#, php-format
+#~ msgid "New %s"
+#~ msgstr "Nový %s"
+
+#, php-format
+#~ msgid "Edit %s"
+#~ msgstr "Uprav %s"
+
+#, php-format
+#~ msgid "Remove %s"
+#~ msgstr "Odstranit %s"
+
+#, php-format
+#~ msgid "Create new %s"
+#~ msgstr "Vytvořit nový %s"
+
+#, php-format
+#~ msgid "Editing %s"
+#~ msgstr "Upravuji %s"
+
+#, php-format
+#~ msgid "Removing %s"
+#~ msgstr "Odstraňuji %s"
+
+#, php-format
+#~ msgid "Are you sure you wish to delete %%d row of %s ?"
+#~ msgstr "Opravdu chceš smazat %%d řádků z %s ?"
+
+#, php-format
+#~ msgid "Missing ColumnInfo name for %s/%s"
+#~ msgstr "Chybí informace o jménu pro %s/%s"
+
+#, php-format
+#~ msgid "Missing ColumnInfo type for %s/%s"
+#~ msgstr "Chybí informace o typu pro %s/%s"
+
+#~ msgid "Updated"
+#~ msgstr "Aktualizováno"
+
+#~ msgid "Created"
+#~ msgstr "Vytvořeno"
+
+#, php-format
+#~ msgid "%s is not valid email"
+#~ msgstr "%s není platným emailem"
+
+#, php-format
+#~ msgid "A %s is required"
+#~ msgstr "%s je vyžadován"
+
+#, php-format
+#~ msgid "A %s is not unique"
+#~ msgstr "%s není jedinečný"
+
+#, php-format
+#~ msgid "Field Type is not set for %s "
+#~ msgstr "Typ políčka není nastaven pr  %s "
+
+#, fuzzy
+#~ msgid "Error saving record"
+#~ msgstr "Chyba ukládání uživatele"
+
+#, php-format
+#~ msgid "Column \"%s\" of %s without type definition"
+#~ msgstr "Políčko \"%s\" z %s bez definice typu"
+
+#~ msgid "Yes"
+#~ msgstr "Ano"
+
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgid "Dismis"
+#~ msgstr "Zrušit"
+
+#, fuzzy
+#~ msgid "Job Env"
+#~ msgstr "Info úlohy"
+
+#~ msgid "Job ID"
+#~ msgstr "ID úlohy"
+
+#, fuzzy
+#~ msgid "Number of job"
+#~ msgstr "Číslo"
+
+#, fuzzy
+#~ msgid "No RunTemplate prepared"
+#~ msgstr "%s Předloh běhu odstraněno"
+
+#, fuzzy
+#~ msgid "Scheduling job"
+#~ msgstr "Naplánovat úlohu"
+
+#, fuzzy
+#~ msgid "Job environment"
+#~ msgstr "Prostředí"
+
 #, fuzzy, php-format
-msgid "Error counting companies: %s"
-msgstr "Chyba mazání společnosti"
+#~ msgid "Requested Executor %s not availble"
+#~ msgstr "Obchodní podmínky nejsou dostupné."
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:405
-#, php-format
-msgid "Error counting runtemplates: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:47
-msgid "Native"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:52
-msgid "Run Job on same machine as MultiFlexi itself"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:131
-#, php-format
-msgid "Process exceeded maximum execution time limit %d seconds"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:151
-#, fuzzy
-msgid "Unknown"
-msgstr "Neznámá akce"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/LaunchJob.php:32
-#, fuzzy
-msgid "Launch Job"
-msgstr "Spustit okamžitě"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/LaunchJob.php:40
-#, fuzzy
-msgid "Launch another job"
-msgstr "Spustit po"
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:32
-msgid "Chain Runtemplate"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:40
-msgid "Run Another RunTemplate after current"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:65
-msgid "No RunTemplate selected for chaining."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:74
 #, fuzzy, php-format
-msgid "RunTemplate #%d not found."
-msgstr "spustitelný soubor %s nenalezen"
+#~ msgid "Job #%d"
+#~ msgstr "ID úlohy"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:88
-#, php-format
-msgid "Chained RunTemplate #%d scheduled."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:90
-msgid "Failed to schedule chained RunTemplate: "
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:36
-msgid "Jenkins"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:46
-msgid "Trigger Jenkins job"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:75
-msgid "Jenkins URL and job name are required"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:111
-#, php-format
-msgid "Jenkins job %s triggered successfully"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/RedmineIssue.php:36
-msgid "Redmine Issue"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/RedmineIssue.php:46
-msgid "Make Redmine issue using Job output"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:34
-msgid "WebHook"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:44
-msgid "Post Job output to URI"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:57
-msgid "Perform begin"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:72
 #, fuzzy
-msgid "Perform done"
-msgstr "Vykonávám počáteční nastavení"
+#~ msgid "Empty Job Environment"
+#~ msgstr "Prostředí"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:45
-msgid "No valid RunTemplate found for rescheduling."
-msgstr ""
+#~ msgid "missing login"
+#~ msgstr "chybějící přihlašovací jméno"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:57
+#~ msgid "missing password"
+#~ msgstr "chybí heslo"
+
+#~ msgid "invalid password"
+#~ msgstr "chybné heslo"
+
 #, php-format
-msgid "RunTemplate #%d rescheduled for %s."
-msgstr ""
+#~ msgid "user %s does not exist"
+#~ msgstr "uživatel %s neexistuje"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:59
-msgid "Failed to reschedule RunTemplate: "
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:68
 #, fuzzy
-msgid "Reschedule"
-msgstr "Naplánovat"
+#~ msgid "Sign in denied by administrator"
+#~ msgstr "Nejprve se prosím přihlaš jako admin"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:78
-msgid "Reschedule job to be executed later again"
-msgstr ""
+#, fuzzy, php-format
+#~ msgid "New unix user %s created"
+#~ msgstr "štítek %s byl vytvořen"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ToDo.php:34
-msgid "ToDo Issue"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ToDo.php:44
-msgid "Make ToDo issue using Job output"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Github.php:36
 #, fuzzy
-msgid "Github Issue"
-msgstr "Projekt na Githubu"
+#~ msgid "No Action performed"
+#~ msgstr "Prvotní nastavení provedeno"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Github.php:46
-msgid "Make Github issue using Job output"
-msgstr ""
+#, fuzzy, php-format
+#~ msgid "Config field %s inconsistency"
+#~ msgstr "Editor Konfiguračních položek"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:34
-msgid "Stop"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:44
 #, fuzzy
-msgid "Stop periodical Task"
-msgstr "Opakované úlohy"
+#~ msgid "Config fields Saved"
+#~ msgstr "Konfigurační položka uložena"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:53
-#, php-format
-msgid "Periodic executing of «%s» for ❮%s❯ stop 🛑"
-msgstr ""
+#~ msgid "Error saving Config fields"
+#~ msgstr "Chyba ukládání konfiguračního políčka"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:55
-msgid "Stopped module failed"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Sleep.php:32
-msgid "Sleep"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Sleep.php:40
-msgid "delay for a specified amount of time"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Sleep.php:48
-#, php-format
-msgid "Sleepeng for %s seconds"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:36
 #, fuzzy
-msgid "Custom Command"
-msgstr "Příkaz pro prvotní nastavení"
+#~ msgid "RunTemplate CredentialType Values"
+#~ msgstr "Nejnovější typy přihlašovacích údajů"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:46
+#, php-format
+#~ msgid "Setting Environment %s to %s"
+#~ msgstr "Nastavuji prostředí %s na %s"
+
+#, php-format
+#~ msgid "Application %s was assigned to %s company"
+#~ msgstr "Aplikace %s byla přiřazeno ke společnosti %s"
+
+#, php-format
+#~ msgid "Application %s was unassigned from %s company"
+#~ msgstr "Aplkace %s byla odebrána ze společnosti %s"
+
 #, fuzzy
-msgid "Run custom command"
-msgstr "Rychlý instalační příkaz:"
+#~ msgid "MultiFlexi"
+#~ msgstr "Multi Flexi"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:63
-msgid "Custom Command begin"
-msgstr ""
+#, fuzzy, php-format
+#~ msgid "Error counting applications: %s"
+#~ msgstr "Chyba importu aplikace"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:65
+#, fuzzy, php-format
+#~ msgid "Error counting enabled applications: %s"
+#~ msgstr "Chyba importu aplikace"
+
+#, fuzzy, php-format
+#~ msgid "Error counting companies: %s"
+#~ msgstr "Chyba mazání společnosti"
+
 #, fuzzy
-msgid "Custom Command done"
-msgstr "Příkazová řádka"
+#~ msgid "Unknown"
+#~ msgstr "Neznámá akce"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:114
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Customer.php:79
-msgid "Status"
-msgstr "Stav"
+#, fuzzy
+#~ msgid "Launch Job"
+#~ msgstr "Spustit okamžitě"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:115
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Customer.php:73
-msgid "Subject"
-msgstr "Předmět"
+#, fuzzy
+#~ msgid "Launch another job"
+#~ msgstr "Spustit po"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:116
-msgid "Message"
-msgstr "Zpráva"
+#, fuzzy, php-format
+#~ msgid "RunTemplate #%d not found."
+#~ msgstr "spustitelný soubor %s nenalezen"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:135
-msgid "User"
-msgstr "Uživatel"
+#, fuzzy
+#~ msgid "Perform done"
+#~ msgstr "Vykonávám počáteční nastavení"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:40
-#, php-format
-msgid "MetricReporter: registered sink %s"
-msgstr ""
+#, fuzzy
+#~ msgid "Reschedule"
+#~ msgstr "Naplánovat"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:88
-#, php-format
-msgid "MetricReporter sink %s failed on recordJobStart: %s"
-msgstr ""
+#, fuzzy
+#~ msgid "Github Issue"
+#~ msgstr "Projekt na Githubu"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:107
-#, php-format
-msgid "MetricReporter sink %s failed on recordJobEnd: %s"
-msgstr ""
+#, fuzzy
+#~ msgid "Stop periodical Task"
+#~ msgstr "Opakované úlohy"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:126
-#, php-format
-msgid "MetricReporter sink %s failed on flush: %s"
-msgstr ""
+#, fuzzy
+#~ msgid "Custom Command"
+#~ msgstr "Příkaz pro prvotní nastavení"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyEnv.php:135
-msgid "Company custom environment"
-msgstr ""
+#, fuzzy
+#~ msgid "Run custom command"
+#~ msgstr "Rychlý instalační příkaz:"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType.php:97
-#, php-format
-msgid "%s prefilled from default"
-msgstr ""
+#, fuzzy
+#~ msgid "Custom Command done"
+#~ msgstr "Příkazová řádka"
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType.php:109
-msgid "Manually entered value"
-msgstr ""
+#~ msgid "Status"
+#~ msgstr "Stav"
+
+#~ msgid "Subject"
+#~ msgstr "Předmět"
+
+#~ msgid "Message"
+#~ msgstr "Zpráva"
+
+#~ msgid "User"
+#~ msgstr "Uživatel"
 
 # Untranslated strings translated to Czech
 #~ msgid "UUID field not present. "

@@ -1,21 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: TaxTorro\n"
+"Project-Id-Version: MultiFlexiEU\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 11:10+0200\n"
-"PO-Revision-Date: 2021-03-16 17:25+0100\n"
-"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
-"Language-Team: \n"
-"Language: en\n"
+"PO-Revision-Date: 2026-06-08 00:00+0000\n"
+"Last-Translator: MultiFlexi i18n generator\n"
+"Language-Team: sv_SE\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: ../src\n"
-"X-Poedit-SearchPathExcluded-0: ../vendor\n"
 
 #: src/credentialtype.php:27 src/app.php:50
 msgid "n/a"
@@ -48,85 +42,85 @@ msgstr ""
 
 #: src/credentialtype.php:85 src/MultiFlexi/Ui/CredentialProtoTypePanel.php:48
 msgid "Credential Type"
-msgstr ""
+msgstr "Typ av autentiseringsuppgift"
 
 #: src/credentialtype.php:90 src/app.php:117
 #: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:30
 #: src/MultiFlexi/Ui/AppImportForm.php:30
 msgid "Import"
-msgstr ""
+msgstr "Importera"
 
 #: src/credentialtype.php:96
 msgid "Fields"
-msgstr ""
+msgstr "Fält"
 
 #: src/credentialtype.php:103 src/credentialtype.php:114 src/app.php:126
 #: src/app.php:134
 msgid "Configuration"
-msgstr ""
+msgstr "Konfiguration"
 
 #: src/credentialtype.php:107 src/app.php:130
 msgid "No configuration available."
-msgstr ""
+msgstr "Ingen konfiguration tillgänglig."
 
 #: src/credentialtype.php:118 src/app.php:137
 msgid "Export"
-msgstr ""
+msgstr "Exportera"
 
 #: src/credentialtype.php:122 src/app.php:140
 #: src/MultiFlexi/Ui/CoworkersManager.php:32
 msgid "Coworkers"
-msgstr ""
+msgstr "Medarbetare"
 
 #: src/index.php:20
 msgid "MultiFlexi Hub"
-msgstr ""
+msgstr "MultiFlexi-hubb"
 
 #: src/index.php:27
 msgid "MultiFlexi Application & Credential Hub"
-msgstr ""
+msgstr "MultiFlexi – nav för applikationer och autentiseringsuppgifter"
 
 #: src/index.php:29
 msgid ""
 "Browse, share and discover applications and credential type definitions for "
 "MultiFlexi. Sign in to submit your own."
-msgstr ""
+msgstr "Bläddra bland, dela och upptäck definitioner av applikationer och autentiseringstyper för MultiFlexi. Logga in för att skicka in dina egna."
 
 #: src/index.php:39
 msgid "Browse Applications"
-msgstr ""
+msgstr "Bläddra bland applikationer"
 
 #: src/index.php:40
 msgid "Browse Credential Types"
-msgstr ""
+msgstr "Bläddra bland autentiseringstyper"
 
 #: src/index.php:41 src/install.php:176
 msgid "Install MultiFlexi"
-msgstr ""
+msgstr "Installera MultiFlexi"
 
 #: src/index.php:55
 msgid "Recent Applications"
-msgstr ""
+msgstr "Senaste applikationer"
 
 #: src/index.php:97
 msgid "No applications submitted yet. Be the first!"
-msgstr ""
+msgstr "Inga applikationer har skickats in ännu. Var först!"
 
 #: src/index.php:100
 msgid "View all applications"
-msgstr ""
+msgstr "Visa alla applikationer"
 
 #: src/index.php:103
 msgid "Recent Credential Types"
-msgstr ""
+msgstr "Senaste autentiseringstyper"
 
 #: src/index.php:144
 msgid "No credential types submitted yet. Be the first!"
-msgstr ""
+msgstr "Inga autentiseringstyper har skickats in ännu. Var först!"
 
 #: src/index.php:147
 msgid "View all credential types"
-msgstr ""
+msgstr "Visa alla autentiseringstyper"
 
 #: src/importjson.php:31
 msgid "Application imported successfully"
@@ -142,16 +136,16 @@ msgstr ""
 
 #: src/install.php:20
 msgid "MultiFlexi Installation"
-msgstr ""
+msgstr "MultiFlexi-installation"
 
 #: src/install.php:177
 msgid ""
 "Set up the MultiFlexi automation platform on your Debian or Ubuntu system"
-msgstr ""
+msgstr "Konfigurera automatiseringsplattformen MultiFlexi på ditt Debian- eller Ubuntu-system"
 
 #: src/install.php:182
 msgid "Step 1: Prepare your system"
-msgstr ""
+msgstr "Steg 1: Förbered ditt system"
 
 #: src/install.php:184
 msgid "Install prerequisites needed for secure APT repository access."
@@ -159,31 +153,31 @@ msgstr ""
 
 #: src/install.php:192
 msgid "Production Repository"
-msgstr ""
+msgstr "Produktionsförråd"
 
 #: src/install.php:193
 msgid "Stable releases — recommended for production systems"
-msgstr ""
+msgstr "Stabila utgåvor – rekommenderas för produktionssystem"
 
 #: src/install.php:194
 msgid "Stable"
-msgstr ""
+msgstr "Stabil"
 
 #: src/install.php:204
 msgid "Testing Repository"
-msgstr ""
+msgstr "Testförråd"
 
 #: src/install.php:205
 msgid "Development builds — latest features, may be unstable"
-msgstr ""
+msgstr "Utvecklingsbyggen – senaste funktioner, kan vara instabila"
 
 #: src/install.php:206
 msgid "Testing"
-msgstr ""
+msgstr "Testning"
 
 #: src/install.php:216
 msgid "Step 2: Configure APT Repository"
-msgstr ""
+msgstr "Steg 2: Konfigurera APT-förrådet"
 
 #: src/install.php:217
 msgid ""
@@ -192,16 +186,16 @@ msgstr ""
 
 #: src/install.php:223
 msgid "Choose distribution"
-msgstr ""
+msgstr "Välj distribution"
 
 #: src/install.php:234 src/MultiFlexi/Ui/ConfigFieldsView.php:33
 #: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:34
 msgid "Required"
-msgstr ""
+msgstr "Obligatorisk"
 
 #: src/install.php:255
 msgid "Select your distribution:"
-msgstr ""
+msgstr "Välj din distribution:"
 
 #: src/install.php:259
 msgid "Configuration format:"
@@ -217,7 +211,7 @@ msgstr ""
 
 #: src/install.php:267
 msgid "Select components:"
-msgstr ""
+msgstr "Välj komponenter:"
 
 #: src/install.php:269
 msgid "The <strong>main</strong> component is always required."
@@ -225,11 +219,11 @@ msgstr ""
 
 #: src/install.php:274
 msgid "Import the GPG Key"
-msgstr ""
+msgstr "Importera GPG-nyckeln"
 
 #: src/install.php:280
 msgid "Create Configuration File"
-msgstr ""
+msgstr "Skapa konfigurationsfil"
 
 #: src/install.php:281
 msgid "File path:"
@@ -237,11 +231,11 @@ msgstr ""
 
 #: src/install.php:288
 msgid "Quick install command:"
-msgstr ""
+msgstr "Snabbinstallationskommando:"
 
 #: src/install.php:288
 msgid "Copy and paste this into your terminal:"
-msgstr ""
+msgstr "Kopiera och klistra in detta i din terminal:"
 
 #: src/install.php:295
 msgid "Select your distribution above to generate customized configuration"
@@ -249,39 +243,39 @@ msgstr ""
 
 #: src/install.php:306
 msgid "Step 3: Update Sources"
-msgstr ""
+msgstr "Steg 3: Uppdatera källorna"
 
 #: src/install.php:311
 msgid "Step 4: Install for your chosen database"
-msgstr ""
+msgstr "Steg 4: Installera för din valda databas"
 
 #: src/install.php:331
 msgid "Step 5: Discover available applications"
-msgstr ""
+msgstr "Steg 5: Upptäck tillgängliga applikationer"
 
 #: src/install.php:332
 msgid "Search the repository for MultiFlexi application packages:"
-msgstr ""
+msgstr "Sök i förrådet efter MultiFlexi-applikationspaket:"
 
 #: src/apps.php:30 src/apps.php:34
 msgid "Applications"
-msgstr ""
+msgstr "Applikationer"
 
 #: src/apps.php:37 src/credentialtypes.php:35
 msgid "Cards"
-msgstr ""
+msgstr "Kort"
 
 #: src/apps.php:41 src/credentialtypes.php:39
 msgid "Table"
-msgstr ""
+msgstr "Tabell"
 
 #: src/apps.php:83
 msgid "Search applications..."
-msgstr ""
+msgstr "Sök applikationer…"
 
 #: src/apps.php:94
 msgid "Filter by Tags"
-msgstr ""
+msgstr "Filtrera efter taggar"
 
 #: src/apps.php:95
 msgid ""
@@ -295,7 +289,7 @@ msgstr ""
 
 #: src/apps.php:104 src/credentialtypes.php:91
 msgid "Reset Filter"
-msgstr ""
+msgstr "Återställ filter"
 
 #: src/apps.php:108
 msgid "Select all tags to show all applications"
@@ -303,7 +297,7 @@ msgstr ""
 
 #: src/apps.php:117
 msgid "applications"
-msgstr ""
+msgstr "applikationer"
 
 #: src/createaccount.php:43
 msgid "You must agree to the terms and conditions."
@@ -358,9 +352,8 @@ msgid "New Sign On to %s: %s"
 msgstr ""
 
 #: src/createaccount.php:139
-#, fuzzy
 msgid "New User"
-msgstr "New %s"
+msgstr ""
 
 #: src/createaccount.php:154
 msgid "Administrator create failed"
@@ -376,27 +369,27 @@ msgstr ""
 
 #: src/createaccount.php:168
 msgid "User name"
-msgstr ""
+msgstr "Användarnamn"
 
 #: src/createaccount.php:170
 msgid "Firstname"
-msgstr ""
+msgstr "Förnamn"
 
 #: src/createaccount.php:171
 msgid "Lastname"
-msgstr ""
+msgstr "Efternamn"
 
 #: src/createaccount.php:173 src/passwordrecovery.php:59 src/login.php:63
 msgid "Password"
-msgstr ""
+msgstr "Lösenord"
 
 #: src/createaccount.php:174
 msgid "Password confirmation"
-msgstr ""
+msgstr "Bekräfta lösenord"
 
 #: src/createaccount.php:176
 msgid "eMail address"
-msgstr ""
+msgstr "E-postadress"
 
 #: src/createaccount.php:179
 msgid "Terms and conditions not available."
@@ -408,19 +401,19 @@ msgstr ""
 
 #: src/createaccount.php:187
 msgid "I agree to the terms and conditions"
-msgstr ""
+msgstr "Jag godkänner villkoren"
 
 #: src/createaccount.php:193
 msgid "I consent to the processing of personal data according to GDPR"
-msgstr ""
+msgstr "Jag samtycker till behandling av personuppgifter enligt GDPR"
 
 #: src/createaccount.php:199
 msgid "Register"
-msgstr ""
+msgstr "Registrera"
 
 #: src/createaccount.php:200
 msgid "finish registration"
-msgstr ""
+msgstr "slutför registreringen"
 
 #: src/app.php:71
 msgid "Only the application author can delete it"
@@ -449,11 +442,11 @@ msgstr ""
 
 #: src/app.php:112 src/whatis.php:92 src/MultiFlexi/Ui/ApplicationPanel.php:43
 msgid "Application"
-msgstr ""
+msgstr "Applikation"
 
 #: src/app.php:122
 msgid "Config fields"
-msgstr ""
+msgstr "Konfigurationsfält"
 
 #: src/passwordrecovery.php:25
 msgid "Please enter your email."
@@ -475,7 +468,7 @@ msgstr ""
 
 #: src/passwordrecovery.php:58 src/login.php:59
 msgid "Username"
-msgstr ""
+msgstr "Användarnamn"
 
 #: src/passwordrecovery.php:64
 #, php-format
@@ -484,17 +477,17 @@ msgstr ""
 
 #: src/passwordrecovery.php:71 src/passwordrecovery.php:80
 msgid "Password Recovery"
-msgstr ""
+msgstr "Återställning av lösenord"
 
 #: src/passwordrecovery.php:84
 msgid ""
 "Forgot your password? Enter the e-mail address you used during registration "
 "and we will send you a new one."
-msgstr ""
+msgstr "Glömt lösenordet? Ange e-postadressen du använde vid registreringen så skickar vi ett nytt."
 
 #: src/passwordrecovery.php:88
 msgid "Email address"
-msgstr ""
+msgstr "E-postadress"
 
 #: src/passwordrecovery.php:89
 msgid "your@email.com"
@@ -502,15 +495,15 @@ msgstr ""
 
 #: src/passwordrecovery.php:92
 msgid "Send New Password"
-msgstr ""
+msgstr "Skicka nytt lösenord"
 
 #: src/passwordrecovery.php:105
 msgid "Check your inbox — your new password has been sent."
-msgstr ""
+msgstr "Kontrollera din inkorg – ditt nya lösenord har skickats."
 
 #: src/passwordrecovery.php:109
 msgid "Back to Sign In"
-msgstr ""
+msgstr "Tillbaka till inloggning"
 
 #: src/importcredentialtype.php:29
 msgid "Invalid JSON file"
@@ -562,7 +555,7 @@ msgstr ""
 
 #: src/whatis.php:34 src/whatis.php:38 src/MultiFlexi/Ui/MainMenu.php:55
 msgid "What is MultiFlexi?"
-msgstr ""
+msgstr "Vad är MultiFlexi?"
 
 #: src/whatis.php:40
 msgid ""
@@ -631,9 +624,8 @@ msgid "MultiFlexi entity relationships"
 msgstr ""
 
 #: src/whatis.php:91
-#, fuzzy
 msgid "Company"
-msgstr "Company created"
+msgstr ""
 
 #: src/whatis.php:91
 msgid ""
@@ -859,29 +851,29 @@ msgstr ""
 
 #: src/whatis.php:212
 msgid "Browse Apps"
-msgstr ""
+msgstr "Bläddra bland appar"
 
 #: src/whatis.php:213 src/credentialtypes.php:27 src/credentialtypes.php:32
 #: src/MultiFlexi/Ui/MainMenu.php:58
 msgid "Credential Types"
-msgstr ""
+msgstr "Typer av autentiseringsuppgifter"
 
 #: src/whatis.php:214 src/MultiFlexi/Ui/ApplicationPanel.php:46
 #: src/MultiFlexi/Ui/MainMenu.php:59
 msgid "Install"
-msgstr ""
+msgstr "Installera"
 
 #: src/whatis.php:215
 msgid "Try Demo"
-msgstr ""
+msgstr "Prova demo"
 
 #: src/whatis.php:220
 msgid "MultiFlexi on GitHub"
-msgstr ""
+msgstr "MultiFlexi på GitHub"
 
 #: src/whatis.php:221 src/MultiFlexi/Ui/PageBottom.php:52
 msgid "Documentation"
-msgstr ""
+msgstr "Dokumentation"
 
 #: src/whatis.php:222
 msgid "Demo Instance — try MultiFlexi without installing"
@@ -889,27 +881,27 @@ msgstr ""
 
 #: src/login.php:47 src/MultiFlexi/Ui/MainMenu.php:69
 msgid "Sign In"
-msgstr ""
+msgstr "Logga in"
 
 #: src/login.php:53 src/MultiFlexi/Hub/CredentialProtoType.php:31
 msgid "Logo"
-msgstr ""
+msgstr "Logotyp"
 
 #: src/login.php:56
 msgid "Sign in to MultiFlexi"
-msgstr ""
+msgstr "Logga in på MultiFlexi"
 
 #: src/login.php:67
 msgid "Sign in"
-msgstr ""
+msgstr "Logga in"
 
 #: src/login.php:71
 msgid "Password recovery"
-msgstr ""
+msgstr "Återställning av lösenord"
 
 #: src/mycredentialtypes.php:21 src/MultiFlexi/Ui/MainMenu.php:63
 msgid "My Credential Types"
-msgstr ""
+msgstr "Mina typer av autentiseringsuppgifter"
 
 #: src/mycredentialtypes.php:27
 msgid "Submit new credential type"
@@ -917,11 +909,11 @@ msgstr ""
 
 #: src/logout.php:24 src/MultiFlexi/Ui/MainMenu.php:66
 msgid "Sign Off"
-msgstr ""
+msgstr "Logga ut"
 
 #: src/logout.php:28
 msgid "Good bye"
-msgstr ""
+msgstr "Hej då"
 
 #: src/logout.php:33
 msgid "Thank you for your patronage and look forward to another visit"
@@ -929,11 +921,11 @@ msgstr ""
 
 #: src/credentialtypes.php:70
 msgid "Search credential types..."
-msgstr ""
+msgstr "Sök autentiseringstyper…"
 
 #: src/credentialtypes.php:81
 msgid "Filter by Topics"
-msgstr ""
+msgstr "Filtrera efter ämnen"
 
 #: src/credentialtypes.php:82
 msgid ""
@@ -951,12 +943,12 @@ msgstr ""
 
 #: src/credentialtypes.php:104
 msgid "credential types"
-msgstr ""
+msgstr "autentiseringstyper"
 
 #: src/credentialtypes.php:161 src/MultiFlexi/Hub/Application.php:36
 #: src/MultiFlexi/Hub/CredentialProtoType.php:36
 msgid "Homepage"
-msgstr ""
+msgstr "Startsida"
 
 #: src/main.php:20
 msgid "Multi Flexi"
@@ -986,17 +978,17 @@ msgstr ""
 #: src/MultiFlexi/Hub/Application.php:30
 #: src/MultiFlexi/Hub/CredentialProtoType.php:30
 msgid "Id"
-msgstr ""
+msgstr "ID"
 
 #: src/MultiFlexi/Hub/Application.php:31
 msgid "Image"
-msgstr ""
+msgstr "Avbild"
 
 #: src/MultiFlexi/Hub/Application.php:32
 #: src/MultiFlexi/Hub/CredentialProtoType.php:33
 #: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:33
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 #: src/MultiFlexi/Hub/Application.php:34
 #: src/MultiFlexi/Hub/CredentialProtoType.php:35
@@ -1004,37 +996,37 @@ msgstr ""
 #: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:35
 #: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:35
 msgid "Description"
-msgstr ""
+msgstr "Beskrivning"
 
 #: src/MultiFlexi/Hub/Application.php:35
 #: src/MultiFlexi/Hub/CredentialProtoType.php:37
 msgid "Tags"
-msgstr ""
+msgstr "Taggar"
 
 #: src/MultiFlexi/Hub/Application.php:37
 #: src/MultiFlexi/Hub/CredentialProtoType.php:38
 #: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:32
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: src/MultiFlexi/Hub/Application.php:38
 #: src/MultiFlexi/Hub/CredentialProtoType.php:39
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #: src/MultiFlexi/Hub/Application.php:39
 #: src/MultiFlexi/Hub/CredentialProtoType.php:40
 msgid "Owner"
-msgstr ""
+msgstr "Ägare"
 
 #: src/MultiFlexi/Hub/CredentialProtoType.php:32
 #: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:30
 msgid "Code"
-msgstr ""
+msgstr "Kod"
 
 #: src/MultiFlexi/Ui/PageBottom.php:49
 msgid "Github Project"
-msgstr ""
+msgstr "GitHub-projekt"
 
 #: src/MultiFlexi/Ui/PageBottom.php:50
 msgid "LinkedIN Product page"
@@ -1047,7 +1039,7 @@ msgstr ""
 #: src/MultiFlexi/Ui/CredentialProtoTypeJson.php:33
 #: src/MultiFlexi/Ui/AppJson.php:29
 msgid "Download"
-msgstr ""
+msgstr "Ladda ner"
 
 #: src/MultiFlexi/Ui/AppImportForm.php:29
 msgid "Application JSON file"
@@ -1055,69 +1047,69 @@ msgstr ""
 
 #: src/MultiFlexi/Ui/ConfigFieldsView.php:31
 msgid "Key"
-msgstr ""
+msgstr "Nyckel"
 
 #: src/MultiFlexi/Ui/ConfigFieldsView.php:32
 #: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:32
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:31
 msgid "Keyword"
-msgstr ""
+msgstr "Nyckelord"
 
 #: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:53
 msgid "No fields defined"
-msgstr ""
+msgstr "Inga fält definierade"
 
 #: src/MultiFlexi/Ui/PageTop.php:68
 msgid "Click to hide messages"
-msgstr ""
+msgstr "Klicka för att dölja meddelanden"
 
 #: src/MultiFlexi/Ui/DBDataTable.php:114
 msgid "Reload"
-msgstr ""
+msgstr "Ladda om"
 
 #: src/MultiFlexi/Ui/DBDataTable.php:130
 msgid "Filter"
-msgstr ""
+msgstr "Filtrera"
 
 #: src/MultiFlexi/Ui/DBDataTable.php:347
 msgid "All pages"
-msgstr ""
+msgstr "Alla sidor"
 
 #: src/MultiFlexi/Ui/ColumnsForm.php:120 src/MultiFlexi/Ui/AppEditorForm.php:48
 #: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:36
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: src/MultiFlexi/Ui/ColumnsForm.php:132
 msgid "Save and back"
-msgstr ""
+msgstr "Spara och tillbaka"
 
 #: src/MultiFlexi/Ui/ColumnsForm.php:144
 msgid "Save and next"
-msgstr ""
+msgstr "Spara och nästa"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:34
 msgid "Application name"
-msgstr ""
+msgstr "Applikationsnamn"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:35
 msgid "Application code"
-msgstr ""
+msgstr "Applikationskod"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:36
 msgid "Application Description"
-msgstr ""
+msgstr "Applikationsbeskrivning"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:37
 msgid "Path to binary"
-msgstr ""
+msgstr "Sökväg till binärfil"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:38
 msgid "Setup Command"
-msgstr ""
+msgstr "Konfigurationskommando"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:38
 msgid "Command used to setup new company for use with command"
@@ -1125,7 +1117,7 @@ msgstr ""
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:39
 msgid "Command arguments"
-msgstr ""
+msgstr "Kommandoargument"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:39
 msgid ""
@@ -1134,19 +1126,19 @@ msgstr ""
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:40
 msgid "Application Icon"
-msgstr ""
+msgstr "Applikationsikon"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:41
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiverad"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:42
 msgid "Application Homepage"
-msgstr ""
+msgstr "Applikationens startsida"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:43
 msgid "Container image"
-msgstr ""
+msgstr "Containeravbild"
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:44
 msgid "Current Version of Application"
@@ -1162,159 +1154,56 @@ msgstr ""
 
 #: src/MultiFlexi/Ui/AppEditorForm.php:47
 msgid "Tags separated by comma"
-msgstr ""
+msgstr "Taggar separerade med komma"
 
 #: src/MultiFlexi/Ui/CoworkersManager.php:33
 msgid "Add users who can edit this item."
-msgstr ""
+msgstr "Lägg till användare som kan redigera detta objekt."
 
 #: src/MultiFlexi/Ui/MainMenu.php:45
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Växla navigering"
 
 #: src/MultiFlexi/Ui/MainMenu.php:56
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 #: src/MultiFlexi/Ui/MainMenu.php:57
 msgid "Apps"
-msgstr ""
+msgstr "Appar"
 
 #: src/MultiFlexi/Ui/MainMenu.php:62
 msgid "My Apps"
-msgstr ""
+msgstr "Mina appar"
 
 #: src/MultiFlexi/Ui/MainMenu.php:64
 msgid "Submit App"
-msgstr ""
+msgstr "Skicka in app"
 
 #: src/MultiFlexi/Ui/MainMenu.php:65
 msgid "Submit Credential Type"
-msgstr ""
+msgstr "Skicka in autentiseringstyp"
 
 #: src/MultiFlexi/Ui/MainMenu.php:68
 msgid "Sign On"
-msgstr ""
+msgstr "Registrera dig"
 
 #: src/MultiFlexi/Ui/FilterDialog.php:65 src/MultiFlexi/Ui/FilterDialog.php:94
 msgid "From"
-msgstr ""
+msgstr "Från"
 
 #: src/MultiFlexi/Ui/FilterDialog.php:78 src/MultiFlexi/Ui/FilterDialog.php:104
 msgid "To"
-msgstr ""
+msgstr "Till"
 
 #: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:31
 msgid "Credential Type Name"
-msgstr ""
+msgstr "Namn på autentiseringstyp"
 
 #: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:33
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:34
 msgid "Logo URL"
-msgstr ""
-
-#~ msgid "Name is empty"
-#~ msgstr "Name is empty"
-
-#, fuzzy, php-format
-#~ msgid "Executable %s does not exist"
-#~ msgstr "Executable %s does not exist in search PATH"
-
-#, fuzzy, php-format
-#~ msgid "Executable %s does not exist in search PATH %s"
-#~ msgstr "Executable %s does not exist in search PATH"
-
-#, fuzzy, php-format
-#~ msgid "File %s does not exists"
-#~ msgstr "Executable %s does not exist in search PATH"
-
-#, fuzzy, php-format
-#~ msgid "New %s"
-#~ msgstr "New %s"
-
-#, php-format
-#~ msgid "Edit %s"
-#~ msgstr "Edit %s"
-
-#, php-format
-#~ msgid "Remove %s"
-#~ msgstr "Remove %s"
-
-#, php-format
-#~ msgid "Create new %s"
-#~ msgstr "Create new %s"
-
-#, php-format
-#~ msgid "Editing %s"
-#~ msgstr "Editing %s"
-
-#, php-format
-#~ msgid "Removing %s"
-#~ msgstr "Removing %s"
-
-#, php-format
-#~ msgid "Are you sure you wish to delete %%d row of %s ?"
-#~ msgstr "Are you sure you wish to delete %%d row of %s ?"
-
-#, fuzzy
-#~ msgid "Created"
-#~ msgstr "Company created"
-
-#, fuzzy, php-format
-#~ msgid "A %s is required"
-#~ msgstr "Hook %s was registered"
-
-#, fuzzy, php-format
-#~ msgid "user %s does not exist"
-#~ msgstr "Executable %s does not exist in search PATH"
-
-#, fuzzy, php-format
-#~ msgid "New unix user %s created"
-#~ msgstr "label %s created"
-
-#, php-format
-#~ msgid "Setting Environment %s to %s"
-#~ msgstr "Setting Environment %s to %s"
-
-#, fuzzy
-#~ msgid "User"
-#~ msgstr "New %s"
-
-#~ msgid "Instance name cannot be empty"
-#~ msgstr "Instance name cannot be empty"
-
-#~ msgid "AbraFlexi API URL cannot be empty"
-#~ msgstr "AbraFlexi API URL cannot be empty"
-
-#~ msgid "User name cannot be empty"
-#~ msgstr "User name cannot be empty"
-
-#~ msgid "API User password cannot be empty"
-#~ msgstr "API User password cannot be empty"
-
-#~ msgid "Company code cannot be empty"
-#~ msgstr "Company code cannot be empty"
-
-#~ msgid "AbraFlexi API URL cannot end with slash"
-#~ msgstr "AbraFlexi API URL cannot end with slash"
-
-#, php-format
-#~ msgid "Executable %s found as %s"
-#~ msgstr "Executable %s found as %s"
-
-#, php-format
-#~ msgid "Hook %s not registered"
-#~ msgstr "Hook %s not registered"
-
-#~ msgid "ChangesAPI was enabled"
-#~ msgstr "ChangesAPI was enabled"
-
-#~ msgid "ChangesAPI was disabled"
-#~ msgstr "ChangesAPI was disabled"
-
-#, php-format
-#~ msgid "Company with no ID"
-#~ msgstr "Company with no ID"
+msgstr "Logotyp-URL"

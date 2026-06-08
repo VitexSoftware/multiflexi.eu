@@ -1,14 +1,12 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Translation template for the MultiFlexi.eu website.
+# Copyright (C) 2026 Vitex Software
 # This file is distributed under the same license as the MultiFlexiEU package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MultiFlexiEU 1.0\n"
+"Project-Id-Version: MultiFlexiEU\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-05 20:16+0200\n"
+"POT-Creation-Date: 2026-06-08 11:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,83 +15,79 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MultiFlexi/Ui/CoworkersManager.php:33
-msgid "Add users who can edit this item."
+#: src/credentialtype.php:27 src/app.php:50
+msgid "n/a"
 msgstr ""
 
-#: src/createaccount.php:103
-msgid "Admin account created"
+#: src/credentialtype.php:48
+msgid "Only the owner can delete this credential type"
 msgstr ""
 
-#: src/createaccount.php:154
-msgid "Administrator create failed"
-msgstr ""
-
-#: src/MultiFlexi/Ui/DBDataTable.php:347
-msgid "All pages"
-msgstr ""
-
-#: src/app.php:112 src/MultiFlexi/Ui/ApplicationPanel.php:43
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Application.php:52
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:119
-msgid "Application"
-msgstr ""
-
-#: src/app.php:80
+#: src/credentialtype.php:54
 #, php-format
-msgid "Application %s removal"
+msgid "Credential Type %s removed"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:36
-msgid "Application Description"
+#: src/credentialtype.php:62
+msgid "You do not have permission to edit this credential type"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:42
-msgid "Application Homepage"
+#: src/credentialtype.php:68
+msgid "Credential Type Saved"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:40
-msgid "Application Icon"
+#: src/credentialtype.php:71
+msgid "Error saving Credential Type"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppImportForm.php:29
-msgid "Application JSON file"
+#: src/credentialtype.php:81
+msgid "New Credential Type"
 msgstr ""
 
-#: src/app.php:94
-msgid "Application Saved"
+#: src/credentialtype.php:85 src/MultiFlexi/Ui/CredentialProtoTypePanel.php:48
+msgid "Credential Type"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:46
-msgid "Application Universal Unique Identifier"
+#: src/credentialtype.php:90 src/app.php:117
+#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:30
+#: src/MultiFlexi/Ui/AppImportForm.php:30
+msgid "Import"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:35
-msgid "Application code"
+#: src/credentialtype.php:96
+msgid "Fields"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:45
-msgid "Application deploy command"
+#: src/credentialtype.php:103 src/credentialtype.php:114 src/app.php:126
+#: src/app.php:134
+msgid "Configuration"
 msgstr ""
 
-#: src/importjson.php:31
-msgid "Application imported successfully"
+#: src/credentialtype.php:107 src/app.php:130
+msgid "No configuration available."
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:34
-msgid "Application name"
+#: src/credentialtype.php:118 src/app.php:137
+msgid "Export"
 msgstr ""
 
-#: src/apps.php:30 src/apps.php:34
-msgid "Applications"
+#: src/credentialtype.php:122 src/app.php:140
+#: src/MultiFlexi/Ui/CoworkersManager.php:32
+msgid "Coworkers"
 msgstr ""
 
-#: src/MultiFlexi/Ui/MainMenu.php:32
-msgid "Apps"
+#: src/index.php:20
+msgid "MultiFlexi Hub"
 msgstr ""
 
-#: src/passwordrecovery.php:109
-msgid "Back to Sign In"
+#: src/index.php:27
+msgid "MultiFlexi Application & Credential Hub"
+msgstr ""
+
+#: src/index.php:29
+msgid ""
+"Browse, share and discover applications and credential type definitions for "
+"MultiFlexi. Sign in to submit your own."
 msgstr ""
 
 #: src/index.php:39
@@ -104,525 +98,48 @@ msgstr ""
 msgid "Browse Credential Types"
 msgstr ""
 
-#: src/index.php:29
-msgid ""
-"Browse, share and discover applications and credential type definitions for "
-"MultiFlexi. Sign in to submit your own."
+#: src/index.php:41 src/install.php:176
+msgid "Install MultiFlexi"
 msgstr ""
 
-#: src/apps.php:37 src/credentialtypes.php:28
-msgid "Cards"
+#: src/index.php:55
+msgid "Recent Applications"
 msgstr ""
 
-#: src/passwordrecovery.php:105
-msgid "Check your inbox — your new password has been sent."
+#: src/index.php:97
+msgid "No applications submitted yet. Be the first!"
 msgstr ""
 
-#: src/install.php:223
-msgid "Choose distribution"
+#: src/index.php:100
+msgid "View all applications"
 msgstr ""
 
-#: src/install.php:217
-msgid ""
-"Choose your preferred repository channel and configure it interactively."
+#: src/index.php:103
+msgid "Recent Credential Types"
 msgstr ""
 
-#: src/MultiFlexi/Ui/PageTop.php:68
-msgid "Click to hide messages"
+#: src/index.php:144
+msgid "No credential types submitted yet. Be the first!"
 msgstr ""
 
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:30
-#: src/MultiFlexi/Hub/CredentialProtoType.php:32
-msgid "Code"
+#: src/index.php:147
+msgid "View all credential types"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:39
-msgid "Command arguments"
-msgstr ""
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:38
-msgid "Command used to setup new company for use with command"
-msgstr ""
-
-#: src/app.php:122
-msgid "Config fields"
-msgstr ""
-
-#: src/app.php:126 src/app.php:134 src/credentialtype.php:103
-#: src/credentialtype.php:114
-msgid "Configuration"
-msgstr ""
-
-#: src/install.php:259
-msgid "Configuration format:"
-msgstr ""
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:43
-msgid "Container image"
-msgstr ""
-
-#: src/install.php:288
-msgid "Copy and paste this into your terminal:"
-msgstr ""
-
-#: src/coworkers.php:67
-msgid "Coworker added"
-msgstr ""
-
-#: src/coworkers.php:73
-msgid "Coworker removed"
-msgstr ""
-
-#: src/app.php:140 src/credentialtype.php:122
-#: src/MultiFlexi/Ui/CoworkersManager.php:32
-msgid "Coworkers"
-msgstr ""
-
-#: src/install.php:280
-msgid "Create Configuration File"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:29
-msgid "Credential Prototype JSON file"
-msgstr ""
-
-#: src/credentialtype.php:85 src/MultiFlexi/Ui/CredentialProtoTypePanel.php:45
-msgid "Credential Type"
-msgstr ""
-
-#: src/credentialtype.php:54
-#, php-format
-msgid "Credential Type %s removed"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:31
-msgid "Credential Type Name"
-msgstr ""
-
-#: src/credentialtype.php:68
-msgid "Credential Type Saved"
-msgstr ""
-
-#: src/importcredentialtype.php:32
-msgid "Credential Type imported successfully"
-msgstr ""
-
-#: src/credentialtypes.php:20 src/credentialtypes.php:25
-#: src/MultiFlexi/Ui/MainMenu.php:33
-msgid "Credential Types"
-msgstr ""
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:44
-msgid "Current Version of Application"
-msgstr ""
-
-#: src/install.php:261
-msgid "DEB822 format (.sources) — Recommended"
-msgstr ""
-
-#: src/MultiFlexi/Ui/MainMenu.php:31
-msgid "Demo Site"
-msgstr ""
-
-#: src/MultiFlexi/Ui/ConfigFieldsView.php:34
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:35
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:35
-#: src/MultiFlexi/Hub/Application.php:34
-#: src/MultiFlexi/Hub/CredentialProtoType.php:35
-msgid "Description"
-msgstr ""
-
-#: src/install.php:205
-msgid "Development builds — latest features, may be unstable"
-msgstr ""
-
-#: src/MultiFlexi/Ui/MainMenu.php:35
-msgid "Documentation"
-msgstr ""
-
-#: src/MultiFlexi/Ui/AppJson.php:29
-#: src/MultiFlexi/Ui/CredentialProtoTypeJson.php:33
-msgid "Download"
-msgstr ""
-
-#: src/passwordrecovery.php:88
-msgid "Email address"
-msgstr ""
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:41
-msgid "Enabled"
-msgstr ""
-
-#: src/importcredentialtype.php:35
-msgid "Error importing Credential Type"
+#: src/importjson.php:31
+msgid "Application imported successfully"
 msgstr ""
 
 #: src/importjson.php:34
 msgid "Error importing application"
 msgstr ""
 
-#: src/app.php:97
-msgid "Error saving Application"
-msgstr ""
-
-#: src/credentialtype.php:71
-msgid "Error saving Credential Type"
-msgstr ""
-
-#: src/app.php:137 src/credentialtype.php:118
-msgid "Export"
-msgstr ""
-
-#: src/credentialtype.php:96
-msgid "Fields"
-msgstr ""
-
-#: src/install.php:281
-msgid "File path:"
-msgstr ""
-
-#: src/MultiFlexi/Ui/DBDataTable.php:130
-msgid "Filter"
-msgstr ""
-
-#: src/apps.php:94
-msgid "Filter by Tags"
-msgstr ""
-
-#: src/createaccount.php:170
-msgid "Firstname"
-msgstr ""
-
-#: src/passwordrecovery.php:84
-msgid ""
-"Forgot your password? Enter the e-mail address you used during registration "
-"and we will send you a new one."
-msgstr ""
-
-#: src/MultiFlexi/Ui/FilterDialog.php:65 src/MultiFlexi/Ui/FilterDialog.php:94
-msgid "From"
-msgstr ""
-
-#: src/createaccount.php:180
-msgid "GDPR consent not available."
-msgstr ""
-
-#: src/MultiFlexi/Ui/PageBottom.php:49
-msgid "Github Project"
-msgstr ""
-
-#: src/logout.php:28
-msgid "Good bye"
-msgstr ""
-
-#: src/MultiFlexi/Hub/Application.php:36
-msgid "Homepage"
-msgstr ""
-
-#: src/createaccount.php:187
-msgid "I agree to the terms and conditions"
-msgstr ""
-
-#: src/createaccount.php:193
-msgid "I consent to the processing of personal data according to GDPR"
-msgstr ""
-
-#: src/MultiFlexi/Hub/Application.php:30
-#: src/MultiFlexi/Hub/CredentialProtoType.php:30
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:209
-msgid "Id"
-msgstr ""
-
-#: src/MultiFlexi/Hub/Application.php:31
-msgid "Image"
-msgstr ""
-
-#: src/app.php:117 src/credentialtype.php:90
-#: src/MultiFlexi/Ui/AppImportForm.php:30
-#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:30
-msgid "Import"
-msgstr ""
-
-#: src/install.php:274
-msgid "Import the GPG Key"
-msgstr ""
-
-#: src/MultiFlexi/Ui/ApplicationPanel.php:46 src/MultiFlexi/Ui/MainMenu.php:34
-msgid "Install"
-msgstr ""
-
-#: src/index.php:41 src/install.php:176
-msgid "Install MultiFlexi"
-msgstr ""
-
-#: src/install.php:184
-msgid "Install prerequisites needed for secure APT repository access."
-msgstr ""
-
-#: src/importcredentialtype.php:29
-msgid "Invalid JSON file"
-msgstr ""
-
-#: src/coworkers.php:36
-msgid "Invalid parameters"
-msgstr ""
-
-#: src/MultiFlexi/Ui/ConfigFieldsView.php:31
-msgid "Key"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:31
-msgid "Keyword"
-msgstr ""
-
-#: src/createaccount.php:171
-msgid "Lastname"
-msgstr ""
-
-#: src/install.php:262
-msgid "Legacy format (sources.list)"
-msgstr ""
-
-#: src/MultiFlexi/Ui/PageBottom.php:50
-msgid "LinkedIN Product page"
-msgstr ""
-
-#: src/login.php:53 src/MultiFlexi/Hub/CredentialProtoType.php:31
-msgid "Logo"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:34
-msgid "Logo URL"
-msgstr ""
-
-#: src/MultiFlexi/Ui/MainMenu.php:66
-msgid "Logout"
-msgstr ""
-
-#: src/createaccount.php:61
-#, php-format
-msgid "Mail address %s is already registered"
-msgstr ""
-
-#: src/main.php:20
-msgid "Multi Flexi"
-msgstr ""
-
-#: src/index.php:27
-msgid "MultiFlexi Application & Credential Hub"
-msgstr ""
-
-#: src/index.php:20
-msgid "MultiFlexi Hub"
+#: src/importjson.php:38 src/importcredentialtype.php:39
+msgid "No file uploaded or upload error"
 msgstr ""
 
 #: src/install.php:20
 msgid "MultiFlexi Installation"
-msgstr ""
-
-#: src/myapps.php:21
-msgid "My Applications"
-msgstr ""
-
-#: src/MultiFlexi/Ui/MainMenu.php:62
-msgid "My Apps"
-msgstr ""
-
-#: src/mycredentialtypes.php:21 src/MultiFlexi/Ui/MainMenu.php:63
-msgid "My Credential Types"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:33
-#: src/MultiFlexi/Hub/Application.php:32
-#: src/MultiFlexi/Hub/CredentialProtoType.php:33
-msgid "Name"
-msgstr ""
-
-#: src/createaccount.php:158
-msgid "New Administrator"
-msgstr ""
-
-#: src/app.php:107
-msgid "New Application"
-msgstr ""
-
-#: src/credentialtype.php:81
-msgid "New Credential Type"
-msgstr ""
-
-#: src/createaccount.php:133
-#, php-format
-msgid "New Sign On to %s: %s"
-msgstr ""
-
-#: src/createaccount.php:139
-msgid "New User"
-msgstr ""
-
-#: src/passwordrecovery.php:50
-#, php-format
-msgid "New password for %s"
-msgstr ""
-
-#: src/index.php:87
-msgid "No applications submitted yet. Be the first!"
-msgstr ""
-
-#: src/app.php:130 src/credentialtype.php:107
-msgid "No configuration available."
-msgstr ""
-
-#: src/index.php:134
-msgid "No credential types submitted yet. Be the first!"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:53
-msgid "No fields defined"
-msgstr ""
-
-#: src/importcredentialtype.php:39 src/importjson.php:38
-msgid "No file uploaded or upload error"
-msgstr ""
-
-#: src/coworkers.php:25
-msgid "Not authenticated"
-msgstr ""
-
-#: src/app.php:71
-msgid "Only the application author can delete it"
-msgstr ""
-
-#: src/app.php:88
-msgid "Only the application author can edit it"
-msgstr ""
-
-#: src/credentialtype.php:48
-msgid "Only the owner can delete this credential type"
-msgstr ""
-
-#: src/coworkers.php:51
-msgid "Only the owner can manage coworkers"
-msgstr ""
-
-#: src/MultiFlexi/Hub/Application.php:39
-#: src/MultiFlexi/Hub/CredentialProtoType.php:38
-msgid "Owner"
-msgstr ""
-
-#: src/createaccount.php:173 src/login.php:63 src/passwordrecovery.php:59
-msgid "Password"
-msgstr ""
-
-#: src/passwordrecovery.php:71 src/passwordrecovery.php:80
-msgid "Password Recovery"
-msgstr ""
-
-#: src/createaccount.php:174
-msgid "Password confirmation"
-msgstr ""
-
-#: src/createaccount.php:74
-msgid "Password control does not match"
-msgstr ""
-
-#: src/login.php:71
-msgid "Password recovery"
-msgstr ""
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:37
-msgid "Path to binary"
-msgstr ""
-
-#: src/passwordrecovery.php:25
-msgid "Please enter your email."
-msgstr ""
-
-#: src/install.php:192
-msgid "Production Repository"
-msgstr ""
-
-#: src/install.php:288
-msgid "Quick install command:"
-msgstr ""
-
-#: src/index.php:45
-msgid "Recent Applications"
-msgstr ""
-
-#: src/index.php:93
-msgid "Recent Credential Types"
-msgstr ""
-
-#: src/createaccount.php:199
-msgid "Register"
-msgstr ""
-
-#: src/MultiFlexi/Ui/DBDataTable.php:114
-msgid "Reload"
-msgstr ""
-
-#: src/install.php:234 src/MultiFlexi/Ui/ConfigFieldsView.php:33
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:34
-msgid "Required"
-msgstr ""
-
-#: src/apps.php:104
-msgid "Reset Filter"
-msgstr ""
-
-#: src/MultiFlexi/Ui/AppEditorForm.php:48 src/MultiFlexi/Ui/ColumnsForm.php:120
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:36
-msgid "Save"
-msgstr ""
-
-#: src/MultiFlexi/Ui/ColumnsForm.php:132
-msgid "Save and back"
-msgstr ""
-
-#: src/MultiFlexi/Ui/ColumnsForm.php:144
-msgid "Save and next"
-msgstr ""
-
-#: src/apps.php:83
-msgid "Search applications..."
-msgstr ""
-
-#: src/credentialtypes.php:45
-msgid "Search credential types..."
-msgstr ""
-
-#: src/install.php:332
-msgid "Search the repository for MultiFlexi application packages:"
-msgstr ""
-
-#: src/apps.php:108
-msgid "Select all tags to show all applications"
-msgstr ""
-
-#: src/install.php:267
-msgid "Select components:"
-msgstr ""
-
-#: src/apps.php:95
-msgid ""
-"Select tags to filter applications. All applications are shown when no tags "
-"are selected."
-msgstr ""
-
-#: src/apps.php:100
-msgid "Select tags to filter applications..."
-msgstr ""
-
-#: src/install.php:295
-msgid "Select your distribution above to generate customized configuration"
-msgstr ""
-
-#: src/install.php:255
-msgid "Select your distribution:"
-msgstr ""
-
-#: src/passwordrecovery.php:92
-msgid "Send New Password"
 msgstr ""
 
 #: src/install.php:177
@@ -630,56 +147,102 @@ msgid ""
 "Set up the MultiFlexi automation platform on your Debian or Ubuntu system"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:38
-msgid "Setup Command"
+#: src/install.php:182
+msgid "Step 1: Prepare your system"
 msgstr ""
 
-#: src/login.php:47 src/MultiFlexi/Ui/MainMenu.php:69
-msgid "Sign In"
+#: src/install.php:184
+msgid "Install prerequisites needed for secure APT repository access."
 msgstr ""
 
-#: src/logout.php:24
-msgid "Sign Off"
-msgstr ""
-
-#: src/MultiFlexi/Ui/MainMenu.php:68
-msgid "Sign On"
-msgstr ""
-
-#: src/createaccount.php:116
-msgid "Sign On info"
-msgstr ""
-
-#: src/passwordrecovery.php:56
-msgid "Sign On informations was changed"
-msgstr ""
-
-#: src/login.php:67
-msgid "Sign in"
-msgstr ""
-
-#: src/login.php:56
-msgid "Sign in to MultiFlexi"
-msgstr ""
-
-#: src/createaccount.php:160
-msgid "Singn On"
-msgstr ""
-
-#: src/install.php:194
-msgid "Stable"
+#: src/install.php:192
+msgid "Production Repository"
 msgstr ""
 
 #: src/install.php:193
 msgid "Stable releases — recommended for production systems"
 msgstr ""
 
-#: src/install.php:182
-msgid "Step 1: Prepare your system"
+#: src/install.php:194
+msgid "Stable"
+msgstr ""
+
+#: src/install.php:204
+msgid "Testing Repository"
+msgstr ""
+
+#: src/install.php:205
+msgid "Development builds — latest features, may be unstable"
+msgstr ""
+
+#: src/install.php:206
+msgid "Testing"
 msgstr ""
 
 #: src/install.php:216
 msgid "Step 2: Configure APT Repository"
+msgstr ""
+
+#: src/install.php:217
+msgid ""
+"Choose your preferred repository channel and configure it interactively."
+msgstr ""
+
+#: src/install.php:223
+msgid "Choose distribution"
+msgstr ""
+
+#: src/install.php:234 src/MultiFlexi/Ui/ConfigFieldsView.php:33
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:34
+msgid "Required"
+msgstr ""
+
+#: src/install.php:255
+msgid "Select your distribution:"
+msgstr ""
+
+#: src/install.php:259
+msgid "Configuration format:"
+msgstr ""
+
+#: src/install.php:261
+msgid "DEB822 format (.sources) — Recommended"
+msgstr ""
+
+#: src/install.php:262
+msgid "Legacy format (sources.list)"
+msgstr ""
+
+#: src/install.php:267
+msgid "Select components:"
+msgstr ""
+
+#: src/install.php:269
+msgid "The <strong>main</strong> component is always required."
+msgstr ""
+
+#: src/install.php:274
+msgid "Import the GPG Key"
+msgstr ""
+
+#: src/install.php:280
+msgid "Create Configuration File"
+msgstr ""
+
+#: src/install.php:281
+msgid "File path:"
+msgstr ""
+
+#: src/install.php:288
+msgid "Quick install command:"
+msgstr ""
+
+#: src/install.php:288
+msgid "Copy and paste this into your terminal:"
+msgstr ""
+
+#: src/install.php:295
+msgid "Select your distribution above to generate customized configuration"
 msgstr ""
 
 #: src/install.php:306
@@ -694,117 +257,50 @@ msgstr ""
 msgid "Step 5: Discover available applications"
 msgstr ""
 
-#: src/MultiFlexi/Ui/MainMenu.php:64
-msgid "Submit App"
+#: src/install.php:332
+msgid "Search the repository for MultiFlexi application packages:"
 msgstr ""
 
-#: src/MultiFlexi/Ui/MainMenu.php:65
-msgid "Submit Credential Type"
+#: src/apps.php:30 src/apps.php:34
+msgid "Applications"
 msgstr ""
 
-#: src/myapps.php:27
-msgid "Submit new application"
+#: src/apps.php:37 src/credentialtypes.php:35
+msgid "Cards"
 msgstr ""
 
-#: src/mycredentialtypes.php:27
-msgid "Submit new credential type"
-msgstr ""
-
-#: src/apps.php:41 src/credentialtypes.php:32
+#: src/apps.php:41 src/credentialtypes.php:39
 msgid "Table"
 msgstr ""
 
-#: src/MultiFlexi/Hub/Application.php:35
-msgid "Tags"
+#: src/apps.php:83
+msgid "Search applications..."
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:47
-msgid "Tags separated by comma"
+#: src/apps.php:94
+msgid "Filter by Tags"
 msgstr ""
 
-#: src/createaccount.php:179
-msgid "Terms and conditions not available."
+#: src/apps.php:95
+msgid ""
+"Select tags to filter applications. All applications are shown when no tags "
+"are selected."
 msgstr ""
 
-#: src/install.php:206
-msgid "Testing"
+#: src/apps.php:100
+msgid "Select tags to filter applications..."
 msgstr ""
 
-#: src/install.php:204
-msgid "Testing Repository"
+#: src/apps.php:104 src/credentialtypes.php:91
+msgid "Reset Filter"
 msgstr ""
 
-#: src/logout.php:33
-msgid "Thank you for your patronage and look forward to another visit"
+#: src/apps.php:108
+msgid "Select all tags to show all applications"
 msgstr ""
 
-#: src/install.php:269
-msgid "The <strong>main</strong> component is always required."
-msgstr ""
-
-#: src/MultiFlexi/Ui/FilterDialog.php:78 src/MultiFlexi/Ui/FilterDialog.php:104
-msgid "To"
-msgstr ""
-
-#: src/MultiFlexi/Ui/MainMenu.php:51
-msgid "Toggle navigation"
-msgstr ""
-
-#: src/MultiFlexi/Ui/ConfigFieldsView.php:32
-#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:32
-msgid "Type"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:33
-msgid "URL"
-msgstr ""
-
-#: src/MultiFlexi/Hub/Application.php:38
-#: src/MultiFlexi/Hub/CredentialProtoType.php:37
-msgid "UUID"
-msgstr ""
-
-#: src/coworkers.php:78
-msgid "Unknown action"
-msgstr ""
-
-#: src/createaccount.php:107
-msgid "User account created"
-msgstr ""
-
-#: src/createaccount.php:168
-msgid "User name"
-msgstr ""
-
-#: src/login.php:59 src/passwordrecovery.php:58
-msgid "Username"
-msgstr ""
-
-#: src/createaccount.php:84
-#, php-format
-msgid "Username %s is used. Please choose another one"
-msgstr ""
-
-#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:32
-#: src/MultiFlexi/Hub/Application.php:37
-#: src/MultiFlexi/Hub/CredentialProtoType.php:36
-msgid "Version"
-msgstr ""
-
-#: src/index.php:90
-msgid "View all applications"
-msgstr ""
-
-#: src/index.php:137
-msgid "View all credential types"
-msgstr ""
-
-#: src/coworkers.php:58
-msgid "You are already the owner"
-msgstr ""
-
-#: src/credentialtype.php:62
-msgid "You do not have permission to edit this credential type"
+#: src/apps.php:117
+msgid "applications"
 msgstr ""
 
 #: src/createaccount.php:43
@@ -815,43 +311,149 @@ msgstr ""
 msgid "You must consent to the processing of personal data according to GDPR."
 msgstr ""
 
+#: src/createaccount.php:52
+msgid "invalid mail address"
+msgstr ""
+
+#: src/createaccount.php:61
+#, php-format
+msgid "Mail address %s is already registered"
+msgstr ""
+
+#: src/createaccount.php:71
+msgid "password is too short"
+msgstr ""
+
+#: src/createaccount.php:74
+msgid "Password control does not match"
+msgstr ""
+
+#: src/createaccount.php:84
+#, php-format
+msgid "Username %s is used. Please choose another one"
+msgstr ""
+
+#: src/createaccount.php:103
+msgid "Admin account created"
+msgstr ""
+
+#: src/createaccount.php:107
+msgid "User account created"
+msgstr ""
+
+#: src/createaccount.php:116
+msgid "Sign On info"
+msgstr ""
+
 #: src/createaccount.php:119
 #, php-format
 msgid "Your new %s account:"
 msgstr ""
 
-#: src/passwordrecovery.php:64
+#: src/createaccount.php:133
 #, php-format
-msgid "Your new password was sent to %s"
+msgid "New Sign On to %s: %s"
 msgstr ""
 
-#: src/apps.php:117
-msgid "applications"
+#: src/createaccount.php:139
+msgid "New User"
 msgstr ""
 
-#: src/credentialtypes.php:53
-msgid "credential types"
+#: src/createaccount.php:154
+msgid "Administrator create failed"
+msgstr ""
+
+#: src/createaccount.php:158
+msgid "New Administrator"
+msgstr ""
+
+#: src/createaccount.php:160
+msgid "Singn On"
+msgstr ""
+
+#: src/createaccount.php:168
+msgid "User name"
+msgstr ""
+
+#: src/createaccount.php:170
+msgid "Firstname"
+msgstr ""
+
+#: src/createaccount.php:171
+msgid "Lastname"
+msgstr ""
+
+#: src/createaccount.php:173 src/passwordrecovery.php:59 src/login.php:63
+msgid "Password"
+msgstr ""
+
+#: src/createaccount.php:174
+msgid "Password confirmation"
 msgstr ""
 
 #: src/createaccount.php:176
 msgid "eMail address"
 msgstr ""
 
+#: src/createaccount.php:179
+msgid "Terms and conditions not available."
+msgstr ""
+
+#: src/createaccount.php:180
+msgid "GDPR consent not available."
+msgstr ""
+
+#: src/createaccount.php:187
+msgid "I agree to the terms and conditions"
+msgstr ""
+
+#: src/createaccount.php:193
+msgid "I consent to the processing of personal data according to GDPR"
+msgstr ""
+
+#: src/createaccount.php:199
+msgid "Register"
+msgstr ""
+
 #: src/createaccount.php:200
 msgid "finish registration"
 msgstr ""
 
-#: src/createaccount.php:52
-msgid "invalid mail address"
+#: src/app.php:71
+msgid "Only the application author can delete it"
 msgstr ""
 
-#: src/app.php:50 src/credentialtype.php:27
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/JobReport.php:43
-msgid "n/a"
+#: src/app.php:80
+#, php-format
+msgid "Application %s removal"
 msgstr ""
 
-#: src/createaccount.php:71
-msgid "password is too short"
+#: src/app.php:88
+msgid "Only the application author can edit it"
+msgstr ""
+
+#: src/app.php:94
+msgid "Application Saved"
+msgstr ""
+
+#: src/app.php:97
+msgid "Error saving Application"
+msgstr ""
+
+#: src/app.php:107
+msgid "New Application"
+msgstr ""
+
+#: src/app.php:112 src/whatis.php:92 src/MultiFlexi/Ui/ApplicationPanel.php:43
+msgid "Application"
+msgstr ""
+
+#: src/app.php:122
+msgid "Config fields"
+msgstr ""
+
+#: src/passwordrecovery.php:25
+msgid "Please enter your email."
 msgstr ""
 
 #: src/passwordrecovery.php:37
@@ -859,1018 +461,753 @@ msgstr ""
 msgid "unknow email address %s"
 msgstr ""
 
-#: src/MultiFlexi/Ui/AppEditorForm.php:39
+#: src/passwordrecovery.php:50
+#, php-format
+msgid "New password for %s"
+msgstr ""
+
+#: src/passwordrecovery.php:56
+msgid "Sign On informations was changed"
+msgstr ""
+
+#: src/passwordrecovery.php:58 src/login.php:59
+msgid "Username"
+msgstr ""
+
+#: src/passwordrecovery.php:64
+#, php-format
+msgid "Your new password was sent to %s"
+msgstr ""
+
+#: src/passwordrecovery.php:71 src/passwordrecovery.php:80
+msgid "Password Recovery"
+msgstr ""
+
+#: src/passwordrecovery.php:84
 msgid ""
-"you can use macros like {ABRAFLEXI_URL} or custom defined config fields."
+"Forgot your password? Enter the e-mail address you used during registration "
+"and we will send you a new one."
+msgstr ""
+
+#: src/passwordrecovery.php:88
+msgid "Email address"
 msgstr ""
 
 #: src/passwordrecovery.php:89
 msgid "your@email.com"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:64
-msgid "Name is empty"
+#: src/passwordrecovery.php:92
+msgid "Send New Password"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:119
-#, php-format
-msgid "Executable %s does not exist"
+#: src/passwordrecovery.php:105
+msgid "Check your inbox — your new password has been sent."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:126
-#, php-format
-msgid "Executable %s does not exist in search PATH %s"
+#: src/passwordrecovery.php:109
+msgid "Back to Sign In"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:130
-#, php-format
-msgid "file %s is not executable"
+#: src/importcredentialtype.php:29
+msgid "Invalid JSON file"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:450
-#, php-format
-msgid "JSON does not comply with. %s version %s"
+#: src/importcredentialtype.php:32
+msgid "Credential Type imported successfully"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:492
-#, php-format
-msgid "Application removal %d %s"
+#: src/importcredentialtype.php:35
+msgid "Error importing Credential Type"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:519
-#, php-format
-msgid "Unassigned from %d companies"
+#: src/myapps.php:21
+msgid "My Applications"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:530
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyApp.php:91
-#, php-format
-msgid "%s Action Config removal"
+#: src/myapps.php:27
+msgid "Submit new application"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:538
-#, php-format
-msgid "#%d %s RunTemplate removal"
+#: src/coworkers.php:25
+msgid "Not authenticated"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:545
-#, php-format
-msgid "%d Config fields removed"
+#: src/coworkers.php:36
+msgid "Invalid parameters"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:552
-#, php-format
-msgid "%d Configurations removed"
+#: src/coworkers.php:51
+msgid "Only the owner can manage coworkers"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:559
-#, php-format
-msgid "%d Jobs removed"
+#: src/coworkers.php:58
+msgid "You are already the owner"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:588
-msgid "Schema file not found: "
+#: src/coworkers.php:67
+msgid "Coworker added"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:594
-msgid "App definition file is empty: "
+#: src/coworkers.php:73
+msgid "Coworker removed"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:610
-msgid "Invalid JSON: "
+#: src/coworkers.php:78
+msgid "Unknown action"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:813
-#, php-format
-msgid "The required configuration key `%s` was not filled"
+#: src/whatis.php:34 src/whatis.php:38 src/MultiFlexi/Ui/MainMenu.php:55
+msgid "What is MultiFlexi?"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:871
-msgid "Undocumented"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Application.php:972
-#, php-format
-msgid "Failed to insert artifact definition: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Common.php:52
-msgid "Non specialised credential type"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Common.php:70
-msgid "Common type"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:34
-msgid "Fio Bank Account Number"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:34
-msgid "Number of the Fio Bank account"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:37
-msgid "Fio Bank Token"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:37
-msgid "Token for accessing the Fio Bank API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:38
-msgid "AXWxJN18IqwbY....xccP2eyxvWDFLe2"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:40
-msgid "Fio Token Name"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:40
-msgid "Name of the token used for identification"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:74
-msgid "Fio Bank"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/FioBank.php:79
-msgid "Fio Bank credential type for integration with Fio Bank API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:30
-msgid ".env"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:30
-msgid "Path to .env file"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:56
-#, php-format
-msgid "Value from .env file %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:62
-#, php-format
-msgid "File %s is not readable"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:65
-#, php-format
-msgid "File %s does not exists"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:68
-msgid ".env file must be filled"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:102
-msgid ".env file"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:107
-msgid "Load configuration values from .env file"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/EnvFile.php:126
-#, php-format
-msgid "Populated by .env file %s "
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:34
-msgid "Database Connection"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:34
-msgid "Database connection type (e.g., sqlsrv)"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:37
-msgid "Database Host"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:37
-msgid "Host of the SQL Server"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:40
-msgid "Database Port"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:40
-msgid "Port of the SQL Server"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:43
-msgid "Database Name"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:43
-msgid "Name of the database"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:46
-msgid "Database Username"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:46
-msgid "Username for the database"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:49
-msgid "Database Password"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:49
-msgid "Password for the database"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:52
-msgid "Database Settings"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:52
-msgid "Additional database settings (e.g., encrypt=false)"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:72
-msgid "SQL Server"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/SQLServer.php:77
-msgid "Credential type for connecting to Microsoft SQL Server"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:32
-msgid "VaultWarden URL"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:32
-msgid "URL instance VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:33
-msgid "VaultWarden User login"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:33
-msgid "User e-mail"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:34
-msgid "VaultWarden User password"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:34
-msgid "Password for user"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:35
-msgid "VaultWarden Folder"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:35
-msgid "Název složky s hesly ve VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:43
-msgid "VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:48
-msgid "Use VaultWarden secrets"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:94
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:139
-msgid "Missing required fields for VaultWarden"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/VaultWarden.php:117
-msgid "VaultWarden check: connection and secrets available."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:34
-msgid "Office 365 Username"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:34
-msgid "Username for Office 365"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:37
-msgid "Office 365 Password"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:37
-msgid "Password for Office 365"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:40
-msgid "Office 365 Client ID"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:40
-msgid "Client ID for Office 365 API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:43
-msgid "Office 365 Secret Value"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:43
-msgid "Secret value for Office 365 API"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:43
+#: src/whatis.php:40
 msgid ""
-"Azure Portal → App registrations → Your app → Certificates & secrets, and "
-"copy the actual secret VALUE"
+"MultiFlexi is an open-source task scheduling and automation platform for "
+"business system integrations. It lets organizations run applications — "
+"importers, exporters, reports, health checks — on a schedule across multiple "
+"companies, with isolated credentials and full execution history."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:46
-msgid "Office 365 Tenant"
+#: src/whatis.php:46
+msgid "MultiFlexi dashboard"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:46
-msgid "Tenant ID for Office 365"
+#: src/whatis.php:51
+msgid ""
+"Think of it as cron on steroids for business automation: instead of managing "
+"scattered shell scripts and cron entries, you register applications once, "
+"assign them to companies with the right credentials, and let MultiFlexi "
+"handle scheduling, execution, output capture, and monitoring."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:64
-msgid "Office 365"
+#: src/whatis.php:56
+msgid "Who is it for?"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType/Office365.php:69
-msgid "Credential type for integration with Office 365 API"
+#: src/whatis.php:60
+msgid "Accounting Firms"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:52
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:113
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Customer.php:72
-msgid "ID"
+#: src/whatis.php:60
+msgid ""
+"Automating daily tasks for dozens of clients — bank imports, invoice "
+"generation, report exports — each running with that client's own credentials."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:53
-msgid "After"
+#: src/whatis.php:61
+msgid "Managed Service Providers"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:54
-msgid "Job"
+#: src/whatis.php:61
+msgid ""
+"Running system health checks, backup verifications, and compliance reports "
+"across customer environments on schedule."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:55
-msgid "App"
+#: src/whatis.php:62
+msgid "Internal IT Teams"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:56
-msgid "Runtemplate"
+#: src/whatis.php:62
+msgid ""
+"Synchronizing data between systems, dispatching notifications, and "
+"maintaining databases without hand-written automation glue."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/ScheduleLister.php:57
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Company.php:54
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:127
+#: src/whatis.php:77
+msgid "Key Concepts"
+msgstr ""
+
+#: src/whatis.php:79
+msgid "MultiFlexi is built around five core entities that work together:"
+msgstr ""
+
+#: src/whatis.php:85
+msgid "MultiFlexi entity relationships"
+msgstr ""
+
+#: src/whatis.php:91
 msgid "Company"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:136
-#, php-format
-msgid "New %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:137
-#, php-format
-msgid "Edit %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:138
-#, php-format
-msgid "Remove %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:139
-#, php-format
-msgid "Create new %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:140
-#, php-format
-msgid "Editing %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:141
-#, php-format
-msgid "Removing %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:143
-#, php-format
-msgid "Are you sure you wish to delete %%d row of %s ?"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:187
-#, php-format
-msgid "Missing ColumnInfo name for %s/%s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:195
-#, php-format
-msgid "Missing ColumnInfo type for %s/%s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:220
-msgid "Updated"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:230
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:117
-msgid "Created"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:528
-#, php-format
-msgid "%s is not valid email"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:559
-#, php-format
-msgid "A %s is required"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:566
-#, php-format
-msgid "A %s is not unique"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:708
-#, php-format
-msgid "Field Type is not set for %s "
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:822
-msgid "Error saving record"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:956
-#, php-format
-msgid "Column \"%s\" of %s without type definition"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:1160
-msgid "Yes"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:1160
-msgid "No"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/DBEngine.php:1330
-msgid "Dismis"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/EventSource.php:172
-#, php-format
-msgid "Event source \"%s\" unreachable: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialType.php:162
-#, php-format
-msgid "Try to access Undefined field %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialType.php:165
-#, php-format
-msgid "Unexistent field helper %s ?!?"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:87
-msgid "Job Env"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:119
-msgid "Cannot create job without authenticated user. User ID is required."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:143
-#, php-format
-msgid "Creating Job for Runtemplate #%d with NULL company_id. RT data: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:148
-msgid "Job ID"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:148
-msgid "Number of job"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:178
-msgid "Envirnoment unserialization Error"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:213
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:217
-msgid "No RunTemplate prepared"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:286
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:351
-#, php-format
-msgid "OTel export failed: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:485
-msgid "Scheduling job"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:646
-msgid "Job environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:774
-#, php-format
-msgid "Requested Executor %s not availble"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:947
-#, php-format
-msgid "Job #%d"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1009
-msgid "Cannot delete job without ID"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1050
-msgid "Updated runtemplate counters after job deletion"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1054
-#, php-format
-msgid "Failed to update runtemplate counters: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1070
-#, php-format
-msgid "Deleted %d schedule entries"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1076
-#, php-format
-msgid "Failed to delete schedule entries: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1092
-msgid "Empty Job Environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1247
-#, php-format
-msgid "Result file from job execution: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Job.php:1270
-#, php-format
-msgid "Failed to create artifact for result file %s: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:176
-#, php-format
+#: src/whatis.php:91
 msgid ""
-"Too many failed login attempts from your IP address. Please try again in %d "
-"minutes."
+"A tenant or organization you automate tasks for. Each company has its own "
+"set of credentials and job history, ensuring full data isolation."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:184
-#, php-format
+#: src/whatis.php:92
 msgid ""
-"Too many failed login attempts for this username. Please try again in %d "
-"minutes."
+"A tool that MultiFlexi can execute — a CLI binary, a PHP script, a Docker "
+"image. Applications are registered once and can be assigned to any company."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:199
-msgid "missing login"
+#: src/whatis.php:93
+msgid "Credential"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:205
-msgid "missing password"
+#: src/whatis.php:93
+msgid ""
+"Securely stored authentication data (API keys, database passwords, SMTP "
+"accounts). Credentials are scoped to a company and encrypted at rest with "
+"AES-256."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:265
-msgid "invalid password"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:282
-#, php-format
-msgid "user %s does not exist"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/User.php:409
-msgid "Sign in denied by administrator"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/UnixUser.php:48
-#, php-format
-msgid "New unix user %s created"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/UnixUser.php:50
-msgid "Failed to create new user for current Unix username."
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CommonAction.php:84
-msgid "No Action performed"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Credential.php:185
-msgid "undescribed custom field"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Credential.php:186
-#, php-format
-msgid "Config field %s inconsistency"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Scheduler.php:200
-#, php-format
-msgid "Job #%d is already scheduled, skipping duplicate"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Scheduler.php:224
-#, php-format
-msgid "Job #%d already scheduled (caught duplicate key error)"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:382
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:404
-msgid "Config fields Saved"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:385
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:407
-msgid "Error saving Config fields"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:463
-#, php-format
-msgid "RunTemplate #%s Environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/RunTemplate.php:475
-msgid "RunTemplate CredentialType Values"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Environmentor.php:62
-#, php-format
-msgid "Query for Nonexistent module %s vars"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Environmentor.php:92
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Configuration.php:111
-#, php-format
-msgid "Setting Environment %s to %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/FileStore.php:108
-msgid "uploaded file"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyApp.php:71
-#, php-format
-msgid "Application %s was assigned to %s company"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyApp.php:96
-#, php-format
-msgid "Application %s was unassigned from %s company"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/MultiFlexi.php:53
-msgid "MultiFlexi"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/MultiFlexi.php:58
-msgid "Provide Informations about Current running Environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Application.php:57
-msgid "Provide per Application Custom environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/EaseLogger.php:61
-msgid "Logger"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/EaseLogger.php:66
-msgid "Handle Logging for Ease Framework based Applications"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/RunTemplate.php:50
+#: src/whatis.php:94
 msgid "RunTemplate"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/RunTemplate.php:55
-msgid "Provide stored RunTemplate Environment"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Env/Company.php:59
-msgid "Provide Information about Current company"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:83
-msgid "OpenTelemetry metrics export is disabled"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:89
+#: src/whatis.php:94
 msgid ""
-"OpenTelemetry SDK not installed. Install: composer require open-telemetry/"
-"sdk open-telemetry/exporter-otlp"
+"The link between an application and a company: \"run this app for this "
+"company on this schedule with these credentials.\""
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:98
-msgid "OpenTelemetry metrics exporter initialized"
+#: src/whatis.php:95
+msgid "Job"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:100
-#, php-format
-msgid "Failed to initialize OpenTelemetry: %s"
+#: src/whatis.php:95
+msgid ""
+"A single execution of a RunTemplate. MultiFlexi records the start time, exit "
+"code, stdout, stderr, and any output files as searchable artifacts."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:139
-#, php-format
-msgid "OTel: Recorded job start #%d"
+#: src/whatis.php:114
+msgid "How It Works"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:171
-#, php-format
-msgid "OTel: Recorded job end, exitcode=%d, duration=%.2fs"
+#: src/whatis.php:117
+msgid ""
+"Register an application — import its JSON definition or create it in the web "
+"UI."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:188
-msgid "OTel: Metrics flushed"
+#: src/whatis.php:118
+msgid ""
+"Add a company — create a tenant representing the organization whose tasks "
+"you're automating."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:190
-#, php-format
-msgid "Error flushing metrics: %s"
+#: src/whatis.php:119
+msgid ""
+"Assign credentials — store the company's API keys, database passwords, or "
+"SMTP accounts. MultiFlexi encrypts them and injects them as environment "
+"variables at runtime."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:205
-msgid "OTel: Metrics provider shutdown"
+#: src/whatis.php:120
+msgid ""
+"Create a RunTemplate — pick the application, the company, the schedule, and "
+"the credentials."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:207
-#, php-format
-msgid "Error shutting down metrics: %s"
+#: src/whatis.php:121
+msgid ""
+"Jobs run automatically — the scheduler daemon creates job records when the "
+"schedule is due, and the executor daemon launches the application and "
+"captures all output."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:341
-#, php-format
-msgid "Error counting running jobs: %s"
+#: src/whatis.php:133
+msgid "Execution Environments"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:357
-#, php-format
-msgid "Error counting applications: %s"
+#: src/whatis.php:135
+msgid "MultiFlexi can launch applications in several ways:"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:373
-#, php-format
-msgid "Error counting enabled applications: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:389
-#, php-format
-msgid "Error counting companies: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Telemetry/OtelMetricsExporter.php:405
-#, php-format
-msgid "Error counting runtemplates: %s"
-msgstr ""
-
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:47
+#: src/whatis.php:141
 msgid "Native"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:52
-msgid "Run Job on same machine as MultiFlexi itself"
+#: src/whatis.php:141
+msgid "run the command directly on the server"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:131
+#: src/whatis.php:142
+msgid "Docker"
+msgstr ""
+
+#: src/whatis.php:142
+msgid "run inside a Docker container with the application's OCI image"
+msgstr ""
+
+#: src/whatis.php:143
+msgid "Podman"
+msgstr ""
+
+#: src/whatis.php:143
+msgid "rootless container execution"
+msgstr ""
+
+#: src/whatis.php:144
+msgid "Kubernetes"
+msgstr ""
+
+#: src/whatis.php:144
+msgid "launch as a K8s pod"
+msgstr ""
+
+#: src/whatis.php:145
+msgid "Azure Container Instances"
+msgstr ""
+
+#: src/whatis.php:145
+msgid "run in the cloud"
+msgstr ""
+
+#: src/whatis.php:158
+msgid ""
+"The executor is pluggable: each RunTemplate can use a different execution "
+"backend depending on the application's requirements."
+msgstr ""
+
+#: src/whatis.php:163
+msgid "Multiple Interfaces"
+msgstr ""
+
+#: src/whatis.php:165
+msgid ""
+"You interact with MultiFlexi through whichever interface fits your workflow:"
+msgstr ""
+
+#: src/whatis.php:170
+msgid "Web UI"
+msgstr ""
+
+#: src/whatis.php:170
+msgid ""
+"Bootstrap 5 dashboard with real-time metrics, company/application/credential "
+"management, job history, and live output streaming via WebSocket."
+msgstr ""
+
+#: src/whatis.php:171
+msgid "CLI"
+msgstr ""
+
+#: src/whatis.php:171
+msgid ""
+"Full-featured command-line tool for scripting, CI/CD pipelines, and headless "
+"administration."
+msgstr ""
+
+#: src/whatis.php:172
+msgid "TUI"
+msgstr ""
+
+#: src/whatis.php:172
+msgid ""
+"Interactive terminal interface built with Bubbletea (Go) for keyboard-driven "
+"management."
+msgstr ""
+
+#: src/whatis.php:173
+msgid "REST API"
+msgstr ""
+
+#: src/whatis.php:173
+msgid ""
+"JSON/XML/YAML endpoints with HTTP Basic and token authentication for "
+"programmatic integration."
+msgstr ""
+
+#: src/whatis.php:174
+msgid "MCP Server"
+msgstr ""
+
+#: src/whatis.php:174
+msgid "Model Context Protocol server for AI agent integration."
+msgstr ""
+
+#: src/whatis.php:191
+msgid "Monitoring and Observability"
+msgstr ""
+
+#: src/whatis.php:195
+msgid ""
+"Zabbix integration with Low-Level Discovery — auto-discovers companies and "
+"applications, monitors job success rates and execution times"
+msgstr ""
+
+#: src/whatis.php:196
+msgid "OpenTelemetry support for distributed tracing"
+msgstr ""
+
+#: src/whatis.php:197
+msgid "Structured logging to syslog, database, and custom targets"
+msgstr ""
+
+#: src/whatis.php:198
+msgid ""
+"Universal artifact preservation — every job's stdout, stderr, and output "
+"files are stored and searchable"
+msgstr ""
+
+#: src/whatis.php:208
+msgid "Getting Started"
+msgstr ""
+
+#: src/whatis.php:209
+msgid "Ready to try it?"
+msgstr ""
+
+#: src/whatis.php:212
+msgid "Browse Apps"
+msgstr ""
+
+#: src/whatis.php:213 src/credentialtypes.php:27 src/credentialtypes.php:32
+#: src/MultiFlexi/Ui/MainMenu.php:58
+msgid "Credential Types"
+msgstr ""
+
+#: src/whatis.php:214 src/MultiFlexi/Ui/ApplicationPanel.php:46
+#: src/MultiFlexi/Ui/MainMenu.php:59
+msgid "Install"
+msgstr ""
+
+#: src/whatis.php:215
+msgid "Try Demo"
+msgstr ""
+
+#: src/whatis.php:220
+msgid "MultiFlexi on GitHub"
+msgstr ""
+
+#: src/whatis.php:221 src/MultiFlexi/Ui/PageBottom.php:52
+msgid "Documentation"
+msgstr ""
+
+#: src/whatis.php:222
+msgid "Demo Instance — try MultiFlexi without installing"
+msgstr ""
+
+#: src/login.php:47 src/MultiFlexi/Ui/MainMenu.php:69
+msgid "Sign In"
+msgstr ""
+
+#: src/login.php:53 src/MultiFlexi/Hub/CredentialProtoType.php:31
+msgid "Logo"
+msgstr ""
+
+#: src/login.php:56
+msgid "Sign in to MultiFlexi"
+msgstr ""
+
+#: src/login.php:67
+msgid "Sign in"
+msgstr ""
+
+#: src/login.php:71
+msgid "Password recovery"
+msgstr ""
+
+#: src/mycredentialtypes.php:21 src/MultiFlexi/Ui/MainMenu.php:63
+msgid "My Credential Types"
+msgstr ""
+
+#: src/mycredentialtypes.php:27
+msgid "Submit new credential type"
+msgstr ""
+
+#: src/logout.php:24 src/MultiFlexi/Ui/MainMenu.php:66
+msgid "Sign Off"
+msgstr ""
+
+#: src/logout.php:28
+msgid "Good bye"
+msgstr ""
+
+#: src/logout.php:33
+msgid "Thank you for your patronage and look forward to another visit"
+msgstr ""
+
+#: src/credentialtypes.php:70
+msgid "Search credential types..."
+msgstr ""
+
+#: src/credentialtypes.php:81
+msgid "Filter by Topics"
+msgstr ""
+
+#: src/credentialtypes.php:82
+msgid ""
+"Select topics to filter credential types. All are shown when no topics are "
+"selected."
+msgstr ""
+
+#: src/credentialtypes.php:87
+msgid "Select topics to filter..."
+msgstr ""
+
+#: src/credentialtypes.php:95
+msgid "Clear topic filter to show all credential types"
+msgstr ""
+
+#: src/credentialtypes.php:104
+msgid "credential types"
+msgstr ""
+
+#: src/credentialtypes.php:161 src/MultiFlexi/Hub/Application.php:36
+#: src/MultiFlexi/Hub/CredentialProtoType.php:36
+msgid "Homepage"
+msgstr ""
+
+#: src/main.php:20
+msgid "Multi Flexi"
+msgstr ""
+
+#: libexec/json2app.php:40
+msgid "Error importing application json"
+msgstr ""
+
+#: libexec/json2credentialtype.php:42
+msgid "Credential prototype definition file is empty: "
+msgstr ""
+
+#: libexec/json2credentialtype.php:50
+msgid "Invalid JSON: "
+msgstr ""
+
+#: libexec/json2credentialtype.php:60
 #, php-format
-msgid "Process exceeded maximum execution time limit %d seconds"
+msgid "Credential prototype %s imported successfully"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Executor/Native.php:151
-msgid "Unknown"
+#: libexec/json2credentialtype.php:62
+msgid "Error importing credential prototype"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/LaunchJob.php:32
-msgid "Launch Job"
+#: src/MultiFlexi/Hub/Application.php:30
+#: src/MultiFlexi/Hub/CredentialProtoType.php:30
+msgid "Id"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/LaunchJob.php:40
-msgid "Launch another job"
+#: src/MultiFlexi/Hub/Application.php:31
+msgid "Image"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:32
-msgid "Chain Runtemplate"
+#: src/MultiFlexi/Hub/Application.php:32
+#: src/MultiFlexi/Hub/CredentialProtoType.php:33
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:33
+msgid "Name"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:40
-msgid "Run Another RunTemplate after current"
+#: src/MultiFlexi/Hub/Application.php:34
+#: src/MultiFlexi/Hub/CredentialProtoType.php:35
+#: src/MultiFlexi/Ui/ConfigFieldsView.php:34
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:35
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:35
+msgid "Description"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:65
-msgid "No RunTemplate selected for chaining."
+#: src/MultiFlexi/Hub/Application.php:35
+#: src/MultiFlexi/Hub/CredentialProtoType.php:37
+msgid "Tags"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:74
-#, php-format
-msgid "RunTemplate #%d not found."
+#: src/MultiFlexi/Hub/Application.php:37
+#: src/MultiFlexi/Hub/CredentialProtoType.php:38
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:32
+msgid "Version"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:88
-#, php-format
-msgid "Chained RunTemplate #%d scheduled."
+#: src/MultiFlexi/Hub/Application.php:38
+#: src/MultiFlexi/Hub/CredentialProtoType.php:39
+msgid "UUID"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ChainRuntemplate.php:90
-msgid "Failed to schedule chained RunTemplate: "
+#: src/MultiFlexi/Hub/Application.php:39
+#: src/MultiFlexi/Hub/CredentialProtoType.php:40
+msgid "Owner"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:36
-msgid "Jenkins"
+#: src/MultiFlexi/Hub/CredentialProtoType.php:32
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:30
+msgid "Code"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:46
-msgid "Trigger Jenkins job"
+#: src/MultiFlexi/Ui/PageBottom.php:49
+msgid "Github Project"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:75
-msgid "Jenkins URL and job name are required"
+#: src/MultiFlexi/Ui/PageBottom.php:50
+msgid "LinkedIN Product page"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/TriggerJenkins.php:111
-#, php-format
-msgid "Jenkins job %s triggered successfully"
+#: src/MultiFlexi/Ui/CredentialProtoTypeImportForm.php:29
+msgid "Credential Prototype JSON file"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/RedmineIssue.php:36
-msgid "Redmine Issue"
+#: src/MultiFlexi/Ui/CredentialProtoTypeJson.php:33
+#: src/MultiFlexi/Ui/AppJson.php:29
+msgid "Download"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/RedmineIssue.php:46
-msgid "Make Redmine issue using Job output"
+#: src/MultiFlexi/Ui/AppImportForm.php:29
+msgid "Application JSON file"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:34
-msgid "WebHook"
+#: src/MultiFlexi/Ui/ConfigFieldsView.php:31
+msgid "Key"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:44
-msgid "Post Job output to URI"
+#: src/MultiFlexi/Ui/ConfigFieldsView.php:32
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:32
+msgid "Type"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:57
-msgid "Perform begin"
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:31
+msgid "Keyword"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/WebHook.php:72
-msgid "Perform done"
+#: src/MultiFlexi/Ui/CredentialProtoTypeFieldsView.php:53
+msgid "No fields defined"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:45
-msgid "No valid RunTemplate found for rescheduling."
+#: src/MultiFlexi/Ui/PageTop.php:68
+msgid "Click to hide messages"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:57
-#, php-format
-msgid "RunTemplate #%d rescheduled for %s."
+#: src/MultiFlexi/Ui/DBDataTable.php:114
+msgid "Reload"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:59
-msgid "Failed to reschedule RunTemplate: "
+#: src/MultiFlexi/Ui/DBDataTable.php:130
+msgid "Filter"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:68
-msgid "Reschedule"
+#: src/MultiFlexi/Ui/DBDataTable.php:347
+msgid "All pages"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Reschedule.php:78
-msgid "Reschedule job to be executed later again"
+#: src/MultiFlexi/Ui/ColumnsForm.php:120 src/MultiFlexi/Ui/AppEditorForm.php:48
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:36
+msgid "Save"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ToDo.php:34
-msgid "ToDo Issue"
+#: src/MultiFlexi/Ui/ColumnsForm.php:132
+msgid "Save and back"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/ToDo.php:44
-msgid "Make ToDo issue using Job output"
+#: src/MultiFlexi/Ui/ColumnsForm.php:144
+msgid "Save and next"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Github.php:36
-msgid "Github Issue"
+#: src/MultiFlexi/Ui/AppEditorForm.php:34
+msgid "Application name"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Github.php:46
-msgid "Make Github issue using Job output"
+#: src/MultiFlexi/Ui/AppEditorForm.php:35
+msgid "Application code"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:34
-msgid "Stop"
+#: src/MultiFlexi/Ui/AppEditorForm.php:36
+msgid "Application Description"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:44
-msgid "Stop periodical Task"
+#: src/MultiFlexi/Ui/AppEditorForm.php:37
+msgid "Path to binary"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:53
-#, php-format
-msgid "Periodic executing of «%s» for ❮%s❯ stop 🛑"
+#: src/MultiFlexi/Ui/AppEditorForm.php:38
+msgid "Setup Command"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Stop.php:55
-msgid "Stopped module failed"
+#: src/MultiFlexi/Ui/AppEditorForm.php:38
+msgid "Command used to setup new company for use with command"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Sleep.php:32
-msgid "Sleep"
+#: src/MultiFlexi/Ui/AppEditorForm.php:39
+msgid "Command arguments"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Sleep.php:40
-msgid "delay for a specified amount of time"
+#: src/MultiFlexi/Ui/AppEditorForm.php:39
+msgid ""
+"you can use macros like {ABRAFLEXI_URL} or custom defined config fields."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/Sleep.php:48
-#, php-format
-msgid "Sleepeng for %s seconds"
+#: src/MultiFlexi/Ui/AppEditorForm.php:40
+msgid "Application Icon"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:36
-msgid "Custom Command"
+#: src/MultiFlexi/Ui/AppEditorForm.php:41
+msgid "Enabled"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:46
-msgid "Run custom command"
+#: src/MultiFlexi/Ui/AppEditorForm.php:42
+msgid "Application Homepage"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:63
-msgid "Custom Command begin"
+#: src/MultiFlexi/Ui/AppEditorForm.php:43
+msgid "Container image"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Action/CustomCommand.php:65
-msgid "Custom Command done"
+#: src/MultiFlexi/Ui/AppEditorForm.php:44
+msgid "Current Version of Application"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:114
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Customer.php:79
-msgid "Status"
+#: src/MultiFlexi/Ui/AppEditorForm.php:45
+msgid "Application deploy command"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:115
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Customer.php:73
-msgid "Subject"
+#: src/MultiFlexi/Ui/AppEditorForm.php:46
+msgid "Application Universal Unique Identifier"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:116
-msgid "Message"
+#: src/MultiFlexi/Ui/AppEditorForm.php:47
+msgid "Tags separated by comma"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Logger.php:135
-msgid "User"
+#: src/MultiFlexi/Ui/CoworkersManager.php:33
+msgid "Add users who can edit this item."
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:40
-#, php-format
-msgid "MetricReporter: registered sink %s"
+#: src/MultiFlexi/Ui/MainMenu.php:45
+msgid "Toggle navigation"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:88
-#, php-format
-msgid "MetricReporter sink %s failed on recordJobStart: %s"
+#: src/MultiFlexi/Ui/MainMenu.php:56
+msgid "Demo"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:107
-#, php-format
-msgid "MetricReporter sink %s failed on recordJobEnd: %s"
+#: src/MultiFlexi/Ui/MainMenu.php:57
+msgid "Apps"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/Reporting/MetricReporter.php:126
-#, php-format
-msgid "MetricReporter sink %s failed on flush: %s"
+#: src/MultiFlexi/Ui/MainMenu.php:62
+msgid "My Apps"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CompanyEnv.php:135
-msgid "Company custom environment"
+#: src/MultiFlexi/Ui/MainMenu.php:64
+msgid "Submit App"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType.php:97
-#, php-format
-msgid "%s prefilled from default"
+#: src/MultiFlexi/Ui/MainMenu.php:65
+msgid "Submit Credential Type"
 msgstr ""
 
-#: vendor/vitexsoftware/multiflexi-core/src/MultiFlexi/CredentialProtoType.php:109
-msgid "Manually entered value"
+#: src/MultiFlexi/Ui/MainMenu.php:68
+msgid "Sign On"
+msgstr ""
+
+#: src/MultiFlexi/Ui/FilterDialog.php:65 src/MultiFlexi/Ui/FilterDialog.php:94
+msgid "From"
+msgstr ""
+
+#: src/MultiFlexi/Ui/FilterDialog.php:78 src/MultiFlexi/Ui/FilterDialog.php:104
+msgid "To"
+msgstr ""
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:31
+msgid "Credential Type Name"
+msgstr ""
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:33
+msgid "URL"
+msgstr ""
+
+#: src/MultiFlexi/Ui/CredentialProtoTypeEditorForm.php:34
+msgid "Logo URL"
 msgstr ""
