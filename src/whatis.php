@@ -23,9 +23,8 @@ use Ease\Html\H4Tag;
 use Ease\Html\ImgTag;
 use Ease\Html\LiTag;
 use Ease\Html\PTag;
-use Ease\Html\SpanTag;
-use Ease\Html\StrongTag;
 use Ease\Html\UlTag;
+use Ease\TWB5\Accordion;
 use Ease\TWB5\LinkButton;
 use Ease\TWB5\Row;
 
@@ -95,20 +94,23 @@ $concepts = [
     [_('Job'), _('A single execution of a RunTemplate. MultiFlexi records the start time, exit code, stdout, stderr, and any output files as searchable artifacts.'), null],
 ];
 
-foreach ($concepts as $concept) {
-    $conceptDiv = new DivTag(null, ['class' => 'mb-4']);
-    $conceptDiv->addItem(new H4Tag($concept[0]));
-    $conceptDiv->addItem(new PTag($concept[1], ['class' => 'text-muted']));
+$conceptsAccordion = new Accordion('accordionConcepts', [], false, ['class' => 'mb-4']);
+
+foreach ($concepts as $i => $concept) {
+    $body = new DivTag(null);
+    $body->addItem(new PTag($concept[1], ['class' => 'text-muted']));
 
     if (!empty($concept[2])) {
-        $conceptDiv->addItem(new DivTag(
+        $body->addItem(new DivTag(
             new ImgTag($concept[2], $concept[0], ['class' => 'img-fluid rounded shadow-sm']),
             ['class' => 'text-center my-3'],
         ));
     }
 
-    $oPage->container->addItem($conceptDiv);
+    $conceptsAccordion->addAccordionItem($concept[0], $body, $i === 0);
 }
+
+$oPage->container->addItem($conceptsAccordion);
 
 // --- How It Works ---
 $oPage->container->addItem(new H3Tag(_('How It Works'), ['class' => 'mt-5 mb-3']));
@@ -136,7 +138,6 @@ $oPage->container->addItem(new PTag(
     ['class' => 'mb-3'],
 ));
 
-$envList = new UlTag(null, ['class' => 'list-group mb-4']);
 $envs = [
     [_('Native'), _('run the command directly on the server')],
     [_('Docker'), _('run inside a Docker container with the application\'s OCI image')],
@@ -145,14 +146,13 @@ $envs = [
     [_('Azure Container Instances'), _('run in the cloud')],
 ];
 
-foreach ($envs as $env) {
-    $envList->addItem(new LiTag(
-        [new StrongTag($env[0]), ' — '.$env[1]],
-        ['class' => 'list-group-item'],
-    ));
+$envAccordion = new Accordion('accordionEnvs', [], true, ['class' => 'mb-4']);
+
+foreach ($envs as $i => $env) {
+    $envAccordion->addAccordionItem($env[0], new PTag($env[1], ['class' => 'text-muted mb-0']), $i === 0);
 }
 
-$oPage->container->addItem($envList);
+$oPage->container->addItem($envAccordion);
 
 $oPage->container->addItem(new PTag(
     _('The executor is pluggable: each RunTemplate can use a different execution backend depending on the application\'s requirements.'),

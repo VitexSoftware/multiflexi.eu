@@ -177,13 +177,14 @@ $oPage->container->addItem('<div class="mf-install-hero">
   <p>'._('Set up the MultiFlexi automation platform on your Debian or Ubuntu system').'</p>
 </div>');
 
+/* ── Install steps accordion ── */
+$stepsAccordion = new \Ease\TWB5\Accordion('accordionInstall');
+
 /* ── Step 1: Prepare system ── */
-$prepCard = new \Ease\Html\DivTag(null, ['class' => 'mf-db-card']);
-$prepCard->addItem('<div class="mf-db-header"><i class="bi bi-terminal"></i> '._('Step 1: Prepare your system').'</div>');
-$prepBody = $prepCard->addItem(new \Ease\Html\DivTag(null, ['class' => 'mf-db-body']));
-$prepBody->addItem('<p class="text-muted mb-3">'._('Install prerequisites needed for secure APT repository access.').'</p>');
-$prepBody->addItem('<div style="position:relative"><pre class="mf-pre" id="prepCmd"><code>sudo apt update &amp;&amp; sudo apt install -y lsb-release apt-transport-https bzip2 ca-certificates curl</code></pre><button class="mf-copy-btn" data-copy-target="prepCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
-$oPage->container->addItem($prepCard);
+$step1Body = new \Ease\Html\DivTag(null);
+$step1Body->addItem('<p class="text-muted mb-3">'._('Install prerequisites needed for secure APT repository access.').'</p>');
+$step1Body->addItem('<div style="position:relative"><pre class="mf-pre" id="prepCmd"><code>sudo apt update &amp;&amp; sudo apt install -y lsb-release apt-transport-https bzip2 ca-certificates curl</code></pre><button class="mf-copy-btn" data-copy-target="prepCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
+$stepsAccordion->addAccordionItem('<i class="bi bi-terminal"></i> '._('Step 1: Prepare your system'), $step1Body, true);
 
 /* ── Repository configs (production + testing) ── */
 $repos = [
@@ -212,9 +213,6 @@ $repos = [
         'components' => ['main', 'backports', 'borrowed', 'games', 'paid'],
     ],
 ];
-
-$oPage->container->addItem('<h2 class="mt-4 mb-3"><i class="bi bi-gear"></i> '._('Step 2: Configure APT Repository').'</h2>');
-$oPage->container->addItem('<p class="text-muted mb-4">'._('Choose your preferred repository channel and configure it interactively.').'</p>');
 
 $repoRow = new \Ease\TWB5\Row();
 
@@ -300,16 +298,18 @@ foreach ($repos as $repo) {
     $repoRow->addColumn(6, $html);
 }
 
-$oPage->container->addItem($repoRow);
+$step2Body = new \Ease\Html\DivTag(null);
+$step2Body->addItem('<p class="text-muted mb-4">'._('Choose your preferred repository channel and configure it interactively.').'</p>');
+$step2Body->addItem($repoRow);
+$stepsAccordion->addAccordionItem('<i class="bi bi-gear"></i> '._('Step 2: Configure APT Repository'), $step2Body);
 
 /* ── Step 3: Update & install ── */
-$oPage->container->addItem('<h2 class="mt-4 mb-3"><i class="bi bi-arrow-repeat"></i> '._('Step 3: Update Sources').'</h2>');
-$oPage->container->addItem('<div style="position:relative"><pre class="mf-pre" id="updateCmd"><code>sudo apt update</code></pre><button class="mf-copy-btn" data-copy-target="updateCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
+$step3Body = new \Ease\Html\DivTag(null);
+$step3Body->addItem('<div style="position:relative"><pre class="mf-pre" id="updateCmd"><code>sudo apt update</code></pre><button class="mf-copy-btn" data-copy-target="updateCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
+$stepsAccordion->addAccordionItem('<i class="bi bi-arrow-repeat"></i> '._('Step 3: Update Sources'), $step3Body);
 
 /* ── Step 4: Choose database ── */
-$dbCard = new \Ease\Html\DivTag(null, ['class' => 'mf-db-card']);
-$dbCard->addItem('<div class="mf-db-header"><i class="bi bi-database"></i> '._('Step 4: Install for your chosen database').'</div>');
-$dbBody = $dbCard->addItem(new \Ease\Html\DivTag(null, ['class' => 'mf-db-body']));
+$dbBody = new \Ease\Html\DivTag(null);
 
 $dbTabs = new \Ease\TWB5\Tabs();
 $dbTabs->addTab(
@@ -325,12 +325,15 @@ $dbTabs->addTab(
     '<div style="position:relative"><pre class="mf-pre" id="dbSqlite"><code>sudo apt install multiflexi-sqlite</code></pre><button class="mf-copy-btn" data-copy-target="dbSqlite"><i class="bi bi-clipboard"></i> Copy</button></div>',
 );
 $dbBody->addItem($dbTabs);
-$oPage->container->addItem($dbCard);
+$stepsAccordion->addAccordionItem('<i class="bi bi-database"></i> '._('Step 4: Install for your chosen database'), $dbBody);
 
 /* ── Step 5: Discover apps ── */
-$oPage->container->addItem('<h2 class="mt-4 mb-3"><i class="bi bi-search"></i> '._('Step 5: Discover available applications').'</h2>');
-$oPage->container->addItem('<p class="text-muted mb-2">'._('Search the repository for MultiFlexi application packages:').'</p>');
-$oPage->container->addItem('<div style="position:relative"><pre class="mf-pre" id="searchCmd"><code>apt search multiflexi</code></pre><button class="mf-copy-btn" data-copy-target="searchCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
+$step5Body = new \Ease\Html\DivTag(null);
+$step5Body->addItem('<p class="text-muted mb-2">'._('Search the repository for MultiFlexi application packages:').'</p>');
+$step5Body->addItem('<div style="position:relative"><pre class="mf-pre" id="searchCmd"><code>apt search multiflexi</code></pre><button class="mf-copy-btn" data-copy-target="searchCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
+$stepsAccordion->addAccordionItem('<i class="bi bi-search"></i> '._('Step 5: Discover available applications'), $step5Body);
+
+$oPage->container->addItem($stepsAccordion);
 
 /* ── Repo config JSON data (read by JS via embedded <script type=application/json>) ── */
 $repoConfigs = [];
