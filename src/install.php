@@ -169,6 +169,16 @@ $oPage->addCss(<<<'CSS'
     font-size: 1rem;
 }
 .mf-db-body { padding: 1.3rem; }
+
+/* ScrollSpy step sidebar */
+.mf-step-sidebar { top: 1.5rem; }
+.mf-sidebar-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #8898aa; padding: 0.4rem 1rem; margin: 0; }
+.mf-step-sidebar .list-group-item { font-size: 0.84rem; color: #344055; border-left: 3px solid transparent; border-right: 0; border-top: 0; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 0.5rem 1rem; }
+.mf-step-sidebar .list-group-item.active { background: #eef5ff; color: #1e6fbf; border-left-color: #1e6fbf; font-weight: 600; }
+.mf-step-sidebar .list-group-item:hover:not(.active) { background: #f8faff; color: #1e2d4a; }
+.mf-step-num { display: inline-flex; align-items: center; justify-content: center; width: 1.3rem; height: 1.3rem; border-radius: 50%; background: #1e6fbf; color: #fff; font-size: 0.68rem; font-weight: 700; margin-right: 0.4rem; flex-shrink: 0; }
+.list-group-item.active .mf-step-num { background: #fff; color: #1e6fbf; }
+@media (max-width: 991.98px) { .mf-step-sidebar { position: static !important; margin-bottom: 1rem; } }
 CSS);
 
 /* ── Hero section ── */
@@ -177,14 +187,27 @@ $oPage->container->addItem('<div class="mf-install-hero">
   <p>'._('Set up the MultiFlexi automation platform on your Debian or Ubuntu system').'</p>
 </div>');
 
-/* ── Install steps accordion ── */
-$stepsAccordion = new \Ease\TWB5\Accordion('accordionInstall');
+/* ── ScrollSpy layout: sidebar + content ── */
+$installRow = new \Ease\TWB5\Row();
+$installRow->addColumn(3, '<nav id="installStepNav" class="sticky-top mf-step-sidebar">
+  <p class="mf-sidebar-label">'._('Install Steps').'</p>
+  <div class="list-group list-group-flush">
+    <a class="list-group-item list-group-item-action" href="#install-step1"><span class="mf-step-num">1</span>'._('Prepare').'</a>
+    <a class="list-group-item list-group-item-action" href="#install-step2"><span class="mf-step-num">2</span>'._('Configure Repo').'</a>
+    <a class="list-group-item list-group-item-action" href="#install-step3"><span class="mf-step-num">3</span>'._('Update Sources').'</a>
+    <a class="list-group-item list-group-item-action" href="#install-step4"><span class="mf-step-num">4</span>'._('Install').'</a>
+    <a class="list-group-item list-group-item-action" href="#install-step5"><span class="mf-step-num">5</span>'._('Discover Apps').'</a>
+  </div>
+</nav>', 'lg');
+$contentDiv = new \Ease\Html\DivTag(null);
 
 /* ── Step 1: Prepare system ── */
-$step1Body = new \Ease\Html\DivTag(null);
-$step1Body->addItem('<p class="text-muted mb-3">'._('Install prerequisites needed for secure APT repository access.').'</p>');
-$step1Body->addItem('<div style="position:relative"><pre class="mf-pre" id="prepCmd"><code>sudo apt update &amp;&amp; sudo apt install -y lsb-release apt-transport-https bzip2 ca-certificates curl</code></pre><button class="mf-copy-btn" data-copy-target="prepCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
-$stepsAccordion->addAccordionItem('<i class="bi bi-terminal"></i> '._('Step 1: Prepare your system'), $step1Body, true);
+$prepCard = new \Ease\Html\DivTag(null, ['class' => 'mf-db-card', 'id' => 'install-step1']);
+$prepCard->addItem('<div class="mf-db-header"><i class="bi bi-terminal"></i> '._('Step 1: Prepare your system').'</div>');
+$prepBody = $prepCard->addItem(new \Ease\Html\DivTag(null, ['class' => 'mf-db-body']));
+$prepBody->addItem('<p class="text-muted mb-3">'._('Install prerequisites needed for secure APT repository access.').'</p>');
+$prepBody->addItem('<div style="position:relative"><pre class="mf-pre" id="prepCmd"><code>sudo apt update &amp;&amp; sudo apt install -y lsb-release apt-transport-https bzip2 ca-certificates curl</code></pre><button class="mf-copy-btn" data-copy-target="prepCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
+$contentDiv->addItem($prepCard);
 
 /* ── Repository configs (production + testing) ── */
 $repos = [
@@ -213,6 +236,9 @@ $repos = [
         'components' => ['main', 'backports', 'borrowed', 'games', 'paid'],
     ],
 ];
+
+$contentDiv->addItem('<h2 id="install-step2" class="mt-4 mb-3"><i class="bi bi-gear"></i> '._('Step 2: Configure APT Repository').'</h2>');
+$contentDiv->addItem('<p class="text-muted mb-4">'._('Choose your preferred repository channel and configure it interactively.').'</p>');
 
 $repoRow = new \Ease\TWB5\Row();
 
@@ -298,18 +324,16 @@ foreach ($repos as $repo) {
     $repoRow->addColumn(6, $html);
 }
 
-$step2Body = new \Ease\Html\DivTag(null);
-$step2Body->addItem('<p class="text-muted mb-4">'._('Choose your preferred repository channel and configure it interactively.').'</p>');
-$step2Body->addItem($repoRow);
-$stepsAccordion->addAccordionItem('<i class="bi bi-gear"></i> '._('Step 2: Configure APT Repository'), $step2Body);
+$contentDiv->addItem($repoRow);
 
 /* ── Step 3: Update & install ── */
-$step3Body = new \Ease\Html\DivTag(null);
-$step3Body->addItem('<div style="position:relative"><pre class="mf-pre" id="updateCmd"><code>sudo apt update</code></pre><button class="mf-copy-btn" data-copy-target="updateCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
-$stepsAccordion->addAccordionItem('<i class="bi bi-arrow-repeat"></i> '._('Step 3: Update Sources'), $step3Body);
+$contentDiv->addItem('<h2 id="install-step3" class="mt-4 mb-3"><i class="bi bi-arrow-repeat"></i> '._('Step 3: Update Sources').'</h2>');
+$contentDiv->addItem('<div style="position:relative"><pre class="mf-pre" id="updateCmd"><code>sudo apt update</code></pre><button class="mf-copy-btn" data-copy-target="updateCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
 
 /* ── Step 4: Choose database ── */
-$dbBody = new \Ease\Html\DivTag(null);
+$dbCard = new \Ease\Html\DivTag(null, ['class' => 'mf-db-card', 'id' => 'install-step4']);
+$dbCard->addItem('<div class="mf-db-header"><i class="bi bi-database"></i> '._('Step 4: Install for your chosen database').'</div>');
+$dbBody = $dbCard->addItem(new \Ease\Html\DivTag(null, ['class' => 'mf-db-body']));
 
 $dbTabs = new \Ease\TWB5\Tabs();
 $dbTabs->addTab(
@@ -325,15 +349,15 @@ $dbTabs->addTab(
     '<div style="position:relative"><pre class="mf-pre" id="dbSqlite"><code>sudo apt install multiflexi-sqlite</code></pre><button class="mf-copy-btn" data-copy-target="dbSqlite"><i class="bi bi-clipboard"></i> Copy</button></div>',
 );
 $dbBody->addItem($dbTabs);
-$stepsAccordion->addAccordionItem('<i class="bi bi-database"></i> '._('Step 4: Install for your chosen database'), $dbBody);
+$contentDiv->addItem($dbCard);
 
 /* ── Step 5: Discover apps ── */
-$step5Body = new \Ease\Html\DivTag(null);
-$step5Body->addItem('<p class="text-muted mb-2">'._('Search the repository for MultiFlexi application packages:').'</p>');
-$step5Body->addItem('<div style="position:relative"><pre class="mf-pre" id="searchCmd"><code>apt search multiflexi</code></pre><button class="mf-copy-btn" data-copy-target="searchCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
-$stepsAccordion->addAccordionItem('<i class="bi bi-search"></i> '._('Step 5: Discover available applications'), $step5Body);
+$contentDiv->addItem('<h2 id="install-step5" class="mt-4 mb-3"><i class="bi bi-search"></i> '._('Step 5: Discover available applications').'</h2>');
+$contentDiv->addItem('<p class="text-muted mb-2">'._('Search the repository for MultiFlexi application packages:').'</p>');
+$contentDiv->addItem('<div style="position:relative"><pre class="mf-pre" id="searchCmd"><code>apt search multiflexi</code></pre><button class="mf-copy-btn" data-copy-target="searchCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
 
-$oPage->container->addItem($stepsAccordion);
+$installRow->addColumn(9, $contentDiv, 'lg');
+$oPage->container->addItem($installRow);
 
 /* ── Repo config JSON data (read by JS via embedded <script type=application/json>) ── */
 $repoConfigs = [];
@@ -426,6 +450,12 @@ $oPage->addJavaScript(<<<'JS'
   /* Wire up all copy buttons */
   document.querySelectorAll('[data-copy-target]').forEach(function(el){
     el.addEventListener('click', function(){ copyToClipboard(el.dataset.copyTarget); });
+  });
+
+  /* Bootstrap 5 ScrollSpy: highlight current step in sidebar as the user scrolls */
+  new bootstrap.ScrollSpy(document.body, {
+    target: '#installStepNav',
+    rootMargin: '0px 0px -60%'
   });
 }());
 JS);
