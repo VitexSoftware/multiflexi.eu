@@ -329,6 +329,9 @@ $contentDiv->addItem($repoRow);
 /* ── Step 3: Update & install ── */
 $contentDiv->addItem('<h2 id="install-step3" class="mt-4 mb-3"><i class="bi bi-arrow-repeat"></i> '._('Step 3: Update Sources').'</h2>');
 $contentDiv->addItem('<div style="position:relative"><pre class="mf-pre" id="updateCmd"><code>sudo apt update</code></pre><button class="mf-copy-btn" data-copy-target="updateCmd"><i class="bi bi-clipboard"></i> Copy</button></div>');
+$contentDiv->addItem('<div class="alert alert-info mt-2 mb-0"><i class="bi bi-info-circle"></i> '
+    ._('multiflexi-server (the REST API) requires PHP Slim <strong>4</strong>. No supported Debian/Ubuntu release packages that in its own archive — Debian 12, Ubuntu 22.04 and 24.04 don\'t ship <code>php-slim</code> at all, and Debian 13 (Trixie) ships Slim <strong>3</strong>, which is incompatible. VitexSoftware publishes its own Slim 4 <code>php-slim</code> package for every supported distro via the repository configured above; as long as it\'s enabled, <code>apt</code> installs the correct version automatically (its dependency is pinned to <code>php-slim (&gt;= 4)</code>).')
+    .'</div>');
 
 /* ── Step 4: Choose database ── */
 $dbCard = new \Ease\Html\DivTag(null, ['class' => 'mf-db-card', 'id' => 'install-step4']);
