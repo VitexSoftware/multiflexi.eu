@@ -1,5 +1,7 @@
 multiflexi.eu (0.3.0) UNRELEASED; urgency=medium
 
+  * Publish MultiFlexi JSON schemas at /schema/*.json from core package files
+  * Redirect legacy schema filenames to the canonical /schema/ paths
   * Add topics (tags) and homepage support to credential types
   * Display topic badges and homepage link on credential type detail page
   * Add topic filter with Selectize PillBox to credential types card view
