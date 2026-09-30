@@ -24,9 +24,9 @@ namespace MultiFlexi\Ui;
  */
 class Landing
 {
-    private const ORBIT_INNER = 'M1382 362 A280 250 -14 1 1 838 498 A280 250 -14 1 1 1382 362';
-    private const ORBIT_OUTER = 'M1459 343 A360 300 -14 1 1 761 517 A360 300 -14 1 1 1459 343';
-    private const ICONS = [
+    private const string ORBIT_INNER = 'M1382 362 A280 250 -14 1 1 838 498 A280 250 -14 1 1 1382 362';
+    private const string ORBIT_OUTER = 'M1459 343 A360 300 -14 1 1 761 517 A360 300 -14 1 1 1459 343';
+    private const array ICONS = [
         'bank' => 'M-7 -1.5h14M-5 -1.5v6m3.3-6v6m3.4-6v6m3.3-6v6M-7 5.5h14M0 -7.5l7.5 4.5h-15z',
         'doc' => 'M-6 -7.5h12v15h-12zM-3 -3h6M-3 0.5h6M-3 4h4',
         'pohoda' => 'M6.5 0a6.5 6.5 0 1 1-6.5-6.5M6.5-6.5L0 0',

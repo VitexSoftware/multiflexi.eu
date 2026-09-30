@@ -39,7 +39,9 @@ class PageTop extends \Ease\Html\DivTag
             WebPage::singleton()->setPageTitle($pageTitle);
         }
 
-        $this->status = WebPage::singleton()->body->addAsFirst(new \Ease\Html\DivTag('', ['id' => 'status']));
+        // addAsFirst() does not return the added item in current Ease
+        $this->status = new \Ease\Html\DivTag('', ['id' => 'status']);
+        WebPage::singleton()->body->addAsFirst($this->status);
         WebPage::singleton()->body->addAsFirst(new MainMenu());
     }
 
