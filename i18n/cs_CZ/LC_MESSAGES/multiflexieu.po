@@ -2760,3 +2760,24 @@ msgstr "MultiFlexi.eu %s · © 2024–2026 %s"
 
 msgid "Open source under the MIT license"
 msgstr "Open source pod licencí MIT"
+
+msgid "Importers, exporters, reports and health checks ready to run in MultiFlexi – each one a Debian package with a JSON definition."
+msgstr "Importéry, exportéry, reporty a kontroly připravené ke spuštění v MultiFlexi – každá aplikace je balíček pro Debian s definicí v JSON."
+
+msgid "Install Steps"
+msgstr "Kroky instalace"
+
+msgid "Prepare"
+msgstr "Příprava"
+
+msgid "Configure Repo"
+msgstr "Repozitář"
+
+msgid "Update Sources"
+msgstr "Aktualizace zdrojů"
+
+msgid "Discover Apps"
+msgstr "Objevte aplikace"
+
+msgid "multiflexi-server (the REST API) requires PHP Slim <strong>4</strong>. No supported Debian/Ubuntu release packages that in its own archive — Debian 12, Ubuntu 22.04 and 24.04 don't ship <code>php-slim</code> at all, and Debian 13 (Trixie) ships Slim <strong>3</strong>, which is incompatible. VitexSoftware publishes its own Slim 4 <code>php-slim</code> package for every supported distro via the repository configured above; as long as it's enabled, <code>apt</code> installs the correct version automatically (its dependency is pinned to <code>php-slim (&gt;= 4)</code>)."
+msgstr "multiflexi-server (REST API) vyžaduje PHP Slim <strong>4</strong>. Žádné podporované vydání Debianu ani Ubuntu ho ve vlastním archivu nemá — Debian 12, Ubuntu 22.04 a 24.04 <code>php-slim</code> vůbec nenabízejí a Debian 13 (Trixie) má Slim <strong>3</strong>, který není kompatibilní. VitexSoftware vydává vlastní balíček <code>php-slim</code> se Slim 4 pro každou podporovanou distribuci v repozitáři nastaveném výše; dokud je zapnutý, <code>apt</code> nainstaluje správnou verzi automaticky (závislost je nastavená na <code>php-slim (&gt;= 4)</code>)."

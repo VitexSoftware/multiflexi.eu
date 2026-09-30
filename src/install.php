@@ -182,10 +182,11 @@ $oPage->addCss(<<<'CSS'
 CSS);
 
 /* ── Hero section ── */
-$oPage->container->addItem('<div class="mf-install-hero">
-  <h1><i class="bi bi-box-arrow-in-down"></i> '._('Install MultiFlexi').'</h1>
-  <p>'._('Set up the MultiFlexi automation platform on your Debian or Ubuntu system').'</p>
-</div>');
+$oPage->container->addItem(new PageHero(
+    _('Install MultiFlexi'),
+    _('Set up the MultiFlexi automation platform on your Debian or Ubuntu system'),
+    'Debian · Ubuntu',
+));
 
 /* ── ScrollSpy layout: sidebar + content ── */
 $installRow = new \Ease\TWB5\Row();

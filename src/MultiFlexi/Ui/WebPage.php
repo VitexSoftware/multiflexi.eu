@@ -25,7 +25,7 @@ class WebPage extends \Ease\TWB5\WebPage
     /**
      * Bump when css/theme.css, css/hub.css or js/theme.js change, so browsers fetch the new version.
      */
-    public const ASSET_VERSION = '1.0.0';
+    public const ASSET_VERSION = '1.1.0';
 
     /**
      * Put page contents here.

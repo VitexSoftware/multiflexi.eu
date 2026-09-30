@@ -149,7 +149,7 @@ msgstr "Schritt 1: System vorbereiten"
 
 #: src/install.php:184
 msgid "Install prerequisites needed for secure APT repository access."
-msgstr ""
+msgstr "Installieren Sie die Voraussetzungen für den sicheren Zugriff auf das APT-Repository."
 
 #: src/install.php:192
 msgid "Production Repository"
@@ -182,7 +182,7 @@ msgstr "Schritt 2: APT-Repository konfigurieren"
 #: src/install.php:217
 msgid ""
 "Choose your preferred repository channel and configure it interactively."
-msgstr ""
+msgstr "Wählen Sie den gewünschten Repository-Kanal und konfigurieren Sie ihn interaktiv."
 
 #: src/install.php:223
 msgid "Choose distribution"
@@ -199,15 +199,15 @@ msgstr "Wählen Sie Ihre Distribution:"
 
 #: src/install.php:259
 msgid "Configuration format:"
-msgstr ""
+msgstr "Konfigurationsformat:"
 
 #: src/install.php:261
 msgid "DEB822 format (.sources) — Recommended"
-msgstr ""
+msgstr "DEB822-Format (.sources) — empfohlen"
 
 #: src/install.php:262
 msgid "Legacy format (sources.list)"
-msgstr ""
+msgstr "Altes Format (sources.list)"
 
 #: src/install.php:267
 msgid "Select components:"
@@ -215,7 +215,7 @@ msgstr "Komponenten auswählen:"
 
 #: src/install.php:269
 msgid "The <strong>main</strong> component is always required."
-msgstr ""
+msgstr "Die Komponente <strong>main</strong> ist immer erforderlich."
 
 #: src/install.php:274
 msgid "Import the GPG Key"
@@ -227,7 +227,7 @@ msgstr "Konfigurationsdatei erstellen"
 
 #: src/install.php:281
 msgid "File path:"
-msgstr ""
+msgstr "Dateipfad:"
 
 #: src/install.php:288
 msgid "Quick install command:"
@@ -239,7 +239,7 @@ msgstr "Kopieren Sie dies in Ihr Terminal:"
 
 #: src/install.php:295
 msgid "Select your distribution above to generate customized configuration"
-msgstr ""
+msgstr "Wählen Sie oben Ihre Distribution, um eine passende Konfiguration zu erzeugen"
 
 #: src/install.php:306
 msgid "Step 3: Update Sources"
@@ -281,11 +281,11 @@ msgstr "Nach Tags filtern"
 msgid ""
 "Select tags to filter applications. All applications are shown when no tags "
 "are selected."
-msgstr ""
+msgstr "Wählen Sie Tags, um die Anwendungen zu filtern. Ohne ausgewählte Tags werden alle Anwendungen angezeigt."
 
 #: src/apps.php:100
 msgid "Select tags to filter applications..."
-msgstr ""
+msgstr "Tags zum Filtern der Anwendungen wählen …"
 
 #: src/apps.php:104 src/credentialtypes.php:91
 msgid "Reset Filter"
@@ -293,7 +293,7 @@ msgstr "Filter zurücksetzen"
 
 #: src/apps.php:108
 msgid "Select all tags to show all applications"
-msgstr ""
+msgstr "Alle Tags wählen, um alle Anwendungen anzuzeigen"
 
 #: src/apps.php:117
 msgid "applications"
@@ -1456,3 +1456,24 @@ msgstr "MultiFlexi.eu %s · © 2024–2026 %s"
 
 msgid "Open source under the MIT license"
 msgstr "Open Source unter der MIT-Lizenz"
+
+msgid "Importers, exporters, reports and health checks ready to run in MultiFlexi – each one a Debian package with a JSON definition."
+msgstr "Importer, Exporter, Berichte und Health-Checks, startklar in MultiFlexi – jede Anwendung ein Debian-Paket mit JSON-Definition."
+
+msgid "Install Steps"
+msgstr "Installationsschritte"
+
+msgid "Prepare"
+msgstr "Vorbereitung"
+
+msgid "Configure Repo"
+msgstr "Repository"
+
+msgid "Update Sources"
+msgstr "Quellen aktualisieren"
+
+msgid "Discover Apps"
+msgstr "Anwendungen entdecken"
+
+msgid "multiflexi-server (the REST API) requires PHP Slim <strong>4</strong>. No supported Debian/Ubuntu release packages that in its own archive — Debian 12, Ubuntu 22.04 and 24.04 don't ship <code>php-slim</code> at all, and Debian 13 (Trixie) ships Slim <strong>3</strong>, which is incompatible. VitexSoftware publishes its own Slim 4 <code>php-slim</code> package for every supported distro via the repository configured above; as long as it's enabled, <code>apt</code> installs the correct version automatically (its dependency is pinned to <code>php-slim (&gt;= 4)</code>)."
+msgstr "multiflexi-server (die REST-API) benötigt PHP Slim <strong>4</strong>. Keine unterstützte Debian/Ubuntu-Version enthält es im eigenen Archiv — Debian 12, Ubuntu 22.04 und 24.04 liefern <code>php-slim</code> gar nicht, und Debian 13 (Trixie) liefert Slim <strong>3</strong>, das inkompatibel ist. VitexSoftware veröffentlicht für jede unterstützte Distribution ein eigenes <code>php-slim</code>-Paket mit Slim 4 im oben eingerichteten Repository; solange es aktiviert ist, installiert <code>apt</code> automatisch die richtige Version (die Abhängigkeit ist auf <code>php-slim (&gt;= 4)</code> festgelegt)."

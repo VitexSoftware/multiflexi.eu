@@ -150,3 +150,51 @@ pre code { color: inherit; }
 .lang-drop .dropdown-item { border-radius: 8px; font-size: .88rem; color: var(--text); display: flex; justify-content: space-between; gap: 16px; }
 .lang-drop .dropdown-item small { color: var(--dim); letter-spacing: .06em; }
 .lang-drop .dropdown-item.active, .lang-drop .dropdown-item:hover { background: var(--glass-2); color: var(--text); }
+
+/* ---------- install page (overrides its inline light styles) ---------- */
+body .mf-setup-card, body .mf-db-card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: none; }
+body .mf-setup-header, body .mf-db-header { background: var(--glass-2); color: var(--text); border-bottom: 1px solid var(--border); border-radius: var(--radius) var(--radius) 0 0; font-weight: 500; }
+body .mf-db-header i, body .mf-step-h3 i { color: var(--p2); }
+body .mf-setup-header h2 { color: var(--text); font-weight: 500; }
+body .mf-setup-header p { color: var(--dim); }
+body .mf-repo-logo-prod { filter: none; }
+body .mf-label-teal { color: var(--dim); }
+body .mf-select-teal { background-color: var(--glass); border-color: var(--border); color: var(--text); }
+body .mf-comp-card { background: var(--glass-2); border-color: var(--border); }
+body .mf-comp-card .form-check-label { color: var(--text); }
+body .mf-step-h3 { color: var(--text); font-weight: 500; border-left-color: var(--p1); }
+body .mf-pre, body .mf-pre-config, body .mf-quick-cmd { background: rgba(0, 0, 0, .32); color: #fff4f8; border: 1px solid var(--border); border-left: 3px solid var(--p1); border-radius: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+body .mf-pre-config { border-left-color: var(--p2); color: var(--p2); }
+:root[data-theme="light"] body .mf-pre, :root[data-theme="light"] body .mf-pre-config, :root[data-theme="light"] body .mf-quick-cmd { background: #2a1640; }
+body .mf-copy-btn { border-radius: 999px; }
+body .mf-quick-alert { background: var(--glass); border-color: var(--border); border-left-color: var(--p4); border-radius: 12px; color: var(--text); }
+body .mf-no-distro { color: var(--dim); }
+body .mf-no-distro i { color: var(--p1); }
+body .mf-badge-prod { background: color-mix(in srgb, #3ddc97 18%, transparent); color: #3ddc97; border-color: color-mix(in srgb, #3ddc97 40%, transparent); }
+body .mf-badge-test { background: color-mix(in srgb, var(--p4) 18%, transparent); color: var(--p4); border-color: color-mix(in srgb, var(--p4) 40%, transparent); }
+body .mf-sidebar-label { color: var(--dim); }
+body .mf-step-sidebar { top: calc(var(--header-h) + 16px); }
+body .mf-step-sidebar .list-group-item { background: transparent; color: var(--dim); border-bottom-color: var(--border); }
+body .mf-step-sidebar .list-group-item.active { background: var(--glass-2); color: var(--text); border-left-color: var(--p1); }
+body .mf-step-sidebar .list-group-item:hover:not(.active) { background: var(--glass); color: var(--text); }
+body .mf-step-num { background: linear-gradient(135deg, var(--p1), var(--p3)); }
+body .list-group-item.active .mf-step-num { background: linear-gradient(135deg, var(--p1), var(--p3)); color: #fff; }
+
+/* ---------- app / credential type cards ---------- */
+body .app-card:hover { box-shadow: 0 20px 50px -24px color-mix(in srgb, var(--p1) 50%, transparent); border-color: var(--border-strong); }
+body .tag-badge.bg-primary { background: linear-gradient(100deg, var(--p1), var(--p3)) !important; box-shadow: none !important; }
+.page-toolbar { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-bottom: 18px; }
+.btn-group > .btn { border-radius: 999px; }
+.btn-group > .btn:not(:last-child) { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.btn-group > .btn:not(:first-child) { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.page-content img.rounded.shadow-sm { border-radius: 16px !important; border: 1px solid var(--border); }
+
+/* selectize (tag filter) + green actions */
+body .selectize-input, body .selectize-input.full, body .selectize-control.single .selectize-input { background: var(--glass) !important; border: 1px solid var(--border) !important; border-radius: 12px; color: var(--text); box-shadow: none !important; }
+body .selectize-input input { color: var(--text) !important; }
+body .selectize-input input::placeholder { color: var(--dim); }
+body .selectize-dropdown { background: var(--bg-2); border: 1px solid var(--border); color: var(--text); border-radius: 12px; }
+body .selectize-dropdown .active { background: var(--glass-2); color: var(--text); }
+body .selectize-control.multi .selectize-input > div { background: linear-gradient(100deg, var(--p1), var(--p3)); color: #fff; border-radius: 999px; border: 0; }
+.btn-success { --bs-btn-color: #fff; --bs-btn-hover-color: #fff; background: linear-gradient(100deg, var(--p1), var(--p3)); border: 0; }
+.btn-success:hover { box-shadow: 0 10px 34px -8px color-mix(in srgb, var(--p3) 70%, transparent); }
