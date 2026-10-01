@@ -30,8 +30,12 @@ require_once __DIR__.'/init.php';
 $oPage->addItem(new PageTop(_('Applications')));
 
 // View toggle buttons
-$viewToggle = new DivTag(null, ['class' => 'd-flex justify-content-between align-items-center mb-3']);
-$viewToggle->addItem(new H2Tag(_('Applications'), ['class' => 'mb-0']));
+$oPage->container->addItem(new PageHero(
+    _('Applications'),
+    _('Importers, exporters, reports and health checks ready to run in MultiFlexi – each one a Debian package with a JSON definition.'),
+    'MultiFlexi Hub',
+));
+$viewToggle = new DivTag(null, ['class' => 'page-toolbar']);
 $toggleBtns = new DivTag(null, ['class' => 'btn-group', 'role' => 'group']);
 $toggleBtns->addItem(new \Ease\Html\ButtonTag(
     '<i class="bi bi-grid-3x3-gap-fill"></i> '._('Cards'),

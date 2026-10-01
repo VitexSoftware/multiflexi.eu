@@ -39,7 +39,7 @@ session_start();
     ['DB_CONNECTION', 'DB_HOST', 'DB_PORT', 'DB_DATABASE', 'DB_USERNAME', 'DB_PASSWORD'],
     \dirname(__DIR__).'/.env',
 );
-\Ease\Locale::singleton(null, '../i18n', 'multiflexieu');
+\Ease\Locale::singleton(\PHP_SAPI === 'cli' ? null : WebPage::preferredLocale('../i18n', 'multiflexieu'), '../i18n', 'multiflexieu');
 // Workaround: Ease\Locale sets LANGUAGUE (typo) instead of LANGUAGE;
 // gettext on some systems needs the correct LANGUAGE env var to find .mo files.
 \putenv('LANGUAGE='.(\Ease\Locale::$localeUsed ?? 'en_US'));

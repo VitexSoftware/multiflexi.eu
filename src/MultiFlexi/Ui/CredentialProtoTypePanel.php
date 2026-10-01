@@ -39,7 +39,7 @@ class CredentialProtoTypePanel extends Panel
     {
         $cid = $prototype->getMyKey();
         $logoUrl = method_exists($prototype, 'getLogoUrl') ? $prototype->getLogoUrl() : 'credentialtypeimage.php?uuid='.rawurlencode((string) $prototype->getDataValue('uuid'));
-        $logo = new \Ease\Html\ImgTag($logoUrl, $prototype->getRecordName(), [
+        $logo = new \Ease\Html\ImgTag($logoUrl, (string) $prototype->getRecordName(), [
             'class' => 'img-thumbnail me-2',
             'style' => 'max-width: 48px; max-height: 48px;',
         ]);

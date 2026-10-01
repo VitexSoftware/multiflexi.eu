@@ -571,7 +571,7 @@ msgstr "Neznámá akce"
 
 #: src/whatis.php:34 src/whatis.php:38 src/MultiFlexi/Ui/MainMenu.php:55
 msgid "What is MultiFlexi?"
-msgstr ""
+msgstr "Co je MultiFlexi?"
 
 #: src/whatis.php:40
 msgid ""
@@ -579,11 +579,11 @@ msgid ""
 "business system integrations. It lets organizations run applications — "
 "importers, exporters, reports, health checks — on a schedule across multiple "
 "companies, with isolated credentials and full execution history."
-msgstr ""
+msgstr "MultiFlexi je open source platforma pro plánování úloh a automatizaci integrací firemních systémů. Organizacím umožňuje spouštět aplikace — importéry, exportéry, reporty, kontroly — podle plánu pro mnoho firem, s oddělenými přístupy a úplnou historií běhů."
 
 #: src/whatis.php:46
 msgid "MultiFlexi dashboard"
-msgstr ""
+msgstr "Nástěnka MultiFlexi"
 
 #: src/whatis.php:51
 msgid ""
@@ -591,53 +591,53 @@ msgid ""
 "scattered shell scripts and cron entries, you register applications once, "
 "assign them to companies with the right credentials, and let MultiFlexi "
 "handle scheduling, execution, output capture, and monitoring."
-msgstr ""
+msgstr "Představte si to jako cron na steroidech pro firemní automatizaci: místo roztroušených shellových skriptů a záznamů v cronu aplikace jednou zaregistrujete, přiřadíte je firmám se správnými přístupy a plánování, spouštění, zachytávání výstupu i monitoring nechte na MultiFlexi."
 
 #: src/whatis.php:56
 msgid "Who is it for?"
-msgstr ""
+msgstr "Pro koho to je?"
 
 #: src/whatis.php:60
 msgid "Accounting Firms"
-msgstr ""
+msgstr "Účetní kanceláře"
 
 #: src/whatis.php:60
 msgid ""
 "Automating daily tasks for dozens of clients — bank imports, invoice "
 "generation, report exports — each running with that client's own credentials."
-msgstr ""
+msgstr "Automatizace každodenních úloh pro desítky klientů – import bankovních výpisů, vystavování faktur, exporty reportů – každá běží s vlastními přístupy daného klienta."
 
 #: src/whatis.php:61
 msgid "Managed Service Providers"
-msgstr ""
+msgstr "Správci IT služeb"
 
 #: src/whatis.php:61
 msgid ""
 "Running system health checks, backup verifications, and compliance reports "
 "across customer environments on schedule."
-msgstr ""
+msgstr "Pravidelné kontroly systémů, ověřování záloh a reporty souladu napříč prostředími zákazníků."
 
 #: src/whatis.php:62
 msgid "Internal IT Teams"
-msgstr ""
+msgstr "Interní IT týmy"
 
 #: src/whatis.php:62
 msgid ""
 "Synchronizing data between systems, dispatching notifications, and "
 "maintaining databases without hand-written automation glue."
-msgstr ""
+msgstr "Synchronizace dat mezi systémy, rozesílání upozornění a údržba databází bez ručně psaného automatizačního lepidla."
 
 #: src/whatis.php:77
 msgid "Key Concepts"
-msgstr ""
+msgstr "Klíčové pojmy"
 
 #: src/whatis.php:79
 msgid "MultiFlexi is built around five core entities that work together:"
-msgstr ""
+msgstr "MultiFlexi stojí na pěti základních entitách, které spolupracují:"
 
 #: src/whatis.php:85
 msgid "MultiFlexi entity relationships"
-msgstr ""
+msgstr "Vztahy entit v MultiFlexi"
 
 #: src/whatis.php:91
 msgid "Company"
@@ -647,24 +647,24 @@ msgstr "Společnost"
 msgid ""
 "A tenant or organization you automate tasks for. Each company has its own "
 "set of credentials and job history, ensuring full data isolation."
-msgstr ""
+msgstr "Klient nebo organizace, pro kterou úlohy automatizujete. Každá firma má vlastní přístupy a historii úloh, takže data jsou plně oddělená."
 
 #: src/whatis.php:92
 msgid ""
 "A tool that MultiFlexi can execute — a CLI binary, a PHP script, a Docker "
 "image. Applications are registered once and can be assigned to any company."
-msgstr ""
+msgstr "Nástroj, který MultiFlexi umí spustit — binárka pro příkazovou řádku, PHP skript nebo Docker image. Aplikace se zaregistruje jednou a lze ji přiřadit libovolné firmě."
 
 #: src/whatis.php:93
 msgid "Credential"
-msgstr ""
+msgstr "Přístup"
 
 #: src/whatis.php:93
 msgid ""
 "Securely stored authentication data (API keys, database passwords, SMTP "
 "accounts). Credentials are scoped to a company and encrypted at rest with "
 "AES-256."
-msgstr ""
+msgstr "Bezpečně uložené přihlašovací údaje (API klíče, hesla k databázím, SMTP účty). Přístupy patří vždy ke konkrétní firmě a jsou šifrované pomocí AES-256."
 
 #: src/whatis.php:94
 #, fuzzy
@@ -675,7 +675,7 @@ msgstr "%s Předloh běhu odstraněno"
 msgid ""
 "The link between an application and a company: \"run this app for this "
 "company on this schedule with these credentials.\""
-msgstr ""
+msgstr "Propojení aplikace a firmy: „spusť tuhle aplikaci pro tuhle firmu podle tohohle plánu s těmihle přístupy.“"
 
 #: src/whatis.php:95
 msgid "Job"
@@ -685,190 +685,190 @@ msgstr "Úloha"
 msgid ""
 "A single execution of a RunTemplate. MultiFlexi records the start time, exit "
 "code, stdout, stderr, and any output files as searchable artifacts."
-msgstr ""
+msgstr "Jedno spuštění RunTemplate. MultiFlexi zaznamená čas startu, návratový kód, stdout, stderr a všechny výstupní soubory jako prohledávatelné artefakty."
 
 #: src/whatis.php:114
 msgid "How It Works"
-msgstr ""
+msgstr "Jak to funguje"
 
 #: src/whatis.php:117
 msgid ""
 "Register an application — import its JSON definition or create it in the web "
 "UI."
-msgstr ""
+msgstr "Zaregistrujte aplikaci — importujte její JSON definici nebo ji vytvořte ve webovém rozhraní."
 
 #: src/whatis.php:118
 msgid ""
 "Add a company — create a tenant representing the organization whose tasks "
 "you're automating."
-msgstr ""
+msgstr "Přidejte firmu — založte klienta představujícího organizaci, jejíž úlohy automatizujete."
 
 #: src/whatis.php:119
 msgid ""
 "Assign credentials — store the company's API keys, database passwords, or "
 "SMTP accounts. MultiFlexi encrypts them and injects them as environment "
 "variables at runtime."
-msgstr ""
+msgstr "Přiřaďte přístupy — uložte API klíče, hesla k databázím nebo SMTP účty dané firmy. MultiFlexi je zašifruje a při běhu předá jako proměnné prostředí."
 
 #: src/whatis.php:120
 msgid ""
 "Create a RunTemplate — pick the application, the company, the schedule, and "
 "the credentials."
-msgstr ""
+msgstr "Vytvořte RunTemplate — vyberte aplikaci, firmu, plán a přístupy."
 
 #: src/whatis.php:121
 msgid ""
 "Jobs run automatically — the scheduler daemon creates job records when the "
 "schedule is due, and the executor daemon launches the application and "
 "captures all output."
-msgstr ""
+msgstr "Úlohy běží samy — plánovač vytvoří záznam úlohy, když nastane její čas, a spouštěč aplikaci spustí a zachytí veškerý výstup."
 
 #: src/whatis.php:133
 msgid "Execution Environments"
-msgstr ""
+msgstr "Prostředí pro běh"
 
 #: src/whatis.php:135
 msgid "MultiFlexi can launch applications in several ways:"
-msgstr ""
+msgstr "MultiFlexi umí aplikace spouštět několika způsoby:"
 
 #: src/whatis.php:141
 msgid "Native"
-msgstr ""
+msgstr "Nativně"
 
 #: src/whatis.php:141
 msgid "run the command directly on the server"
-msgstr ""
+msgstr "spustí příkaz přímo na serveru"
 
 #: src/whatis.php:142
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: src/whatis.php:142
 msgid "run inside a Docker container with the application's OCI image"
-msgstr ""
+msgstr "spustí v kontejneru Docker s OCI image aplikace"
 
 #: src/whatis.php:143
 msgid "Podman"
-msgstr ""
+msgstr "Podman"
 
 #: src/whatis.php:143
 msgid "rootless container execution"
-msgstr ""
+msgstr "spouštění v kontejneru bez roota"
 
 #: src/whatis.php:144
 msgid "Kubernetes"
-msgstr ""
+msgstr "Kubernetes"
 
 #: src/whatis.php:144
 msgid "launch as a K8s pod"
-msgstr ""
+msgstr "spustí jako pod v K8s"
 
 #: src/whatis.php:145
 msgid "Azure Container Instances"
-msgstr ""
+msgstr "Azure Container Instances"
 
 #: src/whatis.php:145
 msgid "run in the cloud"
-msgstr ""
+msgstr "spustí v cloudu"
 
 #: src/whatis.php:158
 msgid ""
 "The executor is pluggable: each RunTemplate can use a different execution "
 "backend depending on the application's requirements."
-msgstr ""
+msgstr "Spouštěč je výměnný: každý RunTemplate může podle potřeb aplikace použít jiný backend."
 
 #: src/whatis.php:163
 msgid "Multiple Interfaces"
-msgstr ""
+msgstr "Více rozhraní"
 
 #: src/whatis.php:165
 msgid ""
 "You interact with MultiFlexi through whichever interface fits your workflow:"
-msgstr ""
+msgstr "S MultiFlexi pracujete přes rozhraní, které vám vyhovuje:"
 
 #: src/whatis.php:170
 msgid "Web UI"
-msgstr ""
+msgstr "Webové rozhraní"
 
 #: src/whatis.php:170
 msgid ""
 "Bootstrap 5 dashboard with real-time metrics, company/application/credential "
 "management, job history, and live output streaming via WebSocket."
-msgstr ""
+msgstr "Nástěnka v Bootstrapu 5 s metrikami v reálném čase, správou firem, aplikací a přístupů, historií úloh a živým výstupem přes WebSocket."
 
 #: src/whatis.php:171
 msgid "CLI"
-msgstr ""
+msgstr "CLI"
 
 #: src/whatis.php:171
 msgid ""
 "Full-featured command-line tool for scripting, CI/CD pipelines, and headless "
 "administration."
-msgstr ""
+msgstr "Plnohodnotný nástroj pro příkazovou řádku – skripty, CI/CD pipeline a správa bez grafického rozhraní."
 
 #: src/whatis.php:172
 msgid "TUI"
-msgstr ""
+msgstr "TUI"
 
 #: src/whatis.php:172
 msgid ""
 "Interactive terminal interface built with Bubbletea (Go) for keyboard-driven "
 "management."
-msgstr ""
+msgstr "Interaktivní rozhraní v terminálu postavené na Bubbletea (Go) pro ovládání z klávesnice."
 
 #: src/whatis.php:173
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: src/whatis.php:173
 msgid ""
 "JSON/XML/YAML endpoints with HTTP Basic and token authentication for "
 "programmatic integration."
-msgstr ""
+msgstr "Endpointy v JSON, XML a YAML s HTTP Basic a tokenovým ověřením pro programovou integraci."
 
 #: src/whatis.php:174
 msgid "MCP Server"
-msgstr ""
+msgstr "MCP server"
 
 #: src/whatis.php:174
 msgid "Model Context Protocol server for AI agent integration."
-msgstr ""
+msgstr "Server Model Context Protocol pro napojení AI agentů."
 
 #: src/whatis.php:191
 msgid "Monitoring and Observability"
-msgstr ""
+msgstr "Monitoring a přehled"
 
 #: src/whatis.php:195
 msgid ""
 "Zabbix integration with Low-Level Discovery — auto-discovers companies and "
 "applications, monitors job success rates and execution times"
-msgstr ""
+msgstr "Integrace se Zabbixem s Low-Level Discovery — sama objeví firmy a aplikace, sleduje úspěšnost úloh a dobu běhu"
 
 #: src/whatis.php:196
 msgid "OpenTelemetry support for distributed tracing"
-msgstr ""
+msgstr "Podpora OpenTelemetry pro distribuované trasování"
 
 #: src/whatis.php:197
 msgid "Structured logging to syslog, database, and custom targets"
-msgstr ""
+msgstr "Strukturované logování do syslogu, databáze a vlastních cílů"
 
 #: src/whatis.php:198
 msgid ""
 "Universal artifact preservation — every job's stdout, stderr, and output "
 "files are stored and searchable"
-msgstr ""
+msgstr "Uchování všech artefaktů — stdout, stderr i výstupní soubory každé úlohy jsou uložené a prohledávatelné"
 
 #: src/whatis.php:208
 msgid "Getting Started"
-msgstr ""
+msgstr "Jak začít"
 
 #: src/whatis.php:209
 msgid "Ready to try it?"
-msgstr ""
+msgstr "Chcete to zkusit?"
 
 #: src/whatis.php:212
 msgid "Browse Apps"
-msgstr ""
+msgstr "Procházet aplikace"
 
 #: src/whatis.php:213 src/credentialtypes.php:27 src/credentialtypes.php:32
 #: src/MultiFlexi/Ui/MainMenu.php:58
@@ -882,11 +882,11 @@ msgstr "Instalace"
 
 #: src/whatis.php:215
 msgid "Try Demo"
-msgstr ""
+msgstr "Vyzkoušet demo"
 
 #: src/whatis.php:220
 msgid "MultiFlexi on GitHub"
-msgstr ""
+msgstr "MultiFlexi na GitHubu"
 
 #: src/whatis.php:221 src/MultiFlexi/Ui/PageBottom.php:52
 msgid "Documentation"
@@ -894,7 +894,7 @@ msgstr "Dokumentace"
 
 #: src/whatis.php:222
 msgid "Demo Instance — try MultiFlexi without installing"
-msgstr ""
+msgstr "Demo instance — vyzkoušejte MultiFlexi bez instalace"
 
 #: src/login.php:47 src/MultiFlexi/Ui/MainMenu.php:69
 msgid "Sign In"
@@ -1185,7 +1185,7 @@ msgstr "Přepnout navigaci"
 
 #: src/MultiFlexi/Ui/MainMenu.php:56
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 #: src/MultiFlexi/Ui/MainMenu.php:57
 msgid "Apps"
@@ -2511,3 +2511,273 @@ msgstr "URL loga"
 #, fuzzy
 #~ msgid "Transakce"
 #~ msgstr "Transakce"
+
+msgid "Bank"
+msgstr "Banka"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Fio bank statement imported"
+msgstr "Výpis z Fio importován"
+
+msgid "Pohoda · 23 transactions"
+msgstr "Pohoda · 23 pohybů"
+
+msgid "Payments matched to invoices"
+msgstr "Platby spárovány s fakturami"
+
+msgid "AbraFlexi · by variable symbol"
+msgstr "AbraFlexi · podle VS"
+
+msgid "Payment reminders sent"
+msgstr "Upomínky odeslány"
+
+msgid "only to overdue customers"
+msgstr "jen po splatnosti"
+
+msgid "Received invoices from e-mail"
+msgstr "Přijaté faktury z e-mailu"
+
+msgid "loaded into AbraFlexi"
+msgstr "načteny do AbraFlexi"
+
+msgid "Weekly digest for the management"
+msgstr "Týdenní přehled pro vedení"
+
+msgid "receivables and cash flow"
+msgstr "pohledávky a cashflow"
+
+msgid "Health check passed"
+msgstr "Kontrola dostupnosti v pořádku"
+
+msgid "Zabbix · all companies"
+msgstr "Zabbix · všechny firmy"
+
+msgid "Automation"
+msgstr "Automatizace"
+
+msgid "Freedom"
+msgstr "Svoboda"
+
+msgid "Automation that"
+msgstr "Automatizace, která"
+
+msgid "runs by itself."
+msgstr "běží sama."
+
+msgid "MultiFlexi runs, schedules and watches your integrations on top of AbraFlexi and Pohoda – for dozens of companies, with isolated credentials and a full history."
+msgstr "MultiFlexi spouští, plánuje a hlídá vaše integrace nad AbraFlexi a Pohodou – pro desítky firem, s oddělenými přístupy a úplnou historií."
+
+msgid "Cron on steroids for business automation."
+msgstr "Cron na steroidech pro firemní automatizaci."
+
+msgid "Turnkey automation"
+msgstr "Automatizace na klíč"
+
+msgid "Install for free"
+msgstr "Nainstalovat zdarma"
+
+msgid "Example of a MultiFlexi morning"
+msgstr "Ukázka rána s MultiFlexi"
+
+msgid "this morning · example"
+msgstr "dnes ráno · ukázka"
+
+msgid "A better world starts with good software"
+msgstr "Lepší svět začíná dobrým softwarem"
+
+msgid "Two ways to start"
+msgstr "Dvě cesty, jak začít"
+
+msgid "We run it for you, or you run it yourself"
+msgstr "Provozujeme za vás, nebo si to provozujte sami"
+
+msgid "Less manual work."
+msgstr "Méně ruční práce."
+
+msgid "More time for what matters."
+msgstr "Více času na to, co má smysl."
+
+msgid "Turnkey from Vitex Software"
+msgstr "Na klíč od Vitex Software"
+
+msgid "We set it up, host it and watch over it"
+msgstr "Nastavíme, hostujeme a hlídáme"
+
+msgid "78 ready-made automations for AbraFlexi and Pohoda: bank statements, payment matching, reminders, received invoices and digests. You only look at the results."
+msgstr "78 hotových automatizací pro AbraFlexi a Pohodu: bankovní výpisy, párování plateb, upomínky, přijaté faktury a přehledy. Vy jen koukáte na výsledek."
+
+msgid "Pricing"
+msgstr "Ceník"
+
+msgid "Get a free quote"
+msgstr "Nezávazně poptat"
+
+msgid "Open source, on your server"
+msgstr "Open source, na vašem serveru"
+
+msgid "Free, MIT license"
+msgstr "Zdarma, licence MIT"
+
+msgid "Packages for Debian and Ubuntu with MySQL, PostgreSQL or SQLite. Add the repository and install:"
+msgstr "Balíčky pro Debian a Ubuntu s MySQL, PostgreSQL nebo SQLite. Přidejte repozitář a nainstalujte:"
+
+msgid "Installation guide"
+msgstr "Návod k instalaci"
+
+msgid "%d applications ready to run"
+msgstr "%d aplikací připravených ke spuštění"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "try one automation"
+msgstr "vyzkoušet 1 automatizaci"
+
+msgid "CZK"
+msgstr "Kč"
+
+msgid "setup 2 900 CZK one-off"
+msgstr "nastavení 2 900 Kč jednorázově"
+
+msgid "1 automation of your choice"
+msgstr "1 automatizace dle výběru"
+
+msgid "hosting included"
+msgstr "hostování v ceně"
+
+msgid "tool updates"
+msgstr "aktualizace nástroje"
+
+msgid "e-mail support"
+msgstr "podpora e-mailem"
+
+msgid "Operation"
+msgstr "Provoz"
+
+msgid "a typical company on AbraFlexi / Pohoda"
+msgstr "běžná firma na AbraFlexi / Pohodě"
+
+msgid "setup 4 900 CZK one-off"
+msgstr "nastavení 4 900 Kč jednorázově"
+
+msgid "2–3 automations of your choice"
+msgstr "2–3 automatizace dle výběru"
+
+msgid "hosting + monitoring"
+msgstr "hostování + monitoring"
+
+msgid "automatic updates"
+msgstr "automatické aktualizace"
+
+msgid "priority support"
+msgstr "přednostní podpora"
+
+msgid "Turnkey"
+msgstr "Na klíč"
+
+msgid "complex operation and customisation"
+msgstr "složitější provoz a úpravy"
+
+msgid "from"
+msgstr "od"
+
+msgid "setup from 9 900 CZK one-off"
+msgstr "nastavení od 9 900 Kč jednorázově"
+
+msgid "unlimited automations"
+msgstr "neomezeně automatizací"
+
+msgid "custom changes"
+msgstr "úpravy na míru"
+
+msgid "priority SLA + phone"
+msgstr "prioritní SLA + telefon"
+
+msgid "monthly report"
+msgstr "měsíční report"
+
+msgid "most popular"
+msgstr "nejoblíbenější"
+
+msgid "month"
+msgstr "měsíc"
+
+msgid "I am interested"
+msgstr "Mám zájem"
+
+msgid "One automation saves more than it costs"
+msgstr "Jedna automatizace ušetří víc, než stojí"
+
+msgid "Set up, hosted and monitored by Vitex Software. Paying a year in advance = 2 months of operation free."
+msgstr "Nastaví, hostuje a hlídá Vitex Software. Roční platba předem = 2 měsíce provozu zdarma."
+
+msgid "Prices are final, we are not VAT payers."
+msgstr "Ceny jsou konečné, nejsme plátci DPH."
+
+msgid "Who is behind MultiFlexi"
+msgstr "Kdo stojí za MultiFlexi"
+
+msgid "MultiFlexi is written, packaged and run by Vítězslav Dvořák from Vitex Software – everything as open source."
+msgstr "MultiFlexi píše, balí a provozuje Vítězslav Dvořák z Vitex Software – všechno jako open source."
+
+msgid "The same platform runs the automations of Vitex Software customers every day."
+msgstr "Stejná platforma každý den provozuje automatizace zákazníků Vitex Software."
+
+msgid "Click through the demo"
+msgstr "Proklikejte si demo"
+
+msgid "or let us show you on your data."
+msgstr "nebo vám to ukážeme na vašich datech."
+
+msgid "My account"
+msgstr "Můj účet"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Switch light / dark mode"
+msgstr "Přepnout světlý / tmavý režim"
+
+msgid "Try the demo"
+msgstr "Vyzkoušet demo"
+
+msgid "Product"
+msgstr "Produkt"
+
+msgid "Community"
+msgstr "Komunita"
+
+msgid "Accounting automation"
+msgstr "Automatizace účetnictví"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "MultiFlexi.eu %s · © 2024–2026 %s"
+msgstr "MultiFlexi.eu %s · © 2024–2026 %s"
+
+msgid "Open source under the MIT license"
+msgstr "Open source pod licencí MIT"
+
+msgid "Importers, exporters, reports and health checks ready to run in MultiFlexi – each one a Debian package with a JSON definition."
+msgstr "Importéry, exportéry, reporty a kontroly připravené ke spuštění v MultiFlexi – každá aplikace je balíček pro Debian s definicí v JSON."
+
+msgid "Install Steps"
+msgstr "Kroky instalace"
+
+msgid "Prepare"
+msgstr "Příprava"
+
+msgid "Configure Repo"
+msgstr "Repozitář"
+
+msgid "Update Sources"
+msgstr "Aktualizace zdrojů"
+
+msgid "Discover Apps"
+msgstr "Objevte aplikace"
+
+msgid "multiflexi-server (the REST API) requires PHP Slim <strong>4</strong>. No supported Debian/Ubuntu release packages that in its own archive — Debian 12, Ubuntu 22.04 and 24.04 don't ship <code>php-slim</code> at all, and Debian 13 (Trixie) ships Slim <strong>3</strong>, which is incompatible. VitexSoftware publishes its own Slim 4 <code>php-slim</code> package for every supported distro via the repository configured above; as long as it's enabled, <code>apt</code> installs the correct version automatically (its dependency is pinned to <code>php-slim (&gt;= 4)</code>)."
+msgstr "multiflexi-server (REST API) vyžaduje PHP Slim <strong>4</strong>. Žádné podporované vydání Debianu ani Ubuntu ho ve vlastním archivu nemá — Debian 12, Ubuntu 22.04 a 24.04 <code>php-slim</code> vůbec nenabízejí a Debian 13 (Trixie) má Slim <strong>3</strong>, který není kompatibilní. VitexSoftware vydává vlastní balíček <code>php-slim</code> se Slim 4 pro každou podporovanou distribuci v repozitáři nastaveném výše; dokud je zapnutý, <code>apt</code> nainstaluje správnou verzi automaticky (závislost je nastavená na <code>php-slim (&gt;= 4)</code>)."
