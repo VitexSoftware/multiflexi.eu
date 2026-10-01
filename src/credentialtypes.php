@@ -28,8 +28,12 @@ $oPage->addItem(new PageTop(_('Credential Types')));
 $oPage->includeCSS('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
 
 // View toggle buttons
-$viewToggle = new \Ease\Html\DivTag(null, ['class' => 'd-flex justify-content-between align-items-center mb-3']);
-$viewToggle->addItem(new \Ease\Html\H2Tag(_('Credential Types'), ['class' => 'mb-0']));
+$oPage->container->addItem(new PageHero(
+    _('Credential Types'),
+    _('Securely stored authentication data (API keys, database passwords, SMTP accounts). Credentials are scoped to a company and encrypted at rest with AES-256.'),
+    'MultiFlexi Hub',
+));
+$viewToggle = new \Ease\Html\DivTag(null, ['class' => 'page-toolbar']);
 $toggleBtns = new \Ease\Html\DivTag(null, ['class' => 'btn-group', 'role' => 'group']);
 $toggleBtns->addItem(new \Ease\Html\ButtonTag(
     '<i class="bi bi-grid-3x3-gap-fill"></i> '._('Cards'),

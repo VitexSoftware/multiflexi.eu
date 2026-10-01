@@ -149,7 +149,7 @@ class CredentialProtoType extends \MultiFlexi\CredentialProtoType
 
     public function getLogoUrl(): string
     {
-        return self::logoUrl($this->getData());
+        return self::logoUrl($this->getData() ?? []);
     }
 
     private static function logoImageHtml(array $dataRow): string

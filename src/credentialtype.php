@@ -23,7 +23,23 @@ use MultiFlexi\Hub\CredentialProtoType;
 require_once __DIR__.'/init.php';
 
 $action = \Ease\WebPage::getRequestValue('action');
-$prototype = new CredentialProtoType(WebPage::getRequestValue('id', 'int'));
+$requestedId = WebPage::getRequestValue('id', 'int');
+$prototype = new CredentialProtoType($requestedId);
+
+if ($requestedId && !$prototype->getMyKey()) {
+    http_response_code(404);
+    $oPage->addItem(new PageTop(_('Credential type not found')));
+    $oPage->container->addItem(new PageHero(
+        _('Credential type not found'),
+        _('It may have been removed, or the link is wrong.'),
+        '404',
+        [new \Ease\Html\ATag('credentialtypes.php', _('View all credential types').' <span class="arrow">→</span>', ['class' => 'btn btn-glow'])],
+    ));
+    $oPage->addItem(new PageBottom());
+    $oPage->draw();
+
+    exit;
+}
 $instanceName = $prototype->getDataValue('name') ?: _('n/a');
 
 $loggedUser = \Ease\Shared::user();

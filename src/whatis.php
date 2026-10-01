@@ -33,13 +33,11 @@ require_once __DIR__.'/init.php';
 $oPage->addItem(new PageTop(_('What is MultiFlexi?')));
 
 // --- Hero ---
-$hero = new DivTag(null, ['class' => 'text-center mb-4']);
-$hero->addItem(new H2Tag(_('What is MultiFlexi?'), ['class' => 'mb-3']));
-$hero->addItem(new PTag(
+$oPage->container->addItem(new PageHero(
+    _('What is MultiFlexi?'),
     _('MultiFlexi is an open-source task scheduling and automation platform for business system integrations. It lets organizations run applications — importers, exporters, reports, health checks — on a schedule across multiple companies, with isolated credentials and full execution history.'),
-    ['class' => 'lead text-muted'],
+    'MultiFlexi',
 ));
-$oPage->container->addItem($hero);
 
 $oPage->container->addItem(new DivTag(
     new ImgTag('images/overview/dashboard.png', _('MultiFlexi dashboard'), ['class' => 'img-fluid rounded shadow-sm']),
